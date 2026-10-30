@@ -1,0 +1,8 @@
+packages:
+  - packages/**
+
+minimumReleaseAge: 0
+
+allowBuilds:
+  "@parcel/watcher": true
+  "unrs-resolver": true
