@@ -1,0 +1,201 @@
+country,category,subcategory,value,label,emoji
+american,drink,drink,coffee,Coffee,☕
+american,drink,drink,iced-tea,Iced Tea,🧋
+american,drink,drink,lemonade,Lemonade,🍋
+american,drink,drink,milkshake,Milkshake,🥤
+american,drink,drink,root-beer,Root Beer,🍺
+american,main,dinner,bbq-ribs,BBQ Ribs,🍖
+american,main,dinner,fried-chicken,Fried Chicken,🍗
+american,main,dinner,mac-and-cheese,Mac and Cheese,🧀
+american,main,dinner,meatloaf,Meatloaf,🥩
+american,main,dinner,pot-roast,Pot Roast,🍖
+american,main,lunch,caesar-salad,Caesar Salad,🥗
+american,main,lunch,cheeseburger,Cheeseburger,🍔
+american,main,lunch,club-sandwich,Club Sandwich,🥪
+american,main,lunch,grilled-cheese,Grilled Cheese,🧀
+american,main,lunch,hot-dog,Hot Dog,🌭
+american,snack/dessert,snack/dessert,apple-pie,Apple Pie,🥧
+american,snack/dessert,snack/dessert,brownie,Brownie,🍫
+american,snack/dessert,snack/dessert,buffalo-wings,Buffalo Wings,🍗
+american,snack/dessert,snack/dessert,cheesecake,Cheesecake,🍰
+american,snack/dessert,snack/dessert,pecan-pie,Pecan Pie,🥧
+chinese,drink,drink,bubble-tea,Bubble Tea,🧋
+chinese,drink,drink,chrysanthemum-tea,Chrysanthemum Tea,🍵
+chinese,drink,drink,jasmine-tea,Jasmine Tea,🍵
+chinese,drink,drink,plum-juice,Plum Juice,🍹
+chinese,drink,drink,soy-milk,Soy Milk,🥛
+chinese,main,dinner,kung-pao-chicken,Kung Pao Chicken,🥘
+chinese,main,dinner,peking-duck,Peking Duck,🦆
+chinese,main,dinner,peking-duck-plate,Peking Duck Plate,🦆
+chinese,main,dinner,sweet-sour-pork,Sweet and Sour Pork,🍖
+chinese,main,lunch,chow-mein,Chow Mein,🍜
+chinese,main,lunch,dan-dan-noodles,Dan Dan Noodles,🍜
+chinese,main,lunch,fried-rice,Fried Rice,🍚
+chinese,main,lunch,mapo-tofu,Mapo Tofu,🌶️
+chinese,main,lunch,wonton-soup,Wonton Soup,🍜
+chinese,main,lunch,yangzhou-fried-rice,Yangzhou Fried Rice,🍚
+chinese,snack/dessert,snack/dessert,dumpling,Dumpling,🥟
+chinese,snack/dessert,snack/dessert,egg-tart,Egg Tart,🥧
+chinese,snack/dessert,snack/dessert,mooncake,Mooncake,🥮
+chinese,snack/dessert,snack/dessert,spring-roll,Spring Roll,🥠
+chinese,snack/dessert,snack/dessert,xiao-long-bao,Xiao Long Bao,🥟
+indian,drink,drink,mango-lassi,Mango Lassi,🥭
+indian,drink,drink,masala-chai,Masala Chai,☕
+indian,drink,drink,nimbu-pani,Nimbu Pani,🍋
+indian,drink,drink,rose-sharbat,Rose Sharbat,🌹
+indian,drink,drink,thandai,Thandai,🥛
+indian,main,dinner,biryani,Biryani,🍚
+indian,main,dinner,fish-curry,Fish Curry,🐟
+indian,main,dinner,lamb-vindaloo,Lamb Vindaloo,🍖
+indian,main,dinner,rogan-josh,Rogan Josh,🍖
+indian,main,dinner,tandoori-chicken,Tandoori Chicken,🍗
+indian,main,lunch,aloo-gobi,Aloo Gobi,🥔
+indian,main,lunch,butter-chicken,Butter Chicken,🍗
+indian,main,lunch,chana-masala,Chana Masala,🥗
+indian,main,lunch,dal-makhani,Dal Makhani,🥣
+indian,main,lunch,palak-paneer,Palak Paneer,🥬
+indian,snack/dessert,snack/dessert,gulab-jamun,Gulab Jamun,🍩
+indian,snack/dessert,snack/dessert,jalebi,Jalebi,🥨
+indian,snack/dessert,snack/dessert,kachori,Kachori,🥟
+indian,snack/dessert,snack/dessert,rasgulla,Rasgulla,🍬
+indian,snack/dessert,snack/dessert,samosa,Samosa,🥟
+italian,drink,drink,aperol-spritz,Aperol Spritz,🍹
+italian,drink,drink,cappuccino,Cappuccino,☕
+italian,drink,drink,espresso,Espresso,☕
+italian,drink,drink,limoncello,Limoncello,🍋
+italian,drink,drink,negroni,Negroni,🍹
+italian,main,dinner,chicken-parm,Chicken Parm,🍗
+italian,main,dinner,gnocchi,Gnocchi,🥔
+italian,main,dinner,lasagna,Lasagna,🥘
+italian,main,dinner,margherita-pizza,Margherita Pizza,🍕
+italian,main,dinner,osso-buco,Osso Buco,🥩
+italian,main,dinner,ravioli,Ravioli,🥟
+italian,main,dinner,risotto,Risotto,🍚
+italian,main,dinner,spaghetti-carbonara,Spaghetti Carbonara,🍝
+italian,main,lunch,caprese-salad,Caprese Salad,🥗
+italian,main,lunch,minestrone,Minestrone,🍲
+italian,snack/dessert,snack/dessert,bruschetta,Bruschetta,🥖
+italian,snack/dessert,snack/dessert,cannoli,Cannoli,🍩
+italian,snack/dessert,snack/dessert,focaccia,Focaccia,🫓
+italian,snack/dessert,snack/dessert,gelato,Gelato,🍨
+italian,snack/dessert,snack/dessert,tiramisu,Tiramisu,🍰
+japanese,drink,drink,amazake,Amazake,🍶
+japanese,drink,drink,hojicha,Hojicha,🍵
+japanese,drink,drink,matcha,Matcha,🍵
+japanese,drink,drink,ramune,Ramune,🥤
+japanese,drink,drink,sake,Sake,🍶
+japanese,main,breakfast,onigiri,Onigiri,🍙
+japanese,main,dinner,gyudon,Gyudon,🍚
+japanese,main,dinner,shabu-shabu,Shabu Shabu,🍲
+japanese,main,dinner,tonkatsu,Tonkatsu,🥩
+japanese,main,lunch,bento-box,Bento Box,🍱
+japanese,main,lunch,katsudon,Katsudon,🍚
+japanese,main,lunch,oyakodon,Oyakodon,🍚
+japanese,main,lunch,ramen,Ramen,🍜
+japanese,main,lunch,sushi,Sushi,🍣
+japanese,main,lunch,udon,Udon,🍥
+japanese,snack/dessert,snack/dessert,dorayaki,Dorayaki,🥞
+japanese,snack/dessert,snack/dessert,mochi,Mochi,🍡
+japanese,snack/dessert,snack/dessert,takoyaki,Takoyaki,🐙
+japanese,snack/dessert,snack/dessert,tempura,Tempura,🍤
+japanese,snack/dessert,snack/dessert,yakitori,Yakitori,🍢
+korean,drink,drink,bori-cha,Bori Cha,🍵
+korean,drink,drink,makgeolli,Makgeolli,🍶
+korean,drink,drink,sikhye,Sikhye,🥤
+korean,drink,drink,soju,Soju,🍶
+korean,drink,drink,yuja-tea,Yuja Tea,🍵
+korean,main,dinner,bulgogi,Bulgogi,🥩
+korean,main,dinner,galbi,Galbi,🥩
+korean,main,dinner,kimchi-stew,Kimchi Stew,🍲
+korean,main,dinner,samgyeopsal,Samgyeopsal,🥓
+korean,main,dinner,sundubu-jjigae,Sundubu-jjigae,🍲
+korean,main,lunch,bibimbap,Bibimbap,🍲
+korean,main,lunch,bibimbap-bowl,Bibimbap Bowl,🍚
+korean,main,lunch,japchae,Japchae,🍜
+korean,main,lunch,jjajangmyeon,Jjajangmyeon,🍜
+korean,main,lunch,kimchi-fried-rice,Kimchi Fried Rice,🍛
+korean,snack/dessert,snack/dessert,bungeoppang,Bungeoppang,🐟
+korean,snack/dessert,snack/dessert,hotteok,Hotteok,🥞
+korean,snack/dessert,snack/dessert,mandu,Mandu,🥟
+korean,snack/dessert,snack/dessert,tteokbokki,Tteokbokki,🍡
+korean,snack/dessert,snack/dessert,yakgwa,Yakgwa,🍪
+mexican,drink,drink,aguas-frescas,Aguas Frescas,🍹
+mexican,drink,drink,atole,Atole,☕
+mexican,drink,drink,horchata,Horchata,🥤
+mexican,drink,drink,mexican-cola,Mexican Cola,🥤
+mexican,drink,drink,michelada,Michelada,🍺
+mexican,main,breakfast,pozole,Pozole,🍲
+mexican,main,breakfast,tamales,Tamales,🫔
+mexican,main,dinner,birria,Birria,🌮
+mexican,main,dinner,carnitas,Carnitas,🍖
+mexican,main,dinner,enchiladas,Enchiladas,🫕
+mexican,main,dinner,mole-poblano,Mole Poblano,🍗
+mexican,main,dinner,tacos-al-pastor,Tacos al Pastor,🌮
+mexican,main,lunch,pozole-rojo,Pozole Rojo,🍲
+mexican,main,lunch,quesadilla,Quesadilla,🧀
+mexican,main,lunch,tortas,Tortas,🥪
+mexican,snack/dessert,snack/dessert,churros,Churros,🥨
+mexican,snack/dessert,snack/dessert,elote,Elote,🌽
+mexican,snack/dessert,snack/dessert,flan,Flan,🍮
+mexican,snack/dessert,snack/dessert,guacamole,Guacamole,🥑
+mexican,snack/dessert,snack/dessert,tres-leches,Tres Leches,🍰
+thai,drink,drink,cha-yen,Cha Yen,🧋
+thai,drink,drink,coconut-water,Coconut Water,🥥
+thai,drink,drink,lemongrass-juice,Lemongrass Juice,🍹
+thai,drink,drink,roselle-tea,Roselle Tea,🍵
+thai,drink,drink,thai-tea,Thai Tea,🧋
+thai,main,dinner,boat-noodles,Boat Noodles,🍜
+thai,main,dinner,gai-yang,Gai Yang,🍗
+thai,main,dinner,green-curry,Green Curry,🥘
+thai,main,dinner,massaman-curry,Massaman Curry,🍛
+thai,main,dinner,panang-curry,Panang Curry,🍛
+thai,main,dinner,tom-yum-goong,Tom Yum Goong,🦐
+thai,main,lunch,khao-soi,Khao Soi,🍜
+thai,main,lunch,larb,Larb,🥗
+thai,main,lunch,pad-kra-pao,Pad Kra Pao,🍛
+thai,main,lunch,pad-thai,Pad Thai,🥜
+thai,snack/dessert,snack/dessert,coconut-cake,Coconut Cake,🍰
+thai,snack/dessert,snack/dessert,coconut-ice-cream,Coconut Ice Cream,🍦
+thai,snack/dessert,snack/dessert,mango-sticky,Mango Sticky,🥭
+thai,snack/dessert,snack/dessert,mango-sticky-rice,Mango Sticky Rice,🥭
+thai,snack/dessert,snack/dessert,som-tam,Som Tam,🌶️
+turkish,drink,drink,ayran,Ayran,🥛
+turkish,drink,drink,salep,Salep,🥛
+turkish,drink,drink,sherbet,Sherbet,🍹
+turkish,drink,drink,turkish-coffee,Turkish Coffee,☕
+turkish,drink,drink,turkish-tea,Turkish Tea,🍵
+turkish,main,dinner,hunkar-begendi,Hunkar Begendi,🍆
+turkish,main,dinner,iskender-kebab,Iskender Kebab,🍖
+turkish,main,dinner,kofte,Kofte,🥩
+turkish,main,dinner,pide,Pide,🍞
+turkish,main,dinner,testi-kebab,Testi Kebab,🍲
+turkish,main,lunch,doner-kebab,Doner Kebab,🥙
+turkish,main,lunch,imam-bayildi,Imam Bayildi,🍆
+turkish,main,lunch,lahmacun,Lahmacun,🍕
+turkish,main,lunch,manti,Manti,🥟
+turkish,main,lunch,menemen,Menemen,🍳
+turkish,snack/dessert,snack/dessert,baklava,Baklava,🍯
+turkish,snack/dessert,snack/dessert,kunefe,Kunefe,🧀
+turkish,snack/dessert,snack/dessert,lokum,Lokum,🍬
+turkish,snack/dessert,snack/dessert,revani,Revani,🍰
+turkish,snack/dessert,snack/dessert,simit,Simit,🥯
+vietnamese,drink,drink,ca-phe-sua-da,Ca Phe Sua Da,☕
+vietnamese,drink,drink,nuoc-mia,Nuoc Mia,🥤
+vietnamese,drink,drink,rau-ma,Rau Ma,🥤
+vietnamese,drink,drink,sinh-to,Sinh To,🍹
+vietnamese,drink,drink,tra-da,Tra Da,🍵
+vietnamese,main,breakfast,banh-mi,Banh Mi,🥖
+vietnamese,main,breakfast,pho,Pho,🍜
+vietnamese,main,dinner,ca-kho-to,Ca Kho To,🥘
+vietnamese,main,dinner,canh-chua,Canh Chua,🍲
+vietnamese,main,dinner,thit-kho,Thit Kho,🍖
+vietnamese,main,lunch,banh-xeo,Banh Xeo,🍳
+vietnamese,main,lunch,bun-bo-hue,Bun Bo Hue,🍜
+vietnamese,main,lunch,bun-cha,Bun Cha,🍖
+vietnamese,main,lunch,com-tam,Com Tam,🍚
+vietnamese,main,lunch,mi-quang,Mi Quang,🍜
+vietnamese,snack/dessert,snack/dessert,banh-flan,Banh Flan,🍮
+vietnamese,snack/dessert,snack/dessert,che,Che,🍮
+vietnamese,snack/dessert,snack/dessert,che-ba-mau,Che Ba Mau,🍮
+vietnamese,snack/dessert,snack/dessert,che-ba-mau-2,Che Ba Mau 2,🍮
+vietnamese,snack/dessert,snack/dessert,goi-cuon,Goi Cuon,🥗

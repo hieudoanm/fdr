@@ -1,0 +1,52 @@
+[
+  {
+    "value": "american",
+    "label": "American",
+    "emoji": "🇺🇸"
+  },
+  {
+    "value": "chinese",
+    "label": "Chinese",
+    "emoji": "🇨🇳"
+  },
+  {
+    "value": "indian",
+    "label": "Indian",
+    "emoji": "🇮🇳"
+  },
+  {
+    "value": "italian",
+    "label": "Italian",
+    "emoji": "🇮🇹"
+  },
+  {
+    "value": "japanese",
+    "label": "Japanese",
+    "emoji": "🇯🇵"
+  },
+  {
+    "value": "korean",
+    "label": "Korean",
+    "emoji": "🇰🇷"
+  },
+  {
+    "value": "mexican",
+    "label": "Mexican",
+    "emoji": "🇲🇽"
+  },
+  {
+    "value": "thai",
+    "label": "Thai",
+    "emoji": "🇹🇭"
+  },
+  {
+    "value": "turkish",
+    "label": "Turkish",
+    "emoji": "🇹🇷"
+  },
+  {
+    "value": "vietnamese",
+    "label": "Vietnamese",
+    "emoji": "🇻🇳"
+  }
+]
