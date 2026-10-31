@@ -39,7 +39,7 @@ RUN pnpm build
 # ---- runner ----------------------------------------------------------------
 # Serve the static `out/` export with an unprivileged, non-root nginx
 # (listens on 8080). 1.27.4 pin avoids a 1.27.5 /run/nginx.pid regression.
-FROM nginxinc/nginx-unprivileged:1.31.6-alpine
+FROM nginxinc/nginx-unprivileged:1.31.7-alpine
 LABEL org.opencontainers.image.title="fdr"
 LABEL org.opencontainers.image.description="FDR"
 LABEL org.opencontainers.image.source="https://github.com/hieudoanm/hieudoanm.github.io"
