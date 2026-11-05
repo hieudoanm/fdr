@@ -1,10 +1,18 @@
 import { render, screen } from '@testing-library/react';
 import SchedulePage from '@/app/(app)/schedule/page';
 
+jest.mock('@/components/organisms/Schedule', () => ({
+  FoodSchedule: () => <div data-testid="food-schedule" />,
+}));
+jest.mock('@/components/molecules/SchedulePicker', () => ({
+  SchedulePicker: () => <div data-testid="schedule-picker" />,
+}));
+
 describe('SchedulePage', () => {
-  it('renders the food schedule and heading', () => {
+  it('renders the heading and both sections', () => {
     render(<SchedulePage />);
-    expect(screen.getByTestId('schedule-table')).toBeInTheDocument();
-    expect(screen.getByText(/food schedule/i)).toBeInTheDocument();
+    expect(screen.getByText(/food schedules/i)).toBeInTheDocument();
+    expect(screen.getByTestId('food-schedule')).toBeInTheDocument();
+    expect(screen.getByTestId('schedule-picker')).toBeInTheDocument();
   });
 });

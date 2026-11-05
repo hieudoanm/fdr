@@ -26,23 +26,23 @@ const ITEMS: CourseItem[] = [
     href: '/randomizer/',
   },
   {
-    label: "Sheldon's Food Schedule",
-    description: 'A week of meals dictated by a rigorous schedule',
-    icon: PiCalendarDots,
-    href: '/schedule/',
-  },
-  {
-    label: 'Cuisine List',
+    label: 'Dishes',
     description: 'Browse and search dishes across world cuisines',
     icon: PiListDashes,
-    href: '/list/',
+    href: '/dishes/',
+  },
+  {
+    label: 'Food Schedules',
+    description: 'Browse weekly dining schedules',
+    icon: PiCalendarDots,
+    href: '/schedule/',
   },
 ];
 
 const HomePage: NextPage = () => {
   return (
     <HomeTemplate
-      title="FDR"
+      title="Food & Drink"
       description="Can't decide what to eat? Spin the reel and let fate choose."
       items={ITEMS}
     />

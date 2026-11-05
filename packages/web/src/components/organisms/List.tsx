@@ -67,7 +67,9 @@ export const CuisineList: FC<CuisineListProps> = ({
 
       <div className="border-base-content/10 bg-base-200 mt-4 overflow-hidden rounded-2xl border">
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-sm" data-testid="cuisine-table">
+          <table
+            className="w-full text-left text-sm"
+            data-testid="cuisine-table">
             <thead>
               <tr className="text-base-content/50 border-base-content/10 border-b text-xs font-bold tracking-wider uppercase">
                 <th className="px-4 py-3">Dish</th>

@@ -1,24 +1,31 @@
 'use client';
 
 import type { FC } from 'react';
-import { scheldon } from '@/data';
+import type { ScheduleEntry } from '@/data';
 
 const todayLabel = (): string =>
   new Date().toLocaleDateString('en-US', { weekday: 'long' });
 
 interface FoodScheduleProps {
+  entries: ScheduleEntry[];
+  quote?: string;
   today?: string;
 }
 
-export const FoodSchedule: FC<FoodScheduleProps> = ({ today }) => {
+export const FoodSchedule: FC<FoodScheduleProps> = ({
+  entries,
+  quote,
+  today,
+}) => {
   const activeDay = today ?? todayLabel();
 
   return (
     <div className="flex w-full max-w-3xl flex-col gap-4">
-      <p className="text-base-content/60 border-base-content/10 bg-base-200 rounded-xl border px-4 py-3 text-center text-sm italic">
-        “I cannot accept a fluctuating weekly dining schedule.”
-        <span className="not-italic"> — Sheldon Cooper</span>
-      </p>
+      {quote && (
+        <p className="text-base-content/60 border-base-content/10 bg-base-200 rounded-xl border px-4 py-3 text-center text-sm italic">
+          “{quote}”
+        </p>
+      )}
 
       <div className="border-base-content/10 bg-base-200 overflow-hidden rounded-2xl border">
         <table
@@ -33,7 +40,7 @@ export const FoodSchedule: FC<FoodScheduleProps> = ({ today }) => {
             </tr>
           </thead>
           <tbody>
-            {scheldon.map((entry) => {
+            {entries.map((entry) => {
               const isToday = entry.day === activeDay;
               return (
                 <tr

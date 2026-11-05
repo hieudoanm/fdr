@@ -20,3 +20,12 @@ export interface ScheduleEntry {
   restaurant: string;
   note: string;
 }
+
+export interface ScheduleMeta {
+  slug: string;
+  label: string;
+  description: string;
+  emoji: string;
+  quote?: string;
+  entries: ScheduleEntry[];
+}
