@@ -44,7 +44,7 @@ const parseCSV = (text) => {
     rows.push(row);
   }
   return rows.filter((r) => r.some((c) => c.trim() !== ''));
-}
+};
 
 for (const file of readdirSync(csvDir)) {
   if (extname(file) !== '.csv') continue;

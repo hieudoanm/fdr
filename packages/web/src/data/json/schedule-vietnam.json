@@ -1,0 +1,51 @@
+[
+  {
+    "day": "Monday",
+    "meal": "Phở",
+    "emoji": "🇻🇳",
+    "restaurant": "Phở Gia Truyền",
+    "note": "Beef phở with fresh herbs and lime"
+  },
+  {
+    "day": "Tuesday",
+    "meal": "Bún Riêu",
+    "emoji": "🍜",
+    "restaurant": "Bún Riêu 13",
+    "note": "Tomato crab noodle soup with fried tofu"
+  },
+  {
+    "day": "Wednesday",
+    "meal": "Cơm Tấm",
+    "emoji": "🍚",
+    "restaurant": "Cơm Tấm Mộc",
+    "note": "Broken rice with pork chop and shredded pork"
+  },
+  {
+    "day": "Thursday",
+    "meal": "Bún Bò Huế",
+    "emoji": "🍜",
+    "restaurant": "Bún Bò Huế 79",
+    "note": "Spicy lemongrass beef noodle soup"
+  },
+  {
+    "day": "Friday",
+    "meal": "Mì Quảng",
+    "emoji": "🍜",
+    "restaurant": "Mì Quảng 47",
+    "note": "Turmeric rice noodles with shrimp, quail eggs and herbs"
+  },
+  {
+    "day": "Saturday",
+    "meal": "Bánh Xèo",
+    "emoji": "🥘",
+    "restaurant": "Home",
+    "note": "Crispy turmeric crepe with shrimp and pork, eaten with herbs"
+  },
+  {
+    "day": "Sunday",
+    "meal": "Xôi",
+    "emoji": "🍚",
+    "restaurant": "Home",
+    "note": "Day of rest — no rigid takeout night"
+  }
+]

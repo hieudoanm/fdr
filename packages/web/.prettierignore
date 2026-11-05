@@ -18,13 +18,6 @@ next-env.d.ts
 /build
 dist
 
-# tauri
-/src-tauri
-src-tauri
-src-tauri/target
-/src-tauri/target/
-/src-tauri/gen/schemas
-
 # misc
 .DS_Store
 *.pem

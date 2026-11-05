@@ -7,7 +7,6 @@
 | Framework | Next.js 16 App Router (static export), React 19 |
 | Language  | TypeScript strict                               |
 | Styling   | Tailwind CSS 4 + DaisyUI 5 custom themes        |
-| Desktop   | Tauri 2 (updater, dialog, notification plugins) |
 | Testing   | Jest (+ React Testing Library)                  |
 
 ## Directory Structure

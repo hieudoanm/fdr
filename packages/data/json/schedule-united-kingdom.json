@@ -1,0 +1,51 @@
+[
+  {
+    "day": "Monday",
+    "meal": "Full English Breakfast",
+    "emoji": "🍳",
+    "restaurant": "The Cafe",
+    "note": "Sausage, bacon, eggs, beans and toast"
+  },
+  {
+    "day": "Tuesday",
+    "meal": "Fish & Chips",
+    "emoji": "🍟",
+    "restaurant": "The Golden Haddock",
+    "note": "Cod with mushy peas and malt vinegar"
+  },
+  {
+    "day": "Wednesday",
+    "meal": "Shepherd's Pie",
+    "emoji": "🥩",
+    "restaurant": "The Lamb & Flag",
+    "note": "Lamb and veg under a cheesy mash crust"
+  },
+  {
+    "day": "Thursday",
+    "meal": "Chicken Tikka Masala",
+    "emoji": "🍖",
+    "restaurant": "Taj Mahal",
+    "note": "Creamy tomato curry with naan"
+  },
+  {
+    "day": "Friday",
+    "meal": "Burger & Chips",
+    "emoji": "🍔",
+    "restaurant": "The Crown",
+    "note": "Double cheeseburger with triple-cooked chips"
+  },
+  {
+    "day": "Saturday",
+    "meal": "Sunday Roast (Saturday edition)",
+    "emoji": "🍖",
+    "restaurant": "The King's Arms",
+    "note": "Roast beef, Yorkshire pudding and gravy"
+  },
+  {
+    "day": "Sunday",
+    "meal": "Afternoon Tea",
+    "emoji": "🍰",
+    "restaurant": "The Rose Lounge",
+    "note": "Scones with clotted cream and jam"
+  }
+]

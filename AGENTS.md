@@ -12,8 +12,6 @@
   `output: 'export'`; every route is prerendered into `packages/web/out`.
 - **No backend.** There is no API, database, or server-side data fetching. Food
   data is bundled at build time.
-- **Tauri is a shell, not a second app.** `packages/web/src-tauri` wraps the
-  same web build for desktop; web-only behaviour must keep working.
 - **One workspace, two packages.** `packages/data` holds source data;
   `packages/web` holds the app.
 - **`pnpm typecheck`, `pnpm lint`, and `pnpm test` must pass before a change is
@@ -22,17 +20,16 @@
 
 ## Stack
 
-| Area        | Choice                                                        |
-| ----------- | ------------------------------------------------------------- |
-| Runtime     | Node 26.13.0 (`.nvmrc`), pnpm 12.16.1                         |
-| Monorepo    | pnpm workspaces + Turborepo                                   |
-| Framework   | Next.js 16 App Router, React 19, TypeScript 6                 |
-| Styling     | Tailwind CSS 4 + DaisyUI 5 (`fdr`, `fdr-dark` themes)     |
-| Icons       | `react-icons`                                                 |
-| State/data  | `@tanstack/react-query`, `idb`, static JSON                   |
-| Tests       | Jest 30 + Testing Library (jsdom), Playwright for e2e         |
-| Desktop     | Tauri 2 (dialog, notification, updater plugins)               |
-| Deploy      | GitHub Pages via GitHub Actions                               |
+| Area       | Choice                                                |
+| ---------- | ----------------------------------------------------- |
+| Runtime    | Node 26.13.0 (`.nvmrc`), pnpm 12.16.1                 |
+| Monorepo   | pnpm workspaces + Turborepo                           |
+| Framework  | Next.js 16 App Router, React 19, TypeScript 6         |
+| Styling    | Tailwind CSS 4 + DaisyUI 5 (`fdr`, `fdr-dark` themes) |
+| Icons      | `react-icons`                                         |
+| State/data | `@tanstack/react-query`, `idb`, static JSON           |
+| Tests      | Jest 30 + Testing Library (jsdom), Playwright for e2e |
+| Deploy     | GitHub Pages via GitHub Actions                       |
 
 ## Commands
 
@@ -48,26 +45,24 @@ pnpm test             # turbo run test (Jest, 80% coverage thresholds)
 pnpm format           # turbo run format (Prettier, writes)
 
 pnpm --filter @fdr/web test:e2e     # Playwright
-pnpm --filter @fdr/web tauri dev    # desktop shell
 node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
 ```
 
 ## Workspace layout
 
-| Path                              | Contents                                                     |
-| --------------------------------- | ------------------------------------------------------------ |
-| `packages/web/src/app`            | Routes: `/`, `/wheel`, `/randomizer`, `/schedule`, `/list`; error/loading/not-found boundaries; `robots.ts` |
-| `packages/web/src/components/atoms`      | `Badge`, `Button`, `OfflineBadge`, `ThemeToggle`      |
-| `packages/web/src/components/molecules`  | `CuisineSelect`, `Reel`                               |
-| `packages/web/src/components/organisms`  | `Header`, `List`, `Randomizer`, `Schedule`, `Wheel`   |
-| `packages/web/src/components/templates`  | `HomeTemplate`, `ErrorTemplate`                       |
-| `packages/web/src/data`           | Types, JSON, and `FOOD_OPTIONS` accessors                    |
-| `packages/web/src/hooks`          | `useFoodPicker` and related hooks                            |
-| `packages/web/src/lib`            | Providers, native bridges, utilities                         |
-| `packages/web/src-tauri`          | Desktop configuration, Rust entry point, capabilities        |
-| `packages/web/e2e`                | Playwright specs                                             |
-| `packages/data/csv`               | Source of truth: `foods.csv`, `countries.csv`, `scheldon.csv` |
-| `packages/data/json`              | Generated JSON (`csv-to-json.mjs`)                           |
+| Path                                    | Contents                                                                                                             |
+| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `packages/web/src/app`                  | Routes: `/`, `/wheel`, `/randomizer`, `/schedule`, `/dishes`; error/loading/not-found boundaries; `robots.ts`          |
+| `packages/web/src/components/atoms`     | `Badge`, `Button`, `OfflineBadge`, `ThemeToggle`                                                                     |
+| `packages/web/src/components/molecules` | `CuisineSelect`, `Reel`                                                                                              |
+| `packages/web/src/components/organisms` | `Header`, `List`, `Randomizer`, `Schedule`, `Wheel`                                                                  |
+| `packages/web/src/components/templates` | `HomeTemplate`, `ErrorTemplate`                                                                                      |
+| `packages/web/src/data`                 | Types, JSON, and `FOOD_OPTIONS` accessors                                                                            |
+| `packages/web/src/hooks`                | `useFoodPicker` and related hooks                                                                                    |
+| `packages/web/src/lib`                  | Providers and utilities                                                                                              |
+| `packages/web/e2e`                      | Playwright specs                                                                                                     |
+| `packages/data/csv`                     | Source of truth: `foods.csv`, `countries.csv`, `scheldon.csv`, `schedule-vietnam.csv`, `schedule-united-kingdom.csv` |
+| `packages/data/json`                    | Generated JSON (`csv-to-json.mjs`)                                                                                   |
 
 ## Architecture
 
@@ -83,11 +78,9 @@ node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
   otherwise.
 - **Components are `FC`; pages are `NextPage`.**
 - **Path alias.** `@/*` maps to `packages/web/src/*`.
-- **Theme.** `layout.tsx` renders the default `fdr-light` theme; `Header`
+- **Theme.** `layout.tsx` renders the default `fdr` theme; `Header`
   owns the toggle, applies the stored theme, and writes
   `localStorage['fdr:theme']`.
-- **Native behaviour.** Anything Tauri-specific goes through
-  `src/lib/native/index.ts`, never directly from a component.
 
 ## Data conventions
 
@@ -150,8 +143,6 @@ manual dispatch:
   route handlers that need a server, no `next/image` optimisation.
 - **Trailing slashes are on.** `trailingSlash: true` means routes resolve as
   `/wheel/`, not `/wheel`.
-- **Tauri tests do not run in CI.** Native plugins are stubbed in unit tests;
-  verify desktop behaviour manually.
 - **Playwright specs reference routes that may not exist** (`/about`,
   `/downloads`, `/version`). Keep them out of CI until they match the app.
 - **`packages/web/package.json` metadata is stale** (GPL-3.0, old repository

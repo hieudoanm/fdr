@@ -1,16 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
 jest.mock('@/styles/globals.css', () => ({}));
-jest.mock('@/providers/NativeProvider', () => ({
-  NativeProvider: ({ children }: { children: React.ReactNode }) => (
-    <div>{children}</div>
-  ),
-}));
-jest.mock('@/providers/QueryProvider', () => ({
-  QueryProvider: ({ children }: { children: React.ReactNode }) => (
-    <div>{children}</div>
-  ),
-}));
 jest.mock('@/providers/SWProvider', () => ({
   SWProvider: ({ children }: { children: React.ReactNode }) => (
     <div>{children}</div>
@@ -38,10 +28,7 @@ describe('RootLayout', () => {
         <div />
       </RootLayout>
     );
-    expect(document.documentElement).toHaveAttribute(
-      'data-theme',
-      'fdr-light'
-    );
+    expect(document.documentElement).toHaveAttribute('data-theme', 'fdr');
   });
 
   it('renders header', () => {
