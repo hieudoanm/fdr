@@ -27,7 +27,7 @@
 | Framework  | Next.js 16 App Router, React 19, TypeScript 6         |
 | Styling    | Tailwind CSS 4 + DaisyUI 5 (`fdr`, `fdr-dark` themes) |
 | Icons      | `react-icons`                                         |
-| State/data | `@tanstack/react-query`, `idb`, static JSON           |
+| State/data | `idb`, static JSON                                     |
 | Tests      | Jest 30 + Testing Library (jsdom), Playwright for e2e |
 | Deploy     | GitHub Pages via GitHub Actions                       |
 
@@ -143,10 +143,9 @@ manual dispatch:
   route handlers that need a server, no `next/image` optimisation.
 - **Trailing slashes are on.** `trailingSlash: true` means routes resolve as
   `/wheel/`, not `/wheel`.
-- **Playwright specs reference routes that may not exist** (`/about`,
-  `/downloads`, `/version`). Keep them out of CI until they match the app.
-- **`packages/web/package.json` metadata is stale** (GPL-3.0, old repository
-  URL). The repository license is MIT; do not propagate the old metadata.
+- **Playwright specs cover the real routes** (`/`, `/wheel/`, `/randomizer/`,
+  `/dishes/`, `/schedule/`). They are not part of CI; run them locally with
+  `pnpm --filter @fdr/web test:e2e`.
 
 ## Definition of done
 

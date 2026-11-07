@@ -1,6 +1,7 @@
 'use client';
 
 import type { FC } from 'react';
+import { useEffect, useState } from 'react';
 import type { ScheduleEntry } from '@/data';
 
 const todayLabel = (): string =>
@@ -17,7 +18,13 @@ export const FoodSchedule: FC<FoodScheduleProps> = ({
   quote,
   today,
 }) => {
-  const activeDay = today ?? todayLabel();
+  const [clientToday, setClientToday] = useState('');
+
+  useEffect(() => {
+    if (!today) setClientToday(todayLabel());
+  }, [today]);
+
+  const activeDay = today ?? clientToday;
 
   return (
     <div className="flex w-full max-w-3xl flex-col gap-4">
@@ -33,10 +40,18 @@ export const FoodSchedule: FC<FoodScheduleProps> = ({
           className="w-full text-left text-sm">
           <thead>
             <tr className="text-base-content/50 border-base-content/10 border-b text-xs font-bold tracking-wider uppercase">
-              <th className="px-4 py-3">Day</th>
-              <th className="px-4 py-3">Meal</th>
-              <th className="px-4 py-3">Source</th>
-              <th className="hidden px-4 py-3 sm:table-cell">Notes</th>
+              <th scope="col" className="px-4 py-3">
+                Day
+              </th>
+              <th scope="col" className="px-4 py-3">
+                Meal
+              </th>
+              <th scope="col" className="px-4 py-3">
+                Source
+              </th>
+              <th scope="col" className="hidden px-4 py-3 sm:table-cell">
+                Notes
+              </th>
             </tr>
           </thead>
           <tbody>

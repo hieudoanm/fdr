@@ -38,7 +38,7 @@ describe('RandomizerPage', () => {
     const user = userEvent.setup();
     render(<RandomizerPage />);
     await user.click(screen.getByTestId('cuisine-select-trigger'));
-    await user.click(screen.getByRole('button', { name: /All Cuisines/ }));
+    await user.click(screen.getByRole('option', { name: /All Cuisines/ }));
     expect(replace).toHaveBeenCalledWith('/randomizer');
   });
 });

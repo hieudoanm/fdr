@@ -1,5 +1,3 @@
-'use client';
-
 import { NextPage } from 'next';
 import { FoodSchedule } from '@/components/organisms/Schedule';
 import { SchedulePicker } from '@/components/molecules/SchedulePicker';

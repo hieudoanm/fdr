@@ -11,8 +11,6 @@ describe('robots', () => {
 
   it('returns sitemap URL', () => {
     const result = robots();
-    expect(result.sitemap).toBe(
-      'https://hieudoanm.github.io/free/fdr/sitemap.xml'
-    );
+    expect(result.sitemap).toBe('https://hieudoanm.github.io/fdr/sitemap.xml');
   });
 });

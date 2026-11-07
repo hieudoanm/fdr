@@ -31,7 +31,6 @@ export const metadata: Metadata = {
       'Spin the reel and let fate pick your next meal, with a weekly schedule and a reusable dish list.',
     images: ['/og/og.png'],
   },
-  manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
@@ -45,10 +44,14 @@ export const viewport: Viewport = {
   maximumScale: 1,
 };
 
+const themeScript = `try{var t=localStorage.getItem('fdr:theme');if(t==='fdr'||t==='fdr-dark')document.documentElement.dataset.theme=t;}catch(e){}`;
+const iconHref = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icons/icon-192x192.png`;
+
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="fdr">
+  <html lang="en" data-theme="fdr" suppressHydrationWarning>
     <head>
-      <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+      <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      <link rel="apple-touch-icon" href={iconHref} />
     </head>
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-mono">
       <SWProvider>

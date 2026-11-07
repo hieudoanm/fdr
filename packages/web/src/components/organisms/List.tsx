@@ -72,11 +72,21 @@ export const CuisineList: FC<CuisineListProps> = ({
             data-testid="cuisine-table">
             <thead>
               <tr className="text-base-content/50 border-base-content/10 border-b text-xs font-bold tracking-wider uppercase">
-                <th className="px-4 py-3">Dish</th>
-                <th className="px-4 py-3">Cuisine</th>
-                <th className="px-4 py-3">Category</th>
-                <th className="px-4 py-3">Course</th>
-                <th className="px-4 py-3">Slug</th>
+                <th scope="col" className="px-4 py-3">
+                  Dish
+                </th>
+                <th scope="col" className="px-4 py-3">
+                  Cuisine
+                </th>
+                <th scope="col" className="px-4 py-3">
+                  Category
+                </th>
+                <th scope="col" className="px-4 py-3">
+                  Course
+                </th>
+                <th scope="col" className="px-4 py-3">
+                  Slug
+                </th>
               </tr>
             </thead>
             <tbody>

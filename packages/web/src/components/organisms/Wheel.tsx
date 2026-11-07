@@ -1,7 +1,7 @@
 'use client';
 
 import type { FC } from 'react';
-import { useCallback, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { countries, type Cuisine } from '@/data';
 
@@ -79,6 +79,24 @@ export const CuisineWheel: FC<CuisineWheelProps> = ({
     }, settlingMs);
   }, [rotation, spinning, settlingMs]);
 
+  useEffect(() => {
+    const handleKey = (event: KeyboardEvent) => {
+      const target = event.target;
+      if (
+        target instanceof HTMLElement &&
+        ['INPUT', 'TEXTAREA', 'SELECT', 'BUTTON', 'A'].includes(target.tagName)
+      ) {
+        return;
+      }
+      if ((event.code === 'Space' || event.code === 'Enter') && !spinning) {
+        event.preventDefault();
+        spin();
+      }
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [spin, spinning]);
+
   return (
     <div className="flex w-full flex-col items-center gap-6">
       <div
@@ -134,6 +152,7 @@ export const CuisineWheel: FC<CuisineWheelProps> = ({
 
       <p
         data-testid="wheel-result"
+        aria-live="polite"
         className="text-base-content/70 m-0 text-sm font-semibold tracking-wide">
         {result
           ? `${result.emoji} ${result.label}`

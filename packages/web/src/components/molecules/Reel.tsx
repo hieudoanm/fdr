@@ -25,6 +25,7 @@ export const Reel: FC<ReelProps> = ({
 
   useEffect(() => {
     if (spinning) {
+      if (topics.length === 0) return;
       let index = topics.indexOf(current);
       if (index < 0) index = 0;
       intervalRef.current = setInterval(() => {

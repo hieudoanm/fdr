@@ -3,9 +3,10 @@
 import { useEffect, useState } from 'react';
 
 export const useOffline = (): boolean => {
-  const [offline, setOffline] = useState<boolean>(!navigator.onLine);
+  const [offline, setOffline] = useState<boolean>(false);
 
   useEffect(() => {
+    setOffline(!navigator.onLine);
     const goOffline = (): void => setOffline(true);
     const goOnline = (): void => setOffline(false);
     window.addEventListener('offline', goOffline);

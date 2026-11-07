@@ -9,7 +9,7 @@ const robots = (): MetadataRoute.Robots => ({
       allow: '/',
     },
   ],
-  sitemap: 'https://hieudoanm.github.io/free/fdr/sitemap.xml',
+  sitemap: 'https://hieudoanm.github.io/fdr/sitemap.xml',
 });
 
 export default robots;

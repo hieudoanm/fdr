@@ -1,5 +1,3 @@
-'use client';
-
 import { CuisineWheel } from '@/components/organisms/Wheel';
 import { NextPage } from 'next';
 

@@ -6,6 +6,9 @@ import { countries, FOOD_OPTIONS, foods } from '@/data';
 import { CuisineSelect } from '@/components/molecules/CuisineSelect';
 import { Reel } from '@/components/molecules/Reel';
 import { useFoodPicker } from '@/hooks/useFoodPicker';
+import { awardXp, getProgress, type Progress } from '@/lib/progress';
+
+const XP_PER_SPIN = 10;
 
 const isTypingTarget = (target: EventTarget | null): boolean => {
   if (!(target instanceof HTMLElement)) return false;
@@ -29,12 +32,38 @@ export const FoodRandomizer: FC<FoodRandomizerProps> = ({
   const { food, suggestion, spinning, options, selectFood, spin } =
     useFoodPicker({ foodsMap: FOOD_OPTIONS, initialFood });
   const [spins, setSpins] = useState(0);
+  const [progress, setProgress] = useState<Progress | null>(null);
 
   const landedFood = foods.find((item) => item.label === suggestion);
   const activeCuisine = landedFood
     ? countries.find((cuisine) => cuisine.value === landedFood.country)
     : countries.find((cuisine) => cuisine.value === food);
   const landed = !spinning && suggestion.length > 0;
+
+  useEffect(() => {
+    let cancelled = false;
+    getProgress()
+      .then((stored) => {
+        if (!cancelled) setProgress(stored);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!landed) return;
+    let cancelled = false;
+    awardXp(XP_PER_SPIN)
+      .then((next) => {
+        if (!cancelled) setProgress(next);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [landed]);
 
   const handleSpin = useCallback(() => {
     spin();
@@ -96,6 +125,13 @@ export const FoodRandomizer: FC<FoodRandomizerProps> = ({
       <p data-testid="stats-line" className="text-base-content/50 m-0 text-xs">
         Press Space or Enter to spin · {options.length} dishes ·{' '}
         <span data-testid="spin-count">{spins}</span> spins
+        {progress && progress.xp > 0 && (
+          <>
+            {' '}
+            · <span data-testid="progress-line">🔥 {progress.xp} XP</span>
+            {progress.streak > 1 && ` · ${progress.streak}-day streak`}
+          </>
+        )}
       </p>
 
       <CuisineSelect

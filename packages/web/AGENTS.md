@@ -1,18 +1,17 @@
 # FDR
 
 Can't decide what to eat? A food randomizer that spins a reel of dishes across
-world cuisines, built with Next.js and Tauri.
+world cuisines, built with Next.js.
 
 ## Commands
 
-| Command              | Description                               |
-| -------------------- | ----------------------------------------- |
-| `pnpm run dev`       | Start the development server              |
-| `pnpm run build`     | Production build with type checking       |
-| `pnpm run lint`      | ESLint, writing fixes                     |
-| `pnpm run test`      | Unit tests with coverage (80% thresholds) |
-| `pnpm run test:e2e`  | Playwright end-to-end tests               |
-| `pnpm run tauri dev` | Run the Tauri desktop shell               |
+| Command             | Description                               |
+| ------------------- | ----------------------------------------- |
+| `pnpm run dev`      | Start the development server              |
+| `pnpm run build`    | Production build with type checking       |
+| `pnpm run lint`     | ESLint, writing fixes                     |
+| `pnpm run test`     | Unit tests with coverage (80% thresholds) |
+| `pnpm run test:e2e` | Playwright end-to-end tests               |
 
 ## Key Conventions
 
@@ -27,11 +26,9 @@ world cuisines, built with Next.js and Tauri.
 - Path alias `@/*` maps to `./src/*`.
 - DaisyUI themes are `fdr` (light) and `fdr-dark`; `Header` applies the theme
   and reads/writes `localStorage['fdr:theme']`.
-- Shared infrastructure mirrors `education/lingo`: providers (`SWProvider`,
-  `NativeProvider`, `QueryProvider`), atoms (`Badge`, `OfflineBadge`,
-  `ThemeToggle`), hooks and libs live in the same locations.
-- The Tauri shell registers dialog, notification and updater plugins; native
-  bridges go through `src/lib/native/index.ts`.
+- Shared infrastructure lives in `src/providers/` (`SWProvider`),
+  `src/components/atoms/` (`Badge`, `Button`, `OfflineBadge`, `ThemeToggle`),
+  `src/hooks/` and `src/lib/`.
 
 ## Data
 
