@@ -20,6 +20,9 @@ export const useSWRegister = (): void => {
         .catch(() => undefined);
       return;
     }
-    navigator.serviceWorker.register('/sw.js').catch(() => undefined);
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+    navigator.serviceWorker
+      .register(`${basePath}/sw.js`)
+      .catch(() => undefined);
   }, []);
 };

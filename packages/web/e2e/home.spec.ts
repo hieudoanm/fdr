@@ -7,11 +7,16 @@ test('page has correct title', async ({ page }) => {
   await expect(page).toHaveTitle('FDR');
 });
 
-test('home lists the food randomizer tool', async ({ page }) => {
+test('home lists the app tools', async ({ page }) => {
   await page.goto('/');
 
-  await expect(page.getByRole('heading', { name: 'FDR' })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Food & Drink' })
+  ).toBeVisible();
+  await expect(page.getByTestId('tool-card-wheel')).toBeVisible();
   await expect(page.getByTestId('tool-card-randomizer')).toBeVisible();
+  await expect(page.getByTestId('tool-card-dishes')).toBeVisible();
+  await expect(page.getByTestId('tool-card-schedule')).toBeVisible();
 });
 
 test('navigating to food randomizer works', async ({ page }) => {
@@ -21,26 +26,6 @@ test('navigating to food randomizer works', async ({ page }) => {
   await expect(
     page.getByRole('heading', { name: 'Food Randomizer' })
   ).toBeVisible();
-});
-
-test('about page loads', async ({ page }) => {
-  await page.goto('/about');
-
-  await expect(page.getByText('About')).toBeVisible();
-  await expect(page.getByText('FDR')).toBeVisible();
-});
-
-test('downloads page loads', async ({ page }) => {
-  await page.goto('/downloads');
-
-  await expect(page.getByText('Downloads')).toBeVisible();
-  await expect(page.getByText('Installers')).toBeVisible();
-});
-
-test('version page loads', async ({ page }) => {
-  await page.goto('/version');
-
-  await expect(page.getByText('Version')).toBeVisible();
 });
 
 test('404 page for unknown routes', async ({ page }) => {

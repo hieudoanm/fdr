@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/hieudoanm/fdr.git"
   },
-  "license": "GPL-3.0",
+  "license": "MIT",
   "author": {
     "name": "hieudoanm",
     "email": "hieu.doan.professional@gmail.com",
@@ -39,10 +39,9 @@
     "start": "next start",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "foods:convert": "node scripts/foods-csv-to-json.mjs"
+    "foods:convert": "node ../data/csv-to-json.mjs"
   },
   "dependencies": {
-    "@tanstack/react-query": "5.107.1",
     "idb": "8.0.4",
     "next": "16.4.5",
     "react": "19.3.1",

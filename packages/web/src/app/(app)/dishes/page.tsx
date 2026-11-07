@@ -1,5 +1,3 @@
-'use client';
-
 import { CuisineList } from '@/components/organisms/List';
 import { NextPage } from 'next';
 

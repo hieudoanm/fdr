@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 @plugin 'daisyui' {
-  themes: fdr --default;
+  themes:
+    fdr --default,
+    fdr-dark;
 }
 
 @plugin 'daisyui/theme' {
@@ -27,6 +29,39 @@
   --color-warning-content: #43302b;
   --color-error: #d7263d;
   --color-error-content: #ffffff;
+  --radius-selector: 1rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'fdr-dark';
+  color-scheme: 'dark';
+  --color-base-100: #221a18;
+  --color-base-200: #2c211e;
+  --color-base-300: #3d2f2a;
+  --color-base-content: #f3e7dc;
+  --color-primary: #ff6b52;
+  --color-primary-content: #2b0f0a;
+  --color-secondary: #8fce6d;
+  --color-secondary-content: #14230c;
+  --color-accent: #ffbe3d;
+  --color-accent-content: #3a2a05;
+  --color-neutral: #c9b8ae;
+  --color-neutral-content: #221a18;
+  --color-info: #6db3f2;
+  --color-info-content: #0b1c30;
+  --color-success: #8fce6d;
+  --color-success-content: #14230c;
+  --color-warning: #ffbe3d;
+  --color-warning-content: #3a2a05;
+  --color-error: #ff5c74;
+  --color-error-content: #33060f;
   --radius-selector: 1rem;
   --radius-field: 0.75rem;
   --radius-box: 1rem;

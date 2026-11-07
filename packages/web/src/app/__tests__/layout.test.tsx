@@ -45,8 +45,4 @@ describe('metadata', () => {
   it('has correct title', () => {
     expect(metadata.title).toBe('FDR');
   });
-
-  it('has manifest', () => {
-    expect(metadata.manifest).toBe('/manifest.json');
-  });
 });

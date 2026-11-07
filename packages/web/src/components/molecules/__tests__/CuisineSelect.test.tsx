@@ -41,7 +41,7 @@ describe('CuisineSelect', () => {
     expect(screen.getByTitle('Italy')).toBeInTheDocument();
     expect(screen.getByTitle('Japan')).toBeInTheDocument();
     expect(
-      within(menu).getByRole('button', { name: /All Cuisines/ })
+      within(menu).getByRole('option', { name: /All Cuisines/ })
     ).toBeInTheDocument();
   });
 
@@ -58,7 +58,7 @@ describe('CuisineSelect', () => {
     const user = userEvent.setup();
     const { onChange } = setup('japanese');
     await user.click(screen.getByTestId('cuisine-select-trigger'));
-    await user.click(screen.getByRole('button', { name: /All Cuisines/ }));
+    await user.click(screen.getByRole('option', { name: /All Cuisines/ }));
     expect(onChange).toHaveBeenCalledWith('all');
     expect(screen.queryByTestId('cuisine-select-menu')).not.toBeInTheDocument();
   });
@@ -69,6 +69,15 @@ describe('CuisineSelect', () => {
     await user.click(screen.getByTestId('cuisine-select-trigger'));
     expect(screen.getByTestId('cuisine-select-menu')).toBeInTheDocument();
     await user.click(document.body);
+    expect(screen.queryByTestId('cuisine-select-menu')).not.toBeInTheDocument();
+  });
+
+  it('closes on Escape', async () => {
+    const user = userEvent.setup();
+    setup();
+    await user.click(screen.getByTestId('cuisine-select-trigger'));
+    expect(screen.getByTestId('cuisine-select-menu')).toBeInTheDocument();
+    await user.keyboard('{Escape}');
     expect(screen.queryByTestId('cuisine-select-menu')).not.toBeInTheDocument();
   });
 });

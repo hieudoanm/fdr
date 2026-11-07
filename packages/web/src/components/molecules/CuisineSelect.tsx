@@ -33,6 +33,15 @@ export const CuisineSelect: FC<CuisineSelectProps> = ({
     return () => document.removeEventListener('mousedown', handle);
   }, [open]);
 
+  useEffect(() => {
+    if (!open) return;
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => document.removeEventListener('keydown', handleKey);
+  }, [open]);
+
   const choose = (next: string) => {
     onChange(next);
     setOpen(false);
@@ -41,8 +50,11 @@ export const CuisineSelect: FC<CuisineSelectProps> = ({
   return (
     <div ref={ref} className="relative w-full max-w-md">
       <button
+        type="button"
         onClick={() => setOpen((previous) => !previous)}
         data-testid="cuisine-select-trigger"
+        aria-haspopup="listbox"
+        aria-expanded={open}
         className={`flex w-full cursor-pointer items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold tracking-wide transition-all duration-200 ${
           open
             ? 'text-accent border-accent/50 bg-accent/10'
@@ -64,8 +76,12 @@ export const CuisineSelect: FC<CuisineSelectProps> = ({
       {open && (
         <div
           data-testid="cuisine-select-menu"
+          role="listbox"
+          aria-label="Cuisine"
           className="border-base-content/10 bg-base-200 absolute right-0 left-0 z-[1000] mt-2 rounded-2xl border p-1.5 shadow-2xl shadow-black/50">
           <button
+            role="option"
+            aria-selected={value === 'all'}
             onClick={() => choose('all')}
             className={`flex w-full cursor-pointer items-center gap-2 rounded-xl border-none px-3 py-2.5 text-left text-sm font-semibold transition-colors duration-150 ${
               value === 'all'
@@ -86,6 +102,8 @@ export const CuisineSelect: FC<CuisineSelectProps> = ({
           {cuisines.map((cuisine) => (
             <button
               key={cuisine.value}
+              role="option"
+              aria-selected={value === cuisine.value}
               onClick={() => choose(cuisine.value)}
               title={cuisine.label}
               className={`flex w-full cursor-pointer items-center gap-2 rounded-xl border-none px-3 py-2.5 text-left text-sm font-semibold transition-colors duration-150 ${
