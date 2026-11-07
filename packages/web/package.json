@@ -42,7 +42,7 @@
     "foods:convert": "node scripts/foods-csv-to-json.mjs"
   },
   "dependencies": {
-    "@tanstack/react-query": "5.106.1",
+    "@tanstack/react-query": "5.107.1",
     "idb": "8.0.4",
     "next": "16.4.5",
     "react": "19.3.1",
