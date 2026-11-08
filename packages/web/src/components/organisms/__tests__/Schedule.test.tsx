@@ -40,6 +40,20 @@ describe('FoodSchedule', () => {
     expect(wednesday?.textContent).toContain('Wednesday');
   });
 
+  it('shows a week column when entries span multiple weeks', () => {
+    const twoWeek = scheldon.flatMap((entry, index) => [
+      { ...entry, week: 'Week 1' },
+      { ...entry, week: 'Week 2', meal: `${entry.meal} II` },
+    ]);
+    render(<FoodSchedule entries={twoWeek} today="Monday" />);
+    expect(screen.getByText('Week')).toBeInTheDocument();
+    expect(screen.getAllByText('Week 1')).toHaveLength(scheldon.length);
+    expect(screen.getAllByText('Week 2')).toHaveLength(scheldon.length);
+    expect(screen.getAllByTestId('schedule-row')).toHaveLength(
+      scheldon.length * 2
+    );
+  });
+
   it('shows the canonical meal for each day', () => {
     render(<FoodSchedule entries={scheldon} today="Thursday" />);
     expect(screen.getByText(/Pizza/)).toBeInTheDocument();

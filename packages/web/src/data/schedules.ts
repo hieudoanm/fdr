@@ -15,7 +15,7 @@ const SCHEDULES: ScheduleMeta[] = [
   {
     slug: 'vietnam',
     label: 'Vietnam',
-    description: 'A week of classic Vietnamese dishes',
+    description: 'Two weeks of classic Vietnamese dishes',
     emoji: '🇻🇳',
     entries: vietnam,
   },

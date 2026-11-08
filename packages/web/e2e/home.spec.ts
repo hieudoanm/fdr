@@ -16,7 +16,7 @@ test('home lists the app tools', async ({ page }) => {
   await expect(page.getByTestId('tool-card-wheel')).toBeVisible();
   await expect(page.getByTestId('tool-card-randomizer')).toBeVisible();
   await expect(page.getByTestId('tool-card-dishes')).toBeVisible();
-  await expect(page.getByTestId('tool-card-schedule')).toBeVisible();
+  await expect(page.getByTestId('tool-card-schedulevietnam')).toBeVisible();
 });
 
 test('navigating to food randomizer works', async ({ page }) => {

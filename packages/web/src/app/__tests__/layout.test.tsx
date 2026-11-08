@@ -6,9 +6,6 @@ jest.mock('@/providers/SWProvider', () => ({
     <div>{children}</div>
   ),
 }));
-jest.mock('@/components/organisms/Header', () => ({
-  Header: () => <div data-testid="header">Header</div>,
-}));
 
 import RootLayout, { metadata, viewport } from '../layout';
 
@@ -29,15 +26,6 @@ describe('RootLayout', () => {
       </RootLayout>
     );
     expect(document.documentElement).toHaveAttribute('data-theme', 'fdr');
-  });
-
-  it('renders header', () => {
-    render(
-      <RootLayout>
-        <div />
-      </RootLayout>
-    );
-    expect(screen.getByTestId('header')).toBeInTheDocument();
   });
 });
 

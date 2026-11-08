@@ -15,6 +15,7 @@ export interface Food {
 
 export interface ScheduleEntry {
   day: string;
+  week?: string;
   meal: string;
   emoji: string;
   restaurant: string;

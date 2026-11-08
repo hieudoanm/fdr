@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import { notFound } from 'next/navigation';
 import { FoodSchedule } from '@/components/organisms/Schedule';
 import { SchedulePicker } from '@/components/molecules/SchedulePicker';
+import { BackLink } from '@/components/molecules/BackLink';
 import { getSchedule, listSchedules } from '@/data';
 
 interface ScheduleSlugPageProps {
@@ -17,6 +18,7 @@ const ScheduleSlugPage: NextPage<ScheduleSlugPageProps> = async ({
 
   return (
     <main className="bg-base-100 flex min-h-dvh flex-col items-center justify-center gap-6 px-4 py-12 sm:px-6">
+      <BackLink />
       <div className="text-center">
         <h1 className="text-primary font-serif text-3xl font-bold tracking-tight">
           {schedule.label}
