@@ -47,5 +47,54 @@
     "emoji": "🍜",
     "restaurant": "-",
     "note": "Beef phở with fresh herbs and lime"
+  },
+  {
+    "day": "Monday",
+    "meal": "Bún Chả",
+    "emoji": "🍜",
+    "restaurant": "-",
+    "note": "Grilled pork and vermicelli bowls with herbs and fish sauce"
+  },
+  {
+    "day": "Tuesday",
+    "meal": "Gỏi Cuốn",
+    "emoji": "🥗",
+    "restaurant": "-",
+    "note": "Fresh spring rolls with pork, shrimp and peanut sauce"
+  },
+  {
+    "day": "Wednesday",
+    "meal": "Bánh Cuốn",
+    "emoji": "🍥",
+    "restaurant": "-",
+    "note": "Delicate steamed rice crepes with pork and mushroom"
+  },
+  {
+    "day": "Thursday",
+    "meal": "Cơm Gà",
+    "emoji": "🍗",
+    "restaurant": "-",
+    "note": "Hainanese-style chicken rice with ginger sauce"
+  },
+  {
+    "day": "Friday",
+    "meal": "Bún Bò Nam Bộ",
+    "emoji": "🍜",
+    "restaurant": "-",
+    "note": "Southern-style beef noodle soup with shrimp and tomato"
+  },
+  {
+    "day": "Saturday",
+    "meal": "Chả Cá",
+    "emoji": "🐟",
+    "restaurant": "-",
+    "note": "Turmeric-marinated fish with dill and rice noodles"
+  },
+  {
+    "day": "Sunday",
+    "meal": "Chè",
+    "emoji": "🍮",
+    "restaurant": "-",
+    "note": "Mixed sweet soup with beans, jelly and coconut"
   }
 ]

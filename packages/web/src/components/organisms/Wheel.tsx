@@ -21,7 +21,7 @@ const COLORS = [
 ];
 
 const WHEEL_SIZE = 320;
-const LABEL_RADIUS = 88;
+const LABEL_RADIUS = 115;
 
 export interface WheelSpin {
   targetIndex: number;

@@ -18,17 +18,16 @@ world cuisines, built with Next.js.
 - The randomizer feature is wired up in
   `src/components/organisms/Randomizer.tsx` (the `FoodRandomizer` organism), and
   its reusable pieces live in `src/components/molecules/` (`CuisineSelect`,
-  `HowToModal`, `Reel`) and `src/hooks/` (`useFoodPicker`).
+  `Reel`, `SchedulePicker`) and `src/hooks/` (`useFoodPicker`).
 - Jest treats every file inside `__tests__/` as a suite: keep shared fixtures in
   `<feature>/testing/`, not in `__tests__/`.
 - Pages are thin: they compose templates (`HomeTemplate`) and feature
   components.
 - Path alias `@/*` maps to `./src/*`.
-- DaisyUI themes are `fdr` (light) and `fdr-dark`; `Header` applies the theme
-  and reads/writes `localStorage['fdr:theme']`.
+- DaisyUI has a single `fdr` light theme, defined in `src/styles/globals.css`
+  and applied via `data-theme="fdr"` on `<html>`.
 - Shared infrastructure lives in `src/providers/` (`SWProvider`),
-  `src/components/atoms/` (`Badge`, `Button`, `OfflineBadge`, `ThemeToggle`),
-  `src/hooks/` and `src/lib/`.
+  `src/components/atoms/` (`Badge`, `Button`, `OfflineBadge`) and `src/hooks/`.
 
 ## Data
 

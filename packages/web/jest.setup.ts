@@ -1,19 +1,9 @@
 import '@testing-library/jest-dom';
-import 'fake-indexeddb/auto';
 
 if (typeof global.TextEncoder === 'undefined') {
   const { TextEncoder, TextDecoder } = require('node:util');
   global.TextEncoder = TextEncoder;
   global.TextDecoder = TextDecoder as typeof global.TextDecoder;
-}
-
-// jsdom does not implement structuredClone, which fake-indexeddb requires.
-if (typeof window.structuredClone !== 'function') {
-  Object.defineProperty(window, 'structuredClone', {
-    configurable: true,
-    writable: true,
-    value: (value: unknown): unknown => JSON.parse(JSON.stringify(value)),
-  });
 }
 
 Element.prototype.scrollIntoView = () => {};

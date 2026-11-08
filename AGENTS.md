@@ -25,9 +25,9 @@
 | Runtime    | Node 26.13.0 (`.nvmrc`), pnpm 12.16.1                 |
 | Monorepo   | pnpm workspaces + Turborepo                           |
 | Framework  | Next.js 16 App Router, React 19, TypeScript 6         |
-| Styling    | Tailwind CSS 4 + DaisyUI 5 (`fdr`, `fdr-dark` themes) |
+| Styling    | Tailwind CSS 4 + DaisyUI 5 (`fdr` theme)              |
 | Icons      | `react-icons`                                         |
-| State/data | `idb`, static JSON                                     |
+| State/data | Static JSON                                           |
 | Tests      | Jest 30 + Testing Library (jsdom), Playwright for e2e |
 | Deploy     | GitHub Pages via GitHub Actions                       |
 
@@ -53,13 +53,13 @@ node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
 | Path                                    | Contents                                                                                                             |
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `packages/web/src/app`                  | Routes: `/`, `/wheel`, `/randomizer`, `/schedule`, `/dishes`; error/loading/not-found boundaries; `robots.ts`          |
-| `packages/web/src/components/atoms`     | `Badge`, `Button`, `OfflineBadge`, `ThemeToggle`                                                                     |
-| `packages/web/src/components/molecules` | `CuisineSelect`, `Reel`                                                                                              |
-| `packages/web/src/components/organisms` | `Header`, `List`, `Randomizer`, `Schedule`, `Wheel`                                                                  |
+| `packages/web/src/components/atoms`     | `Badge`, `Button`, `OfflineBadge`                                                                                     |
+| `packages/web/src/components/molecules` | `BackLink`, `CuisineSelect`, `Reel`, `SchedulePicker`                                                                |
+| `packages/web/src/components/organisms` | `List`, `Randomizer`, `Schedule`, `Wheel`                                                                            |
 | `packages/web/src/components/templates` | `HomeTemplate`, `ErrorTemplate`                                                                                      |
 | `packages/web/src/data`                 | Types, JSON, and `FOOD_OPTIONS` accessors                                                                            |
 | `packages/web/src/hooks`                | `useFoodPicker` and related hooks                                                                                    |
-| `packages/web/src/lib`                  | Providers and utilities                                                                                              |
+| `packages/web/src/providers`            | `SWProvider`                                                                                                         |
 | `packages/web/e2e`                      | Playwright specs                                                                                                     |
 | `packages/data/csv`                     | Source of truth: `foods.csv`, `countries.csv`, `scheldon.csv`, `schedule-vietnam.csv`, `schedule-united-kingdom.csv` |
 | `packages/data/json`                    | Generated JSON (`csv-to-json.mjs`)                                                                                   |
@@ -78,9 +78,8 @@ node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
   otherwise.
 - **Components are `FC`; pages are `NextPage`.**
 - **Path alias.** `@/*` maps to `packages/web/src/*`.
-- **Theme.** `layout.tsx` renders the default `fdr` theme; `Header`
-  owns the toggle, applies the stored theme, and writes
-  `localStorage['fdr:theme']`.
+- **Theme.** `layout.tsx` renders the single `fdr` light theme via
+  `data-theme="fdr"`; theme colors live in `src/styles/globals.css`.
 
 ## Data conventions
 

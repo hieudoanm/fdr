@@ -41,4 +41,18 @@ describe('HomeTemplate', () => {
     render(<HomeTemplate {...base} />);
     expect(screen.getByRole('main').className).toContain('justify-center');
   });
+
+  it('renders children when provided', () => {
+    render(
+      <HomeTemplate {...base}>
+        <div data-testid="extra-section">extra</div>
+      </HomeTemplate>
+    );
+    expect(screen.getByTestId('extra-section')).toBeInTheDocument();
+  });
+
+  it('renders a back link when showBackLink is set', () => {
+    render(<HomeTemplate {...base} showBackLink />);
+    expect(screen.getByTestId('back-home')).toHaveAttribute('href', '/');
+  });
 });

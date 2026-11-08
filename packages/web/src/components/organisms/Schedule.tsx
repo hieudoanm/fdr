@@ -25,6 +25,7 @@ export const FoodSchedule: FC<FoodScheduleProps> = ({
   }, [today]);
 
   const activeDay = today ?? clientToday;
+  const showWeek = entries.some((entry) => entry.week);
 
   return (
     <div className="flex w-full max-w-3xl flex-col gap-4">
@@ -43,6 +44,11 @@ export const FoodSchedule: FC<FoodScheduleProps> = ({
               <th scope="col" className="px-4 py-3">
                 Day
               </th>
+              {showWeek && (
+                <th scope="col" className="px-4 py-3">
+                  Week
+                </th>
+              )}
               <th scope="col" className="px-4 py-3">
                 Meal
               </th>
@@ -59,13 +65,18 @@ export const FoodSchedule: FC<FoodScheduleProps> = ({
               const isToday = entry.day === activeDay;
               return (
                 <tr
-                  key={entry.day}
+                  key={entry.week ? `${entry.week}-${entry.day}` : entry.day}
                   data-testid="schedule-row"
                   data-today={isToday || undefined}
                   className={`border-base-content/5 border-b transition-colors last:border-b-0 ${
                     isToday ? 'text-accent bg-accent/10' : ''
                   }`}>
                   <td className="px-4 py-3 font-semibold">{entry.day}</td>
+                  {showWeek && (
+                    <td className="text-base-content/60 px-4 py-3">
+                      {entry.week}
+                    </td>
+                  )}
                   <td className="px-4 py-3 font-medium">
                     <span className="mr-2">{entry.emoji}</span>
                     {entry.meal}

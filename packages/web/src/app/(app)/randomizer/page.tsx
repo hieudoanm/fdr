@@ -3,6 +3,7 @@
 import { Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { FoodRandomizer } from '@/components/organisms/Randomizer';
+import { BackLink } from '@/components/molecules/BackLink';
 
 const RandomizerContent = () => {
   const searchParams = useSearchParams();
@@ -25,7 +26,8 @@ const RandomizerContent = () => {
 
 const RandomizerPage = () => {
   return (
-    <main className="bg-base-100 flex min-h-dvh flex-col items-center justify-center px-4 py-12 sm:px-6">
+    <main className="bg-base-100 flex min-h-dvh flex-col items-center justify-center gap-6 px-4 py-12 sm:px-6">
+      <BackLink />
       <Suspense fallback={null}>
         <RandomizerContent />
       </Suspense>

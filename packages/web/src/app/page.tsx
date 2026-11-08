@@ -1,14 +1,12 @@
 import {
+  CourseGrid,
   HomeTemplate,
+  scheduleToCourseItem,
   type CourseItem,
 } from '@/components/templates/HomeTemplate';
+import { listSchedules } from '@/data';
 import { NextPage } from 'next';
-import {
-  PiCalendarDots,
-  PiCircleNotch,
-  PiHamburger,
-  PiListDashes,
-} from 'react-icons/pi';
+import { PiCircleNotch, PiHamburger, PiListDashes } from 'react-icons/pi';
 
 const ITEMS: CourseItem[] = [
   {
@@ -29,21 +27,23 @@ const ITEMS: CourseItem[] = [
     icon: PiListDashes,
     href: '/dishes/',
   },
-  {
-    label: 'Food Schedules',
-    description: 'Browse weekly dining schedules',
-    icon: PiCalendarDots,
-    href: '/schedule/',
-  },
 ];
+
+const SCHEDULE_ITEMS = listSchedules().map(scheduleToCourseItem);
 
 const HomePage: NextPage = () => {
   return (
     <HomeTemplate
       title="Food & Drink"
       description="Can't decide what to eat? Spin the reel and let fate choose."
-      items={ITEMS}
-    />
+      items={ITEMS}>
+      <div className="text-base-content/50 flex w-full max-w-3xl items-center gap-4 text-xs font-bold tracking-widest uppercase">
+        <hr className="border-base-content/10 flex-1 border-t" />
+        Schedules
+        <hr className="border-base-content/10 flex-1 border-t" />
+      </div>
+      <CourseGrid items={SCHEDULE_ITEMS} />
+    </HomeTemplate>
   );
 };
 

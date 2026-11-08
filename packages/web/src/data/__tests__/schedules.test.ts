@@ -15,16 +15,16 @@ describe('schedules', () => {
     const vietnam = getSchedule('vietnam');
     expect(vietnam).toBeDefined();
     expect(vietnam?.label).toBe('Vietnam');
-    expect(vietnam?.entries).toHaveLength(7);
+    expect(vietnam?.entries).toHaveLength(14);
   });
 
   it('returns undefined for an unknown slug', () => {
     expect(getSchedule('nope')).toBeUndefined();
   });
 
-  it('each schedule has seven weekday entries', () => {
+  it('each schedule has whole weeks of entries', () => {
     listSchedules().forEach((schedule) => {
-      expect(schedule.entries).toHaveLength(7);
+      expect(schedule.entries.length % 7).toBe(0);
       schedule.entries.forEach((entry) => {
         expect(entry.day.length).toBeGreaterThan(0);
         expect(entry.meal.length).toBeGreaterThan(0);
