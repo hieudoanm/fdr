@@ -66,7 +66,7 @@
     "prettier": "3.9.10",
     "prettier-plugin-tailwindcss": "0.8.1",
     "rimraf": "6.1.4",
-    "serve": "^14.2.7",
+    "serve": "14.2.7",
     "tailwindcss": "4.3.5",
     "ts-jest": "29.4.15",
     "typescript": "6.0.3",
