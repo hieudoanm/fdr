@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
 import { FC, ReactNode } from 'react';
 import { SWProvider } from '@/providers/SWProvider';
+import { OfflineBadge } from '@/components/atoms/OfflineBadge';
 
 export const metadata: Metadata = {
   title: 'FDR',
@@ -35,23 +36,28 @@ export const metadata: Metadata = {
     statusBarStyle: 'black-translucent',
     title: 'FDR',
   },
+  icons: {
+    apple: [
+      {
+        url: `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icons/icon-180x180.png`,
+        sizes: '180x180',
+      },
+    ],
+  },
 };
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 };
-
-const iconHref = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icons/icon-192x192.png`;
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <html lang="en" data-theme="fdr">
-    <head>
-      <link rel="apple-touch-icon" href={iconHref} />
-    </head>
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-mono">
       <SWProvider>{children}</SWProvider>
+      <div className="pointer-events-none fixed right-4 bottom-4 z-50">
+        <OfflineBadge />
+      </div>
     </body>
   </html>
 );

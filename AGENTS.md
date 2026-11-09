@@ -53,7 +53,7 @@ node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
 | Path                                    | Contents                                                                                                             |
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `packages/web/src/app`                  | Routes: `/`, `/wheel`, `/randomizer`, `/schedule`, `/dishes`; error/loading/not-found boundaries; `robots.ts`          |
-| `packages/web/src/components/atoms`     | `Badge`, `Button`, `OfflineBadge`                                                                                     |
+| `packages/web/src/components/atoms`     | `Badge`, `OfflineBadge`                                                                                               |
 | `packages/web/src/components/molecules` | `BackLink`, `CuisineSelect`, `Reel`, `SchedulePicker`                                                                |
 | `packages/web/src/components/organisms` | `List`, `Randomizer`, `Schedule`, `Wheel`                                                                            |
 | `packages/web/src/components/templates` | `HomeTemplate`, `ErrorTemplate`                                                                                      |
@@ -61,7 +61,7 @@ node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
 | `packages/web/src/hooks`                | `useFoodPicker` and related hooks                                                                                    |
 | `packages/web/src/providers`            | `SWProvider`                                                                                                         |
 | `packages/web/e2e`                      | Playwright specs                                                                                                     |
-| `packages/data/csv`                     | Source of truth: `foods.csv`, `countries.csv`, `scheldon.csv`, `schedule-vietnam.csv`, `schedule-united-kingdom.csv` |
+| `packages/data/csv`                     | Source of truth: `foods.csv`, `countries.csv`, `schedule-scheldon.csv`, `schedule-vietnam.csv`, `schedule-united-kingdom.csv` |
 | `packages/data/json`                    | Generated JSON (`csv-to-json.mjs`)                                                                                   |
 
 ## Architecture
@@ -91,7 +91,8 @@ node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
   `value` is the stable slug; `label` is display text.
 - **`Cuisine` shape.** `{ value, label, emoji }`; `value` matches
   `Food.country`.
-- **`ScheduleEntry` shape.** `{ day, meal, emoji, restaurant, note }`.
+- **`ScheduleEntry` shape.** `{ day, week?, meal, emoji, restaurant, note }`;
+  `week` is only present on multi-week schedules.
 - **Derived options.** `FOOD_OPTIONS` in `src/data/foods.ts` maps `all`, each
   country, and each dish value to label lists used by the reel and picker.
 - **Types live in `src/data/types.ts`.** Export new shared types from
