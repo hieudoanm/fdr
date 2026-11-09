@@ -133,6 +133,7 @@ export const CuisineList: FC<CuisineListProps> = ({
         </div>
         <p
           data-testid="cuisine-count"
+          aria-live="polite"
           className="text-base-content/50 border-base-content/10 border-t px-4 py-2 text-xs">
           {rows.length} of {foods.length} dishes
         </p>

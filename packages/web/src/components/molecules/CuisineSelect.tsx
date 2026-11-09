@@ -1,6 +1,6 @@
 'use client';
 
-import type { FC } from 'react';
+import type { FC, KeyboardEvent } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { PiCaretDown, PiCheckBold } from 'react-icons/pi';
 import type { Cuisine } from '@/data';
@@ -20,6 +20,8 @@ export const CuisineSelect: FC<CuisineSelectProps> = ({
 }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const menuRef = useRef<HTMLDivElement>(null);
   const selected = cuisines.find((cuisine) => cuisine.value === value);
 
   useEffect(() => {
@@ -35,21 +37,62 @@ export const CuisineSelect: FC<CuisineSelectProps> = ({
 
   useEffect(() => {
     if (!open) return;
-    const handleKey = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setOpen(false);
+    const handleKey = (event: globalThis.KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        triggerRef.current?.focus();
+      }
     };
     document.addEventListener('keydown', handleKey);
     return () => document.removeEventListener('keydown', handleKey);
   }, [open]);
 
+  // Move focus into the listbox when it opens, on the selected option.
+  useEffect(() => {
+    if (!open) return;
+    const selectedOption = menuRef.current?.querySelector<HTMLElement>(
+      '[role="option"][aria-selected="true"]'
+    );
+    (selectedOption ?? menuRef.current)?.focus();
+  }, [open]);
+
+  const menuOptions = (): HTMLElement[] =>
+    Array.from(
+      menuRef.current?.querySelectorAll<HTMLElement>('[role="option"]') ?? []
+    );
+
+  const handleMenuKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    const items = menuOptions();
+    const current = items.indexOf(document.activeElement as HTMLElement);
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      const delta = event.key === 'ArrowDown' ? 1 : -1;
+      const next =
+        current < 0
+          ? event.key === 'ArrowDown'
+            ? 0
+            : items.length - 1
+          : (current + delta + items.length) % items.length;
+      items[next]?.focus();
+    } else if (event.key === 'Home') {
+      event.preventDefault();
+      items[0]?.focus();
+    } else if (event.key === 'End') {
+      event.preventDefault();
+      items.at(-1)?.focus();
+    }
+  };
+
   const choose = (next: string) => {
     onChange(next);
     setOpen(false);
+    triggerRef.current?.focus();
   };
 
   return (
     <div ref={ref} className="relative w-full max-w-md">
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => setOpen((previous) => !previous)}
         data-testid="cuisine-select-trigger"
@@ -75,9 +118,12 @@ export const CuisineSelect: FC<CuisineSelectProps> = ({
 
       {open && (
         <div
+          ref={menuRef}
           data-testid="cuisine-select-menu"
           role="listbox"
           aria-label="Cuisine"
+          tabIndex={-1}
+          onKeyDown={handleMenuKeyDown}
           className="border-base-content/10 bg-base-200 absolute right-0 left-0 z-[1000] mt-2 rounded-2xl border p-1.5 shadow-2xl shadow-black/50">
           <button
             role="option"

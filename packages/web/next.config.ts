@@ -5,6 +5,7 @@ const BASE_PATH: string = process.env.BASE_PATH ?? '';
 const nextConfig: NextConfig = {
   trailingSlash: true,
   reactStrictMode: true,
+  poweredByHeader: false,
   output: 'export',
   basePath: BASE_PATH,
   env: {

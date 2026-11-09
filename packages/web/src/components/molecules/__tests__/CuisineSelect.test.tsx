@@ -80,4 +80,58 @@ describe('CuisineSelect', () => {
     await user.keyboard('{Escape}');
     expect(screen.queryByTestId('cuisine-select-menu')).not.toBeInTheDocument();
   });
+
+  it('focuses the selected option when the menu opens', async () => {
+    const user = userEvent.setup();
+    setup('japanese');
+    await user.click(screen.getByTestId('cuisine-select-trigger'));
+    const menu = screen.getByTestId('cuisine-select-menu');
+    expect(within(menu).getByTitle('Japan')).toHaveFocus();
+  });
+
+  it('moves focus with arrow keys and wraps around', async () => {
+    const user = userEvent.setup();
+    setup();
+    await user.click(screen.getByTestId('cuisine-select-trigger'));
+    const menu = screen.getByTestId('cuisine-select-menu');
+    const options = within(menu).getAllByRole('option');
+    expect(options[0]).toHaveFocus();
+
+    await user.keyboard('{ArrowDown}');
+    expect(options[1]).toHaveFocus();
+    await user.keyboard('{ArrowDown}');
+    expect(options[2]).toHaveFocus();
+    await user.keyboard('{ArrowDown}');
+    expect(options[0]).toHaveFocus();
+    await user.keyboard('{ArrowUp}');
+    expect(options[2]).toHaveFocus();
+  });
+
+  it('jumps to first and last options with Home and End', async () => {
+    const user = userEvent.setup();
+    setup();
+    await user.click(screen.getByTestId('cuisine-select-trigger'));
+    const menu = screen.getByTestId('cuisine-select-menu');
+    const options = within(menu).getAllByRole('option');
+
+    await user.keyboard('{End}');
+    expect(options[2]).toHaveFocus();
+    await user.keyboard('{Home}');
+    expect(options[0]).toHaveFocus();
+  });
+
+  it('returns focus to the trigger on Escape and on selection', async () => {
+    const user = userEvent.setup();
+    const { onChange } = setup();
+    const trigger = screen.getByTestId('cuisine-select-trigger');
+
+    await user.click(trigger);
+    await user.keyboard('{Escape}');
+    expect(trigger).toHaveFocus();
+
+    await user.click(trigger);
+    await user.click(screen.getByTitle('Japan'));
+    expect(onChange).toHaveBeenCalledWith('japanese');
+    expect(trigger).toHaveFocus();
+  });
 });

@@ -5,6 +5,7 @@ import {
   type CourseItem,
 } from '@/components/templates/HomeTemplate';
 import { listSchedules } from '@/data';
+import type { Metadata } from 'next';
 import { NextPage } from 'next';
 import { PiCircleNotch, PiHamburger, PiListDashes } from 'react-icons/pi';
 
@@ -28,6 +29,10 @@ const ITEMS: CourseItem[] = [
     href: '/dishes/',
   },
 ];
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 const SCHEDULE_ITEMS = listSchedules().map(scheduleToCourseItem);
 

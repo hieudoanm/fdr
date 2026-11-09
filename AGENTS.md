@@ -84,9 +84,9 @@ node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
 ## Data conventions
 
 - **CSV is the source of truth.** Edit `packages/data/csv/*.csv`, then run
-  `node packages/data/csv-to-json.mjs` to rewrite `packages/data/json/*.json`.
-- **The web app imports a copy.** `packages/web/src/data/json/` is a checked-in
-  duplicate of `packages/data/json/`. Regenerate both and keep them identical.
+  `node packages/data/csv-to-json.mjs` — it rewrites both
+  `packages/data/json/*.json` and the checked-in copy in
+  `packages/web/src/data/json/`.
 - **`Food` shape.** `{ country, category, subcategory, value, label, emoji }`.
   `value` is the stable slug; `label` is display text.
 - **`Cuisine` shape.** `{ value, label, emoji }`; `value` matches

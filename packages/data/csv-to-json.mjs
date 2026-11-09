@@ -6,7 +6,10 @@ import { dirname, join, basename, extname } from 'node:path';
 const here = dirname(fileURLToPath(import.meta.url));
 const csvDir = join(here, 'csv');
 const jsonDir = join(here, 'json');
+// The web app consumes a checked-in copy of the generated JSON.
+const webJsonDir = join(here, '..', 'web', 'src', 'data', 'json');
 mkdirSync(jsonDir, { recursive: true });
+mkdirSync(webJsonDir, { recursive: true });
 
 const parseCSV = (text) => {
   const rows = [];
@@ -54,7 +57,11 @@ for (const file of readdirSync(csvDir)) {
   const records = data.map((cells) =>
     Object.fromEntries(header.map((col, i) => [col, cells[i] ?? '']))
   );
-  const jsonPath = join(jsonDir, basename(file, '.csv') + '.json');
-  writeFileSync(jsonPath, `${JSON.stringify(records, null, 2)}\n`, 'utf8');
-  console.log(`Wrote ${records.length} records -> ${jsonPath}`);
+  const name = basename(file, '.csv') + '.json';
+  const contents = `${JSON.stringify(records, null, 2)}\n`;
+  for (const dir of [jsonDir, webJsonDir]) {
+    const jsonPath = join(dir, name);
+    writeFileSync(jsonPath, contents, 'utf8');
+    console.log(`Wrote ${records.length} records -> ${jsonPath}`);
+  }
 }

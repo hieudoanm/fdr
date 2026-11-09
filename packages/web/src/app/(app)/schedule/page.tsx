@@ -8,6 +8,7 @@ import { listSchedules } from '@/data';
 export const metadata: Metadata = {
   title: 'Food Schedules | FDR',
   description: 'Pick a weekly dining schedule to inspect',
+  alternates: { canonical: '/schedule/' },
 };
 
 const SchedulePage: NextPage = () => (

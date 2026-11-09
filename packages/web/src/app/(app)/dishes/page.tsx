@@ -5,6 +5,7 @@ import type { Metadata, NextPage } from 'next';
 export const metadata: Metadata = {
   title: 'Dishes | FDR',
   description: "Browse and search dishes across the world's cuisines",
+  alternates: { canonical: '/dishes/' },
 };
 
 const DishesPage: NextPage = () => (
