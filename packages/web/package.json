@@ -37,7 +37,7 @@
     "build": "next build",
     "prestart": "kill-port 3000",
     "start": "serve out -l 3000",
-    "test:e2e": "playwright test",
+    "test:e2e": "pnpm build && playwright test",
     "test:e2e:ui": "playwright test --ui",
     "foods:convert": "node ../data/csv-to-json.mjs"
   },

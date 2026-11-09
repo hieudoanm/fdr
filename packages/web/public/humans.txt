@@ -1,0 +1,12 @@
+/* TEAM */
+Developer: Hieu Doan
+Site: https://hieudoanm.github.io
+GitHub: https://github.com/hieudoanm
+
+/* SITE */
+Last update: 2026/11/09
+Language: English
+Doctype: HTML5
+
+/* THANKS */
+Built with Next.js, React, Tailwind CSS and DaisyUI.

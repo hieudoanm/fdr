@@ -5,6 +5,7 @@ import type { Metadata, NextPage } from 'next';
 export const metadata: Metadata = {
   title: 'Wheel of Cuisine | FDR',
   description: 'Spin the wheel to let fate pick a country to eat from',
+  alternates: { canonical: '/wheel/' },
 };
 
 const WheelPage: NextPage = () => (

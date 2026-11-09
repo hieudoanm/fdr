@@ -33,8 +33,8 @@ world cuisines, built with Next.js.
 
 Static food data lives in `src/data/json/`, imported through
 `src/data/index.ts`. The canonical CSV sources are in `packages/data/csv/`;
-regenerate JSON with `node packages/data/csv-to-json.mjs`, then copy it into
-`src/data/json/` (the two copies are kept in sync by hand).
+regenerate JSON with `node packages/data/csv-to-json.mjs`, which writes both
+`packages/data/json/` and this `src/data/json/` copy.
 
 - `foods.json` — 200 dishes with
   `{ country, category, subcategory, value, label, emoji }`.

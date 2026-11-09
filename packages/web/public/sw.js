@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fdr-v2';
+const CACHE_NAME = 'fdr-v3';
 
 // Relative URLs resolve against this script's location, so precaching works
 // both at the domain root and under the /fdr base path.

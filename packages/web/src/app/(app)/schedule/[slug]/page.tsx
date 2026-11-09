@@ -52,5 +52,6 @@ export async function generateMetadata({
   return {
     title: `${schedule.label} | FDR`,
     description: schedule.description,
+    alternates: { canonical: `/schedule/${schedule.slug}/` },
   };
 }
