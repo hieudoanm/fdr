@@ -1,6 +1,11 @@
 import { CuisineList } from '@/components/organisms/List';
 import { BackLink } from '@/components/molecules/BackLink';
-import { NextPage } from 'next';
+import type { Metadata, NextPage } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Dishes | FDR',
+  description: "Browse and search dishes across the world's cuisines",
+};
 
 const DishesPage: NextPage = () => (
   <main className="bg-base-100 flex min-h-dvh flex-col items-center justify-center gap-6 px-4 py-12 sm:px-6">

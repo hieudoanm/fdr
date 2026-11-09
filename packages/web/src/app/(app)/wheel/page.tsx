@@ -1,6 +1,11 @@
 import { CuisineWheel } from '@/components/organisms/Wheel';
 import { BackLink } from '@/components/molecules/BackLink';
-import { NextPage } from 'next';
+import type { Metadata, NextPage } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Wheel of Cuisine | FDR',
+  description: 'Spin the wheel to let fate pick a country to eat from',
+};
 
 const WheelPage: NextPage = () => (
   <main className="bg-base-100 flex min-h-dvh flex-col items-center justify-center gap-6 px-4 py-12 sm:px-6">

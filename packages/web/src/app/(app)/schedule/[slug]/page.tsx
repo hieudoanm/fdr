@@ -1,4 +1,4 @@
-import type { NextPage } from 'next';
+import type { Metadata, NextPage } from 'next';
 import { notFound } from 'next/navigation';
 import { FoodSchedule } from '@/components/organisms/Schedule';
 import { SchedulePicker } from '@/components/molecules/SchedulePicker';
@@ -41,4 +41,16 @@ export default ScheduleSlugPage;
 
 export function generateStaticParams() {
   return listSchedules().map((schedule) => ({ slug: schedule.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: ScheduleSlugPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const schedule = getSchedule(slug);
+  if (!schedule) return {};
+  return {
+    title: `${schedule.label} | FDR`,
+    description: schedule.description,
+  };
 }

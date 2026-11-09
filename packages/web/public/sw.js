@@ -2,7 +2,16 @@ const CACHE_NAME = 'fdr-v2';
 
 // Relative URLs resolve against this script's location, so precaching works
 // both at the domain root and under the /fdr base path.
-const PRECACHE_URLS = ['./', 'wheel/', 'randomizer/', 'dishes/', 'schedule/'];
+const PRECACHE_URLS = [
+  './',
+  'wheel/',
+  'randomizer/',
+  'dishes/',
+  'schedule/',
+  'schedule/scheldon/',
+  'schedule/vietnam/',
+  'schedule/united-kingdom/',
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

@@ -9,11 +9,13 @@ interface CuisineListProps {
   filterLabel?: string;
 }
 
+const CUISINE_BY_VALUE = new Map(countries.map((c) => [c.value, c]));
+
 const cuisineLabel = (country: string): string =>
-  countries.find((cuisine) => cuisine.value === country)?.label ?? country;
+  CUISINE_BY_VALUE.get(country)?.label ?? country;
 
 const cuisineEmoji = (country: string): string =>
-  countries.find((cuisine) => cuisine.value === country)?.emoji ?? '🍽️';
+  CUISINE_BY_VALUE.get(country)?.emoji ?? '🍽️';
 
 export const CuisineList: FC<CuisineListProps> = ({
   filterLabel = 'All countries',
@@ -28,6 +30,9 @@ export const CuisineList: FC<CuisineListProps> = ({
         (filter === 'all' || food.country === filter) &&
         (!query ||
           food.label.toLowerCase().includes(query) ||
+          food.value.toLowerCase().includes(query) ||
+          food.category.toLowerCase().includes(query) ||
+          food.subcategory.toLowerCase().includes(query) ||
           cuisineLabel(food.country).toLowerCase().includes(query))
     );
   }, [search, filter]);

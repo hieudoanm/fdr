@@ -27,7 +27,7 @@ world cuisines, built with Next.js.
 - DaisyUI has a single `fdr` light theme, defined in `src/styles/globals.css`
   and applied via `data-theme="fdr"` on `<html>`.
 - Shared infrastructure lives in `src/providers/` (`SWProvider`),
-  `src/components/atoms/` (`Badge`, `Button`, `OfflineBadge`) and `src/hooks/`.
+  `src/components/atoms/` (`Badge`, `OfflineBadge`) and `src/hooks/`.
 
 ## Data
 
@@ -39,8 +39,9 @@ regenerate JSON with `node packages/data/csv-to-json.mjs`, then copy it into
 - `foods.json` — 200 dishes with
   `{ country, category, subcategory, value, label, emoji }`.
 - `countries.json` — 10 countries with `{ value, label, emoji }`.
-- `scheldon.json` — 7 schedule entries with
-  `{ day, meal, emoji, restaurant, note }`.
+- `schedule-scheldon.json` — 7 entries, `schedule-vietnam.json` — 14 entries
+  (two weeks, with `week`), `schedule-united-kingdom.json` — 7 entries; all with
+  `{ day, week?, meal, emoji, restaurant, note }`.
 - `FOOD_OPTIONS` maps `all`, each country, and each dish value to label lists
   used by the reel and picker.
 

@@ -1,9 +1,14 @@
-import { NextPage } from 'next';
+import type { Metadata, NextPage } from 'next';
 import {
   HomeTemplate,
   scheduleToCourseItem,
 } from '@/components/templates/HomeTemplate';
 import { listSchedules } from '@/data';
+
+export const metadata: Metadata = {
+  title: 'Food Schedules | FDR',
+  description: 'Pick a weekly dining schedule to inspect',
+};
 
 const SchedulePage: NextPage = () => (
   <HomeTemplate
