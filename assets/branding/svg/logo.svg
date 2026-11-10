@@ -7,15 +7,34 @@
   </defs>
   <rect width="512" height="512" fill="url(#grid)" />
   <g fill="none" stroke="#111827" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="256" cy="256" r="184" />
-    <line x1="292" y1="256" x2="428" y2="256" />
-    <line x1="281.5" y1="281.5" x2="377.7" y2="377.7" />
-    <line x1="256" y1="292" x2="256" y2="428" />
-    <line x1="230.5" y1="281.5" x2="134.3" y2="377.7" />
-    <line x1="220" y1="256" x2="84" y2="256" />
-    <line x1="230.5" y1="230.5" x2="134.3" y2="134.3" />
-    <line x1="256" y1="220" x2="256" y2="84" />
-    <line x1="281.5" y1="230.5" x2="377.7" y2="134.3" />
-    <circle cx="256" cy="256" r="30" fill="#111827" stroke="none" />
+    <circle cx="256" cy="256" r="200" fill="#f59e0b" />
+    <circle cx="256" cy="256" r="166" fill="#fde047" />
+  </g>
+  <g fill="#dc2626">
+    <circle cx="256" cy="256" r="32" />
+    <circle cx="256" cy="144" r="28" />
+    <circle cx="368" cy="200" r="28" />
+    <circle cx="368" cy="312" r="28" />
+    <circle cx="256" cy="368" r="28" />
+    <circle cx="144" cy="312" r="28" />
+    <circle cx="144" cy="200" r="28" />
+  </g>
+  <g fill="#16a34a">
+    <ellipse cx="200" cy="200" rx="16" ry="9" transform="rotate(-45 200 200)" />
+    <ellipse cx="312" cy="200" rx="16" ry="9" transform="rotate(45 312 200)" />
+    <ellipse cx="200" cy="312" rx="16" ry="9" transform="rotate(45 200 312)" />
+    <ellipse cx="312" cy="312" rx="16" ry="9" transform="rotate(-45 312 312)" />
+  </g>
+  <g fill="#111827">
+    <circle cx="305" cy="150" r="11" />
+    <circle cx="207" cy="362" r="11" />
+    <circle cx="362" cy="256" r="11" />
+    <circle cx="150" cy="256" r="11" />
+  </g>
+  <g fill="#e8c9a0" stroke="#111827" stroke-width="6">
+    <circle cx="225" cy="170" r="17" />
+    <circle cx="287" cy="342" r="17" />
+    <circle cx="170" cy="287" r="17" />
+    <circle cx="342" cy="225" r="17" />
   </g>
 </svg>
