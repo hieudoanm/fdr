@@ -173,7 +173,7 @@ importers:
         specifier: 2.11.10
         version: 2.11.10
 
-  packages/web:
+  packages/landing:
     dependencies:
       next:
         specifier: 16.4.6

@@ -4,16 +4,16 @@
 - The [README](./README.md) explains what the app is; this file explains how to
   change it.
 - Product requirements live in [`docs/`](./docs/README.md).
-- Package-level guidance lives in [`packages/web/AGENTS.md`](./packages/web/AGENTS.md).
+- Package-level guidance lives in [`packages/landing/AGENTS.md`](./packages/landing/AGENTS.md).
 
 ## Read this first
 
-- **Static Next.js app.** `packages/web` uses the App Router with
-  `output: 'export'`; every route is prerendered into `packages/web/out`.
+- **Static Next.js app.** `packages/landing` uses the App Router with
+  `output: 'export'`; every route is prerendered into `packages/landing/out`.
 - **No backend.** There is no API, database, or server-side data fetching. Food
   data is bundled at build time.
-- **One workspace, two packages.** `packages/data` holds source data;
-  `packages/web` holds the app.
+- **Single-package workspace.** `packages/landing` holds the Next.js app;
+  CSV sources and generated JSON live inside it at `packages/landing/data`.
 - **`pnpm typecheck`, `pnpm lint`, and `pnpm test` must pass before a change is
   done.**
 - **Keep diffs minimal.** Do not reformat files you did not change.
@@ -38,31 +38,31 @@ Run from the repository root unless noted.
 ```bash
 pnpm install          # install workspace dependencies
 pnpm dev              # turbo run dev -> http://localhost:3000
-pnpm build            # turbo run build -> packages/web/out
-pnpm lint             # turbo run lint (eslint . --fix in web)
+pnpm build            # turbo run build -> packages/landing/out
+pnpm lint             # turbo run lint (eslint . --fix in landing)
 pnpm typecheck        # turbo run typecheck (tsc --noEmit)
 pnpm test             # turbo run test (Jest, 80% coverage thresholds)
 pnpm format           # turbo run format (Prettier, writes)
 
-pnpm --filter @fdr/web test:e2e     # Playwright
-node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
+pnpm --filter @fdr/landing test:e2e     # Playwright
+node packages/landing/data/csv-to-json.mjs  # regenerate JSON from CSV
 ```
 
 ## Workspace layout
 
 | Path                                    | Contents                                                                                                             |
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `packages/web/src/app`                  | Routes: `/`, `/wheel`, `/randomizer`, `/schedule`, `/dishes`; error/loading/not-found boundaries; `robots.ts`          |
-| `packages/web/src/components/atoms`     | `Badge`, `OfflineBadge`                                                                                               |
-| `packages/web/src/components/molecules` | `BackLink`, `CuisineSelect`, `Reel`, `SchedulePicker`                                                                |
-| `packages/web/src/components/organisms` | `List`, `Randomizer`, `Schedule`, `Wheel`                                                                            |
-| `packages/web/src/components/templates` | `HomeTemplate`, `ErrorTemplate`                                                                                      |
-| `packages/web/src/data`                 | Types, JSON, and `FOOD_OPTIONS` accessors                                                                            |
-| `packages/web/src/hooks`                | `useFoodPicker` and related hooks                                                                                    |
-| `packages/web/src/providers`            | `SWProvider`                                                                                                         |
-| `packages/web/e2e`                      | Playwright specs                                                                                                     |
-| `packages/data/csv`                     | Source of truth: `foods.csv`, `countries.csv`, `schedule-scheldon.csv`, `schedule-vietnam.csv`, `schedule-united-kingdom.csv` |
-| `packages/data/json`                    | Generated JSON (`csv-to-json.mjs`)                                                                                   |
+| `packages/landing/src/app`                  | Routes: `/`, `/wheel`, `/randomizer`, `/schedule`, `/dishes`; error/loading/not-found boundaries; `robots.ts`          |
+| `packages/landing/src/components/atoms`     | `Badge`, `OfflineBadge`                                                                                               |
+| `packages/landing/src/components/molecules` | `BackLink`, `CuisineSelect`, `Reel`, `SchedulePicker`                                                                |
+| `packages/landing/src/components/organisms` | `List`, `Randomizer`, `Schedule`, `Wheel`                                                                            |
+| `packages/landing/src/components/templates` | `HomeTemplate`, `ErrorTemplate`                                                                                      |
+| `packages/landing/src/data`                 | Types, JSON, and `FOOD_OPTIONS` accessors                                                                            |
+| `packages/landing/src/hooks`                | `useFoodPicker` and related hooks                                                                                    |
+| `packages/landing/src/providers`            | `SWProvider`                                                                                                         |
+| `packages/landing/e2e`                      | Playwright specs                                                                                                     |
+| `packages/landing/data/csv`                     | Source of truth: `foods.csv`, `countries.csv`, `schedule-scheldon.csv`, `schedule-vietnam.csv`, `schedule-united-kingdom.csv` |
+| `packages/landing/data/json`                    | Generated JSON (`csv-to-json.mjs`)                                                                                   |
 
 ## Architecture
 
@@ -77,16 +77,16 @@ node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
   event handlers starts with `'use client'`. Prefer a server component
   otherwise.
 - **Components are `FC`; pages are `NextPage`.**
-- **Path alias.** `@/*` maps to `packages/web/src/*`.
+- **Path alias.** `@/*` maps to `packages/landing/src/*`.
 - **Theme.** `layout.tsx` renders the single `fdr` light theme via
   `data-theme="fdr"`; theme colors live in `src/styles/globals.css`.
 
 ## Data conventions
 
-- **CSV is the source of truth.** Edit `packages/data/csv/*.csv`, then run
-  `node packages/data/csv-to-json.mjs` — it rewrites both
-  `packages/data/json/*.json` and the checked-in copy in
-  `packages/web/src/data/json/`.
+- **CSV is the source of truth.** Edit `packages/landing/data/csv/*.csv`, then run
+  `node packages/landing/data/csv-to-json.mjs` — it rewrites both
+  `packages/landing/data/json/*.json` and the checked-in copy in
+  `packages/landing/src/data/json/`.
 - **`Food` shape.** `{ country, category, subcategory, value, label, emoji }`.
   `value` is the stable slug; `label` is display text.
 - **`Cuisine` shape.** `{ value, label, emoji }`; `value` matches
@@ -108,7 +108,7 @@ node packages/data/csv-to-json.mjs  # regenerate JSON from CSV
   `../<Name>`.
 - **Test names describe behaviour**, e.g. `renders the theme toggle`.
 - **Playwright** specs in `e2e/` target the exported site. They are not part of
-  CI; run them locally with `pnpm --filter @fdr/web test:e2e`.
+  CI; run them locally with `pnpm --filter @fdr/landing test:e2e`.
 - **Coverage is a gate.** A new branch or component needs a test that exercises
   it.
 
@@ -121,7 +121,7 @@ manual dispatch:
 2. `pnpm install --frozen-lockfile`.
 3. `pnpm typecheck`, `pnpm lint`, `pnpm test`.
 4. `pnpm build` with `BASE_PATH=/fdr`.
-5. `touch packages/web/out/.nojekyll`, upload `packages/web/out` as the Pages
+5. `touch packages/landing/out/.nojekyll`, upload `packages/landing/out` as the Pages
    artifact.
 6. On `master`, deploy with `actions/deploy-pages`.
 
@@ -136,8 +136,8 @@ manual dispatch:
 
 ## Gotchas
 
-- **Stale data copies.** Editing only `packages/web/src/data/json/` leaves
-  `packages/data` behind, and vice versa. Update both.
+- **Data copies are generated.** Never hand-edit `src/data/json/` or
+  `data/json/`; edit `data/csv/` and run `csv-to-json.mjs`, which writes both.
 - **`pnpm lint` is `eslint . --fix`.** It may rewrite files; review the diff.
 - **Static export limits.** No dynamic routes without `generateStaticParams`, no
   route handlers that need a server, no `next/image` optimisation.
@@ -145,7 +145,7 @@ manual dispatch:
   `/wheel/`, not `/wheel`.
 - **Playwright specs cover the real routes** (`/`, `/wheel/`, `/randomizer/`,
   `/dishes/`, `/schedule/`). They are not part of CI; run them locally with
-  `pnpm --filter @fdr/web test:e2e`.
+  `pnpm --filter @fdr/landing test:e2e`.
 
 ## Definition of done
 

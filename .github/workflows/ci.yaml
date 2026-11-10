@@ -55,11 +55,11 @@ jobs:
           BASE_PATH: /fdr
         run: pnpm build
       - name: Disable Jekyll
-        run: touch packages/web/out/.nojekyll
+        run: touch packages/landing/out/.nojekyll
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v5.0.0
         with:
-          path: packages/web/out/
+          path: packages/landing/out/
           retention-days: 1
 
   deploy:
