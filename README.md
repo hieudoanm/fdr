@@ -6,6 +6,10 @@
 
 <p align="center"><strong>Can't decide what to eat? Let fate choose.</strong></p>
 
+<p align="center">
+  [![CI](https://github.com/hieudoanm/fdr/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/fdr/actions/workflows/ci.yaml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+</p>
+
 FDR (Food & Drink) is a small, fast food-picker app: a static Next.js site
 with a wheel, a dish randomizer, a searchable menu, and weekly dining
 schedules.
