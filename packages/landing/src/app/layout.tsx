@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       'Spin the reel and let fate pick your next meal, with a weekly schedule and a reusable dish list.',
     images: [
       {
-        url: '/og/og.png',
+        url: '/og.png',
         width: 1280,
         height: 640,
         alt: 'FDR — Spin the wheel, eat better',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: 'Spin the wheel, eat better',
     description:
       'Spin the reel and let fate pick your next meal, with a weekly schedule and a reusable dish list.',
-    images: ['/og/og.png'],
+    images: ['/og.png'],
   },
   appleWebApp: {
     capable: true,
