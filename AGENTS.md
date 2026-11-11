@@ -39,7 +39,7 @@ Run from the repository root unless noted.
 pnpm install          # install workspace dependencies
 pnpm dev              # turbo run dev -> http://localhost:3000
 pnpm build            # turbo run build -> packages/landing/out
-pnpm lint             # turbo run lint (eslint . --fix in landing)
+pnpm lint             # turbo run lint (eslint . in landing)
 pnpm typecheck        # turbo run typecheck (tsc --noEmit)
 pnpm test             # turbo run test (Jest, 80% coverage thresholds)
 pnpm format           # turbo run format (Prettier, writes)
@@ -138,7 +138,7 @@ manual dispatch:
 
 - **Data copies are generated.** Never hand-edit `src/data/json/` or
   `data/json/`; edit `data/csv/` and run `csv-to-json.mjs`, which writes both.
-- **`pnpm lint` is `eslint . --fix`.** It may rewrite files; review the diff.
+- **`pnpm lint` is `eslint .` (check only); `pnpm lint:fix` rewrites files.**
 - **Static export limits.** No dynamic routes without `generateStaticParams`, no
   route handlers that need a server, no `next/image` optimisation.
 - **Trailing slashes are on.** `trailingSlash: true` means routes resolve as
