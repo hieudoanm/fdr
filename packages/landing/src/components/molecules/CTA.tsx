@@ -22,6 +22,10 @@ const CTAButton: FC<{ link: CTALink; className: string }> = ({
     <a href={link.href} target="_blank" rel="noreferrer" className={className}>
       {link.label}
     </a>
+  ) : link.href.startsWith('#') ? (
+    <a href={link.href} className={className}>
+      {link.label}
+    </a>
   ) : (
     <Link href={link.href} className={className}>
       {link.label}
