@@ -1,0 +1,361 @@
+country,category,subcategory,value,label,emoji
+united-states,main,dinner,bbq-ribs,BBQ Ribs,🍖
+united-states,main,breakfast,french-toast,French Toast,🥞
+united-states,main,breakfast,breakfast-burrito,Breakfast Burrito,🌯
+united-states,main,lunch,reuben-sandwich,Reuben Sandwich,🥪
+united-states,main,lunch,blt-sandwich,BLT Sandwich,🥓
+united-states,main,lunch,egg-salad-sandwich,Egg Salad Sandwich,🥪
+united-states,main,lunch,chicken-tenders,Chicken Tenders,🍗
+united-states,main,dinner,braised-short-ribs,Braised Short Ribs,🍖
+united-states,main,dinner,roast-turkey,Roast Turkey,🦃
+united-states,main,dinner,baked-salmon,Baked Salmon,🐟
+united-states,main,dinner,chicken-and-dumplings,Chicken and Dumplings,🍲
+united-states,main,breakfast,pancakes,Pancakes,🥞
+united-states,main,breakfast,biscuits-and-gravy,Biscuits and Gravy,🥣
+united-states,main,lunch,tuna-sandwich,Tuna Sandwich,🥪
+united-states,main,lunch,chicken-pot-pie,Chicken Pot Pie,🥧
+united-states,main,lunch,pulled-pork-sandwich,Pulled Pork Sandwich,🐷
+united-states,main,lunch,french-dip,French Dip,🥪
+united-states,main,dinner,shepherd-s-pie,Shepherd's Pie,🥔
+united-states,main,dinner,salisbury-steak,Salisbury Steak,🥩
+united-states,main,dinner,chicken-fried-steak,Chicken Fried Steak,🍗
+united-states,main,dinner,jambalaya,Jambalaya,🍤
+united-states,main,dinner,fried-chicken,Fried Chicken,🍗
+united-states,main,dinner,mac-and-cheese,Mac and Cheese,🧀
+united-states,main,dinner,meatloaf,Meatloaf,🥩
+united-states,main,dinner,pot-roast,Pot Roast,🍖
+united-states,main,lunch,caesar-salad,Caesar Salad,🥗
+united-states,main,lunch,cheeseburger,Cheeseburger,🍔
+united-states,main,lunch,club-sandwich,Club Sandwich,🥪
+united-states,main,lunch,grilled-cheese,Grilled Cheese,🧀
+united-states,main,lunch,hot-dog,Hot Dog,🌭
+chinese,main,dinner,kung-pao-chicken,Kung Pao Chicken,🥘
+chinese,main,breakfast,jiaozi,Jiaozi,🥟
+chinese,main,breakfast,baozi,Baozi,🥟
+chinese,main,lunch,lo-mein,Lo Mein,🍜
+chinese,main,lunch,char-siu,Char Siu,🍖
+chinese,main,lunch,orange-chicken,Orange Chicken,🍊
+chinese,main,lunch,twice-cooked-pork,Twice Cooked Pork,🥓
+chinese,main,dinner,dongpo-pork,Dongpo Pork,🍖
+chinese,main,dinner,salt-and-pepper-shrimp,Salt and Pepper Shrimp,🦐
+chinese,main,dinner,black-pepper-beef,Black Pepper Beef,🥩
+chinese,main,dinner,broccoli-beef,Broccoli Beef,🥦
+chinese,main,breakfast,congee,Congee,🍚
+chinese,main,breakfast,scallion-pancakes,Scallion Pancakes,🥞
+chinese,main,lunch,hot-and-sour-soup,Hot and Sour Soup,🍲
+chinese,main,lunch,moo-shu-pork,Moo Shu Pork,🥬
+chinese,main,lunch,spring-rolls,Spring Rolls,🥟
+chinese,main,lunch,egg-fried-rice,Egg Fried Rice,🍳
+chinese,main,dinner,general-tso-s-chicken,General Tso's Chicken,🍗
+chinese,main,dinner,moo-goo-gai-pan,Moo Goo Gai Pan,🐔
+chinese,main,dinner,hot-pot,Hot Pot,🍲
+chinese,main,dinner,beef-noodle-soup,Beef Noodle Soup,🍜
+chinese,main,dinner,peking-duck,Peking Duck,🦆
+chinese,main,dinner,peking-duck-plate,Peking Duck Plate,🦆
+chinese,main,dinner,sweet-sour-pork,Sweet and Sour Pork,🍖
+chinese,main,lunch,chow-mein,Chow Mein,🍜
+chinese,main,lunch,dan-dan-noodles,Dan Dan Noodles,🍜
+chinese,main,lunch,fried-rice,Fried Rice,🍚
+chinese,main,lunch,mapo-tofu,Mapo Tofu,🌶️
+chinese,main,lunch,wonton-soup,Wonton Soup,🍜
+chinese,main,lunch,yangzhou-fried-rice,Yangzhou Fried Rice,🍚
+indian,main,dinner,biryani,Biryani,🍚
+indian,main,breakfast,upma,Upma,🥣
+indian,main,breakfast,aloo-paratha,Aloo Paratha,🥔
+indian,main,lunch,malai-kofta,Malai Kofta,🧆
+indian,main,lunch,navratan-korma,Navratan Korma,🍛
+indian,main,lunch,dum-aloo,Dum Aloo,🥔
+indian,main,lunch,bhindi-masala,Bhindi Masala,🥬
+indian,main,dinner,kadai-chicken,Kadai Chicken,🍗
+indian,main,dinner,amritsari-fish,Amritsari Fish,🐟
+indian,main,dinner,paneer-tikka,Paneer Tikka,🍢
+indian,main,dinner,mushroom-matar,Mushroom Matar,🍄
+indian,main,breakfast,poha,Poha,🍚
+indian,main,breakfast,masala-dosa,Masala Dosa,🥞
+indian,main,lunch,chole-bhature,Chole Bhature,🍛
+indian,main,lunch,rajma,Rajma,🍛
+indian,main,lunch,kadhi,Kadhi,🥣
+indian,main,lunch,vegetable-pulao,Vegetable Pulao,🍚
+indian,main,dinner,chicken-tikka,Chicken Tikka,🍢
+indian,main,dinner,dal-tadka,Dal Tadka,🥣
+indian,main,dinner,baingan-bharta,Baingan Bharta,🍆
+indian,main,dinner,kerala-fish-curry,Kerala Fish Curry,🐟
+indian,main,dinner,fish-curry,Fish Curry,🐟
+indian,main,dinner,lamb-vindaloo,Lamb Vindaloo,🍖
+indian,main,dinner,rogan-josh,Rogan Josh,🍖
+indian,main,dinner,tandoori-chicken,Tandoori Chicken,🍗
+indian,main,lunch,aloo-gobi,Aloo Gobi,🥔
+indian,main,lunch,butter-chicken,Butter Chicken,🍗
+indian,main,lunch,chana-masala,Chana Masala,🥗
+indian,main,lunch,dal-makhani,Dal Makhani,🥣
+indian,main,lunch,palak-paneer,Palak Paneer,🥬
+italian,main,dinner,chicken-parm,Chicken Parm,🍗
+italian,main,breakfast,sfogliatella,Sfogliatella,🥐
+italian,main,breakfast,maritozzo,Maritozzo,🍑
+italian,main,lunch,pasta-pomodoro,Pasta Pomodoro,🍝
+italian,main,lunch,trofie-al-pesto,Trofie al Pesto,🍝
+italian,main,lunch,carpaccio,Carpaccio,🥩
+italian,main,lunch,supplì,Suppli,🧆
+italian,main,dinner,bistecca-alla-fiorentina,Bistecca alla Fiorentina,🥩
+italian,main,dinner,branzino-al-forno,Branzino al Forno,🐟
+italian,main,dinner,pork-ragu-tagliatelle,Pork Ragù Tagliatelle,🍝
+italian,main,dinner,caponata,Caponata,🍆
+italian,main,breakfast,frittata,Frittata,🍳
+italian,main,breakfast,cornetto,Cornetto,🥐
+italian,main,lunch,pasta-aglio-e-olio,Pasta Aglio e Olio,🍝
+italian,main,lunch,eggplant-parmigiana,Eggplant Parmigiana,🍆
+italian,main,lunch,arancini,Arancini,🧆
+italian,main,lunch,prosciutto-panini,Prosciutto Panini,🥪
+italian,main,dinner,veal-saltimbocca,Veal Saltimbocca,🥩
+italian,main,dinner,shrimp-scampi,Shrimp Scampi,🍤
+italian,main,dinner,chicken-cacciatore,Chicken Cacciatore,🍗
+italian,main,dinner,pasta-puttanesca,Pasta Puttanesca,🍝
+italian,main,dinner,gnocchi,Gnocchi,🥔
+italian,main,dinner,lasagna,Lasagna,🥘
+italian,main,dinner,margherita-pizza,Margherita Pizza,🍕
+italian,main,dinner,osso-buco,Osso Buco,🥩
+italian,main,dinner,ravioli,Ravioli,🥟
+italian,main,dinner,risotto,Risotto,🍚
+italian,main,dinner,spaghetti-carbonara,Spaghetti Carbonara,🍝
+italian,main,lunch,caprese-salad,Caprese Salad,🥗
+italian,main,lunch,minestrone,Minestrone,🍲
+japanese,main,breakfast,onigiri,Onigiri,🍙
+japanese,main,breakfast,miso-soup,Miso Soup,🍲
+japanese,main,breakfast,natto,Natto,🍚
+japanese,main,lunch,karaage,Karaage,🍗
+japanese,main,lunch,tsukune,Tsukune,🍢
+japanese,main,lunch,soba,Soba,🍜
+japanese,main,lunch,tendon,Tendon,🍱
+japanese,main,dinner,chankonabe,Chankonabe,🍲
+japanese,main,dinner,oden,Oden,🍢
+japanese,main,dinner,gyoza,Gyoza,🥟
+japanese,main,dinner,butadon,Butadon,🍚
+japanese,main,breakfast,tamagoyaki,Tamagoyaki,🍳
+japanese,main,breakfast,okayu,Okayu,🍚
+japanese,main,lunch,kaki-age,Kaki Age,🍤
+japanese,main,lunch,chicken-katsu-curry,Chicken Katsu Curry,🍛
+japanese,main,lunch,negima-yaki,Negima Yaki,🍢
+japanese,main,lunch,okonomiyaki,Okonomiyaki,🥞
+japanese,main,dinner,sukiyaki,Sukiyaki,🍲
+japanese,main,dinner,chirashi-bowl,Chirashi Bowl,🍱
+japanese,main,dinner,unagi-don,Unagi Don,🍱
+japanese,main,dinner,nikujaga,Nikujaga,🍲
+japanese,main,dinner,gyudon,Gyudon,🍚
+japanese,main,dinner,shabu-shabu,Shabu Shabu,🍲
+japanese,main,dinner,tonkatsu,Tonkatsu,🥩
+japanese,main,lunch,bento-box,Bento Box,🍱
+japanese,main,lunch,katsudon,Katsudon,🍚
+japanese,main,lunch,oyakodon,Oyakodon,🍚
+japanese,main,lunch,ramen,Ramen,🍜
+japanese,main,lunch,sushi,Sushi,🍣
+japanese,main,lunch,udon,Udon,🍥
+korean,main,dinner,bulgogi,Bulgogi,🥩
+korean,main,breakfast,gyeran-jjim,Gyeran Jjim,🍳
+korean,main,breakfast,miyeok-guk,Miyeok Guk,🍲
+korean,main,lunch,seolleongtang,Seolleongtang,🥣
+korean,main,lunch,gimbap,Gimbap,🍙
+korean,main,lunch,pajeon,Pajeon,🥞
+korean,main,lunch,myeolchi-bokkeum,Myeolchi Bokkeum,🐟
+korean,main,dinner,galbijjim,Galbijjim,🍖
+korean,main,dinner,kimchi-jjigae,Kimchi Jjigae,🍲
+korean,main,dinner,yangnyeom-chicken,Yangnyeom Chicken,🍗
+korean,main,dinner,jeyuk-bokkeum,Jeyuk Bokkeum,🍖
+korean,main,lunch,kongguksu,Kongguksu,🍜
+korean,main,lunch,naengmyeon,Naengmyeon,🍜
+korean,main,lunch,bossam,Bossam,🐷
+korean,main,lunch,dakgalbi,Dakgalbi,🍗
+korean,main,lunch,mandoo,Mandu,🥟
+korean,main,dinner,doenjang-jjigae,Doenjang Jjigae,🍲
+korean,main,dinner,budae-jjigae,Budae Jjigae,🍲
+korean,main,dinner,samgyetang,Samgyetang,🐔
+korean,main,dinner,godeungeo-gui,Grilled Mackerel,🐟
+korean,main,dinner,dakbokkeum-tang,Dakbokkeum-tang,🍗
+korean,main,dinner,galbi,Galbi,🥩
+korean,main,dinner,kimchi-stew,Kimchi Stew,🍲
+korean,main,dinner,samgyeopsal,Samgyeopsal,🥓
+korean,main,dinner,sundubu-jjigae,Sundubu-jjigae,🍲
+korean,main,lunch,bibimbap,Bibimbap,🍲
+korean,main,lunch,bibimbap-bowl,Bibimbap Bowl,🍚
+korean,main,lunch,japchae,Japchae,🍜
+korean,main,lunch,jjajangmyeon,Jjajangmyeon,🍜
+korean,main,lunch,kimchi-fried-rice,Kimchi Fried Rice,🍛
+mexican,main,breakfast,pozole,Pozole,🍲
+mexican,main,breakfast,migas,Migas,🌯
+mexican,main,breakfast,concha,Concha,🥐
+mexican,main,lunch,huaraches,Huaraches,🫓
+mexican,main,lunch,gorditas,Gorditas,🫓
+mexican,main,lunch,chiles-rellenos,Chiles Rellenos,🌶️
+mexican,main,lunch,flautas,Flautas,🌮
+mexican,main,dinner,barbacoa,Barbacoa,🌮
+mexican,main,dinner,menudo,Menudo,🍲
+mexican,main,dinner,arroz-con-pollo,Arroz con Pollo,🍗
+mexican,main,dinner,pescado-a-la-veracruzana,Pescado a la Veracruzana,🐟
+mexican,main,breakfast,chilaquiles,Chilaquiles,🌶️
+mexican,main,breakfast,huevos-rancheros,Huevos Rancheros,🍳
+mexican,main,lunch,esquites,Esquites,🌽
+mexican,main,lunch,tinga-tostadas,Tinga Tostadas,🥪
+mexican,main,lunch,sopes,Sopes,🫓
+mexican,main,lunch,fish-tacos,Fish Tacos,🌮
+mexican,main,dinner,cochinita-pibil,Cochinita Pibil,🍖
+mexican,main,dinner,chiles-en-nogada,Chiles en Nogada,🌶️
+mexican,main,dinner,picadillo,Picadillo,🥘
+mexican,main,dinner,ropa-vieja,Ropa Vieja,🍖
+mexican,main,breakfast,tamales,Tamales,🫔
+mexican,main,dinner,birria,Birria,🌮
+mexican,main,dinner,carnitas,Carnitas,🍖
+mexican,main,dinner,enchiladas,Enchiladas,🫕
+mexican,main,dinner,mole-poblano,Mole Poblano,🍗
+mexican,main,dinner,tacos-al-pastor,Tacos al Pastor,🌮
+mexican,main,lunch,pozole-rojo,Pozole Rojo,🍲
+mexican,main,lunch,quesadilla,Quesadilla,🧀
+mexican,main,lunch,tortas,Tortas,🥪
+thai,main,dinner,boat-noodles,Boat Noodles,🍜
+thai,main,breakfast,khao-tom,Khao Tom,🍚
+thai,main,breakfast,pa-tong-go-sai-moo,Pa Tong Go Sai Moo,🥐
+thai,main,lunch,moo-ping,Moo Ping,🍢
+thai,main,lunch,pad-prik-kung,Pad Prik Kung,🦐
+thai,main,lunch,khao-lam,Khao Lam,🍚
+thai,main,lunch,rad-na,Rad Na,🍜
+thai,main,dinner,hor-mok,Hor Mok,🐟
+thai,main,dinner,pla-thot-jing-re,Pla Thot Jing Re,🐟
+thai,main,dinner,yum-talay,Yum Talay,🦐
+thai,main,dinner,gaeng-pa,Gaeng Pa,🍛
+thai,main,breakfast,jok,Jok,🍚
+thai,main,lunch,som-tum,Som Tum,🥗
+thai,main,lunch,pad-see-ew,Pad See Ew,🍜
+thai,main,lunch,khao-pad,Khao Pad,🍚
+thai,main,lunch,yum-skung,Yum Sung,🍤
+thai,main,dinner,red-curry,Red Curry,🍛
+thai,main,dinner,kai-phad-kratiem,Kai Phad Kratiam,🍗
+thai,main,dinner,pla-neung-manow,Pla Neung Manow,🐟
+thai,main,dinner,khao-man-gai,Khao Man Gai,🍗
+thai,main,dinner,tod-mun-plaa,Tod Mun Plaa,🐟
+thai,main,dinner,gai-yang,Gai Yang,🍗
+thai,main,dinner,green-curry,Green Curry,🥘
+thai,main,dinner,massaman-curry,Massaman Curry,🍛
+thai,main,dinner,panang-curry,Panang Curry,🍛
+thai,main,dinner,tom-yum-goong,Tom Yum Goong,🦐
+thai,main,lunch,khao-soi,Khao Soi,🍜
+thai,main,lunch,larb,Larb,🥗
+thai,main,lunch,pad-kra-pao,Pad Kra Pao,🍛
+thai,main,lunch,pad-thai,Pad Thai,🥜
+turkish,main,dinner,hunkar-begendi,Hunkar Begendi,🍆
+turkish,main,breakfast,pogaca,Pogaca,🥐
+turkish,main,breakfast,simit-sandwich,Simit Sandwich,🥪
+turkish,main,lunch,ezme,Ezme,🥗
+turkish,main,lunch,cacik,Cacik,🥒
+turkish,main,lunch,kuzu-kavurma,Kuzu Kavurma,🍖
+turkish,main,lunch,nohutlu-pilav,Nohutlu Pilav,🍚
+turkish,main,dinner,ali-nazik-kebab,Ali Nazik Kebab,🍆
+turkish,main,dinner,kuzu-incik,Kuzu Incik,🍖
+turkish,main,dinner,hindi-firini,Hindi Firini,🦃
+turkish,main,dinner,balik-izgara,Balik Izgara,🐟
+turkish,main,breakfast,acma,Acma,🥐
+turkish,main,breakfast,gozleme,Gozleme,🥞
+turkish,main,lunch,mercimek-corbasi,Mercimek Corbasi,🍲
+turkish,main,lunch,sigara-boregi,Sigara Boregi,🥟
+turkish,main,lunch,kuru-fasulye,Kuru Fasulye,🍛
+turkish,main,lunch,turlu,Turlu,🥘
+turkish,main,dinner,adana-kebab,Adana Kebab,🍢
+turkish,main,dinner,sis-kebab,Sis Kebab,🍢
+turkish,main,dinner,beyti-kebab,Beyti Kebab,🥙
+turkish,main,dinner,kuzu-tandir,Kuzu Tandir,🍖
+turkish,main,dinner,iskender-kebab,Iskender Kebab,🍖
+turkish,main,dinner,kofte,Kofte,🥩
+turkish,main,dinner,pide,Pide,🍞
+turkish,main,dinner,testi-kebab,Testi Kebab,🍲
+turkish,main,lunch,doner-kebab,Doner Kebab,🥙
+turkish,main,lunch,imam-bayildi,Imam Bayildi,🍆
+turkish,main,lunch,lahmacun,Lahmacun,🍕
+turkish,main,lunch,manti,Manti,🥟
+turkish,main,lunch,menemen,Menemen,🍳
+vietnamese,main,breakfast,banh-mi,Banh Mi,🥖
+vietnamese,main,breakfast,banh-uot,Banh Uot,🥞
+vietnamese,main,breakfast,hu-tieu,Hu Tieu,🍜
+vietnamese,main,lunch,cha-ca-la-vong,Cha Ca La Vong,🐟
+vietnamese,main,lunch,bun-ca,Bun Ca,🍜
+vietnamese,main,lunch,goi-bo,Goi Bo,🥗
+vietnamese,main,lunch,com-ga,Com Ga,🍚
+vietnamese,main,dinner,ca-hap-sa-ot,Ca Hap Sa Ot,🐟
+vietnamese,main,dinner,nem-nuong,Nem Nuong,🍖
+vietnamese,main,dinner,ga-nuong,Ga Nuong,🍗
+vietnamese,main,dinner,tom-kho,Tom Kho,🦐
+vietnamese,main,breakfast,banh-cuon,Banh Cuon,🥞
+vietnamese,main,breakfast,xoi-xeo,Xoi Xeo,🍚
+vietnamese,main,lunch,bun-thang,Bun Thang,🍜
+vietnamese,main,lunch,bun-rieu,Bun Rieu,🍜
+vietnamese,main,lunch,bun-thit-nuong,Bun Thit Nuong,🍖
+vietnamese,main,lunch,bun-dau-mam-tom,Bun Dau Mam Tom,🍜
+vietnamese,main,dinner,ga-chien-nuoc-mam,Ga Chien Nuoc Mam,🍗
+vietnamese,main,dinner,bo-kho,Bo Kho,🍖
+vietnamese,main,dinner,ca-rim,Ca Rim,🐟
+vietnamese,main,dinner,cha-trung,Cha Trung,🍳
+vietnamese,main,breakfast,pho,Pho,🍜
+vietnamese,main,dinner,ca-kho-to,Ca Kho To,🥘
+vietnamese,main,dinner,canh-chua,Canh Chua,🍲
+vietnamese,main,dinner,thit-kho,Thit Kho,🍖
+vietnamese,main,lunch,banh-xeo,Banh Xeo,🍳
+vietnamese,main,lunch,bun-bo-hue,Bun Bo Hue,🍜
+vietnamese,main,lunch,bun-cha,Bun Cha,🍖
+vietnamese,main,lunch,com-tam,Com Tam,🍚
+vietnamese,main,lunch,mi-quang,Mi Quang,🍜
+united-kingdom,main,breakfast,full-english-breakfast,Full English Breakfast,🍳
+united-kingdom,main,breakfast,scotch-eggs,Scotch Eggs,🥚
+united-kingdom,main,breakfast,crumpets,Crumpets,🥞
+united-kingdom,main,breakfast,beans-on-toast,Beans on Toast,🍞
+united-kingdom,main,breakfast,porridge,Porridge,🥣
+united-kingdom,main,breakfast,kippers,Kippers,🐟
+united-kingdom,main,lunch,fish-and-chips,Fish and Chips,🍟
+united-kingdom,main,lunch,cornish-pasty,Cornish Pasty,🥧
+united-kingdom,main,lunch,ploughmans-platter,Ploughmans Platter,🧀
+united-kingdom,main,lunch,bubble-and-squeak,Bubble and Squeak,🥔
+united-kingdom,main,lunch,pork-pie,Pork Pie,🥧
+united-kingdom,main,lunch,bacon-sandwich,Bacon Sandwich,🥪
+united-kingdom,main,lunch,cauliflower-cheese,Cauliflower Cheese,🥦
+united-kingdom,main,lunch,potted-shrimp,Potted Shrimp,🍤
+united-kingdom,main,lunch,steak-guinness-pie,Steak and Guinness Pie,🥧
+united-kingdom,main,lunch,cheese-toastie,Cheese Toastie,🧀
+united-kingdom,main,lunch,prawn-cocktail,Prawn Cocktail,🦐
+united-kingdom,main,lunch,potted-beef,Potted Beef,🥩
+united-kingdom,main,dinner,cottage-pie,Cottage Pie,🥔
+united-kingdom,main,dinner,bangers-and-mash,Bangers and Mash,🌭
+united-kingdom,main,dinner,toad-in-the-hole,Toad in the Hole,🐷
+united-kingdom,main,dinner,lancashire-hotpot,Lancashire Hotpot,🍲
+united-kingdom,main,dinner,beef-wellington,Beef Wellington,🥩
+united-kingdom,main,dinner,sunday-roast,Sunday Roast,🍖
+united-kingdom,main,dinner,gammon-steak,Gammon Steak,🍖
+united-kingdom,main,dinner,steak-and-kidney-pie,Steak and Kidney Pie,🥧
+united-kingdom,main,dinner,faggots-mash,Faggots and Mash,🫕
+united-kingdom,main,dinner,pork-belly-roast,Pork Belly Roast,🍖
+united-kingdom,main,dinner,gammon-hock,Gammon Hock,🍖
+united-kingdom,main,dinner,haggis-neeps-tatties,"Haggis, Neeps and Tatties",🍲
+egypt,main,breakfast,ful-medames,Ful Medames,🫘
+egypt,main,breakfast,taameya,Taameya,🧆
+egypt,main,breakfast,besarah,Besarah,🫘
+egypt,main,breakfast,feteer-meshaltet,Feteer Meshaltet,🥞
+egypt,main,breakfast,zabadi-honey,Zabadi with Honey,🍯
+egypt,main,lunch,koshari,Koshari,🍚
+egypt,main,lunch,shakshouka,Shakshouka,🍳
+egypt,main,lunch,hawawshi,Hawawshi,🥙
+egypt,main,lunch,mahshi,Mahshi,🥬
+egypt,main,lunch,molokhia,Molokhia,🥬
+egypt,main,lunch,bamia,Bamia,🍲
+egypt,main,lunch,fatta,Fatta,🥙
+egypt,main,lunch,tagine-khudar,Tagine Khudar,🍲
+egypt,main,lunch,djaj-mashwi,Djaj Mashwi,🍗
+egypt,main,lunch,kebda,Kebda,🍖
+egypt,main,lunch,mutabbal,Mutabbal,🥣
+egypt,main,lunch,salatit-balta,Salatit Balta,🥗
+egypt,main,lunch,kofta,Kofta,🧆
+egypt,main,dinner,kebab-mishwi,Kebab Mishwi,🍢
+egypt,main,dinner,kofta-meshwi,Kofta Meshwi,🧆
+egypt,main,dinner,feseekh,Feseekh,🐟
+egypt,main,dinner,sayadeya,Sayadeya,🍚
+egypt,main,dinner,roz-meammar,Roz Meammar,🍚
+egypt,main,dinner,djaj-tagine,Djaj Tagine,🍗
+egypt,main,dinner,kebda-eskandarani,Kebda Eskandarani,🍖
+egypt,main,dinner,kofta-batata,Kofta Batata,🍖
+egypt,main,dinner,samak-mashwi,Samak Mashwi,🍟
+egypt,main,dinner,shorbat-frik,Shorbat Frik,🥣
+egypt,main,dinner,batata-mahshi,Batata Mahshi,🥔
+egypt,main,dinner,hamam-mashwi,Hamam Mashwi,🕊️

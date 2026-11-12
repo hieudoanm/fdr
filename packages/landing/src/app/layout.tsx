@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import { FC, ReactNode } from 'react';
-import { SWProvider } from '@/providers/SWProvider';
+import { ServiceWorker } from '@/components/atoms/ServiceWorker';
+import { Navbar } from '@/components/molecules/Navbar';
 import { OfflineBadge } from '@/components/atoms/OfflineBadge';
 
 export const metadata: Metadata = {
@@ -51,10 +53,14 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="fdr">
-    <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-mono">
-      <SWProvider>{children}</SWProvider>
+  <html lang="en" data-theme="fdr" className={inter.variable}>
+    <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-sans">
+      <Navbar />
+      {children}
+      <ServiceWorker />
       <div className="pointer-events-none fixed right-4 bottom-4 z-50">
         <OfflineBadge />
       </div>

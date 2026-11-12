@@ -13,16 +13,22 @@ test('home lists the app tools', async ({ page }) => {
   await expect(
     page.getByRole('heading', { name: "Can't decide what to eat?" })
   ).toBeVisible();
-  await expect(page.getByTestId('tool-card-wheel')).toBeVisible();
-  await expect(page.getByTestId('tool-card-randomizer')).toBeVisible();
-  await expect(page.getByTestId('tool-card-dishes')).toBeVisible();
+  await expect(page.getByTestId('tool-card-foodswheel')).toBeVisible();
+  await expect(page.getByTestId('tool-card-foodsrandomizer')).toBeVisible();
+  await expect(page.getByTestId('tool-card-foodsdishes')).toBeVisible();
+  await expect(page.getByTestId('tool-card-drinkswheel')).toBeVisible();
+  await expect(page.getByTestId('tool-card-drinksrandomizer')).toBeVisible();
+  await expect(page.getByTestId('tool-card-drinksdishes')).toBeVisible();
+  await expect(page.getByTestId('tool-card-snackswheel')).toBeVisible();
+  await expect(page.getByTestId('tool-card-snacksrandomizer')).toBeVisible();
+  await expect(page.getByTestId('tool-card-snacksdishes')).toBeVisible();
   await expect(page.getByTestId('tool-card-schedulevietnam')).toBeVisible();
 });
 
 test('navigating to food randomizer works', async ({ page }) => {
   await page.goto('/');
 
-  await page.getByTestId('tool-card-randomizer').click();
+  await page.getByTestId('tool-card-foodsrandomizer').click();
   await expect(
     page.getByRole('heading', { name: 'Food Randomizer' })
   ).toBeVisible();

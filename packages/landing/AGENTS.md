@@ -15,10 +15,20 @@ world cuisines, built with Next.js.
 
 ## Key Conventions
 
+- **Fonts:** Inter (sans) via `next/font` (`--font-inter`) or the Google Fonts
+  link in `index.html`; mono stack
+  `ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace`. Tokens:
+  `--font-sans` / `--font-mono`. Do not add other typefaces.
+
 - The randomizer feature is wired up in
   `src/components/organisms/Randomizer.tsx` (the `FoodRandomizer` organism), and
   its reusable pieces live in `src/components/molecules/` (`CuisineSelect`,
-  `Reel`, `SchedulePicker`) and `src/hooks/` (`useFoodPicker`).
+  `Reel`, `SchedulePicker`) and `src/hooks/` (`useFoodPicker`). The same
+  organisms serve both `/foods/*` and `/drinks/*` routes via props (`items`,
+  `optionsMap`, `kind`, `randomizerBasePath`); `/foods/randomizer` and
+  `/drinks/randomizer` share `src/components/templates/RandomizerTemplate.tsx`;
+  the three wheel and three dishes pages share `WheelTemplate` and
+  `DishesTemplate`.
 - Jest treats every file inside `__tests__/` as a suite: keep shared fixtures in
   `<feature>/testing/`, not in `__tests__/`.
 - Pages are thin: they compose templates (`HomeTemplate`) and feature
@@ -26,23 +36,25 @@ world cuisines, built with Next.js.
 - Path alias `@/*` maps to `./src/*`.
 - DaisyUI has a single `fdr` light theme, defined in `src/styles/globals.css`
   and applied via `data-theme="fdr"` on `<html>`.
-- Shared infrastructure lives in `src/providers/` (`SWProvider`),
+- Shared infrastructure lives in `src/components/atoms/` (`ServiceWorker`,
   `src/components/atoms/` (`Badge`, `OfflineBadge`) and `src/hooks/`.
 
 ## Data
 
 Static food data lives in `src/data/json/`, imported through
-`src/data/index.ts`. The canonical CSV sources are in `data/csv/` (repo:
-`packages/landing/data/csv/`); regenerate JSON with `node data/csv-to-json.mjs`
-(or `pnpm foods:convert`), which writes both `data/json/` and this
-`src/data/json/` copy.
+`src/data/index.ts`. The canonical CSV sources are in `src/data/csv/`;
+regenerate JSON with `node scripts/csv-to-json.mjs` (or `pnpm foods:convert`),
+which writes `src/data/json/`.
 
-- `foods.json` — 200 dishes with
-  `{ country, category, subcategory, value, label, emoji }`.
-- `countries.json` — 10 countries with `{ value, label, emoji }`.
-- `schedule-scheldon.json` — 7 entries, `schedule-vietnam.json` — 14 entries
-  (two weeks, with `week`), `schedule-united-kingdom.json` — 7 entries; all with
-  `{ day, week?, meal, emoji, restaurant, note }`.
+- `meal-foods.json` — 360 dishes, `meal-drinks.json` — 60 drinks,
+  `meal-snacks.json` — 60 snacks/desserts, all with
+  `{ country, category, subcategory, value, label, emoji }`. `foodsAndDrinks`
+  merges all three (200 entries); `foods`, `drinks`, and `snacks` are exported
+  separately, with matching `*_OPTIONS` maps.
+- `countries.json` — 12 countries with `{ value, label, emoji }`.
+- `schedule-scheldon.json` — 7 entries, `schedule-vietnam.json` — 28 entries
+  (four weeks, with `week`), `schedule-united-kingdom.json` — 28 entries (four
+  weeks, with `week`); all with `{ day, week?, meal, emoji, restaurant, note }`.
 - `FOOD_OPTIONS` maps `all`, each country, and each dish value to label lists
   used by the reel and picker.
 

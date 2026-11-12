@@ -52,10 +52,12 @@ const buildConicGradient = (): string => {
 
 interface CuisineWheelProps {
   settlingMs?: number;
+  randomizerBasePath?: string;
 }
 
 export const CuisineWheel: FC<CuisineWheelProps> = ({
   settlingMs = SETTLE_MS,
+  randomizerBasePath = '/foods/randomizer',
 }) => {
   const [rotation, setRotation] = useState(0);
   const [spinning, setSpinning] = useState(false);
@@ -161,7 +163,7 @@ export const CuisineWheel: FC<CuisineWheelProps> = ({
 
       {result && (
         <Link
-          href={`/randomizer?country=${result.value}`}
+          href={`${randomizerBasePath}?country=${result.value}`}
           data-testid="wheel-result-link"
           className="btn btn-accent btn-sm rounded-full px-6">
           Spin a dish from {result.label} →

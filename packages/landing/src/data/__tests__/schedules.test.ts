@@ -15,7 +15,7 @@ describe('schedules', () => {
     const vietnam = getSchedule('vietnam');
     expect(vietnam).toBeDefined();
     expect(vietnam?.label).toBe('Vietnam');
-    expect(vietnam?.entries).toHaveLength(14);
+    expect(vietnam?.entries).toHaveLength(28);
   });
 
   it('returns undefined for an unknown slug', () => {

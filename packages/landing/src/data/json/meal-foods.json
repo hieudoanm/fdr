@@ -1,0 +1,2882 @@
+[
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "bbq-ribs",
+    "label": "BBQ Ribs",
+    "emoji": "🍖"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "french-toast",
+    "label": "French Toast",
+    "emoji": "🥞"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "breakfast-burrito",
+    "label": "Breakfast Burrito",
+    "emoji": "🌯"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "reuben-sandwich",
+    "label": "Reuben Sandwich",
+    "emoji": "🥪"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "blt-sandwich",
+    "label": "BLT Sandwich",
+    "emoji": "🥓"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "egg-salad-sandwich",
+    "label": "Egg Salad Sandwich",
+    "emoji": "🥪"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "chicken-tenders",
+    "label": "Chicken Tenders",
+    "emoji": "🍗"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "braised-short-ribs",
+    "label": "Braised Short Ribs",
+    "emoji": "🍖"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "roast-turkey",
+    "label": "Roast Turkey",
+    "emoji": "🦃"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "baked-salmon",
+    "label": "Baked Salmon",
+    "emoji": "🐟"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "chicken-and-dumplings",
+    "label": "Chicken and Dumplings",
+    "emoji": "🍲"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "pancakes",
+    "label": "Pancakes",
+    "emoji": "🥞"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "biscuits-and-gravy",
+    "label": "Biscuits and Gravy",
+    "emoji": "🥣"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "tuna-sandwich",
+    "label": "Tuna Sandwich",
+    "emoji": "🥪"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "chicken-pot-pie",
+    "label": "Chicken Pot Pie",
+    "emoji": "🥧"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "pulled-pork-sandwich",
+    "label": "Pulled Pork Sandwich",
+    "emoji": "🐷"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "french-dip",
+    "label": "French Dip",
+    "emoji": "🥪"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "shepherd-s-pie",
+    "label": "Shepherd's Pie",
+    "emoji": "🥔"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "salisbury-steak",
+    "label": "Salisbury Steak",
+    "emoji": "🥩"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "chicken-fried-steak",
+    "label": "Chicken Fried Steak",
+    "emoji": "🍗"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "jambalaya",
+    "label": "Jambalaya",
+    "emoji": "🍤"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "fried-chicken",
+    "label": "Fried Chicken",
+    "emoji": "🍗"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "mac-and-cheese",
+    "label": "Mac and Cheese",
+    "emoji": "🧀"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "meatloaf",
+    "label": "Meatloaf",
+    "emoji": "🥩"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "pot-roast",
+    "label": "Pot Roast",
+    "emoji": "🍖"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "caesar-salad",
+    "label": "Caesar Salad",
+    "emoji": "🥗"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "cheeseburger",
+    "label": "Cheeseburger",
+    "emoji": "🍔"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "club-sandwich",
+    "label": "Club Sandwich",
+    "emoji": "🥪"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "grilled-cheese",
+    "label": "Grilled Cheese",
+    "emoji": "🧀"
+  },
+  {
+    "country": "united-states",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "hot-dog",
+    "label": "Hot Dog",
+    "emoji": "🌭"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kung-pao-chicken",
+    "label": "Kung Pao Chicken",
+    "emoji": "🥘"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "jiaozi",
+    "label": "Jiaozi",
+    "emoji": "🥟"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "baozi",
+    "label": "Baozi",
+    "emoji": "🥟"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "lo-mein",
+    "label": "Lo Mein",
+    "emoji": "🍜"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "char-siu",
+    "label": "Char Siu",
+    "emoji": "🍖"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "orange-chicken",
+    "label": "Orange Chicken",
+    "emoji": "🍊"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "twice-cooked-pork",
+    "label": "Twice Cooked Pork",
+    "emoji": "🥓"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "dongpo-pork",
+    "label": "Dongpo Pork",
+    "emoji": "🍖"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "salt-and-pepper-shrimp",
+    "label": "Salt and Pepper Shrimp",
+    "emoji": "🦐"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "black-pepper-beef",
+    "label": "Black Pepper Beef",
+    "emoji": "🥩"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "broccoli-beef",
+    "label": "Broccoli Beef",
+    "emoji": "🥦"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "congee",
+    "label": "Congee",
+    "emoji": "🍚"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "scallion-pancakes",
+    "label": "Scallion Pancakes",
+    "emoji": "🥞"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "hot-and-sour-soup",
+    "label": "Hot and Sour Soup",
+    "emoji": "🍲"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "moo-shu-pork",
+    "label": "Moo Shu Pork",
+    "emoji": "🥬"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "spring-rolls",
+    "label": "Spring Rolls",
+    "emoji": "🥟"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "egg-fried-rice",
+    "label": "Egg Fried Rice",
+    "emoji": "🍳"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "general-tso-s-chicken",
+    "label": "General Tso's Chicken",
+    "emoji": "🍗"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "moo-goo-gai-pan",
+    "label": "Moo Goo Gai Pan",
+    "emoji": "🐔"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "hot-pot",
+    "label": "Hot Pot",
+    "emoji": "🍲"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "beef-noodle-soup",
+    "label": "Beef Noodle Soup",
+    "emoji": "🍜"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "peking-duck",
+    "label": "Peking Duck",
+    "emoji": "🦆"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "peking-duck-plate",
+    "label": "Peking Duck Plate",
+    "emoji": "🦆"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "sweet-sour-pork",
+    "label": "Sweet and Sour Pork",
+    "emoji": "🍖"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "chow-mein",
+    "label": "Chow Mein",
+    "emoji": "🍜"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "dan-dan-noodles",
+    "label": "Dan Dan Noodles",
+    "emoji": "🍜"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "fried-rice",
+    "label": "Fried Rice",
+    "emoji": "🍚"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "mapo-tofu",
+    "label": "Mapo Tofu",
+    "emoji": "🌶️"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "wonton-soup",
+    "label": "Wonton Soup",
+    "emoji": "🍜"
+  },
+  {
+    "country": "chinese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "yangzhou-fried-rice",
+    "label": "Yangzhou Fried Rice",
+    "emoji": "🍚"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "biryani",
+    "label": "Biryani",
+    "emoji": "🍚"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "upma",
+    "label": "Upma",
+    "emoji": "🥣"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "aloo-paratha",
+    "label": "Aloo Paratha",
+    "emoji": "🥔"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "malai-kofta",
+    "label": "Malai Kofta",
+    "emoji": "🧆"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "navratan-korma",
+    "label": "Navratan Korma",
+    "emoji": "🍛"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "dum-aloo",
+    "label": "Dum Aloo",
+    "emoji": "🥔"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bhindi-masala",
+    "label": "Bhindi Masala",
+    "emoji": "🥬"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kadai-chicken",
+    "label": "Kadai Chicken",
+    "emoji": "🍗"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "amritsari-fish",
+    "label": "Amritsari Fish",
+    "emoji": "🐟"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "paneer-tikka",
+    "label": "Paneer Tikka",
+    "emoji": "🍢"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "mushroom-matar",
+    "label": "Mushroom Matar",
+    "emoji": "🍄"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "poha",
+    "label": "Poha",
+    "emoji": "🍚"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "masala-dosa",
+    "label": "Masala Dosa",
+    "emoji": "🥞"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "chole-bhature",
+    "label": "Chole Bhature",
+    "emoji": "🍛"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "rajma",
+    "label": "Rajma",
+    "emoji": "🍛"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "kadhi",
+    "label": "Kadhi",
+    "emoji": "🥣"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "vegetable-pulao",
+    "label": "Vegetable Pulao",
+    "emoji": "🍚"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "chicken-tikka",
+    "label": "Chicken Tikka",
+    "emoji": "🍢"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "dal-tadka",
+    "label": "Dal Tadka",
+    "emoji": "🥣"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "baingan-bharta",
+    "label": "Baingan Bharta",
+    "emoji": "🍆"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kerala-fish-curry",
+    "label": "Kerala Fish Curry",
+    "emoji": "🐟"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "fish-curry",
+    "label": "Fish Curry",
+    "emoji": "🐟"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "lamb-vindaloo",
+    "label": "Lamb Vindaloo",
+    "emoji": "🍖"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "rogan-josh",
+    "label": "Rogan Josh",
+    "emoji": "🍖"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "tandoori-chicken",
+    "label": "Tandoori Chicken",
+    "emoji": "🍗"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "aloo-gobi",
+    "label": "Aloo Gobi",
+    "emoji": "🥔"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "butter-chicken",
+    "label": "Butter Chicken",
+    "emoji": "🍗"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "chana-masala",
+    "label": "Chana Masala",
+    "emoji": "🥗"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "dal-makhani",
+    "label": "Dal Makhani",
+    "emoji": "🥣"
+  },
+  {
+    "country": "indian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "palak-paneer",
+    "label": "Palak Paneer",
+    "emoji": "🥬"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "chicken-parm",
+    "label": "Chicken Parm",
+    "emoji": "🍗"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "sfogliatella",
+    "label": "Sfogliatella",
+    "emoji": "🥐"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "maritozzo",
+    "label": "Maritozzo",
+    "emoji": "🍑"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "pasta-pomodoro",
+    "label": "Pasta Pomodoro",
+    "emoji": "🍝"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "trofie-al-pesto",
+    "label": "Trofie al Pesto",
+    "emoji": "🍝"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "carpaccio",
+    "label": "Carpaccio",
+    "emoji": "🥩"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "supplì",
+    "label": "Suppli",
+    "emoji": "🧆"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "bistecca-alla-fiorentina",
+    "label": "Bistecca alla Fiorentina",
+    "emoji": "🥩"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "branzino-al-forno",
+    "label": "Branzino al Forno",
+    "emoji": "🐟"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "pork-ragu-tagliatelle",
+    "label": "Pork Ragù Tagliatelle",
+    "emoji": "🍝"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "caponata",
+    "label": "Caponata",
+    "emoji": "🍆"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "frittata",
+    "label": "Frittata",
+    "emoji": "🍳"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "cornetto",
+    "label": "Cornetto",
+    "emoji": "🥐"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "pasta-aglio-e-olio",
+    "label": "Pasta Aglio e Olio",
+    "emoji": "🍝"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "eggplant-parmigiana",
+    "label": "Eggplant Parmigiana",
+    "emoji": "🍆"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "arancini",
+    "label": "Arancini",
+    "emoji": "🧆"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "prosciutto-panini",
+    "label": "Prosciutto Panini",
+    "emoji": "🥪"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "veal-saltimbocca",
+    "label": "Veal Saltimbocca",
+    "emoji": "🥩"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "shrimp-scampi",
+    "label": "Shrimp Scampi",
+    "emoji": "🍤"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "chicken-cacciatore",
+    "label": "Chicken Cacciatore",
+    "emoji": "🍗"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "pasta-puttanesca",
+    "label": "Pasta Puttanesca",
+    "emoji": "🍝"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "gnocchi",
+    "label": "Gnocchi",
+    "emoji": "🥔"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "lasagna",
+    "label": "Lasagna",
+    "emoji": "🥘"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "margherita-pizza",
+    "label": "Margherita Pizza",
+    "emoji": "🍕"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "osso-buco",
+    "label": "Osso Buco",
+    "emoji": "🥩"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "ravioli",
+    "label": "Ravioli",
+    "emoji": "🥟"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "risotto",
+    "label": "Risotto",
+    "emoji": "🍚"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "spaghetti-carbonara",
+    "label": "Spaghetti Carbonara",
+    "emoji": "🍝"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "caprese-salad",
+    "label": "Caprese Salad",
+    "emoji": "🥗"
+  },
+  {
+    "country": "italian",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "minestrone",
+    "label": "Minestrone",
+    "emoji": "🍲"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "onigiri",
+    "label": "Onigiri",
+    "emoji": "🍙"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "miso-soup",
+    "label": "Miso Soup",
+    "emoji": "🍲"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "natto",
+    "label": "Natto",
+    "emoji": "🍚"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "karaage",
+    "label": "Karaage",
+    "emoji": "🍗"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "tsukune",
+    "label": "Tsukune",
+    "emoji": "🍢"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "soba",
+    "label": "Soba",
+    "emoji": "🍜"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "tendon",
+    "label": "Tendon",
+    "emoji": "🍱"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "chankonabe",
+    "label": "Chankonabe",
+    "emoji": "🍲"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "oden",
+    "label": "Oden",
+    "emoji": "🍢"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "gyoza",
+    "label": "Gyoza",
+    "emoji": "🥟"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "butadon",
+    "label": "Butadon",
+    "emoji": "🍚"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "tamagoyaki",
+    "label": "Tamagoyaki",
+    "emoji": "🍳"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "okayu",
+    "label": "Okayu",
+    "emoji": "🍚"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "kaki-age",
+    "label": "Kaki Age",
+    "emoji": "🍤"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "chicken-katsu-curry",
+    "label": "Chicken Katsu Curry",
+    "emoji": "🍛"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "negima-yaki",
+    "label": "Negima Yaki",
+    "emoji": "🍢"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "okonomiyaki",
+    "label": "Okonomiyaki",
+    "emoji": "🥞"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "sukiyaki",
+    "label": "Sukiyaki",
+    "emoji": "🍲"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "chirashi-bowl",
+    "label": "Chirashi Bowl",
+    "emoji": "🍱"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "unagi-don",
+    "label": "Unagi Don",
+    "emoji": "🍱"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "nikujaga",
+    "label": "Nikujaga",
+    "emoji": "🍲"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "gyudon",
+    "label": "Gyudon",
+    "emoji": "🍚"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "shabu-shabu",
+    "label": "Shabu Shabu",
+    "emoji": "🍲"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "tonkatsu",
+    "label": "Tonkatsu",
+    "emoji": "🥩"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bento-box",
+    "label": "Bento Box",
+    "emoji": "🍱"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "katsudon",
+    "label": "Katsudon",
+    "emoji": "🍚"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "oyakodon",
+    "label": "Oyakodon",
+    "emoji": "🍚"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "ramen",
+    "label": "Ramen",
+    "emoji": "🍜"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "sushi",
+    "label": "Sushi",
+    "emoji": "🍣"
+  },
+  {
+    "country": "japanese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "udon",
+    "label": "Udon",
+    "emoji": "🍥"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "bulgogi",
+    "label": "Bulgogi",
+    "emoji": "🥩"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "gyeran-jjim",
+    "label": "Gyeran Jjim",
+    "emoji": "🍳"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "miyeok-guk",
+    "label": "Miyeok Guk",
+    "emoji": "🍲"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "seolleongtang",
+    "label": "Seolleongtang",
+    "emoji": "🥣"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "gimbap",
+    "label": "Gimbap",
+    "emoji": "🍙"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "pajeon",
+    "label": "Pajeon",
+    "emoji": "🥞"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "myeolchi-bokkeum",
+    "label": "Myeolchi Bokkeum",
+    "emoji": "🐟"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "galbijjim",
+    "label": "Galbijjim",
+    "emoji": "🍖"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kimchi-jjigae",
+    "label": "Kimchi Jjigae",
+    "emoji": "🍲"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "yangnyeom-chicken",
+    "label": "Yangnyeom Chicken",
+    "emoji": "🍗"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "jeyuk-bokkeum",
+    "label": "Jeyuk Bokkeum",
+    "emoji": "🍖"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "kongguksu",
+    "label": "Kongguksu",
+    "emoji": "🍜"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "naengmyeon",
+    "label": "Naengmyeon",
+    "emoji": "🍜"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bossam",
+    "label": "Bossam",
+    "emoji": "🐷"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "dakgalbi",
+    "label": "Dakgalbi",
+    "emoji": "🍗"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "mandoo",
+    "label": "Mandu",
+    "emoji": "🥟"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "doenjang-jjigae",
+    "label": "Doenjang Jjigae",
+    "emoji": "🍲"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "budae-jjigae",
+    "label": "Budae Jjigae",
+    "emoji": "🍲"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "samgyetang",
+    "label": "Samgyetang",
+    "emoji": "🐔"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "godeungeo-gui",
+    "label": "Grilled Mackerel",
+    "emoji": "🐟"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "dakbokkeum-tang",
+    "label": "Dakbokkeum-tang",
+    "emoji": "🍗"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "galbi",
+    "label": "Galbi",
+    "emoji": "🥩"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kimchi-stew",
+    "label": "Kimchi Stew",
+    "emoji": "🍲"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "samgyeopsal",
+    "label": "Samgyeopsal",
+    "emoji": "🥓"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "sundubu-jjigae",
+    "label": "Sundubu-jjigae",
+    "emoji": "🍲"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bibimbap",
+    "label": "Bibimbap",
+    "emoji": "🍲"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bibimbap-bowl",
+    "label": "Bibimbap Bowl",
+    "emoji": "🍚"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "japchae",
+    "label": "Japchae",
+    "emoji": "🍜"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "jjajangmyeon",
+    "label": "Jjajangmyeon",
+    "emoji": "🍜"
+  },
+  {
+    "country": "korean",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "kimchi-fried-rice",
+    "label": "Kimchi Fried Rice",
+    "emoji": "🍛"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "pozole",
+    "label": "Pozole",
+    "emoji": "🍲"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "migas",
+    "label": "Migas",
+    "emoji": "🌯"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "concha",
+    "label": "Concha",
+    "emoji": "🥐"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "huaraches",
+    "label": "Huaraches",
+    "emoji": "🫓"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "gorditas",
+    "label": "Gorditas",
+    "emoji": "🫓"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "chiles-rellenos",
+    "label": "Chiles Rellenos",
+    "emoji": "🌶️"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "flautas",
+    "label": "Flautas",
+    "emoji": "🌮"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "barbacoa",
+    "label": "Barbacoa",
+    "emoji": "🌮"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "menudo",
+    "label": "Menudo",
+    "emoji": "🍲"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "arroz-con-pollo",
+    "label": "Arroz con Pollo",
+    "emoji": "🍗"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "pescado-a-la-veracruzana",
+    "label": "Pescado a la Veracruzana",
+    "emoji": "🐟"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "chilaquiles",
+    "label": "Chilaquiles",
+    "emoji": "🌶️"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "huevos-rancheros",
+    "label": "Huevos Rancheros",
+    "emoji": "🍳"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "esquites",
+    "label": "Esquites",
+    "emoji": "🌽"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "tinga-tostadas",
+    "label": "Tinga Tostadas",
+    "emoji": "🥪"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "sopes",
+    "label": "Sopes",
+    "emoji": "🫓"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "fish-tacos",
+    "label": "Fish Tacos",
+    "emoji": "🌮"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "cochinita-pibil",
+    "label": "Cochinita Pibil",
+    "emoji": "🍖"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "chiles-en-nogada",
+    "label": "Chiles en Nogada",
+    "emoji": "🌶️"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "picadillo",
+    "label": "Picadillo",
+    "emoji": "🥘"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "ropa-vieja",
+    "label": "Ropa Vieja",
+    "emoji": "🍖"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "tamales",
+    "label": "Tamales",
+    "emoji": "🫔"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "birria",
+    "label": "Birria",
+    "emoji": "🌮"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "carnitas",
+    "label": "Carnitas",
+    "emoji": "🍖"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "enchiladas",
+    "label": "Enchiladas",
+    "emoji": "🫕"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "mole-poblano",
+    "label": "Mole Poblano",
+    "emoji": "🍗"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "tacos-al-pastor",
+    "label": "Tacos al Pastor",
+    "emoji": "🌮"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "pozole-rojo",
+    "label": "Pozole Rojo",
+    "emoji": "🍲"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "quesadilla",
+    "label": "Quesadilla",
+    "emoji": "🧀"
+  },
+  {
+    "country": "mexican",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "tortas",
+    "label": "Tortas",
+    "emoji": "🥪"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "boat-noodles",
+    "label": "Boat Noodles",
+    "emoji": "🍜"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "khao-tom",
+    "label": "Khao Tom",
+    "emoji": "🍚"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "pa-tong-go-sai-moo",
+    "label": "Pa Tong Go Sai Moo",
+    "emoji": "🥐"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "moo-ping",
+    "label": "Moo Ping",
+    "emoji": "🍢"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "pad-prik-kung",
+    "label": "Pad Prik Kung",
+    "emoji": "🦐"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "khao-lam",
+    "label": "Khao Lam",
+    "emoji": "🍚"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "rad-na",
+    "label": "Rad Na",
+    "emoji": "🍜"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "hor-mok",
+    "label": "Hor Mok",
+    "emoji": "🐟"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "pla-thot-jing-re",
+    "label": "Pla Thot Jing Re",
+    "emoji": "🐟"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "yum-talay",
+    "label": "Yum Talay",
+    "emoji": "🦐"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "gaeng-pa",
+    "label": "Gaeng Pa",
+    "emoji": "🍛"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "jok",
+    "label": "Jok",
+    "emoji": "🍚"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "som-tum",
+    "label": "Som Tum",
+    "emoji": "🥗"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "pad-see-ew",
+    "label": "Pad See Ew",
+    "emoji": "🍜"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "khao-pad",
+    "label": "Khao Pad",
+    "emoji": "🍚"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "yum-skung",
+    "label": "Yum Sung",
+    "emoji": "🍤"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "red-curry",
+    "label": "Red Curry",
+    "emoji": "🍛"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kai-phad-kratiem",
+    "label": "Kai Phad Kratiam",
+    "emoji": "🍗"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "pla-neung-manow",
+    "label": "Pla Neung Manow",
+    "emoji": "🐟"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "khao-man-gai",
+    "label": "Khao Man Gai",
+    "emoji": "🍗"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "tod-mun-plaa",
+    "label": "Tod Mun Plaa",
+    "emoji": "🐟"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "gai-yang",
+    "label": "Gai Yang",
+    "emoji": "🍗"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "green-curry",
+    "label": "Green Curry",
+    "emoji": "🥘"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "massaman-curry",
+    "label": "Massaman Curry",
+    "emoji": "🍛"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "panang-curry",
+    "label": "Panang Curry",
+    "emoji": "🍛"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "tom-yum-goong",
+    "label": "Tom Yum Goong",
+    "emoji": "🦐"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "khao-soi",
+    "label": "Khao Soi",
+    "emoji": "🍜"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "larb",
+    "label": "Larb",
+    "emoji": "🥗"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "pad-kra-pao",
+    "label": "Pad Kra Pao",
+    "emoji": "🍛"
+  },
+  {
+    "country": "thai",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "pad-thai",
+    "label": "Pad Thai",
+    "emoji": "🥜"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "hunkar-begendi",
+    "label": "Hunkar Begendi",
+    "emoji": "🍆"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "pogaca",
+    "label": "Pogaca",
+    "emoji": "🥐"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "simit-sandwich",
+    "label": "Simit Sandwich",
+    "emoji": "🥪"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "ezme",
+    "label": "Ezme",
+    "emoji": "🥗"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "cacik",
+    "label": "Cacik",
+    "emoji": "🥒"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "kuzu-kavurma",
+    "label": "Kuzu Kavurma",
+    "emoji": "🍖"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "nohutlu-pilav",
+    "label": "Nohutlu Pilav",
+    "emoji": "🍚"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "ali-nazik-kebab",
+    "label": "Ali Nazik Kebab",
+    "emoji": "🍆"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kuzu-incik",
+    "label": "Kuzu Incik",
+    "emoji": "🍖"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "hindi-firini",
+    "label": "Hindi Firini",
+    "emoji": "🦃"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "balik-izgara",
+    "label": "Balik Izgara",
+    "emoji": "🐟"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "acma",
+    "label": "Acma",
+    "emoji": "🥐"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "gozleme",
+    "label": "Gozleme",
+    "emoji": "🥞"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "mercimek-corbasi",
+    "label": "Mercimek Corbasi",
+    "emoji": "🍲"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "sigara-boregi",
+    "label": "Sigara Boregi",
+    "emoji": "🥟"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "kuru-fasulye",
+    "label": "Kuru Fasulye",
+    "emoji": "🍛"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "turlu",
+    "label": "Turlu",
+    "emoji": "🥘"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "adana-kebab",
+    "label": "Adana Kebab",
+    "emoji": "🍢"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "sis-kebab",
+    "label": "Sis Kebab",
+    "emoji": "🍢"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "beyti-kebab",
+    "label": "Beyti Kebab",
+    "emoji": "🥙"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kuzu-tandir",
+    "label": "Kuzu Tandir",
+    "emoji": "🍖"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "iskender-kebab",
+    "label": "Iskender Kebab",
+    "emoji": "🍖"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kofte",
+    "label": "Kofte",
+    "emoji": "🥩"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "pide",
+    "label": "Pide",
+    "emoji": "🍞"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "testi-kebab",
+    "label": "Testi Kebab",
+    "emoji": "🍲"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "doner-kebab",
+    "label": "Doner Kebab",
+    "emoji": "🥙"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "imam-bayildi",
+    "label": "Imam Bayildi",
+    "emoji": "🍆"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "lahmacun",
+    "label": "Lahmacun",
+    "emoji": "🍕"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "manti",
+    "label": "Manti",
+    "emoji": "🥟"
+  },
+  {
+    "country": "turkish",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "menemen",
+    "label": "Menemen",
+    "emoji": "🍳"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "banh-mi",
+    "label": "Banh Mi",
+    "emoji": "🥖"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "banh-uot",
+    "label": "Banh Uot",
+    "emoji": "🥞"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "hu-tieu",
+    "label": "Hu Tieu",
+    "emoji": "🍜"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "cha-ca-la-vong",
+    "label": "Cha Ca La Vong",
+    "emoji": "🐟"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bun-ca",
+    "label": "Bun Ca",
+    "emoji": "🍜"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "goi-bo",
+    "label": "Goi Bo",
+    "emoji": "🥗"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "com-ga",
+    "label": "Com Ga",
+    "emoji": "🍚"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "ca-hap-sa-ot",
+    "label": "Ca Hap Sa Ot",
+    "emoji": "🐟"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "nem-nuong",
+    "label": "Nem Nuong",
+    "emoji": "🍖"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "ga-nuong",
+    "label": "Ga Nuong",
+    "emoji": "🍗"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "tom-kho",
+    "label": "Tom Kho",
+    "emoji": "🦐"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "banh-cuon",
+    "label": "Banh Cuon",
+    "emoji": "🥞"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "xoi-xeo",
+    "label": "Xoi Xeo",
+    "emoji": "🍚"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bun-thang",
+    "label": "Bun Thang",
+    "emoji": "🍜"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bun-rieu",
+    "label": "Bun Rieu",
+    "emoji": "🍜"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bun-thit-nuong",
+    "label": "Bun Thit Nuong",
+    "emoji": "🍖"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bun-dau-mam-tom",
+    "label": "Bun Dau Mam Tom",
+    "emoji": "🍜"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "ga-chien-nuoc-mam",
+    "label": "Ga Chien Nuoc Mam",
+    "emoji": "🍗"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "bo-kho",
+    "label": "Bo Kho",
+    "emoji": "🍖"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "ca-rim",
+    "label": "Ca Rim",
+    "emoji": "🐟"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "cha-trung",
+    "label": "Cha Trung",
+    "emoji": "🍳"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "pho",
+    "label": "Pho",
+    "emoji": "🍜"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "ca-kho-to",
+    "label": "Ca Kho To",
+    "emoji": "🥘"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "canh-chua",
+    "label": "Canh Chua",
+    "emoji": "🍲"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "thit-kho",
+    "label": "Thit Kho",
+    "emoji": "🍖"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "banh-xeo",
+    "label": "Banh Xeo",
+    "emoji": "🍳"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bun-bo-hue",
+    "label": "Bun Bo Hue",
+    "emoji": "🍜"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bun-cha",
+    "label": "Bun Cha",
+    "emoji": "🍖"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "com-tam",
+    "label": "Com Tam",
+    "emoji": "🍚"
+  },
+  {
+    "country": "vietnamese",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "mi-quang",
+    "label": "Mi Quang",
+    "emoji": "🍜"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "full-english-breakfast",
+    "label": "Full English Breakfast",
+    "emoji": "🍳"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "scotch-eggs",
+    "label": "Scotch Eggs",
+    "emoji": "🥚"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "crumpets",
+    "label": "Crumpets",
+    "emoji": "🥞"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "beans-on-toast",
+    "label": "Beans on Toast",
+    "emoji": "🍞"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "porridge",
+    "label": "Porridge",
+    "emoji": "🥣"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "kippers",
+    "label": "Kippers",
+    "emoji": "🐟"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "fish-and-chips",
+    "label": "Fish and Chips",
+    "emoji": "🍟"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "cornish-pasty",
+    "label": "Cornish Pasty",
+    "emoji": "🥧"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "ploughmans-platter",
+    "label": "Ploughmans Platter",
+    "emoji": "🧀"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bubble-and-squeak",
+    "label": "Bubble and Squeak",
+    "emoji": "🥔"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "pork-pie",
+    "label": "Pork Pie",
+    "emoji": "🥧"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bacon-sandwich",
+    "label": "Bacon Sandwich",
+    "emoji": "🥪"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "cauliflower-cheese",
+    "label": "Cauliflower Cheese",
+    "emoji": "🥦"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "potted-shrimp",
+    "label": "Potted Shrimp",
+    "emoji": "🍤"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "steak-guinness-pie",
+    "label": "Steak and Guinness Pie",
+    "emoji": "🥧"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "cheese-toastie",
+    "label": "Cheese Toastie",
+    "emoji": "🧀"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "prawn-cocktail",
+    "label": "Prawn Cocktail",
+    "emoji": "🦐"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "potted-beef",
+    "label": "Potted Beef",
+    "emoji": "🥩"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "cottage-pie",
+    "label": "Cottage Pie",
+    "emoji": "🥔"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "bangers-and-mash",
+    "label": "Bangers and Mash",
+    "emoji": "🌭"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "toad-in-the-hole",
+    "label": "Toad in the Hole",
+    "emoji": "🐷"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "lancashire-hotpot",
+    "label": "Lancashire Hotpot",
+    "emoji": "🍲"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "beef-wellington",
+    "label": "Beef Wellington",
+    "emoji": "🥩"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "sunday-roast",
+    "label": "Sunday Roast",
+    "emoji": "🍖"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "gammon-steak",
+    "label": "Gammon Steak",
+    "emoji": "🍖"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "steak-and-kidney-pie",
+    "label": "Steak and Kidney Pie",
+    "emoji": "🥧"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "faggots-mash",
+    "label": "Faggots and Mash",
+    "emoji": "🫕"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "pork-belly-roast",
+    "label": "Pork Belly Roast",
+    "emoji": "🍖"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "gammon-hock",
+    "label": "Gammon Hock",
+    "emoji": "🍖"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "haggis-neeps-tatties",
+    "label": "Haggis, Neeps and Tatties",
+    "emoji": "🍲"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "ful-medames",
+    "label": "Ful Medames",
+    "emoji": "🫘"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "taameya",
+    "label": "Taameya",
+    "emoji": "🧆"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "besarah",
+    "label": "Besarah",
+    "emoji": "🫘"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "feteer-meshaltet",
+    "label": "Feteer Meshaltet",
+    "emoji": "🥞"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "breakfast",
+    "value": "zabadi-honey",
+    "label": "Zabadi with Honey",
+    "emoji": "🍯"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "koshari",
+    "label": "Koshari",
+    "emoji": "🍚"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "shakshouka",
+    "label": "Shakshouka",
+    "emoji": "🍳"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "hawawshi",
+    "label": "Hawawshi",
+    "emoji": "🥙"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "mahshi",
+    "label": "Mahshi",
+    "emoji": "🥬"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "molokhia",
+    "label": "Molokhia",
+    "emoji": "🥬"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "bamia",
+    "label": "Bamia",
+    "emoji": "🍲"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "fatta",
+    "label": "Fatta",
+    "emoji": "🥙"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "tagine-khudar",
+    "label": "Tagine Khudar",
+    "emoji": "🍲"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "djaj-mashwi",
+    "label": "Djaj Mashwi",
+    "emoji": "🍗"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "kebda",
+    "label": "Kebda",
+    "emoji": "🍖"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "mutabbal",
+    "label": "Mutabbal",
+    "emoji": "🥣"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "salatit-balta",
+    "label": "Salatit Balta",
+    "emoji": "🥗"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "lunch",
+    "value": "kofta",
+    "label": "Kofta",
+    "emoji": "🧆"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kebab-mishwi",
+    "label": "Kebab Mishwi",
+    "emoji": "🍢"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kofta-meshwi",
+    "label": "Kofta Meshwi",
+    "emoji": "🧆"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "feseekh",
+    "label": "Feseekh",
+    "emoji": "🐟"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "sayadeya",
+    "label": "Sayadeya",
+    "emoji": "🍚"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "roz-meammar",
+    "label": "Roz Meammar",
+    "emoji": "🍚"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "djaj-tagine",
+    "label": "Djaj Tagine",
+    "emoji": "🍗"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kebda-eskandarani",
+    "label": "Kebda Eskandarani",
+    "emoji": "🍖"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "kofta-batata",
+    "label": "Kofta Batata",
+    "emoji": "🍖"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "samak-mashwi",
+    "label": "Samak Mashwi",
+    "emoji": "🍟"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "shorbat-frik",
+    "label": "Shorbat Frik",
+    "emoji": "🥣"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "batata-mahshi",
+    "label": "Batata Mahshi",
+    "emoji": "🥔"
+  },
+  {
+    "country": "egypt",
+    "category": "main",
+    "subcategory": "dinner",
+    "value": "hamam-mashwi",
+    "label": "Hamam Mashwi",
+    "emoji": "🕊️"
+  }
+]

@@ -18,19 +18,27 @@ export interface HomeTemplateProps {
   showBackLink?: boolean;
 }
 
-export const CourseGrid: FC<{ items: CourseItem[] }> = ({ items }) => (
-  <div className="grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+export const CourseGrid: FC<{ items: CourseItem[]; wide?: boolean }> = ({
+  items,
+  wide = false,
+}) => (
+  <div
+    className={
+      wide
+        ? 'grid w-full grid-cols-1 gap-4 sm:grid-cols-3 xl:grid-cols-6'
+        : 'grid w-full max-w-3xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
+    }>
     {items.map(({ label, description: itemDescription, icon: Icon, href }) => (
       <Link
         key={href}
         href={href}
         data-testid={`tool-card-${href.replaceAll('/', '')}`}
-        className="border-base-content/10 bg-base-200 hover:border-primary group rounded-2xl border p-6 transition-colors">
-        <div className="bg-primary/10 text-primary mb-4 flex h-11 w-11 items-center justify-center rounded-xl">
-          <Icon className="h-5 w-5" />
+        className="border-base-content/10 bg-base-200 hover:border-primary group rounded-xl border p-4 transition-colors">
+        <div className="bg-primary/10 text-primary mb-3 flex h-9 w-9 items-center justify-center rounded-lg">
+          <Icon className="h-4 w-4" />
         </div>
-        <h2 className="text-lg font-bold">{label}</h2>
-        <p className="text-base-content/60 mt-1 text-sm">{itemDescription}</p>
+        <h2 className="text-base font-bold">{label}</h2>
+        <p className="text-base-content/60 mt-0.5 text-xs">{itemDescription}</p>
       </Link>
     ))}
   </div>

@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { CuisineList } from '../List';
-import { countries, foods } from '@/data';
+import { countries, drinks, foods, snacks } from '@/data';
 
 describe('CuisineList', () => {
   it('renders every dish and the total count', () => {
@@ -15,7 +15,7 @@ describe('CuisineList', () => {
   it('renders the dish, cuisine, category, course, and slug columns', async () => {
     const user = userEvent.setup();
     render(<CuisineList />);
-    await user.type(screen.getByTestId('cuisine-search'), 'coffee');
+    await user.type(screen.getByTestId('cuisine-search'), 'sushi');
     const [row] = screen.getAllByTestId('cuisine-row');
 
     ['Dish', 'Cuisine', 'Category', 'Course', 'Slug'].forEach((column) => {
@@ -23,8 +23,11 @@ describe('CuisineList', () => {
         screen.getByRole('columnheader', { name: column })
       ).toBeInTheDocument();
     });
-    expect(within(row).getAllByText('drink')).toHaveLength(2);
-    expect(within(row).getByText('coffee')).toBeInTheDocument();
+    expect(within(row).getByText('Sushi')).toBeInTheDocument();
+    expect(within(row).getByText(/Japan/)).toBeInTheDocument();
+    expect(within(row).getByText('main')).toBeInTheDocument();
+    expect(within(row).getByText('lunch')).toBeInTheDocument();
+    expect(within(row).getByText('sushi')).toBeInTheDocument();
   });
 
   it('searches dishes by name', async () => {
@@ -67,5 +70,35 @@ describe('CuisineList', () => {
         })
       ).toBeInTheDocument();
     });
+  });
+
+  it('renders the drinks variant with drink copy and data', async () => {
+    const user = userEvent.setup();
+    render(<CuisineList kind="drinks" />);
+    expect(screen.getAllByTestId('cuisine-row')).toHaveLength(drinks.length);
+    expect(screen.getByTestId('cuisine-count')).toHaveTextContent(
+      `${drinks.length} of ${drinks.length} drinks`
+    );
+    expect(
+      screen.getByRole('columnheader', { name: 'Drink' })
+    ).toBeInTheDocument();
+    await user.type(screen.getByTestId('cuisine-search'), 'coffee');
+    expect(screen.getAllByTestId('cuisine-row')).toHaveLength(2);
+    expect(screen.getByText('Coffee')).toBeInTheDocument();
+  });
+
+  it('renders the snacks variant with snack copy and data', async () => {
+    const user = userEvent.setup();
+    render(<CuisineList kind="snacks" />);
+    expect(screen.getAllByTestId('cuisine-row')).toHaveLength(snacks.length);
+    expect(screen.getByTestId('cuisine-count')).toHaveTextContent(
+      `${snacks.length} of ${snacks.length} snacks`
+    );
+    expect(
+      screen.getByRole('columnheader', { name: 'Snack' })
+    ).toBeInTheDocument();
+    await user.type(screen.getByTestId('cuisine-search'), 'apple pie');
+    expect(screen.getAllByTestId('cuisine-row')).toHaveLength(1);
+    expect(screen.getByText('Apple Pie')).toBeInTheDocument();
   });
 });

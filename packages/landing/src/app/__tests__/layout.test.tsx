@@ -1,10 +1,8 @@
 import { render, screen } from '@testing-library/react';
 
 jest.mock('@/styles/globals.css', () => ({}));
-jest.mock('@/providers/SWProvider', () => ({
-  SWProvider: ({ children }: { children: React.ReactNode }) => (
-    <div>{children}</div>
-  ),
+jest.mock('@/components/atoms/ServiceWorker', () => ({
+  ServiceWorker: () => null,
 }));
 
 import RootLayout, { metadata, viewport } from '../layout';

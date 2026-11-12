@@ -1,0 +1,482 @@
+[
+  {
+    "country": "united-states",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "apple-pie",
+    "label": "Apple Pie",
+    "emoji": "🥧"
+  },
+  {
+    "country": "united-states",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "brownie",
+    "label": "Brownie",
+    "emoji": "🍫"
+  },
+  {
+    "country": "united-states",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "buffalo-wings",
+    "label": "Buffalo Wings",
+    "emoji": "🍗"
+  },
+  {
+    "country": "united-states",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "cheesecake",
+    "label": "Cheesecake",
+    "emoji": "🍰"
+  },
+  {
+    "country": "united-states",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "pecan-pie",
+    "label": "Pecan Pie",
+    "emoji": "🥧"
+  },
+  {
+    "country": "chinese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "dumpling",
+    "label": "Dumpling",
+    "emoji": "🥟"
+  },
+  {
+    "country": "chinese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "egg-tart",
+    "label": "Egg Tart",
+    "emoji": "🥧"
+  },
+  {
+    "country": "chinese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "mooncake",
+    "label": "Mooncake",
+    "emoji": "🥮"
+  },
+  {
+    "country": "chinese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "spring-roll",
+    "label": "Spring Roll",
+    "emoji": "🥠"
+  },
+  {
+    "country": "chinese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "xiao-long-bao",
+    "label": "Xiao Long Bao",
+    "emoji": "🥟"
+  },
+  {
+    "country": "indian",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "gulab-jamun",
+    "label": "Gulab Jamun",
+    "emoji": "🍩"
+  },
+  {
+    "country": "indian",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "jalebi",
+    "label": "Jalebi",
+    "emoji": "🥨"
+  },
+  {
+    "country": "indian",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "kachori",
+    "label": "Kachori",
+    "emoji": "🥟"
+  },
+  {
+    "country": "indian",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "rasgulla",
+    "label": "Rasgulla",
+    "emoji": "🍬"
+  },
+  {
+    "country": "indian",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "samosa",
+    "label": "Samosa",
+    "emoji": "🥟"
+  },
+  {
+    "country": "italian",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "bruschetta",
+    "label": "Bruschetta",
+    "emoji": "🥖"
+  },
+  {
+    "country": "italian",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "cannoli",
+    "label": "Cannoli",
+    "emoji": "🍩"
+  },
+  {
+    "country": "italian",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "focaccia",
+    "label": "Focaccia",
+    "emoji": "🫓"
+  },
+  {
+    "country": "italian",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "gelato",
+    "label": "Gelato",
+    "emoji": "🍨"
+  },
+  {
+    "country": "italian",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "tiramisu",
+    "label": "Tiramisu",
+    "emoji": "🍰"
+  },
+  {
+    "country": "japanese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "dorayaki",
+    "label": "Dorayaki",
+    "emoji": "🥞"
+  },
+  {
+    "country": "japanese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "mochi",
+    "label": "Mochi",
+    "emoji": "🍡"
+  },
+  {
+    "country": "japanese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "takoyaki",
+    "label": "Takoyaki",
+    "emoji": "🐙"
+  },
+  {
+    "country": "japanese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "tempura",
+    "label": "Tempura",
+    "emoji": "🍤"
+  },
+  {
+    "country": "japanese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "yakitori",
+    "label": "Yakitori",
+    "emoji": "🍢"
+  },
+  {
+    "country": "korean",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "bungeoppang",
+    "label": "Bungeoppang",
+    "emoji": "🐟"
+  },
+  {
+    "country": "korean",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "hotteok",
+    "label": "Hotteok",
+    "emoji": "🥞"
+  },
+  {
+    "country": "korean",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "mandu",
+    "label": "Mandu",
+    "emoji": "🥟"
+  },
+  {
+    "country": "korean",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "tteokbokki",
+    "label": "Tteokbokki",
+    "emoji": "🍡"
+  },
+  {
+    "country": "korean",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "yakgwa",
+    "label": "Yakgwa",
+    "emoji": "🍪"
+  },
+  {
+    "country": "mexican",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "churros",
+    "label": "Churros",
+    "emoji": "🥨"
+  },
+  {
+    "country": "mexican",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "elote",
+    "label": "Elote",
+    "emoji": "🌽"
+  },
+  {
+    "country": "mexican",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "flan",
+    "label": "Flan",
+    "emoji": "🍮"
+  },
+  {
+    "country": "mexican",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "guacamole",
+    "label": "Guacamole",
+    "emoji": "🥑"
+  },
+  {
+    "country": "mexican",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "tres-leches",
+    "label": "Tres Leches",
+    "emoji": "🍰"
+  },
+  {
+    "country": "thai",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "coconut-cake",
+    "label": "Coconut Cake",
+    "emoji": "🍰"
+  },
+  {
+    "country": "thai",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "coconut-ice-cream",
+    "label": "Coconut Ice Cream",
+    "emoji": "🍦"
+  },
+  {
+    "country": "thai",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "mango-sticky",
+    "label": "Mango Sticky",
+    "emoji": "🥭"
+  },
+  {
+    "country": "thai",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "mango-sticky-rice",
+    "label": "Mango Sticky Rice",
+    "emoji": "🥭"
+  },
+  {
+    "country": "thai",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "som-tam",
+    "label": "Som Tam",
+    "emoji": "🌶️"
+  },
+  {
+    "country": "turkish",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "baklava",
+    "label": "Baklava",
+    "emoji": "🍯"
+  },
+  {
+    "country": "turkish",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "kunefe",
+    "label": "Kunefe",
+    "emoji": "🧀"
+  },
+  {
+    "country": "turkish",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "lokum",
+    "label": "Lokum",
+    "emoji": "🍬"
+  },
+  {
+    "country": "turkish",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "revani",
+    "label": "Revani",
+    "emoji": "🍰"
+  },
+  {
+    "country": "turkish",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "simit",
+    "label": "Simit",
+    "emoji": "🥯"
+  },
+  {
+    "country": "vietnamese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "banh-flan",
+    "label": "Banh Flan",
+    "emoji": "🍮"
+  },
+  {
+    "country": "vietnamese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "che",
+    "label": "Che",
+    "emoji": "🍮"
+  },
+  {
+    "country": "vietnamese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "che-ba-mau",
+    "label": "Che Ba Mau",
+    "emoji": "🍮"
+  },
+  {
+    "country": "vietnamese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "che-ba-mau-2",
+    "label": "Che Ba Mau 2",
+    "emoji": "🍮"
+  },
+  {
+    "country": "vietnamese",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "goi-cuon",
+    "label": "Goi Cuon",
+    "emoji": "🥗"
+  },
+  {
+    "country": "egypt",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "konafa",
+    "label": "Konafa",
+    "emoji": "🍰"
+  },
+  {
+    "country": "egypt",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "basbousa",
+    "label": "Basbousa",
+    "emoji": "🍮"
+  },
+  {
+    "country": "egypt",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "umm-ali",
+    "label": "Umm Ali",
+    "emoji": "🍮"
+  },
+  {
+    "country": "egypt",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "qatayef",
+    "label": "Qatayef",
+    "emoji": "🥞"
+  },
+  {
+    "country": "egypt",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "kahk",
+    "label": "Kahk",
+    "emoji": "🍪"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "scones",
+    "label": "Scones",
+    "emoji": "🧁"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "pork-scratchings",
+    "label": "Pork Scratchings",
+    "emoji": "🥓"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "bread-and-butter-pudding",
+    "label": "Bread and Butter Pudding",
+    "emoji": "🍮"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "jaffa-cakes",
+    "label": "Jaffa Cakes",
+    "emoji": "🍪"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "snack/dessert",
+    "subcategory": "snack/dessert",
+    "value": "custard-creams",
+    "label": "Custard Creams",
+    "emoji": "🍪"
+  }
+]

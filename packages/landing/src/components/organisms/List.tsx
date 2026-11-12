@@ -3,9 +3,49 @@
 import type { FC } from 'react';
 import { useMemo, useState } from 'react';
 import { PiMagnifyingGlass } from 'react-icons/pi';
-import { countries, foods, type Food } from '@/data';
+import { countries, drinks, foods, snacks, type Food } from '@/data';
+
+export type ListKind = 'foods' | 'drinks' | 'snacks';
+
+const LIST_COPY: Record<
+  ListKind,
+  {
+    items: Food[];
+    singular: string;
+    plural: string;
+    searchPlaceholder: string;
+    searchLabel: string;
+    emptyLabel: string;
+  }
+> = {
+  foods: {
+    items: foods,
+    singular: 'Dish',
+    plural: 'dishes',
+    searchPlaceholder: 'Search dishes or countries…',
+    searchLabel: 'Search dishes',
+    emptyLabel: 'No dishes match your search',
+  },
+  drinks: {
+    items: drinks,
+    singular: 'Drink',
+    plural: 'drinks',
+    searchPlaceholder: 'Search drinks or countries…',
+    searchLabel: 'Search drinks',
+    emptyLabel: 'No drinks match your search',
+  },
+  snacks: {
+    items: snacks,
+    singular: 'Snack',
+    plural: 'snacks',
+    searchPlaceholder: 'Search snacks or countries…',
+    searchLabel: 'Search snacks',
+    emptyLabel: 'No snacks match your search',
+  },
+};
 
 interface CuisineListProps {
+  kind?: ListKind;
   filterLabel?: string;
 }
 
@@ -18,14 +58,16 @@ const cuisineEmoji = (country: string): string =>
   CUISINE_BY_VALUE.get(country)?.emoji ?? '🍽️';
 
 export const CuisineList: FC<CuisineListProps> = ({
+  kind = 'foods',
   filterLabel = 'All countries',
 }) => {
+  const copy = LIST_COPY[kind];
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('all');
 
   const rows: Food[] = useMemo(() => {
     const query = search.toLowerCase().trim();
-    return foods.filter(
+    return copy.items.filter(
       (food) =>
         (filter === 'all' || food.country === filter) &&
         (!query ||
@@ -35,7 +77,7 @@ export const CuisineList: FC<CuisineListProps> = ({
           food.subcategory.toLowerCase().includes(query) ||
           cuisineLabel(food.country).toLowerCase().includes(query))
     );
-  }, [search, filter]);
+  }, [search, filter, copy.items]);
 
   return (
     <div className="w-full max-w-3xl">
@@ -46,8 +88,8 @@ export const CuisineList: FC<CuisineListProps> = ({
             type="text"
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="Search dishes or countries…"
-            aria-label="Search dishes"
+            placeholder={copy.searchPlaceholder}
+            aria-label={copy.searchLabel}
             data-testid="cuisine-search"
             className="w-full bg-transparent outline-none"
           />
@@ -78,7 +120,7 @@ export const CuisineList: FC<CuisineListProps> = ({
             <thead>
               <tr className="text-base-content/50 border-base-content/10 border-b text-xs font-bold tracking-wider uppercase">
                 <th scope="col" className="px-4 py-3">
-                  Dish
+                  {copy.singular}
                 </th>
                 <th scope="col" className="px-4 py-3">
                   Cuisine
@@ -100,7 +142,7 @@ export const CuisineList: FC<CuisineListProps> = ({
                   <td
                     colSpan={5}
                     className="text-base-content/50 px-4 py-8 text-center">
-                    No dishes match your search
+                    {copy.emptyLabel}
                   </td>
                 </tr>
               ) : (
@@ -135,7 +177,7 @@ export const CuisineList: FC<CuisineListProps> = ({
           data-testid="cuisine-count"
           aria-live="polite"
           className="text-base-content/50 border-base-content/10 border-t px-4 py-2 text-xs">
-          {rows.length} of {foods.length} dishes
+          {rows.length} of {copy.items.length} {copy.plural}
         </p>
       </div>
     </div>

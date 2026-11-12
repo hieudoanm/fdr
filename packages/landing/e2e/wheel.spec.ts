@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('wheel page spins and reveals a cuisine', async ({ page }) => {
-  await page.goto('/wheel/');
+  await page.goto('/foods/wheel/');
 
   await expect(
     page.getByRole('heading', { name: 'Wheel of Cuisine' })

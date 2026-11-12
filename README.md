@@ -4,7 +4,6 @@
 
 Topics: `food`, `randomizer`, `nextjs`, `static-site`
 
-
 **FDR (Food & Drink)** — Can't decide what to eat? Let fate choose.
 
 <p align="center">
@@ -19,16 +18,23 @@ schedules.
 
 ## Features
 
-| Feature              | Route          | What it does                                    |
-| -------------------- | -------------- | ----------------------------------------------- |
-| **Wheel of Cuisine** | `/wheel/`      | Spin a wheel to pick a country to eat from      |
-| **Food Randomizer**  | `/randomizer/` | Spin a reel to pick a dish, filtered by cuisine |
-| **Dishes**           | `/dishes/`     | Browse and search dishes across world cuisines  |
-| **Food Schedules**   | `/schedule/`   | Weekly dining schedules (Sheldon, Vietnam, UK)  |
+| Feature              | Route                 | What it does                                     |
+| -------------------- | --------------------- | ------------------------------------------------ |
+| **Wheel of Cuisine** | `/foods/wheel/`       | Spin a wheel to pick a country to eat from       |
+| **Food Randomizer**  | `/foods/randomizer/`  | Spin a reel to pick a dish, filtered by cuisine  |
+| **Dishes**           | `/foods/dishes/`      | Browse and search dishes across world cuisines   |
+| **Drinks Wheel**     | `/drinks/wheel/`      | Spin a wheel to pick a country to drink from     |
+| **Drink Randomizer** | `/drinks/randomizer/` | Spin a reel to pick a drink, filtered by cuisine |
+| **Drinks**           | `/drinks/dishes/`     | Browse and search drinks across world cuisines   |
+| **Snacks Wheel**     | `/snacks/wheel/`      | Spin a wheel to pick a country for a snack       |
+| **Snack Randomizer** | `/snacks/randomizer/` | Spin a reel to pick a snack, filtered by cuisine |
+| **Snacks**           | `/snacks/dishes/`     | Browse and search snacks across world cuisines   |
+| **Food Schedules**   | `/schedule/`          | Weekly dining schedules (Sheldon, Vietnam, UK)   |
 
-The data set covers **200 dishes** across **10 countries** — American, Chinese,
-Indian, Italian, Japanese, Korean, Mexican, Thai, Turkish, and Vietnamese — with
-drinks, mains, sides, and desserts.
+The data set covers **480 items** across **12 countries** — American (United States), Chinese,
+Egyptian, Indian, Italian, Japanese, Korean, Mexican, Thai, Turkish, British, and Vietnamese —
+split into 360 dishes (`meal-foods.csv`), 60 drinks (`meal-drinks.csv`), and 60 snacks
+and desserts (`meal-snacks.csv`).
 
 ## Monorepo layout
 
@@ -81,27 +87,31 @@ pnpm --filter @fdr/landing start        # serves out/ on :3000
 
 ## Data model
 
-The canonical data is CSV in `packages/landing/data/csv/`; JSON in
-`packages/landing/data/json/` is generated from it. The app imports a checked-in
-copy from `packages/landing/src/data/json/` — `csv-to-json.mjs` writes both:
+The canonical data is CSV in `packages/landing/src/data/csv/`; JSON in
+`packages/landing/src/data/json/` is generated from it:
 
 ```bash
-node packages/landing/data/csv-to-json.mjs
+node packages/landing/scripts/csv-to-json.mjs
 ```
 
 | File                          | Records | Shape                                                 |
 | ----------------------------- | ------- | ----------------------------------------------------- |
-| `foods.csv`                   | 200     | `country, category, subcategory, value, label, emoji` |
-| `countries.csv`               | 10      | `value, label, emoji`                                 |
+| `meal-foods.csv`              | 360     | `country, category, subcategory, value, label, emoji` |
+| `meal-drinks.csv`             | 60      | `country, category, subcategory, value, label, emoji` |
+| `meal-snacks.csv`             | 60      | `country, category, subcategory, value, label, emoji` |
+| `countries.csv`               | 12      | `value, label, emoji`                                 |
 | `schedule-scheldon.csv`       | 7       | `day, meal, emoji, restaurant, note`                  |
-| `schedule-vietnam.csv`        | 14      | `day, week, meal, emoji, restaurant, note`            |
-| `schedule-united-kingdom.csv` | 7       | `day, meal, emoji, restaurant, note`                  |
+| `schedule-vietnam.csv`        | 28      | `day, week, meal, emoji, restaurant, note`            |
+| `schedule-united-kingdom.csv` | 28      | `day, week, meal, emoji, restaurant, note`            |
 
 `packages/landing/src/data/` exposes the typed accessors:
 
 - `Food`, `Cuisine`, `ScheduleEntry`, and `ScheduleMeta` types
-- `foods`, `countries`, `schedules`, `getSchedule`, `listSchedules`
-- `FOOD_OPTIONS` — label lists keyed by country, dish value, and `all`
+- `foods` (360 dishes), `drinks` (60 drinks), `snacks` (60 snacks),
+  `foodsAndDrinks` (all 480), `countries`, `schedules`, `getSchedule`,
+  `listSchedules`
+- `FOOD_OPTIONS`, `DRINK_OPTIONS`, `SNACK_OPTIONS` — label lists keyed by
+  country, item value, and `all`
 
 ## Deployment
 
