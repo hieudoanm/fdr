@@ -124,7 +124,7 @@ export const CuisineSelect: FC<CuisineSelectProps> = ({
           aria-label="Cuisine"
           tabIndex={-1}
           onKeyDown={handleMenuKeyDown}
-          className="border-base-content/10 bg-base-200 absolute right-0 left-0 z-[1000] mt-2 rounded-2xl border p-1.5 shadow-2xl shadow-black/50">
+          className="border-base-content/10 bg-base-200 absolute right-0 left-0 z-50 mt-2 rounded-2xl border p-1.5 shadow-2xl shadow-black/50">
           <button
             role="option"
             aria-selected={value === 'all'}

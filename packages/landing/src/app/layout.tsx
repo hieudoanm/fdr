@@ -53,11 +53,11 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+const inter = Inter({ subsets: ['latin'] });
 
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
-  <html lang="en" data-theme="fdr" className={inter.variable}>
-    <body className="bg-base-100 text-base-content h-screen overflow-y-auto font-sans">
+  <html lang="en" data-theme="fdr" className={inter.className}>
+    <body className="bg-base-100 text-base-content h-screen overflow-y-auto">
       <Navbar />
       {children}
       <ServiceWorker />
