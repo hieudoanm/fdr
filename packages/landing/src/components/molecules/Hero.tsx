@@ -13,7 +13,7 @@ interface HeroProps {
   primary: CTALink;
   secondary?: CTALink;
   stats: HeroStat[];
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const HeroButton: FC<{ link: CTALink; className: string }> = ({
@@ -22,6 +22,10 @@ const HeroButton: FC<{ link: CTALink; className: string }> = ({
 }) =>
   link.external ? (
     <a href={link.href} target="_blank" rel="noreferrer" className={className}>
+      {link.label}
+    </a>
+  ) : link.href.startsWith('#') ? (
+    <a href={link.href} className={className}>
       {link.label}
     </a>
   ) : (
