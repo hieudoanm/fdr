@@ -6,14 +6,14 @@ global.fetch = jest.fn() as unknown as typeof global.fetch;
 describe('HomePage', () => {
   it('renders the randomizer tool card', () => {
     render(<HomePage />);
-    expect(screen.getByTestId('tool-card-randomizer')).toBeInTheDocument();
+    expect(screen.getByTestId('tool-card-foodsrandomizer')).toBeInTheDocument();
   });
 
   it('links the randomizer card to the randomizer route', () => {
     render(<HomePage />);
-    expect(screen.getByTestId('tool-card-randomizer')).toHaveAttribute(
+    expect(screen.getByTestId('tool-card-foodsrandomizer')).toHaveAttribute(
       'href',
-      '/randomizer'
+      '/foods/randomizer'
     );
   });
 });

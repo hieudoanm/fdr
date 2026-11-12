@@ -1,12 +1,18 @@
-const CACHE_NAME = 'fdr-v3';
+const CACHE_NAME = 'fdr-v5';
 
 // Relative URLs resolve against this script's location, so precaching works
 // both at the domain root and under the /fdr base path.
 const PRECACHE_URLS = [
   './',
-  'wheel/',
-  'randomizer/',
-  'dishes/',
+  'foods/wheel/',
+  'foods/randomizer/',
+  'foods/dishes/',
+  'drinks/wheel/',
+  'drinks/randomizer/',
+  'drinks/dishes/',
+  'snacks/wheel/',
+  'snacks/randomizer/',
+  'snacks/dishes/',
   'schedule/',
   'schedule/scheldon/',
   'schedule/vietnam/',

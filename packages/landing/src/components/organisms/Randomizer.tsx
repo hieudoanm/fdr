@@ -2,7 +2,7 @@
 
 import type { FC } from 'react';
 import { useCallback, useEffect, useState } from 'react';
-import { countries, FOOD_OPTIONS, foods } from '@/data';
+import { countries, foods, FOOD_OPTIONS, type Food } from '@/data';
 import { CuisineSelect } from '@/components/molecules/CuisineSelect';
 import { Reel } from '@/components/molecules/Reel';
 import { useFoodPicker } from '@/hooks/useFoodPicker';
@@ -13,11 +13,21 @@ const isTypingTarget = (target: EventTarget | null): boolean => {
 };
 
 interface FoodRandomizerProps {
+  items?: Food[];
+  optionsMap?: Record<string, string[]>;
+  title?: string;
+  blurb?: string;
+  unitLabel?: string;
   initialCountry?: string;
   onCountryChange?: (value: string) => void;
 }
 
 export const FoodRandomizer: FC<FoodRandomizerProps> = ({
+  items = foods,
+  optionsMap = FOOD_OPTIONS,
+  title = 'Food Randomizer',
+  blurb = "Can't decide what to eat? Spin the reel and let fate choose.",
+  unitLabel = 'dishes',
   initialCountry = 'all',
   onCountryChange,
 }) => {
@@ -27,10 +37,10 @@ export const FoodRandomizer: FC<FoodRandomizerProps> = ({
     ? initialCountry
     : 'all';
   const { food, suggestion, spinning, options, selectFood, spin } =
-    useFoodPicker({ foodsMap: FOOD_OPTIONS, initialFood });
+    useFoodPicker({ foodsMap: optionsMap, initialFood });
   const [spins, setSpins] = useState(0);
 
-  const landedFood = foods.find((item) => item.label === suggestion);
+  const landedFood = items.find((item) => item.label === suggestion);
   const activeCuisine = landedFood
     ? countries.find((cuisine) => cuisine.value === landedFood.country)
     : countries.find((cuisine) => cuisine.value === food);
@@ -65,11 +75,9 @@ export const FoodRandomizer: FC<FoodRandomizerProps> = ({
     <div className="flex w-full flex-col items-center gap-6">
       <div className="flex flex-col items-center gap-2">
         <h1 className="text-primary font-serif text-3xl font-bold tracking-tight">
-          Food Randomizer
+          {title}
         </h1>
-        <p className="text-base-content/60 text-sm">
-          Can&apos;t decide what to eat? Spin the reel and let fate choose.
-        </p>
+        <p className="text-base-content/60 text-sm">{blurb}</p>
       </div>
       <Reel
         topics={options}
@@ -94,7 +102,7 @@ export const FoodRandomizer: FC<FoodRandomizerProps> = ({
       </button>
 
       <p data-testid="stats-line" className="text-base-content/50 m-0 text-xs">
-        Press Space or Enter to spin · {options.length} dishes ·{' '}
+        Press Space or Enter to spin · {options.length} {unitLabel} ·{' '}
         <span data-testid="spin-count">{spins}</span> spins
       </p>
 

@@ -1,0 +1,482 @@
+[
+  {
+    "country": "united-states",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "coffee",
+    "label": "Coffee",
+    "emoji": "☕"
+  },
+  {
+    "country": "united-states",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "iced-tea",
+    "label": "Iced Tea",
+    "emoji": "🧋"
+  },
+  {
+    "country": "united-states",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "lemonade",
+    "label": "Lemonade",
+    "emoji": "🍋"
+  },
+  {
+    "country": "united-states",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "milkshake",
+    "label": "Milkshake",
+    "emoji": "🥤"
+  },
+  {
+    "country": "united-states",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "root-beer",
+    "label": "Root Beer",
+    "emoji": "🍺"
+  },
+  {
+    "country": "chinese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "bubble-tea",
+    "label": "Bubble Tea",
+    "emoji": "🧋"
+  },
+  {
+    "country": "chinese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "chrysanthemum-tea",
+    "label": "Chrysanthemum Tea",
+    "emoji": "🍵"
+  },
+  {
+    "country": "chinese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "jasmine-tea",
+    "label": "Jasmine Tea",
+    "emoji": "🍵"
+  },
+  {
+    "country": "chinese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "plum-juice",
+    "label": "Plum Juice",
+    "emoji": "🍹"
+  },
+  {
+    "country": "chinese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "soy-milk",
+    "label": "Soy Milk",
+    "emoji": "🥛"
+  },
+  {
+    "country": "indian",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "mango-lassi",
+    "label": "Mango Lassi",
+    "emoji": "🥭"
+  },
+  {
+    "country": "indian",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "masala-chai",
+    "label": "Masala Chai",
+    "emoji": "☕"
+  },
+  {
+    "country": "indian",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "nimbu-pani",
+    "label": "Nimbu Pani",
+    "emoji": "🍋"
+  },
+  {
+    "country": "indian",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "rose-sharbat",
+    "label": "Rose Sharbat",
+    "emoji": "🌹"
+  },
+  {
+    "country": "indian",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "thandai",
+    "label": "Thandai",
+    "emoji": "🥛"
+  },
+  {
+    "country": "italian",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "aperol-spritz",
+    "label": "Aperol Spritz",
+    "emoji": "🍹"
+  },
+  {
+    "country": "italian",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "cappuccino",
+    "label": "Cappuccino",
+    "emoji": "☕"
+  },
+  {
+    "country": "italian",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "espresso",
+    "label": "Espresso",
+    "emoji": "☕"
+  },
+  {
+    "country": "italian",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "limoncello",
+    "label": "Limoncello",
+    "emoji": "🍋"
+  },
+  {
+    "country": "italian",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "negroni",
+    "label": "Negroni",
+    "emoji": "🍹"
+  },
+  {
+    "country": "japanese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "amazake",
+    "label": "Amazake",
+    "emoji": "🍶"
+  },
+  {
+    "country": "japanese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "hojicha",
+    "label": "Hojicha",
+    "emoji": "🍵"
+  },
+  {
+    "country": "japanese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "matcha",
+    "label": "Matcha",
+    "emoji": "🍵"
+  },
+  {
+    "country": "japanese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "ramune",
+    "label": "Ramune",
+    "emoji": "🥤"
+  },
+  {
+    "country": "japanese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "sake",
+    "label": "Sake",
+    "emoji": "🍶"
+  },
+  {
+    "country": "korean",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "bori-cha",
+    "label": "Bori Cha",
+    "emoji": "🍵"
+  },
+  {
+    "country": "korean",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "makgeolli",
+    "label": "Makgeolli",
+    "emoji": "🍶"
+  },
+  {
+    "country": "korean",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "sikhye",
+    "label": "Sikhye",
+    "emoji": "🥤"
+  },
+  {
+    "country": "korean",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "soju",
+    "label": "Soju",
+    "emoji": "🍶"
+  },
+  {
+    "country": "korean",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "yuja-tea",
+    "label": "Yuja Tea",
+    "emoji": "🍵"
+  },
+  {
+    "country": "mexican",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "aguas-frescas",
+    "label": "Aguas Frescas",
+    "emoji": "🍹"
+  },
+  {
+    "country": "mexican",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "atole",
+    "label": "Atole",
+    "emoji": "☕"
+  },
+  {
+    "country": "mexican",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "horchata",
+    "label": "Horchata",
+    "emoji": "🥤"
+  },
+  {
+    "country": "mexican",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "mexican-cola",
+    "label": "Mexican Cola",
+    "emoji": "🥤"
+  },
+  {
+    "country": "mexican",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "michelada",
+    "label": "Michelada",
+    "emoji": "🍺"
+  },
+  {
+    "country": "thai",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "cha-yen",
+    "label": "Cha Yen",
+    "emoji": "🧋"
+  },
+  {
+    "country": "thai",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "coconut-water",
+    "label": "Coconut Water",
+    "emoji": "🥥"
+  },
+  {
+    "country": "thai",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "lemongrass-juice",
+    "label": "Lemongrass Juice",
+    "emoji": "🍹"
+  },
+  {
+    "country": "thai",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "roselle-tea",
+    "label": "Roselle Tea",
+    "emoji": "🍵"
+  },
+  {
+    "country": "thai",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "thai-tea",
+    "label": "Thai Tea",
+    "emoji": "🧋"
+  },
+  {
+    "country": "turkish",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "ayran",
+    "label": "Ayran",
+    "emoji": "🥛"
+  },
+  {
+    "country": "turkish",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "salep",
+    "label": "Salep",
+    "emoji": "🥛"
+  },
+  {
+    "country": "turkish",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "sherbet",
+    "label": "Sherbet",
+    "emoji": "🍹"
+  },
+  {
+    "country": "turkish",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "turkish-coffee",
+    "label": "Turkish Coffee",
+    "emoji": "☕"
+  },
+  {
+    "country": "turkish",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "turkish-tea",
+    "label": "Turkish Tea",
+    "emoji": "🍵"
+  },
+  {
+    "country": "vietnamese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "ca-phe-sua-da",
+    "label": "Ca Phe Sua Da",
+    "emoji": "☕"
+  },
+  {
+    "country": "vietnamese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "nuoc-mia",
+    "label": "Nuoc Mia",
+    "emoji": "🥤"
+  },
+  {
+    "country": "vietnamese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "rau-ma",
+    "label": "Rau Ma",
+    "emoji": "🥤"
+  },
+  {
+    "country": "vietnamese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "sinh-to",
+    "label": "Sinh To",
+    "emoji": "🍹"
+  },
+  {
+    "country": "vietnamese",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "tra-da",
+    "label": "Tra Da",
+    "emoji": "🍵"
+  },
+  {
+    "country": "egypt",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "karkade",
+    "label": "Karkade",
+    "emoji": "🌺"
+  },
+  {
+    "country": "egypt",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "sahlab",
+    "label": "Sahlab",
+    "emoji": "🥛"
+  },
+  {
+    "country": "egypt",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "jallab",
+    "label": "Jallab",
+    "emoji": "🥤"
+  },
+  {
+    "country": "egypt",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "tamr-hindi",
+    "label": "Tamr Hindi",
+    "emoji": "🍹"
+  },
+  {
+    "country": "egypt",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "sobia",
+    "label": "Sobia",
+    "emoji": "🥥"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "english-tea",
+    "label": "English Tea",
+    "emoji": "🍵"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "ginger-beer",
+    "label": "Ginger Beer",
+    "emoji": "🫚"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "elderflower-press",
+    "label": "Elderflower Press",
+    "emoji": "🥤"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "orange-squash",
+    "label": "Orange Squash",
+    "emoji": "🍊"
+  },
+  {
+    "country": "united-kingdom",
+    "category": "drink",
+    "subcategory": "drink",
+    "value": "dandelion-burdoch",
+    "label": "Dandelion & Burdoch",
+    "emoji": "🥃"
+  }
+]

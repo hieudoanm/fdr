@@ -1,51 +1,226 @@
 [
   {
     "day": "Monday",
+    "week": "1",
     "meal": "Full English Breakfast",
     "emoji": "🍳",
-    "restaurant": "The Cafe",
-    "note": "Sausage, bacon, eggs, beans and toast"
+    "restaurant": "-",
+    "note": "Sausages, bacon, eggs, beans, mushrooms, tomato and toast"
   },
   {
     "day": "Tuesday",
-    "meal": "Fish & Chips",
+    "week": "1",
+    "meal": "Fish and Chips",
     "emoji": "🍟",
-    "restaurant": "The Golden Haddock",
-    "note": "Cod with mushy peas and malt vinegar"
+    "restaurant": "-",
+    "note": "Beer-battered cod with thick-cut chips and mushy peas"
   },
   {
     "day": "Wednesday",
-    "meal": "Shepherd's Pie",
-    "emoji": "🥩",
-    "restaurant": "The Lamb & Flag",
-    "note": "Lamb and veg under a cheesy mash crust"
+    "week": "1",
+    "meal": "Cottage Pie",
+    "emoji": "🥔",
+    "restaurant": "-",
+    "note": "Minced lamb and vegetables under a mashed potato crust"
   },
   {
     "day": "Thursday",
-    "meal": "Chicken Tikka Masala",
-    "emoji": "🍖",
-    "restaurant": "Taj Mahal",
-    "note": "Creamy tomato curry with naan"
+    "week": "1",
+    "meal": "Cornish Pasty",
+    "emoji": "🥧",
+    "restaurant": "-",
+    "note": "Crimped pastry filled with beef, potato, swede and onion"
   },
   {
     "day": "Friday",
-    "meal": "Burger & Chips",
-    "emoji": "🍔",
-    "restaurant": "The Crown",
-    "note": "Double cheeseburger with triple-cooked chips"
+    "week": "1",
+    "meal": "Bangers and Mash",
+    "emoji": "🌭",
+    "restaurant": "-",
+    "note": "Sausages with creamy mashed potato and onion gravy"
   },
   {
     "day": "Saturday",
-    "meal": "Sunday Roast (Saturday edition)",
-    "emoji": "🍖",
-    "restaurant": "The King's Arms",
-    "note": "Roast beef, Yorkshire pudding and gravy"
+    "week": "1",
+    "meal": "Ploughmans Platter",
+    "emoji": "🧀",
+    "restaurant": "-",
+    "note": "Cheese, pickle, bread and salad — the classic pub lunch"
   },
   {
     "day": "Sunday",
-    "meal": "Afternoon Tea",
-    "emoji": "🍰",
-    "restaurant": "The Rose Lounge",
-    "note": "Scones with clotted cream and jam"
+    "week": "1",
+    "meal": "Toad in the Hole",
+    "emoji": "🐷",
+    "restaurant": "-",
+    "note": "Sausages baked in a Yorkshire pudding batter"
+  },
+  {
+    "day": "Monday",
+    "week": "2",
+    "meal": "Scotch Eggs",
+    "emoji": "🥚",
+    "restaurant": "-",
+    "note": "Soft-boiled eggs wrapped in seasoned sausage meat and baked"
+  },
+  {
+    "day": "Tuesday",
+    "week": "2",
+    "meal": "Bubble and Squeak",
+    "emoji": "🥔",
+    "restaurant": "-",
+    "note": "Fried leftover potatoes, cabbage and vegetables"
+  },
+  {
+    "day": "Wednesday",
+    "week": "2",
+    "meal": "Lancashire Hotpot",
+    "emoji": "🍲",
+    "restaurant": "-",
+    "note": "Layered lamb and potatoes baked in stock"
+  },
+  {
+    "day": "Thursday",
+    "week": "2",
+    "meal": "Pork Pie",
+    "emoji": "🥧",
+    "restaurant": "-",
+    "note": "Cold British pork pie with jelly, often eaten with piccalilli"
+  },
+  {
+    "day": "Friday",
+    "week": "2",
+    "meal": "Beef Wellington",
+    "emoji": "🥩",
+    "restaurant": "-",
+    "note": "Beef fillet wrapped in mushroom duxelles and puff pastry"
+  },
+  {
+    "day": "Saturday",
+    "week": "2",
+    "meal": "Bacon Sandwich",
+    "emoji": "🥪",
+    "restaurant": "-",
+    "note": "Grilled back bacon in white or brown bread with sauce"
+  },
+  {
+    "day": "Sunday",
+    "week": "2",
+    "meal": "Sunday Roast",
+    "emoji": "🍖",
+    "restaurant": "-",
+    "note": "Roast meat, Yorkshire pudding, roast potatoes and gravy"
+  },
+  {
+    "day": "Monday",
+    "week": "3",
+    "meal": "Crumpets",
+    "emoji": "🥞",
+    "restaurant": "-",
+    "note": "Griddled yeast cakes, best toasted with butter"
+  },
+  {
+    "day": "Tuesday",
+    "week": "3",
+    "meal": "Cauliflower Cheese",
+    "emoji": "🥦",
+    "restaurant": "-",
+    "note": "Roasted cauliflower under a cheddar cheese sauce"
+  },
+  {
+    "day": "Wednesday",
+    "week": "3",
+    "meal": "Gammon Steak",
+    "emoji": "🍖",
+    "restaurant": "-",
+    "note": "Cured ham steak, often fried with pineapple or egg"
+  },
+  {
+    "day": "Thursday",
+    "week": "3",
+    "meal": "Potted Shrimp",
+    "emoji": "🍤",
+    "restaurant": "-",
+    "note": "Shrimp preserved in spiced butter, served on toast"
+  },
+  {
+    "day": "Friday",
+    "week": "3",
+    "meal": "Steak and Kidney Pie",
+    "emoji": "🥧",
+    "restaurant": "-",
+    "note": "Steak and kidney braised in gravy under pastry"
+  },
+  {
+    "day": "Saturday",
+    "week": "3",
+    "meal": "Beans on Toast",
+    "emoji": "🍞",
+    "restaurant": "-",
+    "note": "Buttered toast piled with hot baked beans"
+  },
+  {
+    "day": "Sunday",
+    "week": "3",
+    "meal": "Steak and Guinness Pie",
+    "emoji": "🥧",
+    "restaurant": "-",
+    "note": "Steak braised in Guinness under a flaky pastry lid"
+  },
+  {
+    "day": "Monday",
+    "week": "4",
+    "meal": "Porridge",
+    "emoji": "🥣",
+    "restaurant": "-",
+    "note": "Slow-cooked oats with milk or water, often with honey"
+  },
+  {
+    "day": "Tuesday",
+    "week": "4",
+    "meal": "Cheese Toastie",
+    "emoji": "🧀",
+    "restaurant": "-",
+    "note": "Grilled cheese sandwich, often with Branston pickle"
+  },
+  {
+    "day": "Wednesday",
+    "week": "4",
+    "meal": "Pork Belly Roast",
+    "emoji": "🍖",
+    "restaurant": "-",
+    "note": "Slow-roasted pork belly with crackling and apple sauce"
+  },
+  {
+    "day": "Thursday",
+    "week": "4",
+    "meal": "Prawn Cocktail",
+    "emoji": "🦐",
+    "restaurant": "-",
+    "note": "Chilled prawns in a Marie Rose sauce"
+  },
+  {
+    "day": "Friday",
+    "week": "4",
+    "meal": "Haggis",
+    "emoji": " Neeps and Tatties",
+    "restaurant": "🍲",
+    "note": "-"
+  },
+  {
+    "day": "Saturday",
+    "week": "4",
+    "meal": "Kippers",
+    "emoji": "🐟",
+    "restaurant": "-",
+    "note": "Smoked herring, traditionally grilled and served on toast"
+  },
+  {
+    "day": "Sunday",
+    "week": "4",
+    "meal": "Potted Beef",
+    "emoji": "🥩",
+    "restaurant": "-",
+    "note": "Beef preserved in spiced butter, a Victorian deli classic"
   }
 ]

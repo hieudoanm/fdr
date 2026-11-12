@@ -83,8 +83,27 @@ describe('CuisineWheel', () => {
     expect(cuisine).toBeDefined();
     const link = screen.getByTestId('wheel-result-link');
     expect(link.getAttribute('href')).toBe(
-      `/randomizer?country=${cuisine!.value}`
+      `/foods/randomizer?country=${cuisine!.value}`
     );
     expect(link).toHaveTextContent(`Spin a dish from ${cuisine!.label}`);
+  });
+
+  it('links to a custom randomizer base path when provided', async () => {
+    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+    render(
+      <CuisineWheel
+        settlingMs={SETTLE_MS}
+        randomizerBasePath="/drinks/randomizer"
+      />
+    );
+    await user.click(screen.getByTestId('wheel-spin'));
+    act(() => jest.advanceTimersByTime(SETTLE_MS));
+    const result = screen.getByTestId('wheel-result').textContent ?? '';
+    const cuisine = countries.find(
+      (item) => result === `${item.emoji} ${item.label}`
+    );
+    expect(screen.getByTestId('wheel-result-link').getAttribute('href')).toBe(
+      `/drinks/randomizer?country=${cuisine!.value}`
+    );
   });
 });

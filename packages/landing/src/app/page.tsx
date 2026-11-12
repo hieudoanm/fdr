@@ -3,49 +3,108 @@ import type { Metadata } from 'next';
 import { NextPage } from 'next';
 import type { FC } from 'react';
 import {
+  PiCalendarBlank,
   PiCircleNotch,
+  PiCookie,
   PiGithubLogo,
   PiHamburger,
   PiListDashes,
+  PiWifiSlash,
+  PiWine,
 } from 'react-icons/pi';
 import {
   CourseGrid,
   scheduleToCourseItem,
   type CourseItem,
 } from '@/components/templates/HomeTemplate';
-import { countries, foods, listSchedules } from '@/data';
+import { countries, foodsAndDrinks, listSchedules } from '@/data';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
 
-const ITEMS: CourseItem[] = [
+const APP_ITEMS: CourseItem[] = [
   {
-    label: 'Wheel of Cuisine',
-    description: 'Spin a wheel to choose a country to eat from',
+    label: 'Food Wheel',
+    description: 'Spin to pick a cuisine to eat from',
     icon: PiCircleNotch,
-    href: '/wheel/',
+    href: '/foods/wheel/',
   },
   {
     label: 'Food Randomizer',
     description: 'Spin the reel to pick what to eat today',
     icon: PiHamburger,
-    href: '/randomizer/',
+    href: '/foods/randomizer/',
   },
   {
-    label: 'Dishes',
-    description: 'Browse and search dishes across world cuisines',
+    label: 'Food Dishes',
+    description: 'Browse and search food dishes by cuisine',
     icon: PiListDashes,
-    href: '/dishes/',
+    href: '/foods/dishes/',
+  },
+  {
+    label: 'Drink Wheel',
+    description: 'Spin to pick a cuisine to drink from',
+    icon: PiCircleNotch,
+    href: '/drinks/wheel/',
+  },
+  {
+    label: 'Drink Randomizer',
+    description: 'Spin the reel to pick what to drink today',
+    icon: PiWine,
+    href: '/drinks/randomizer/',
+  },
+  {
+    label: 'Drink Dishes',
+    description: 'Browse and search drinks by cuisine',
+    icon: PiListDashes,
+    href: '/drinks/dishes/',
+  },
+  {
+    label: 'Snack Wheel',
+    description: 'Spin to pick a cuisine for a snack',
+    icon: PiCircleNotch,
+    href: '/snacks/wheel/',
+  },
+  {
+    label: 'Snack Randomizer',
+    description: 'Spin the reel to pick a snack or dessert',
+    icon: PiCookie,
+    href: '/snacks/randomizer/',
+  },
+  {
+    label: 'Snack Dishes',
+    description: 'Browse and search snacks by cuisine',
+    icon: PiListDashes,
+    href: '/snacks/dishes/',
   },
 ];
 
 const SCHEDULE_ITEMS = listSchedules().map(scheduleToCourseItem);
 
 const STATS = [
-  { value: foods.length, label: 'dishes' },
+  { value: foodsAndDrinks.length, label: 'dishes' },
   { value: countries.length, label: 'cuisines' },
   { value: listSchedules().length, label: 'schedules' },
+];
+
+const FEATURES = [
+  {
+    icon: PiListDashes,
+    title: 'Dish index',
+    description: `Search ${foodsAndDrinks.length} dishes, drinks and snacks across ${countries.length} cuisines`,
+  },
+  {
+    icon: PiCalendarBlank,
+    title: 'Weekly schedules',
+    description: 'Follow a ready-made plan instead of deciding nightly',
+  },
+  {
+    icon: PiWifiSlash,
+    title: 'Works offline',
+    description:
+      'Installs to your home screen and keeps working without signal',
+  },
 ];
 
 const GITHUB_URL = 'https://github.com/hieudoanm/fdr';
@@ -67,44 +126,6 @@ SectionHead.displayName = 'SectionHead';
 const HomePage: NextPage = () => {
   return (
     <div className="bg-base-100 min-h-dvh">
-      <header className="border-base-content/10 bg-base-100/90 sticky top-0 z-50 border-b backdrop-blur">
-        <div className="mx-auto flex h-16 w-full max-w-6xl items-center gap-6 px-5">
-          <a href="#top" className="flex items-center gap-2.5">
-            {/* eslint-disable-next-line @next/next/no-img-element -- static SVG asset */}
-            <img
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icons/icon.svg`}
-              alt=""
-              width={32}
-              height={32}
-              className="h-8 w-8"
-            />
-            <span className="font-serif text-lg font-bold tracking-tight">
-              FDR
-            </span>
-          </a>
-          <nav className="ml-auto hidden items-center gap-6 sm:flex">
-            <a
-              href="#apps"
-              className="text-base-content/60 hover:text-primary text-sm font-semibold transition-colors">
-              Apps
-            </a>
-            <a
-              href="#schedules"
-              className="text-base-content/60 hover:text-primary text-sm font-semibold transition-colors">
-              Schedules
-            </a>
-          </nav>
-          <a
-            href={GITHUB_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-primary btn-sm ml-auto gap-1.5 sm:ml-0">
-            <PiGithubLogo className="h-4 w-4" />
-            GitHub
-          </a>
-        </div>
-      </header>
-
       <main id="top">
         <section className="mx-auto grid w-full max-w-6xl items-center gap-12 px-5 pt-16 pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:pt-24">
           <div>
@@ -117,10 +138,10 @@ const HomePage: NextPage = () => {
               turns dinner indecision into a game.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/wheel/" className="btn btn-primary btn-lg">
+              <Link href="/foods/wheel/" className="btn btn-primary btn-lg">
                 Spin the wheel
               </Link>
-              <Link href="/randomizer/" className="btn btn-ghost btn-lg">
+              <Link href="/foods/randomizer/" className="btn btn-ghost btn-lg">
                 Try the randomizer
               </Link>
             </div>
@@ -157,25 +178,54 @@ const HomePage: NextPage = () => {
           </figure>
         </section>
 
-        <section id="apps" className="border-base-content/10 border-t">
+        <section className="border-base-content/10 border-t">
           <div className="mx-auto w-full max-w-6xl px-5 py-20">
             <SectionHead
-              title="Apps"
-              description="Three ways to let fate decide — each one a tiny app of its own."
+              title="Features"
+              description="Everything you need to end dinner indecision — fast, offline, and free."
             />
-            <CourseGrid items={ITEMS} />
+            <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-3">
+              {FEATURES.map(({ icon: Icon, title, description }) => (
+                <div
+                  key={title}
+                  className="border-base-content/10 rounded-xl border p-5">
+                  <div className="bg-primary/10 text-primary mb-3 flex h-9 w-9 items-center justify-center rounded-lg">
+                    <Icon className="h-4 w-4" />
+                  </div>
+                  <h3 className="text-base font-bold">{title}</h3>
+                  <p className="text-base-content/60 mt-1 text-xs">
+                    {description}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
         <section
-          id="schedules"
+          id="apps"
           className="border-base-content/10 bg-base-200 border-t">
           <div className="mx-auto w-full max-w-6xl px-5 py-20">
             <SectionHead
-              title="Schedules"
-              description="Weekly dining plans to inspect — from a sitcom legend to two weeks of Vietnamese classics."
+              title="Apps"
+              description="Every tool in one place — wheels, reels, menus, and weekly dining schedules."
             />
-            <CourseGrid items={SCHEDULE_ITEMS} />
+            <CourseGrid wide items={[...APP_ITEMS, ...SCHEDULE_ITEMS]} />
+          </div>
+        </section>
+
+        <section className="border-base-content/10 bg-base-100 border-t">
+          <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-5 py-20 text-center">
+            <h2 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
+              Still can&apos;t decide?
+            </h2>
+            <p className="text-base-content/60 mt-3 max-w-xl text-base">
+              Let fate pick tonight&apos;s meal — it takes less time than
+              scrolling delivery apps.
+            </p>
+            <Link href="/foods/wheel/" className="btn btn-accent btn-lg mt-8">
+              Spin the wheel
+            </Link>
           </div>
         </section>
       </main>

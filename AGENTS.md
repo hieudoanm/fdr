@@ -13,7 +13,7 @@
 - **No backend.** There is no API, database, or server-side data fetching. Food
   data is bundled at build time.
 - **Single-package workspace.** `packages/landing` holds the Next.js app;
-  CSV sources and generated JSON live inside it at `packages/landing/data`.
+  CSV sources live in `src/data/csv/` and generated JSON in `src/data/json/`.
 - **`pnpm typecheck`, `pnpm lint`, and `pnpm test` must pass before a change is
   done.**
 - **Keep diffs minimal.** Do not reformat files you did not change.
@@ -45,24 +45,23 @@ pnpm test             # turbo run test (Jest, 80% coverage thresholds)
 pnpm format           # turbo run format (Prettier, writes)
 
 pnpm --filter @fdr/landing test:e2e     # Playwright
-node packages/landing/data/csv-to-json.mjs  # regenerate JSON from CSV
+node packages/landing/scripts/csv-to-json.mjs  # regenerate JSON from CSV
 ```
 
 ## Workspace layout
 
 | Path                                    | Contents                                                                                                             |
 | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `packages/landing/src/app`                  | Routes: `/`, `/wheel`, `/randomizer`, `/schedule`, `/dishes`; error/loading/not-found boundaries; `robots.ts`          |
+| `packages/landing/src/app`                  | Routes: `/`, `/foods/{wheel,randomizer,dishes}`, `/drinks/{wheel,randomizer,dishes}`, `/snacks/{wheel,randomizer,dishes}`, `/schedule`; error/loading/not-found boundaries; `robots.ts` |
 | `packages/landing/src/components/atoms`     | `Badge`, `OfflineBadge`                                                                                               |
 | `packages/landing/src/components/molecules` | `BackLink`, `CuisineSelect`, `Reel`, `SchedulePicker`                                                                |
 | `packages/landing/src/components/organisms` | `List`, `Randomizer`, `Schedule`, `Wheel`                                                                            |
-| `packages/landing/src/components/templates` | `HomeTemplate`, `ErrorTemplate`                                                                                      |
-| `packages/landing/src/data`                 | Types, JSON, and `FOOD_OPTIONS` accessors                                                                            |
+| `packages/landing/src/components/templates` | `HomeTemplate`, `ErrorTemplate`, `RandomizerTemplate`, `WheelTemplate`, `DishesTemplate`                                                                                      |
+| `packages/landing/src/data`                 | Types, JSON, `csv/` sources, and `FOOD_OPTIONS` accessors                                                            |
 | `packages/landing/src/hooks`                | `useFoodPicker` and related hooks                                                                                    |
-| `packages/landing/src/providers`            | `SWProvider`                                                                                                         |
+| `packages/landing/src/components/atoms`       | `Badge`, `OfflineBadge`, `ServiceWorker`                                                                              |
 | `packages/landing/e2e`                      | Playwright specs                                                                                                     |
-| `packages/landing/data/csv`                     | Source of truth: `foods.csv`, `countries.csv`, `schedule-scheldon.csv`, `schedule-vietnam.csv`, `schedule-united-kingdom.csv` |
-| `packages/landing/data/json`                    | Generated JSON (`csv-to-json.mjs`)                                                                                   |
+| `packages/landing/scripts`                  | `csv-to-json.mjs` — regenerates `src/data/json/` from `src/data/csv/`                                                |
 
 ## Architecture
 
@@ -83,12 +82,13 @@ node packages/landing/data/csv-to-json.mjs  # regenerate JSON from CSV
 
 ## Data conventions
 
-- **CSV is the source of truth.** Edit `packages/landing/data/csv/*.csv`, then run
-  `node packages/landing/data/csv-to-json.mjs` — it rewrites both
-  `packages/landing/data/json/*.json` and the checked-in copy in
-  `packages/landing/src/data/json/`.
+- **CSV is the source of truth.** Edit `packages/landing/src/data/csv/*.csv`,
+  then run `node packages/landing/scripts/csv-to-json.mjs` — it rewrites
+  `packages/landing/src/data/json/*.json`.
 - **`Food` shape.** `{ country, category, subcategory, value, label, emoji }`.
   `value` is the stable slug; `label` is display text.
+  `meal-foods.json` holds 360 dishes, `meal-drinks.json` 60 drinks, `meal-snacks.json` 60
+  snacks/desserts; `foodsAndDrinks` in `src/data/foods.ts` merges all 480.
 - **`Cuisine` shape.** `{ value, label, emoji }`; `value` matches
   `Food.country`.
 - **`ScheduleEntry` shape.** `{ day, week?, meal, emoji, restaurant, note }`;
@@ -136,15 +136,15 @@ manual dispatch:
 
 ## Gotchas
 
-- **Data copies are generated.** Never hand-edit `src/data/json/` or
-  `data/json/`; edit `data/csv/` and run `csv-to-json.mjs`, which writes both.
-- **`pnpm lint` is `eslint .` (check only); `pnpm lint:fix` rewrites files.**
+- **Data copies are generated.** Never hand-edit `src/data/json/`; edit
+  `src/data/csv/` and run `scripts/csv-to-json.mjs`.
+- **`pnpm lint` is `eslint .` (check only).**
 - **Static export limits.** No dynamic routes without `generateStaticParams`, no
   route handlers that need a server, no `next/image` optimisation.
 - **Trailing slashes are on.** `trailingSlash: true` means routes resolve as
-  `/wheel/`, not `/wheel`.
-- **Playwright specs cover the real routes** (`/`, `/wheel/`, `/randomizer/`,
-  `/dishes/`, `/schedule/`). They are not part of CI; run them locally with
+  `/foods/wheel/`, not `/foods/wheel`.
+- **Playwright specs cover the real routes** (`/`, `/foods/*`, `/drinks/*`,
+  `/schedule/`). They are not part of CI; run them locally with
   `pnpm --filter @fdr/landing test:e2e`.
 
 ## Definition of done

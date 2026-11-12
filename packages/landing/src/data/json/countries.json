@@ -1,13 +1,13 @@
 [
   {
-    "value": "american",
-    "label": "American",
-    "emoji": "🇺🇸"
-  },
-  {
     "value": "chinese",
     "label": "Chinese",
     "emoji": "🇨🇳"
+  },
+  {
+    "value": "egypt",
+    "label": "Egypt",
+    "emoji": "🇪🇬"
   },
   {
     "value": "indian",
@@ -43,6 +43,16 @@
     "value": "turkish",
     "label": "Turkish",
     "emoji": "🇹🇷"
+  },
+  {
+    "value": "united-kingdom",
+    "label": "United Kingdom",
+    "emoji": "🇬🇧"
+  },
+  {
+    "value": "united-states",
+    "label": "United States",
+    "emoji": "🇺🇸"
   },
   {
     "value": "vietnamese",

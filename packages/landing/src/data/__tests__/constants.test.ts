@@ -1,15 +1,30 @@
-import { countries, FOOD_OPTIONS, foods } from '@/data';
+import {
+  countries,
+  DRINK_OPTIONS,
+  FOOD_OPTIONS,
+  foods,
+  foodsAndDrinks,
+  snacks,
+  SNACK_OPTIONS,
+} from '@/data';
 
 describe('food data', () => {
-  it('contains 200 foods', () => {
-    expect(foods.length).toBe(200);
-    expect(foods).toHaveLength(foods.length);
+  it('contains 480 foods, drinks, and snacks', () => {
+    expect(foodsAndDrinks.length).toBe(480);
+    expect(foodsAndDrinks).toHaveLength(foodsAndDrinks.length);
   });
 
-  it('has unique food values and non-empty labels', () => {
-    const values = foods.map((food) => food.value);
+  it('splits the data into foods, drinks, and snacks', () => {
+    expect(foods).toHaveLength(360);
+    expect(snacks).toHaveLength(60);
+    expect(DRINK_OPTIONS.all).toHaveLength(60);
+    expect(SNACK_OPTIONS.all).toHaveLength(60);
+  });
+
+  it('has unique values and non-empty labels', () => {
+    const values = foodsAndDrinks.map((food) => food.value);
     expect(new Set(values).size).toBe(values.length);
-    foods.forEach((food) => {
+    foodsAndDrinks.forEach((food) => {
       expect(food.label.length).toBeGreaterThan(0);
       expect(food.emoji.length).toBeGreaterThan(0);
     });
@@ -17,7 +32,7 @@ describe('food data', () => {
 
   it('assigns every food to a known cuisine', () => {
     const cuisineValues = countries.map((cuisine) => cuisine.value);
-    foods.forEach((food) => {
+    foodsAndDrinks.forEach((food) => {
       expect(cuisineValues).toContain(food.country);
     });
   });
@@ -32,6 +47,16 @@ describe('food data', () => {
     });
   });
 
+  it('exposes drink and snack options scoped to their own sets', () => {
+    expect(DRINK_OPTIONS.all).not.toContain('Sushi');
+    expect(SNACK_OPTIONS.all).not.toContain('Sushi');
+    expect(SNACK_OPTIONS.all).toContain('Apple Pie');
+    countries.forEach((cuisine) => {
+      expect(DRINK_OPTIONS[cuisine.value].length).toBeGreaterThan(0);
+      expect(SNACK_OPTIONS[cuisine.value].length).toBeGreaterThan(0);
+    });
+  });
+
   it('maps a locked dish to itself so spins always land', () => {
     expect(FOOD_OPTIONS.sushi).toEqual(['Sushi']);
     expect(Object.keys(FOOD_OPTIONS)).toHaveLength(
@@ -39,18 +64,18 @@ describe('food data', () => {
     );
   });
 
-  it('gives every cuisine exactly 20 foods', () => {
+  it('gives every cuisine exactly 30 foods plus 5 drinks and 5 snacks', () => {
     countries.forEach((cuisine) => {
       expect(
-        foods.filter((food) => food.country === cuisine.value)
-      ).toHaveLength(20);
+        foodsAndDrinks.filter((food) => food.country === cuisine.value)
+      ).toHaveLength(40);
     });
   });
 
-  it('covers the USA, China, India, Italy, Japan, Korea, Mexico, Thailand, Turkey and Vietnam', () => {
+  it('covers the 12 cuisines', () => {
     expect(countries.map((cuisine) => cuisine.value)).toEqual([
-      'american',
       'chinese',
+      'egypt',
       'indian',
       'italian',
       'japanese',
@@ -58,6 +83,8 @@ describe('food data', () => {
       'mexican',
       'thai',
       'turkish',
+      'united-kingdom',
+      'united-states',
       'vietnamese',
     ]);
   });

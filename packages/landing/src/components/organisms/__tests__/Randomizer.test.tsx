@@ -1,7 +1,7 @@
 import { act, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { FoodRandomizer } from '../Randomizer';
-import { FOOD_OPTIONS, foods } from '@/data';
+import { DRINK_OPTIONS, FOOD_OPTIONS, drinks, foods } from '@/data';
 
 const advance = () => act(() => jest.advanceTimersByTime(1800));
 
@@ -77,6 +77,28 @@ describe('FoodRandomizer', () => {
     render(<FoodRandomizer initialCountry="does-not-exist" />);
     expect(screen.getByTestId('cuisine-select-trigger')).toHaveTextContent(
       'All Cuisines'
+    );
+  });
+
+  it('renders the drinks variant with its own title and options', async () => {
+    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+    render(
+      <FoodRandomizer
+        items={drinks}
+        optionsMap={DRINK_OPTIONS}
+        title="Drink Randomizer"
+        blurb="Can't decide what to drink?"
+        unitLabel="drinks"
+      />
+    );
+    expect(screen.getByText('Drink Randomizer')).toBeInTheDocument();
+    expect(screen.getByTestId('stats-line').textContent).toContain(
+      `${drinks.length} drinks`
+    );
+    await user.click(screen.getByTestId('spin-button'));
+    advance();
+    expect(DRINK_OPTIONS.all).toContain(
+      screen.getByTestId('reel-display').textContent
     );
   });
 });

@@ -15,14 +15,14 @@ const SCHEDULES: ScheduleMeta[] = [
   {
     slug: 'vietnam',
     label: 'Vietnam',
-    description: 'Two weeks of classic Vietnamese dishes',
+    description: 'Four weeks of classic Vietnamese dishes',
     emoji: '🇻🇳',
     entries: vietnam,
   },
   {
     slug: 'united-kingdom',
     label: 'United Kingdom',
-    description: 'A week of British comfort food',
+    description: 'Four weeks of British comfort food',
     emoji: '🇬🇧',
     entries: unitedKingdom,
   },

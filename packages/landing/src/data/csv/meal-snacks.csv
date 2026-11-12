@@ -1,0 +1,61 @@
+country,category,subcategory,value,label,emoji
+united-states,snack/dessert,snack/dessert,apple-pie,Apple Pie,🥧
+united-states,snack/dessert,snack/dessert,brownie,Brownie,🍫
+united-states,snack/dessert,snack/dessert,buffalo-wings,Buffalo Wings,🍗
+united-states,snack/dessert,snack/dessert,cheesecake,Cheesecake,🍰
+united-states,snack/dessert,snack/dessert,pecan-pie,Pecan Pie,🥧
+chinese,snack/dessert,snack/dessert,dumpling,Dumpling,🥟
+chinese,snack/dessert,snack/dessert,egg-tart,Egg Tart,🥧
+chinese,snack/dessert,snack/dessert,mooncake,Mooncake,🥮
+chinese,snack/dessert,snack/dessert,spring-roll,Spring Roll,🥠
+chinese,snack/dessert,snack/dessert,xiao-long-bao,Xiao Long Bao,🥟
+indian,snack/dessert,snack/dessert,gulab-jamun,Gulab Jamun,🍩
+indian,snack/dessert,snack/dessert,jalebi,Jalebi,🥨
+indian,snack/dessert,snack/dessert,kachori,Kachori,🥟
+indian,snack/dessert,snack/dessert,rasgulla,Rasgulla,🍬
+indian,snack/dessert,snack/dessert,samosa,Samosa,🥟
+italian,snack/dessert,snack/dessert,bruschetta,Bruschetta,🥖
+italian,snack/dessert,snack/dessert,cannoli,Cannoli,🍩
+italian,snack/dessert,snack/dessert,focaccia,Focaccia,🫓
+italian,snack/dessert,snack/dessert,gelato,Gelato,🍨
+italian,snack/dessert,snack/dessert,tiramisu,Tiramisu,🍰
+japanese,snack/dessert,snack/dessert,dorayaki,Dorayaki,🥞
+japanese,snack/dessert,snack/dessert,mochi,Mochi,🍡
+japanese,snack/dessert,snack/dessert,takoyaki,Takoyaki,🐙
+japanese,snack/dessert,snack/dessert,tempura,Tempura,🍤
+japanese,snack/dessert,snack/dessert,yakitori,Yakitori,🍢
+korean,snack/dessert,snack/dessert,bungeoppang,Bungeoppang,🐟
+korean,snack/dessert,snack/dessert,hotteok,Hotteok,🥞
+korean,snack/dessert,snack/dessert,mandu,Mandu,🥟
+korean,snack/dessert,snack/dessert,tteokbokki,Tteokbokki,🍡
+korean,snack/dessert,snack/dessert,yakgwa,Yakgwa,🍪
+mexican,snack/dessert,snack/dessert,churros,Churros,🥨
+mexican,snack/dessert,snack/dessert,elote,Elote,🌽
+mexican,snack/dessert,snack/dessert,flan,Flan,🍮
+mexican,snack/dessert,snack/dessert,guacamole,Guacamole,🥑
+mexican,snack/dessert,snack/dessert,tres-leches,Tres Leches,🍰
+thai,snack/dessert,snack/dessert,coconut-cake,Coconut Cake,🍰
+thai,snack/dessert,snack/dessert,coconut-ice-cream,Coconut Ice Cream,🍦
+thai,snack/dessert,snack/dessert,mango-sticky,Mango Sticky,🥭
+thai,snack/dessert,snack/dessert,mango-sticky-rice,Mango Sticky Rice,🥭
+thai,snack/dessert,snack/dessert,som-tam,Som Tam,🌶️
+turkish,snack/dessert,snack/dessert,baklava,Baklava,🍯
+turkish,snack/dessert,snack/dessert,kunefe,Kunefe,🧀
+turkish,snack/dessert,snack/dessert,lokum,Lokum,🍬
+turkish,snack/dessert,snack/dessert,revani,Revani,🍰
+turkish,snack/dessert,snack/dessert,simit,Simit,🥯
+vietnamese,snack/dessert,snack/dessert,banh-flan,Banh Flan,🍮
+vietnamese,snack/dessert,snack/dessert,che,Che,🍮
+vietnamese,snack/dessert,snack/dessert,che-ba-mau,Che Ba Mau,🍮
+vietnamese,snack/dessert,snack/dessert,che-ba-mau-2,Che Ba Mau 2,🍮
+vietnamese,snack/dessert,snack/dessert,goi-cuon,Goi Cuon,🥗
+egypt,snack/dessert,snack/dessert,konafa,Konafa,🍰
+egypt,snack/dessert,snack/dessert,basbousa,Basbousa,🍮
+egypt,snack/dessert,snack/dessert,umm-ali,Umm Ali,🍮
+egypt,snack/dessert,snack/dessert,qatayef,Qatayef,🥞
+egypt,snack/dessert,snack/dessert,kahk,Kahk,🍪
+united-kingdom,snack/dessert,snack/dessert,scones,Scones,🧁
+united-kingdom,snack/dessert,snack/dessert,pork-scratchings,Pork Scratchings,🥓
+united-kingdom,snack/dessert,snack/dessert,bread-and-butter-pudding,Bread and Butter Pudding,🍮
+united-kingdom,snack/dessert,snack/dessert,jaffa-cakes,Jaffa Cakes,🍪
+united-kingdom,snack/dessert,snack/dessert,custard-creams,Custard Creams,🍪

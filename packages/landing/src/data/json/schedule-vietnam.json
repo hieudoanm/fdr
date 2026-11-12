@@ -1,100 +1,226 @@
 [
   {
     "day": "Monday",
-    "meal": "Bún Riêu",
-    "emoji": "🍜",
+    "week": "1",
+    "meal": "Banh Mi",
+    "emoji": "🥖",
     "restaurant": "-",
-    "note": "Tomato crab noodle soup with fried tofu"
+    "note": "Grilled pork, pate and pickled veg in a baguette"
   },
   {
     "day": "Tuesday",
-    "meal": "Cơm Tấm",
-    "emoji": "🍚",
+    "week": "1",
+    "meal": "Cha Ca La Vong",
+    "emoji": "🐟",
     "restaurant": "-",
-    "note": "Broken rice with pork chop and shredded pork"
+    "note": "Turmeric dill fish sauteed tableside with rice noodles"
   },
   {
     "day": "Wednesday",
-    "meal": "Bún Bò Huế",
-    "emoji": "🍜",
+    "week": "1",
+    "meal": "Ca Hap Sa Ot",
+    "emoji": "🐟",
     "restaurant": "-",
-    "note": "Spicy lemongrass beef noodle soup"
+    "note": "Steamed fish with lemongrass and chili"
   },
   {
     "day": "Thursday",
-    "meal": "Xôi",
-    "emoji": "🍚",
+    "week": "1",
+    "meal": "Goi Bo",
+    "emoji": "🥗",
     "restaurant": "-",
-    "note": "Day of rest — no rigid takeout night"
+    "note": "Green papaya salad with beef, herbs and roasted peanuts"
   },
   {
     "day": "Friday",
-    "meal": "Mì Quảng",
-    "emoji": "🍜",
+    "week": "1",
+    "meal": "Nem Nuong",
+    "emoji": "🍖",
     "restaurant": "-",
-    "note": "Turmeric rice noodles with shrimp, quail eggs and herbs"
+    "note": "Grilled pork sausage with herbs and rice paper"
   },
   {
     "day": "Saturday",
-    "meal": "Bánh Xèo",
-    "emoji": "🥘",
+    "week": "1",
+    "meal": "Com Ga",
+    "emoji": "🍚",
     "restaurant": "-",
-    "note": "Crispy turmeric crepe with shrimp and pork, eaten with herbs"
+    "note": "Hainanese-style chicken rice with ginger-scallion sauce"
   },
   {
     "day": "Sunday",
-    "meal": "Phở",
-    "emoji": "🍜",
+    "week": "1",
+    "meal": "Ga Nuong",
+    "emoji": "🍗",
     "restaurant": "-",
-    "note": "Beef phở with fresh herbs and lime"
+    "note": "Lemongrass grilled chicken with fish sauce dip"
   },
   {
     "day": "Monday",
-    "meal": "Bún Chả",
-    "emoji": "🍜",
+    "week": "2",
+    "meal": "Banh Uot",
+    "emoji": "🥞",
     "restaurant": "-",
-    "note": "Grilled pork and vermicelli bowls with herbs and fish sauce"
+    "note": "Steamed rice crepes with fried shallots and nuoc cham"
   },
   {
     "day": "Tuesday",
-    "meal": "Gỏi Cuốn",
-    "emoji": "🥗",
+    "week": "2",
+    "meal": "Bun Thang",
+    "emoji": "🍜",
     "restaurant": "-",
-    "note": "Fresh spring rolls with pork, shrimp and peanut sauce"
+    "note": "Hanoi ladder noodle soup with sliced meats and herbs"
   },
   {
     "day": "Wednesday",
-    "meal": "Bánh Cuốn",
-    "emoji": "🍥",
+    "week": "2",
+    "meal": "Tom Kho",
+    "emoji": "🦐",
+    "restaurant": "-",
+    "note": "Clay-pot caramelized shrimp in coconut water"
+  },
+  {
+    "day": "Thursday",
+    "week": "2",
+    "meal": "Bun Rieu",
+    "emoji": "🍜",
+    "restaurant": "-",
+    "note": "Tomato and crab noodle soup with fried tofu and herbs"
+  },
+  {
+    "day": "Friday",
+    "week": "2",
+    "meal": "Ga Chien Nuoc Mam",
+    "emoji": "🍗",
+    "restaurant": "-",
+    "note": "Fish-sauce fried chicken with lemongrass"
+  },
+  {
+    "day": "Saturday",
+    "week": "2",
+    "meal": "Bun Thit Nuong",
+    "emoji": "🍖",
+    "restaurant": "-",
+    "note": "Grilled pork noodles with lettuce, herbs and nuoc mam"
+  },
+  {
+    "day": "Sunday",
+    "week": "2",
+    "meal": "Bo Kho",
+    "emoji": "🍖",
+    "restaurant": "-",
+    "note": "French-Vietnamese beef stew with tomatoes and potatoes"
+  },
+  {
+    "day": "Monday",
+    "week": "3",
+    "meal": "Hu Tieu",
+    "emoji": "🍜",
+    "restaurant": "-",
+    "note": "Southern clear noodle soup with pork and shrimp"
+  },
+  {
+    "day": "Tuesday",
+    "week": "3",
+    "meal": "Bun Dau Mam Tom",
+    "emoji": "🍜",
+    "restaurant": "-",
+    "note": "Fried tofu and shrimp paste noodles with greens"
+  },
+  {
+    "day": "Wednesday",
+    "week": "3",
+    "meal": "Ca Rim",
+    "emoji": "🐟",
+    "restaurant": "-",
+    "note": "Caramelized fish in a clay pot"
+  },
+  {
+    "day": "Thursday",
+    "week": "3",
+    "meal": "Banh Xeo",
+    "emoji": "🍳",
+    "restaurant": "-",
+    "note": "Crispy turmeric crepe with shrimp and pork, wrapped in herbs"
+  },
+  {
+    "day": "Friday",
+    "week": "3",
+    "meal": "Ca Kho To",
+    "emoji": "🥘",
+    "restaurant": "-",
+    "note": "Caramelized clay-pot fish with coconut water"
+  },
+  {
+    "day": "Saturday",
+    "week": "3",
+    "meal": "Banh Cuon",
+    "emoji": "🥞",
     "restaurant": "-",
     "note": "Delicate steamed rice crepes with pork and mushroom"
   },
   {
-    "day": "Thursday",
-    "meal": "Cơm Gà",
-    "emoji": "🍗",
+    "day": "Sunday",
+    "week": "3",
+    "meal": "Bun Bo Hue",
+    "emoji": "🍜",
     "restaurant": "-",
-    "note": "Hainanese-style chicken rice with ginger sauce"
+    "note": "Spicy lemongrass beef noodle soup from Hue"
+  },
+  {
+    "day": "Monday",
+    "week": "4",
+    "meal": "Xoi Xeo",
+    "emoji": "🍚",
+    "restaurant": "-",
+    "note": "Sticky rice with mung bean, fried shallots and mung bean floss"
+  },
+  {
+    "day": "Tuesday",
+    "week": "4",
+    "meal": "Bun Cha",
+    "emoji": "🍖",
+    "restaurant": "-",
+    "note": "Grilled pork patties with vermicelli and dipping sauce"
+  },
+  {
+    "day": "Wednesday",
+    "week": "4",
+    "meal": "Canh Chua",
+    "emoji": "🍲",
+    "restaurant": "-",
+    "note": "Sour tamarind soup with fish, pineapple and herbs"
+  },
+  {
+    "day": "Thursday",
+    "week": "4",
+    "meal": "Com Tam",
+    "emoji": "🍚",
+    "restaurant": "-",
+    "note": "Broken rice with grilled pork chop and fish sauce"
   },
   {
     "day": "Friday",
-    "meal": "Bún Bò Nam Bộ",
-    "emoji": "🍜",
+    "week": "4",
+    "meal": "Thit Kho",
+    "emoji": "🍖",
     "restaurant": "-",
-    "note": "Southern-style beef noodle soup with shrimp and tomato"
+    "note": "Caramelized pork and eggs braised in fish sauce"
   },
   {
     "day": "Saturday",
-    "meal": "Chả Cá",
-    "emoji": "🐟",
+    "week": "4",
+    "meal": "Pho",
+    "emoji": "🍜",
     "restaurant": "-",
-    "note": "Turmeric-marinated fish with dill and rice noodles"
+    "note": "Beef noodle soup with herbs, lime and bean sprouts"
   },
   {
     "day": "Sunday",
-    "meal": "Chè",
-    "emoji": "🍮",
+    "week": "4",
+    "meal": "Mi Quang",
+    "emoji": "🍜",
     "restaurant": "-",
-    "note": "Mixed sweet soup with beans, jelly and coconut"
+    "note": "Turmeric noodles with shrimp, quail egg, peanuts and herbs"
   }
 ]

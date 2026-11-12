@@ -1,0 +1,61 @@
+country,category,subcategory,value,label,emoji
+united-states,drink,drink,coffee,Coffee,☕
+united-states,drink,drink,iced-tea,Iced Tea,🧋
+united-states,drink,drink,lemonade,Lemonade,🍋
+united-states,drink,drink,milkshake,Milkshake,🥤
+united-states,drink,drink,root-beer,Root Beer,🍺
+chinese,drink,drink,bubble-tea,Bubble Tea,🧋
+chinese,drink,drink,chrysanthemum-tea,Chrysanthemum Tea,🍵
+chinese,drink,drink,jasmine-tea,Jasmine Tea,🍵
+chinese,drink,drink,plum-juice,Plum Juice,🍹
+chinese,drink,drink,soy-milk,Soy Milk,🥛
+indian,drink,drink,mango-lassi,Mango Lassi,🥭
+indian,drink,drink,masala-chai,Masala Chai,☕
+indian,drink,drink,nimbu-pani,Nimbu Pani,🍋
+indian,drink,drink,rose-sharbat,Rose Sharbat,🌹
+indian,drink,drink,thandai,Thandai,🥛
+italian,drink,drink,aperol-spritz,Aperol Spritz,🍹
+italian,drink,drink,cappuccino,Cappuccino,☕
+italian,drink,drink,espresso,Espresso,☕
+italian,drink,drink,limoncello,Limoncello,🍋
+italian,drink,drink,negroni,Negroni,🍹
+japanese,drink,drink,amazake,Amazake,🍶
+japanese,drink,drink,hojicha,Hojicha,🍵
+japanese,drink,drink,matcha,Matcha,🍵
+japanese,drink,drink,ramune,Ramune,🥤
+japanese,drink,drink,sake,Sake,🍶
+korean,drink,drink,bori-cha,Bori Cha,🍵
+korean,drink,drink,makgeolli,Makgeolli,🍶
+korean,drink,drink,sikhye,Sikhye,🥤
+korean,drink,drink,soju,Soju,🍶
+korean,drink,drink,yuja-tea,Yuja Tea,🍵
+mexican,drink,drink,aguas-frescas,Aguas Frescas,🍹
+mexican,drink,drink,atole,Atole,☕
+mexican,drink,drink,horchata,Horchata,🥤
+mexican,drink,drink,mexican-cola,Mexican Cola,🥤
+mexican,drink,drink,michelada,Michelada,🍺
+thai,drink,drink,cha-yen,Cha Yen,🧋
+thai,drink,drink,coconut-water,Coconut Water,🥥
+thai,drink,drink,lemongrass-juice,Lemongrass Juice,🍹
+thai,drink,drink,roselle-tea,Roselle Tea,🍵
+thai,drink,drink,thai-tea,Thai Tea,🧋
+turkish,drink,drink,ayran,Ayran,🥛
+turkish,drink,drink,salep,Salep,🥛
+turkish,drink,drink,sherbet,Sherbet,🍹
+turkish,drink,drink,turkish-coffee,Turkish Coffee,☕
+turkish,drink,drink,turkish-tea,Turkish Tea,🍵
+vietnamese,drink,drink,ca-phe-sua-da,Ca Phe Sua Da,☕
+vietnamese,drink,drink,nuoc-mia,Nuoc Mia,🥤
+vietnamese,drink,drink,rau-ma,Rau Ma,🥤
+vietnamese,drink,drink,sinh-to,Sinh To,🍹
+vietnamese,drink,drink,tra-da,Tra Da,🍵
+egypt,drink,drink,karkade,Karkade,🌺
+egypt,drink,drink,sahlab,Sahlab,🥛
+egypt,drink,drink,jallab,Jallab,🥤
+egypt,drink,drink,tamr-hindi,Tamr Hindi,🍹
+egypt,drink,drink,sobia,Sobia,🥥
+united-kingdom,drink,drink,english-tea,English Tea,🍵
+united-kingdom,drink,drink,ginger-beer,Ginger Beer,🫚
+united-kingdom,drink,drink,elderflower-press,Elderflower Press,🥤
+united-kingdom,drink,drink,orange-squash,Orange Squash,🍊
+united-kingdom,drink,drink,dandelion-burdoch,Dandelion & Burdoch,🥃
