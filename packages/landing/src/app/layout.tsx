@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
 import { FC, ReactNode } from 'react';
 import { ServiceWorker } from '@/components/atoms/ServiceWorker';
-import { Navbar } from '@/components/molecules/Navbar';
+import Navbar from '@/components/molecules/Navbar';
 import { OfflineBadge } from '@/components/atoms/OfflineBadge';
 
 export const metadata: Metadata = {
@@ -55,10 +55,47 @@ export const viewport: Viewport = {
 
 const inter = Inter({ subsets: ['latin'] });
 
+const GITHUB_URL = 'https://github.com/hieudoanm/fdr';
+const LOGO = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/icons/icon.svg`;
+
+const TOOL_ITEMS = (base: string) => [
+  { href: `${base}/wheel/`, label: 'Wheel' },
+  { href: `${base}/randomizer/`, label: 'Randomizer' },
+  { href: `${base}/dishes/`, label: 'Dishes' },
+];
+
+const NAV_GROUPS = [
+  { label: 'Foods', items: TOOL_ITEMS('/foods') },
+  { label: 'Drinks', items: TOOL_ITEMS('/drinks') },
+  {
+    label: 'Snacks',
+    items: [
+      { href: '/snacks/wheel/', label: 'Wheel' },
+      { href: '/snacks/randomizer/', label: 'Randomizer' },
+      { href: '/snacks/dishes/', label: 'Snacks' },
+    ],
+  },
+  {
+    label: 'Schedules',
+    items: [
+      { href: '/schedule/', label: 'Overview' },
+      { href: '/schedule/sheldon/', label: "Sheldon's Schedule" },
+      { href: '/schedule/vietnam/', label: 'Vietnam' },
+      { href: '/schedule/united-kingdom/', label: 'United Kingdom' },
+    ],
+  },
+];
+
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <html lang="en" data-theme="fdr" className={inter.className}>
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto">
-      <Navbar />
+      <Navbar
+        name="FDR"
+        logoSrc={LOGO}
+        links={[]}
+        groups={NAV_GROUPS}
+        githubUrl={GITHUB_URL}
+      />
       {children}
       <ServiceWorker />
       <div className="pointer-events-none fixed right-4 bottom-4 z-50">

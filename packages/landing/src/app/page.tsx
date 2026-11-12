@@ -177,7 +177,11 @@ const HomePage: NextPage = () => {
         />
       </main>
 
-      <Footer />
+      <Footer
+        name="fdr"
+        tagline="Food & Drink · Static site · MIT licensed"
+        githubUrl="https://github.com/hieudoanm/fdr"
+      />
     </div>
   );
 };

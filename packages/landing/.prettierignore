@@ -4,6 +4,9 @@ node_modules
 /.pnp
 .pnp.*
 
+# package manager
+pnpm-lock.yaml
+
 # testing
 /coverage
 coverage
