@@ -17,6 +17,9 @@ import {
   type CourseItem,
 } from '@/components/templates/HomeTemplate';
 import Footer from '@/components/molecules/Footer';
+import Features from '@/components/molecules/Features';
+import CTA from '@/components/molecules/CTA';
+import SectionHead from '@/components/molecules/SectionHead';
 import { countries, foodsAndDrinks, listSchedules } from '@/data';
 
 export const metadata: Metadata = {
@@ -88,39 +91,6 @@ const STATS = [
   { value: listSchedules().length, label: 'schedules' },
 ];
 
-const FEATURES = [
-  {
-    icon: PiListDashes,
-    title: 'Dish index',
-    description: `Search ${foodsAndDrinks.length} dishes, drinks and snacks across ${countries.length} cuisines`,
-  },
-  {
-    icon: PiCalendarBlank,
-    title: 'Weekly schedules',
-    description: 'Follow a ready-made plan instead of deciding nightly',
-  },
-  {
-    icon: PiWifiSlash,
-    title: 'Works offline',
-    description:
-      'Installs to your home screen and keeps working without signal',
-  },
-];
-
-const SectionHead: FC<{ title: string; description: string }> = ({
-  title,
-  description,
-}) => (
-  <div className="mb-10 max-w-2xl">
-    <h2 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-      {title}
-    </h2>
-    <p className="text-base-content/60 mt-3 text-base">{description}</p>
-  </div>
-);
-
-SectionHead.displayName = 'SectionHead';
-
 const HomePage: NextPage = () => {
   return (
     <div className="bg-base-100 min-h-dvh">
@@ -176,29 +146,7 @@ const HomePage: NextPage = () => {
           </figure>
         </section>
 
-        <section className="border-base-content/10 border-t">
-          <div className="mx-auto w-full max-w-6xl px-5 py-20">
-            <SectionHead
-              title="Features"
-              description="Everything you need to end dinner indecision — fast, offline, and free."
-            />
-            <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-3">
-              {FEATURES.map(({ icon: Icon, title, description }) => (
-                <div
-                  key={title}
-                  className="border-base-content/10 rounded-xl border p-5">
-                  <div className="bg-primary/10 text-primary mb-3 flex h-9 w-9 items-center justify-center rounded-lg">
-                    <Icon className="h-4 w-4" />
-                  </div>
-                  <h3 className="text-base font-bold">{title}</h3>
-                  <p className="text-base-content/60 mt-1 text-xs">
-                    {description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <Features />
 
         <section
           id="apps"
@@ -212,20 +160,7 @@ const HomePage: NextPage = () => {
           </div>
         </section>
 
-        <section className="border-base-content/10 bg-base-100 border-t">
-          <div className="mx-auto flex w-full max-w-6xl flex-col items-center px-5 py-20 text-center">
-            <h2 className="font-serif text-3xl font-bold tracking-tight sm:text-4xl">
-              Still can&apos;t decide?
-            </h2>
-            <p className="text-base-content/60 mt-3 max-w-xl text-base">
-              Let fate pick tonight&apos;s meal — it takes less time than
-              scrolling delivery apps.
-            </p>
-            <Link href="/foods/wheel/" className="btn btn-accent btn-lg mt-8">
-              Spin the wheel
-            </Link>
-          </div>
-        </section>
+        <CTA />
       </main>
 
       <Footer />
