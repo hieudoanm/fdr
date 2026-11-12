@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/hieudoanm/fdr/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/fdr/actions/workflows/ci.yaml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+keywords: `food`, `randomizer`, `nextjs`, `static-site`
+
 
 **FDR (Food & Drink)** — Can't decide what to eat? Let fate choose.
 
