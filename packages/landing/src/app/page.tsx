@@ -19,6 +19,7 @@ import {
 import Footer from '@/components/molecules/Footer';
 import Features, { type Feature } from '@/components/molecules/Features';
 import CTA from '@/components/molecules/CTA';
+import Hero from '@/components/molecules/Hero';
 import SectionHead from '@/components/molecules/SectionHead';
 import { countries, foodsAndDrinks, listSchedules } from '@/data';
 
@@ -113,38 +114,20 @@ const HomePage: NextPage = () => {
   return (
     <div className="bg-base-100 min-h-dvh">
       <main id="top">
-        <section className="mx-auto grid w-full max-w-6xl items-center gap-12 px-5 pt-16 pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:pt-24">
-          <div>
-            <h1 className="font-serif text-5xl leading-none font-bold tracking-tight sm:text-6xl">
-              Can&apos;t decide{' '}
+        <Hero
+          title={
+            <>
+              Can&apos;t decide
               <span className="text-primary">what to eat?</span>
-            </h1>
-            <p className="text-base-content/60 mt-6 max-w-xl text-lg">
-              Spin the wheel, roll the reel, or follow a weekly schedule — FDR
-              turns dinner indecision into a game.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/foods/wheel/" className="btn btn-primary btn-lg">
-                Spin the wheel
-              </Link>
-              <Link href="/foods/randomizer/" className="btn btn-ghost btn-lg">
-                Try the randomizer
-              </Link>
-            </div>
-            <dl className="mt-12 flex items-start gap-10 sm:gap-14">
-              {STATS.map((stat) => (
-                <div key={stat.label}>
-                  <dt className="text-primary font-serif text-4xl font-bold sm:text-5xl">
-                    {stat.value}
-                  </dt>
-                  <dd className="text-base-content/50 mt-1 text-xs font-bold tracking-widest uppercase">
-                    {stat.label}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
-
+            </>
+          }
+          description="Spin the wheel, roll the reel, or follow a weekly schedule — FDR turns dinner indecision into a game."
+          primary={{ label: 'Spin the wheel', href: '/foods/wheel/' }}
+          secondary={{
+            label: 'Try the randomizer',
+            href: '/foods/randomizer/',
+          }}
+          stats={STATS}>
           <figure className="w-full max-w-sm justify-self-center lg:justify-self-end">
             <figcaption className="text-base-content/50 mb-3 text-xs font-bold tracking-widest uppercase">
               Example pick
@@ -162,7 +145,7 @@ const HomePage: NextPage = () => {
               </span>
             </div>
           </figure>
-        </section>
+        </Hero>
 
         <Features
           title="Everything you need to end dinner indecision."
