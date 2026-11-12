@@ -6,7 +6,6 @@ import {
   PiCalendarBlank,
   PiCircleNotch,
   PiCookie,
-  PiGithubLogo,
   PiHamburger,
   PiListDashes,
   PiWifiSlash,
@@ -17,6 +16,7 @@ import {
   scheduleToCourseItem,
   type CourseItem,
 } from '@/components/templates/HomeTemplate';
+import Footer from '@/components/molecules/Footer';
 import { countries, foodsAndDrinks, listSchedules } from '@/data';
 
 export const metadata: Metadata = {
@@ -106,8 +106,6 @@ const FEATURES = [
       'Installs to your home screen and keeps working without signal',
   },
 ];
-
-const GITHUB_URL = 'https://github.com/hieudoanm/fdr';
 
 const SectionHead: FC<{ title: string; description: string }> = ({
   title,
@@ -230,29 +228,7 @@ const HomePage: NextPage = () => {
         </section>
       </main>
 
-      <footer className="border-base-content/10 border-t">
-        <div className="text-base-content/50 mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-6 text-xs">
-          <span>© 2026 FDR — Food &amp; Drink</span>
-          <span>Static site · MIT licensed</span>
-          <nav className="flex items-center gap-5">
-            <a
-              href={GITHUB_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary inline-flex items-center gap-1.5 font-semibold transition-colors">
-              <PiGithubLogo className="h-4 w-4" />
-              GitHub
-            </a>
-            <a
-              href={`${GITHUB_URL}/blob/master/README.md`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary font-semibold transition-colors">
-              README
-            </a>
-          </nav>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

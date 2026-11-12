@@ -66,3 +66,13 @@ re-exported from `src/data/index.ts`.
 | Document        | Description                                  |
 | --------------- | -------------------------------------------- |
 | [docs](./docs/) | Architecture notes and feature documentation |
+
+## Footer
+
+The landing footer follows the shared contract via
+`packages/landing/src/components/Footer.tsx`: `© {year} {repo-name}` (lowercase
+repo name, `new Date().getFullYear()`), a one-line tagline/license descriptor,
+and a right-aligned `<nav aria-label="Footer">` with exactly two links —
+`GitHub` (repo root) and `README` (`<repo>#readme`), both
+`target="_blank" rel="noreferrer"`. Reuse the component on every page that shows
+a footer.
