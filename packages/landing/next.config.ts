@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next';
 
-const BASE_PATH: string = process.env.BASE_PATH ?? '';
+const NODE_ENV = process.env.NODE_ENV ?? 'development';
+const BASE_PATH = NODE_ENV === 'production' ? '/fdr' : '';
 
 const nextConfig: NextConfig = {
   turbopack: {
@@ -11,16 +12,19 @@ const nextConfig: NextConfig = {
     },
   },
 
+  output: 'export',
   trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
-  output: 'export',
+  // GitHub Pages project site lives under /fdr/
   basePath: BASE_PATH,
+  assetPrefix: BASE_PATH,
   env: {
     NEXT_PUBLIC_BASE_PATH: BASE_PATH,
   },
+  images: { unoptimized: true },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: NODE_ENV === 'production',
   },
 };
 
