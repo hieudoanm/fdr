@@ -3,6 +3,14 @@ import type { NextConfig } from 'next';
 const BASE_PATH: string = process.env.BASE_PATH ?? '';
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    rules: {
+      '*.css': {
+        loaders: ['@tailwindcss/turbopack'],
+      },
+    },
+  },
+
   trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
