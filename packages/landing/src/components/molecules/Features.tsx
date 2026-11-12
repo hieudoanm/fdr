@@ -1,45 +1,40 @@
 import type { FC } from 'react';
-import { PiCalendarBlank, PiListDashes, PiWifiSlash } from 'react-icons/pi';
-import SectionHead from './SectionHead';
-import { countries, foodsAndDrinks } from '@/data';
+import type { IconType } from 'react-icons';
 
-const FEATURES = [
-  {
-    icon: PiListDashes,
-    title: 'Dish index',
-    description: `Search ${foodsAndDrinks.length} dishes, drinks and snacks across ${countries.length} cuisines`,
-  },
-  {
-    icon: PiCalendarBlank,
-    title: 'Weekly schedules',
-    description: 'Follow a ready-made plan instead of deciding nightly',
-  },
-  {
-    icon: PiWifiSlash,
-    title: 'Works offline',
-    description:
-      'Installs to your home screen and keeps working without signal',
-  },
-];
+export interface Feature {
+  title: string;
+  body: string;
+  icon: IconType;
+}
 
-const Features: FC = () => (
-  <section className="border-base-content/10 border-t">
-    <div className="mx-auto w-full max-w-6xl px-5 py-20">
-      <SectionHead
-        title="Features"
-        description="Everything you need to end dinner indecision — fast, offline, and free."
-      />
-      <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-3">
-        {FEATURES.map(({ icon: Icon, title, description }) => (
-          <div
-            key={title}
-            className="border-base-content/10 rounded-xl border p-5">
-            <div className="bg-primary/10 text-primary mb-3 flex h-9 w-9 items-center justify-center rounded-lg">
-              <Icon className="h-4 w-4" />
+interface FeaturesProps {
+  title: string;
+  description: string;
+  features: Feature[];
+}
+
+const Features: FC<FeaturesProps> = ({ title, description, features }) => (
+  <section id="features" className="py-20">
+    <div className="mx-auto w-full max-w-6xl px-5">
+      <div className="mx-auto mb-12 max-w-2xl text-center">
+        <h2 className="text-base-content m-0 text-3xl leading-tight font-bold tracking-normal text-balance">
+          {title}
+        </h2>
+        <p className="text-base-content/60 mt-3 text-lg">{description}</p>
+      </div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {features.map((f) => (
+          <article
+            key={f.title}
+            className="card border-base-300 bg-base-100 border p-6">
+            <div className="bg-accent/10 text-accent mb-3.5 flex h-11 w-11 items-center justify-center rounded-lg">
+              <f.icon className="h-6 w-6" />
             </div>
-            <h3 className="text-base font-bold">{title}</h3>
-            <p className="text-base-content/60 mt-1 text-xs">{description}</p>
-          </div>
+            <h3 className="text-base-content m-0 mb-2 text-lg leading-tight text-balance">
+              {f.title}
+            </h3>
+            <p className="text-base-content/60 text-sm">{f.body}</p>
+          </article>
         ))}
       </div>
     </div>

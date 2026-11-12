@@ -17,7 +17,7 @@ import {
   type CourseItem,
 } from '@/components/templates/HomeTemplate';
 import Footer from '@/components/molecules/Footer';
-import Features from '@/components/molecules/Features';
+import Features, { type Feature } from '@/components/molecules/Features';
 import CTA from '@/components/molecules/CTA';
 import SectionHead from '@/components/molecules/SectionHead';
 import { countries, foodsAndDrinks, listSchedules } from '@/data';
@@ -25,6 +25,24 @@ import { countries, foodsAndDrinks, listSchedules } from '@/data';
 export const metadata: Metadata = {
   alternates: { canonical: '/' },
 };
+
+const FEATURES: Feature[] = [
+  {
+    title: 'Dish index',
+    body: `Search ${foodsAndDrinks.length} dishes, drinks and snacks across ${countries.length} cuisines`,
+    icon: PiListDashes,
+  },
+  {
+    title: 'Weekly schedules',
+    body: 'Follow a ready-made plan instead of deciding nightly',
+    icon: PiCalendarBlank,
+  },
+  {
+    title: 'Works offline',
+    body: 'Installs to your home screen and keeps working without signal',
+    icon: PiWifiSlash,
+  },
+];
 
 const APP_ITEMS: CourseItem[] = [
   {
@@ -97,7 +115,7 @@ const HomePage: NextPage = () => {
       <main id="top">
         <section className="mx-auto grid w-full max-w-6xl items-center gap-12 px-5 pt-16 pb-20 lg:grid-cols-[1.05fr_0.95fr] lg:pt-24">
           <div>
-            <h1 className="font-serif text-5xl leading-[1.05] font-bold tracking-tight sm:text-6xl">
+            <h1 className="font-serif text-5xl leading-none font-bold tracking-tight sm:text-6xl">
               Can&apos;t decide{' '}
               <span className="text-primary">what to eat?</span>
             </h1>
@@ -146,7 +164,11 @@ const HomePage: NextPage = () => {
           </figure>
         </section>
 
-        <Features />
+        <Features
+          title="Everything you need to end dinner indecision."
+          description="Fast, offline, and free — every tool in one place."
+          features={FEATURES}
+        />
 
         <section
           id="apps"
@@ -160,7 +182,16 @@ const HomePage: NextPage = () => {
           </div>
         </section>
 
-        <CTA />
+        <CTA
+          title="Still can't decide?"
+          description="Let fate pick tonight's meal — it takes less time than scrolling delivery apps."
+          primary={{ label: 'Spin the wheel', href: '/foods/wheel/' }}
+          secondary={{
+            label: 'Star on GitHub',
+            href: 'https://github.com/hieudoanm/fdr',
+            external: true,
+          }}
+        />
       </main>
 
       <Footer />

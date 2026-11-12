@@ -134,7 +134,7 @@ export const CuisineWheel: FC<CuisineWheelProps> = ({
                   transform: `translate(-50%, -50%) rotate(${sliceCenter}deg) translateY(${-LABEL_RADIUS}px)`,
                 }}>
                 <span className="text-xl">{cuisine.emoji}</span>
-                <span className="max-w-14 text-center text-[9px] font-bold whitespace-nowrap">
+                <span className="max-w-14 text-center text-xs font-bold whitespace-nowrap">
                   {cuisine.label}
                 </span>
               </span>
