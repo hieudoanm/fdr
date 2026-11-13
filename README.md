@@ -6,9 +6,7 @@ Topics: `food`, `randomizer`, `nextjs`, `static-site`
 
 **FDR (Food & Drink)** — Can't decide what to eat? Let fate choose.
 
-<p align="center">
-  <img src="assets/branding/png/og.png" alt="FDR — Can't decide what to eat? Let fate choose." width="720">
-</p>
+![FDR — Can't decide what to eat? Let fate choose.](assets/branding/png/og.png)
 
 FDR (Food & Drink) is a small, fast food-picker app: a static Next.js site
 with a wheel, a dish randomizer, a searchable menu, and weekly dining
@@ -38,7 +36,7 @@ and desserts (`meal-snacks.csv`).
 
 ## Monorepo layout
 
-```
+```text
 .
 ├── .github/workflows/ci.yaml   # lint → test → build → GitHub Pages deploy
 ├── docs/                       # product specification (00–12)
