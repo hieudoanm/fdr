@@ -46,6 +46,9 @@ pnpm format           # turbo run format (Prettier, writes)
 
 pnpm --filter @fdr/landing test:e2e     # Playwright
 node packages/landing/scripts/csv-to-json.mjs  # regenerate JSON from CSV
+
+cargo build -p fdr-cli                  # build the Rust CLI (crates/fdr-cli)
+./target/debug/fdr --help               # foods/drinks/snacks/pick/schedule/stats/mcp
 ```
 
 ## Workspace layout
@@ -62,6 +65,7 @@ node packages/landing/scripts/csv-to-json.mjs  # regenerate JSON from CSV
 | `packages/landing/src/components/atoms`       | `Badge`, `OfflineBadge`, `ServiceWorker`                                                                              |
 | `packages/landing/e2e`                      | Playwright specs                                                                                                     |
 | `packages/landing/scripts`                  | `csv-to-json.mjs` — regenerates `src/data/json/` from `src/data/csv/`                                                |
+| `crates/fdr-cli`                            | Rust CLI (`fdr`) over the static JSON data, with `fdr mcp` MCP server over stdio                                     |
 
 ## Architecture
 
