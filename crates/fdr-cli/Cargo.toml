@@ -1,0 +1,17 @@
+[package]
+name = "fdr-cli"
+version = "0.1.0"
+edition = "2021"
+description = "CLI for FDR food, drink, and snack data with an MCP server"
+license = "MIT"
+
+[[bin]]
+name = "fdr"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "=4.6.7", features = ["derive"] }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.154"
+ratatui = "=0.30.2"
+crossterm = "=0.29.0"
