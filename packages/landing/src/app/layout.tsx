@@ -9,6 +9,17 @@ import { OfflineBadge } from '@/components/atoms/OfflineBadge';
 export const metadata: Metadata = {
   title: 'FDR',
   description: 'Spin the reel and let fate pick your next meal',
+  keywords: [
+    'food randomizer',
+    'meal wheel',
+    'dish picker',
+    'what to eat',
+    'dinner ideas',
+    'meal planner',
+    'food wheel',
+  ],
+  authors: [{ name: 'hieudoan', url: 'https://github.com/hieudoanm/fdr' }],
+  category: 'lifestyle',
   metadataBase: new URL('https://hieudoanm.github.io/fdr/'),
   openGraph: {
     type: 'website',
@@ -86,9 +97,35 @@ const NAV_GROUPS = [
   },
 ];
 
+const JSON_LD = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      name: 'FDR',
+      url: 'https://hieudoanm.github.io/fdr/',
+      description: 'Spin the reel and let fate pick your next meal',
+    },
+    {
+      '@type': 'WebApplication',
+      name: 'FDR',
+      applicationCategory: 'LifestyleApplication',
+      description:
+        'Spin the reel and let fate pick your next meal, with a weekly schedule and a reusable dish list.',
+      url: 'https://hieudoanm.github.io/fdr/',
+      codeRepository: 'https://github.com/hieudoanm/fdr',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    },
+  ],
+};
+
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <html lang="en" data-theme="fdr" className={inter.className}>
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}
+      />
       <Navbar
         name="FDR"
         logoSrc={LOGO}

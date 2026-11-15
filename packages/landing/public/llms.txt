@@ -1,0 +1,25 @@
+# FDR
+
+> Spin the reel and let fate pick your next meal — a food randomizer with a
+> weekly schedule and a reusable dish list, across world cuisines.
+
+FDR is a static Next.js app: 360 dishes, 60 drinks, 60 snacks, 12 cuisines,
+and meal schedules. A Rust CLI (`fdr`) and MCP server expose the same data.
+
+## Pages
+
+- [Home](https://hieudoanm.github.io/fdr/)
+- [Foods wheel](https://hieudoanm.github.io/fdr/foods/wheel/)
+- [Foods randomizer](https://hieudoanm.github.io/fdr/foods/randomizer/)
+- [Foods dishes](https://hieudoanm.github.io/fdr/foods/dishes/)
+- [Drinks wheel](https://hieudoanm.github.io/fdr/drinks/wheel/)
+- [Drinks randomizer](https://hieudoanm.github.io/fdr/drinks/randomizer/)
+- [Drinks dishes](https://hieudoanm.github.io/fdr/drinks/dishes/)
+- [Snacks wheel](https://hieudoanm.github.io/fdr/snacks/wheel/)
+- [Snacks randomizer](https://hieudoanm.github.io/fdr/snacks/randomizer/)
+- [Snacks dishes](https://hieudoanm.github.io/fdr/snacks/dishes/)
+- [Schedule](https://hieudoanm.github.io/fdr/schedule/)
+
+## Source
+
+- Repository: https://github.com/hieudoanm/fdr
