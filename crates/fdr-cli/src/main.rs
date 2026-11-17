@@ -2,6 +2,7 @@
 
 mod data;
 mod mcp;
+mod mcp_http;
 mod tui;
 
 use clap::{Parser, Subcommand, ValueEnum};
@@ -84,8 +85,16 @@ enum Commands {
     },
     /// Print dataset statistics
     Stats,
-    /// Run an MCP server over stdio JSON-RPC
-    Mcp,
+    /// Run an MCP server (stdio by default, or streamable-HTTP with --http)
+    Mcp {
+        /// Serve MCP over HTTP at this address instead of stdio
+        /// (e.g. 127.0.0.1:8080). Requires POST /mcp.
+        #[arg(long)]
+        http: Option<String>,
+        /// Bearer token required on HTTP requests (or MCP_AUTH_TOKEN)
+        #[arg(long)]
+        token: Option<String>,
+    },
     /// Open the interactive terminal UI
     Tui,
 }
@@ -203,7 +212,17 @@ fn main() {
             run_schedule(&name, week.as_deref(), day.as_deref())
         }
         Commands::Stats => run_stats(),
-        Commands::Mcp => mcp::run().map_err(|e| e.to_string()),
+        Commands::Mcp { http, token } => {
+            if let Some(addr) = http {
+                mcp::run_http(
+                    &addr,
+                    token.or_else(|| std::env::var("MCP_AUTH_TOKEN").ok()),
+                )
+                .map_err(|e| e.to_string())
+            } else {
+                mcp::run().map_err(|e| e.to_string())
+            }
+        }
         Commands::Tui => tui::run(),
     };
     if let Err(error) = result {
