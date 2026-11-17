@@ -8,7 +8,7 @@ use std::io::{BufRead, Write};
 use std::process::Command;
 
 const SERVER_INFO: &str = "fdr-mcp";
-const PROTOCOL_VERSION: &str = "2024-11-05";
+const PROTOCOL_VERSION: &str = "2025-11-25";
 
 fn arg(params: &Value, key: &str) -> Option<String> {
     params
@@ -148,8 +148,24 @@ fn annotations() -> Value {
     })
 }
 
+/// Human-readable display title derived from the tool name
+/// (`pick_meal` -> `Pick Meal`). MCP hosts show `title` in pickers.
+fn titleize(name: &str) -> String {
+    name.split(['_', '-'])
+        .filter(|part| !part.is_empty())
+        .map(|part| {
+            let mut chars = part.chars();
+            match chars.next() {
+                Some(first) => first.to_uppercase().chain(chars).collect::<String>(),
+                None => String::new(),
+            }
+        })
+        .collect::<Vec<_>>()
+        .join(" ")
+}
+
 fn tools_list() -> Value {
-    json!({
+    let mut result = json!({
         "tools": [
             {
                 "name": "list_countries",
@@ -237,7 +253,17 @@ fn tools_list() -> Value {
                 "annotations": annotations()
             }
         ]
-    })
+    });
+    if let Some(tools) = result["tools"].as_array_mut() {
+        for tool in tools {
+            if tool.get("title").is_none() {
+                if let Some(name) = tool["name"].as_str() {
+                    tool["title"] = json!(titleize(name));
+                }
+            }
+        }
+    }
+    result
 }
 
 fn handle_request(request: &Value) -> Option<Value> {
@@ -281,6 +307,26 @@ fn handle_request(request: &Value) -> Option<Value> {
         return None;
     }
     Some(json!({"jsonrpc": "2.0", "id": id, "result": result}))
+}
+
+/// Run the MCP server over streamable HTTP on `addr` until the process exits.
+/// `token` (when set) requires `Authorization: Bearer <token>` on every request.
+pub fn run_http(addr: &str, token: Option<String>) -> std::io::Result<()> {
+    crate::mcp_http::serve(addr, token, |body: &str| {
+        match serde_json::from_str::<Value>(body) {
+            Ok(request) => {
+                handle_request(&request).and_then(|response| serde_json::to_string(&response).ok())
+            }
+            Err(err) => Some(
+                serde_json::to_string(&json!({
+                    "jsonrpc": "2.0",
+                    "id": Value::Null,
+                    "error": {"code": -32700, "message": format!("Parse error: {err}")}
+                }))
+                .unwrap_or_default(),
+            ),
+        }
+    })
 }
 
 /// Run the MCP server on stdin/stdout until EOF.
