@@ -1,11 +1,12 @@
-//! MCP server over stdio JSON-RPC.
+//! MCP server over stdio/HTTP JSON-RPC.
 //!
-//! Tools delegate to the `fdr` binary's own subcommands so MCP behaviour
-//! always matches the CLI. Configure an MCP client with: `fdr mcp`
+//! Tools read the bundled static JSON directly and return both human-readable
+//! text and `structuredContent` matching each tool's `outputSchema`.
+//! Configure an MCP client with: `fdr mcp`
 
+use crate::data::{self, Filters, Food};
 use serde_json::{json, Value};
 use std::io::{BufRead, Write};
-use std::process::Command;
 
 const SERVER_INFO: &str = "fdr-mcp";
 const PROTOCOL_VERSION: &str = "2025-11-25";
@@ -18,98 +19,162 @@ fn arg(params: &Value, key: &str) -> Option<String> {
         .filter(|s| !s.is_empty())
 }
 
-fn num(params: &Value, key: &str) -> Option<String> {
-    params.get(key).and_then(|v| {
-        v.as_u64()
-            .map(|n| n.to_string())
-            .or_else(|| v.as_i64().map(|n| n.to_string()))
-    })
-}
-
-fn filter_args(args: &mut Vec<String>, params: &Value) {
-    for (key, flag) in [
-        ("country", "--country"),
-        ("category", "--category"),
-        ("subcategory", "--subcategory"),
-        ("search", "--search"),
-    ] {
-        if let Some(v) = arg(params, key) {
-            args.extend([flag.to_string(), v]);
-        }
-    }
-    if let Some(v) = num(params, "limit") {
-        args.extend(["--limit".to_string(), v]);
+fn filters_from(params: &Value) -> Filters {
+    Filters {
+        country: arg(params, "country"),
+        category: arg(params, "category"),
+        subcategory: arg(params, "subcategory"),
+        search: arg(params, "search"),
     }
 }
 
-fn run_cli(args: &[String]) -> Value {
-    let exe = match std::env::current_exe() {
-        Ok(exe) => exe,
-        Err(err) => {
-            return json!({
-                "content": [{"type": "text", "text": format!("cannot locate fdr binary: {err}")}],
-                "isError": true
-            })
-        }
-    };
-    match Command::new(exe).args(args).output() {
-        Ok(output) => {
-            let stdout = String::from_utf8_lossy(&output.stdout).trim().to_string();
-            let stderr = String::from_utf8_lossy(&output.stderr).trim().to_string();
-            if output.status.success() {
-                let text = if stdout.is_empty() { stderr } else { stdout };
-                json!({"content": [{"type": "text", "text": text}]})
-            } else {
-                json!({
-                    "content": [{"type": "text", "text": stderr}],
-                    "isError": true
-                })
-            }
-        }
-        Err(err) => json!({
-            "content": [{"type": "text", "text": format!("failed to run fdr: {err}")}],
-            "isError": true
-        }),
+fn limit_from(params: &Value) -> usize {
+    params
+        .get("limit")
+        .and_then(Value::as_u64)
+        .map(|n| n as usize)
+        .unwrap_or(usize::MAX)
+}
+
+fn to_value<T: serde::Serialize>(v: &T) -> Result<Value, String> {
+    serde_json::to_value(v).map_err(|e| e.to_string())
+}
+
+fn items_for(kind: &str) -> Result<Vec<Food>, String> {
+    match kind {
+        "foods" => data::foods(),
+        "drinks" => data::drinks(),
+        "snacks" => data::snacks(),
+        _ => Err(format!("unknown kind: {kind}")),
     }
 }
 
-fn item_args(command: &str, params: &Value, random: bool) -> Option<Vec<String>> {
-    let mut args = vec![command.to_string()];
-    filter_args(&mut args, params);
-    if random {
-        args.push("--random".to_string());
-    }
-    Some(args)
-}
-
-fn build_args(name: &str, params: &Value) -> Option<Vec<String>> {
+/// Run a tool against the data layer, returning `(text, structuredContent)`.
+fn run_structured(name: &str, params: &Value) -> Result<(String, Value), String> {
     match name {
-        "list_countries" => Some(vec!["countries".to_string()]),
-        "stats" => Some(vec!["stats".to_string()]),
-        "list_schedules" => Some(vec!["schedules".to_string()]),
-        "get_schedule" => {
-            let mut args = vec!["schedule".to_string(), arg(params, "name")?];
-            if let Some(v) = arg(params, "week") {
-                args.extend(["--week".to_string(), v]);
-            }
-            if let Some(v) = arg(params, "day") {
-                args.extend(["--day".to_string(), v]);
-            }
-            Some(args)
+        "list_countries" => {
+            let list = data::countries()?;
+            let text = list
+                .iter()
+                .map(|c| format!("{} {} ({})", c.emoji, c.label, c.value))
+                .collect::<Vec<_>>()
+                .join("\n");
+            let structured = json!({
+                "items": to_value(&list)?,
+                "count": list.len(),
+            });
+            Ok((text, structured))
         }
-        "list_foods" => item_args("foods", params, false),
-        "pick_food" => item_args("foods", params, true),
-        "list_drinks" => item_args("drinks", params, false),
-        "pick_drink" => item_args("drinks", params, true),
-        "list_snacks" => item_args("snacks", params, false),
-        "pick_snack" => item_args("snacks", params, true),
+        "stats" => {
+            let f = data::foods()?;
+            let d = data::drinks()?;
+            let s = data::snacks()?;
+            let c = data::countries()?;
+            let names = data::schedules()?;
+            let text = format!(
+                "Countries: {}\nDishes: {}\nDrinks: {}\nSnacks/desserts: {}\nTotal items: {}\nSchedules: {}",
+                c.len(),
+                f.len(),
+                d.len(),
+                s.len(),
+                f.len() + d.len() + s.len(),
+                names.join(", ")
+            );
+            let structured = json!({
+                "countries": c.len(),
+                "dishes": f.len(),
+                "drinks": d.len(),
+                "snacks": s.len(),
+                "total_items": f.len() + d.len() + s.len(),
+                "schedules": names,
+            });
+            Ok((text, structured))
+        }
+        "list_schedules" => {
+            let names = data::schedules()?;
+            let text = names.join("\n");
+            let structured = json!({"schedules": names});
+            Ok((text, structured))
+        }
+        "get_schedule" => {
+            let name = arg(params, "name").ok_or("missing required argument: name")?;
+            let week = arg(params, "week");
+            let day = arg(params, "day");
+            let entries = data::schedule(&name)?;
+            let filtered: Vec<_> = entries
+                .iter()
+                .filter(|e| {
+                    week.as_deref().is_none_or(|w| e.week.as_deref() == Some(w))
+                        && day.as_deref().is_none_or(|d| e.day.eq_ignore_ascii_case(d))
+                })
+                .collect();
+            if filtered.is_empty() {
+                return Ok((
+                    "No schedule entries match.".to_string(),
+                    json!({"entries": []}),
+                ));
+            }
+            let text = filtered
+                .iter()
+                .map(|e| data::format_schedule(e))
+                .collect::<Vec<_>>()
+                .join("\n");
+            let structured = json!({"entries": to_value(&filtered)?});
+            Ok((text, structured))
+        }
+        "list_foods" | "list_drinks" | "list_snacks" => {
+            let kind = name.trim_start_matches("list_");
+            let filtered = filters_from(params).apply(items_for(kind)?);
+            if filtered.is_empty() {
+                return Ok((
+                    format!("No {kind} match the given filters."),
+                    json!({"items": [], "count": 0, "total": 0}),
+                ));
+            }
+            let limit = limit_from(params);
+            let shown: Vec<_> = filtered.iter().take(limit).collect();
+            let text = shown
+                .iter()
+                .map(|f| data::format_food(f))
+                .collect::<Vec<_>>()
+                .join("\n");
+            let structured = json!({
+                "items": to_value(&shown)?,
+                "count": shown.len(),
+                "total": filtered.len(),
+            });
+            Ok((text, structured))
+        }
+        "pick_food" | "pick_drink" | "pick_snack" => {
+            let kind = match name {
+                "pick_food" => "foods",
+                "pick_drink" => "drinks",
+                _ => "snacks",
+            };
+            let filtered = filters_from(params).apply(items_for(kind)?);
+            let food =
+                data::pick(&filtered, data::rng()).ok_or("No items match the given filters.")?;
+            Ok((data::format_food(&food), to_value(&food)?))
+        }
         "pick_meal" => {
             let kind = arg(params, "kind").unwrap_or_else(|| "any".to_string());
-            let mut args = vec!["pick".to_string(), kind];
-            filter_args(&mut args, params);
-            Some(args)
+            let mut all = match kind.as_str() {
+                "foods" | "drinks" | "snacks" => items_for(&kind)?,
+                "any" => {
+                    let mut v = data::foods()?;
+                    v.extend(data::drinks()?);
+                    v.extend(data::snacks()?);
+                    v
+                }
+                other => return Err(format!("unknown kind: {other}")),
+            };
+            all = filters_from(params).apply(all);
+            let food = data::pick(&all, data::rng()).ok_or("No items match the given filters.")?;
+            let mut structured = to_value(&food)?;
+            structured["kind"] = json!(kind);
+            Ok((data::format_food(&food), structured))
         }
-        _ => None,
+        _ => Err(format!("Unknown tool: {name}")),
     }
 }
 
@@ -146,6 +211,118 @@ fn annotations() -> Value {
         "idempotentHint": true,
         "openWorldHint": false
     })
+}
+
+fn food_item_schema() -> Value {
+    json!({
+        "type": "object",
+        "properties": {
+            "country": {"type": "string"},
+            "category": {"type": "string"},
+            "subcategory": {"type": "string"},
+            "value": {"type": "string"},
+            "label": {"type": "string"},
+            "emoji": {"type": "string"}
+        },
+        "required": ["country", "category", "subcategory", "value", "label", "emoji"],
+        "additionalProperties": false
+    })
+}
+
+fn cuisine_item_schema() -> Value {
+    json!({
+        "type": "object",
+        "properties": {
+            "value": {"type": "string"},
+            "label": {"type": "string"},
+            "emoji": {"type": "string"}
+        },
+        "required": ["value", "label", "emoji"],
+        "additionalProperties": false
+    })
+}
+
+fn list_output(item_schema: Value) -> Value {
+    json!({
+        "type": "object",
+        "properties": {
+            "items": {"type": "array", "items": item_schema},
+            "count": {"type": "integer"},
+            "total": {"type": "integer"}
+        },
+        "required": ["items", "count"],
+        "additionalProperties": false
+    })
+}
+
+/// JSON Schema describing each tool's `structuredContent` payload.
+fn output_schema(name: &str) -> Option<Value> {
+    let food = food_item_schema();
+    match name {
+        "list_countries" => Some(json!({
+            "type": "object",
+            "properties": {
+                "items": {"type": "array", "items": cuisine_item_schema()},
+                "count": {"type": "integer"}
+            },
+            "required": ["items", "count"],
+            "additionalProperties": false
+        })),
+        "stats" => Some(json!({
+            "type": "object",
+            "properties": {
+                "countries": {"type": "integer"},
+                "dishes": {"type": "integer"},
+                "drinks": {"type": "integer"},
+                "snacks": {"type": "integer"},
+                "total_items": {"type": "integer"},
+                "schedules": {"type": "array", "items": {"type": "string"}}
+            },
+            "required": ["countries", "dishes", "drinks", "snacks", "total_items", "schedules"],
+            "additionalProperties": false
+        })),
+        "list_schedules" => Some(json!({
+            "type": "object",
+            "properties": {
+                "schedules": {"type": "array", "items": {"type": "string"}}
+            },
+            "required": ["schedules"],
+            "additionalProperties": false
+        })),
+        "get_schedule" => Some(json!({
+            "type": "object",
+            "properties": {
+                "entries": {"type": "array", "items": {
+                    "type": "object",
+                    "properties": {
+                        "day": {"type": "string"},
+                        "week": {"type": ["string", "null"]},
+                        "meal": {"type": "string"},
+                        "emoji": {"type": "string"},
+                        "restaurant": {"type": "string"},
+                        "note": {"type": ["string", "null"]}
+                    },
+                    "required": ["day", "meal", "emoji", "restaurant"],
+                    "additionalProperties": false
+                }}
+            },
+            "required": ["entries"],
+            "additionalProperties": false
+        })),
+        "list_foods" | "list_drinks" | "list_snacks" => Some(list_output(food.clone())),
+        "pick_food" | "pick_drink" | "pick_snack" => Some(food.clone()),
+        "pick_meal" => {
+            let mut schema = food;
+            if let Some(props) = schema.get_mut("properties").and_then(Value::as_object_mut) {
+                props.insert(
+                    "kind".to_string(),
+                    json!({"type": "string", "enum": ["foods", "drinks", "snacks", "any"]}),
+                );
+            }
+            Some(schema)
+        }
+        _ => None,
+    }
 }
 
 /// Human-readable display title derived from the tool name
@@ -256,9 +433,13 @@ fn tools_list() -> Value {
     });
     if let Some(tools) = result["tools"].as_array_mut() {
         for tool in tools {
-            if tool.get("title").is_none() {
-                if let Some(name) = tool["name"].as_str() {
-                    tool["title"] = json!(titleize(name));
+            let name = tool["name"].as_str().map(str::to_owned);
+            if let Some(name) = name {
+                if tool.get("title").is_none() {
+                    tool["title"] = json!(titleize(&name));
+                }
+                if let Some(schema) = output_schema(&name) {
+                    tool["outputSchema"] = schema;
                 }
             }
         }
@@ -283,10 +464,13 @@ fn handle_request(request: &Value) -> Option<Value> {
             let params = request.get("params").cloned().unwrap_or(Value::Null);
             let name = params.get("name").and_then(Value::as_str).unwrap_or("");
             let arguments = params.get("arguments").cloned().unwrap_or(json!({}));
-            match build_args(name, &arguments) {
-                Some(args) => run_cli(&args),
-                None => json!({
-                    "content": [{"type": "text", "text": format!("Unknown tool: {name}")}],
+            match run_structured(name, &arguments) {
+                Ok((text, structured)) => json!({
+                    "content": [{"type": "text", "text": text}],
+                    "structuredContent": structured
+                }),
+                Err(message) => json!({
+                    "content": [{"type": "text", "text": message}],
                     "isError": true
                 }),
             }
@@ -420,18 +604,50 @@ mod tests {
     }
 
     #[test]
-    fn every_tool_maps_to_cli_args() {
-        for name in TOOL_NAMES {
-            let params = match name {
-                "get_schedule" => json!({"name": "sheldon"}),
-                "pick_meal" => json!({"kind": "drinks", "country": "french"}),
-                _ => json!({}),
-            };
+    fn every_tool_declares_output_schema() {
+        for tool in tools() {
+            let name = tool["name"].as_str().expect("tool name");
             assert!(
-                build_args(name, &params).is_some(),
-                "no CLI args for {name}"
+                tool.get("outputSchema").is_some(),
+                "missing outputSchema on {name}"
             );
         }
+    }
+
+    #[test]
+    fn every_tool_produces_structured_content() {
+        for name in TOOL_NAMES {
+            let params = match name {
+                "get_schedule" => json!({"name": "scheldon"}),
+                "pick_meal" => json!({"kind": "any"}),
+                _ => json!({}),
+            };
+            let (text, structured) =
+                run_structured(name, &params).unwrap_or_else(|e| panic!("{name}: {e}"));
+            assert!(!text.is_empty(), "{name} returned empty text");
+            assert!(
+                structured.is_object(),
+                "{name} structuredContent not object"
+            );
+        }
+    }
+
+    #[test]
+    fn tools_call_returns_structured_content() {
+        let request = json!({
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "tools/call",
+            "params": {"name": "stats", "arguments": {}}
+        });
+        let response = handle_request(&request).expect("response");
+        let result = &response["result"];
+        assert!(result.get("isError").is_none());
+        assert!(result["structuredContent"]["total_items"].is_u64());
+        assert!(result["content"][0]["text"]
+            .as_str()
+            .unwrap()
+            .contains("Countries"));
     }
 
     #[test]
