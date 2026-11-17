@@ -138,23 +138,36 @@ fn item_schema(random_pick: bool) -> Value {
     })
 }
 
+/// All tools read bundled static JSON; none touch the network or mutate state.
+fn annotations() -> Value {
+    json!({
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+    })
+}
+
 fn tools_list() -> Value {
     json!({
         "tools": [
             {
                 "name": "list_countries",
                 "description": "List available cuisines/countries",
-                "inputSchema": {"type": "object", "properties": {}, "additionalProperties": false}
+                "inputSchema": {"type": "object", "properties": {}, "additionalProperties": false},
+                "annotations": annotations()
             },
             {
                 "name": "stats",
                 "description": "Print dataset statistics (countries, dishes, drinks, snacks, schedules)",
-                "inputSchema": {"type": "object", "properties": {}, "additionalProperties": false}
+                "inputSchema": {"type": "object", "properties": {}, "additionalProperties": false},
+                "annotations": annotations()
             },
             {
                 "name": "list_schedules",
                 "description": "List available meal schedules",
-                "inputSchema": {"type": "object", "properties": {}, "additionalProperties": false}
+                "inputSchema": {"type": "object", "properties": {}, "additionalProperties": false},
+                "annotations": annotations()
             },
             {
                 "name": "get_schedule",
@@ -168,37 +181,44 @@ fn tools_list() -> Value {
                     },
                     "required": ["name"],
                     "additionalProperties": false
-                }
+                },
+                "annotations": annotations()
             },
             {
                 "name": "list_foods",
                 "description": "List dishes, optionally filtered",
-                "inputSchema": item_schema(false)
+                "inputSchema": item_schema(false),
+                "annotations": annotations()
             },
             {
                 "name": "pick_food",
                 "description": "Pick a random dish, optionally filtered",
-                "inputSchema": item_schema(true)
+                "inputSchema": item_schema(true),
+                "annotations": annotations()
             },
             {
                 "name": "list_drinks",
                 "description": "List drinks, optionally filtered",
-                "inputSchema": item_schema(false)
+                "inputSchema": item_schema(false),
+                "annotations": annotations()
             },
             {
                 "name": "pick_drink",
                 "description": "Pick a random drink, optionally filtered",
-                "inputSchema": item_schema(true)
+                "inputSchema": item_schema(true),
+                "annotations": annotations()
             },
             {
                 "name": "list_snacks",
                 "description": "List snacks and desserts, optionally filtered",
-                "inputSchema": item_schema(false)
+                "inputSchema": item_schema(false),
+                "annotations": annotations()
             },
             {
                 "name": "pick_snack",
                 "description": "Pick a random snack or dessert, optionally filtered",
-                "inputSchema": item_schema(true)
+                "inputSchema": item_schema(true),
+                "annotations": annotations()
             },
             {
                 "name": "pick_meal",
@@ -213,7 +233,8 @@ fn tools_list() -> Value {
                         "search": {"type": "string"}
                     },
                     "additionalProperties": false
-                }
+                },
+                "annotations": annotations()
             }
         ]
     })
@@ -292,4 +313,124 @@ pub fn run() -> std::io::Result<()> {
         }
     }
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    const TOOL_NAMES: [&str; 11] = [
+        "list_countries",
+        "stats",
+        "list_schedules",
+        "get_schedule",
+        "list_foods",
+        "pick_food",
+        "list_drinks",
+        "pick_drink",
+        "list_snacks",
+        "pick_snack",
+        "pick_meal",
+    ];
+
+    fn tools() -> Vec<Value> {
+        tools_list()["tools"]
+            .as_array()
+            .expect("tools array")
+            .clone()
+    }
+
+    #[test]
+    fn tools_list_returns_all_expected_names() {
+        let tools = tools();
+        let names: Vec<&str> = tools
+            .iter()
+            .map(|t| t["name"].as_str().expect("tool name"))
+            .collect();
+        for expected in TOOL_NAMES {
+            assert!(names.contains(&expected), "missing tool {expected}");
+        }
+        assert_eq!(names.len(), TOOL_NAMES.len());
+    }
+
+    #[test]
+    fn every_tool_declares_all_four_hints() {
+        for tool in tools() {
+            let name = tool["name"].as_str().expect("tool name");
+            let annotations = &tool["annotations"];
+            // All tools read bundled static data: read-only, non-destructive,
+            // idempotent, and closed-world (no external systems).
+            assert_eq!(
+                annotations,
+                &json!({
+                    "readOnlyHint": true,
+                    "destructiveHint": false,
+                    "idempotentHint": true,
+                    "openWorldHint": false
+                }),
+                "unexpected annotations on {name}"
+            );
+        }
+    }
+
+    #[test]
+    fn every_tool_maps_to_cli_args() {
+        for name in TOOL_NAMES {
+            let params = match name {
+                "get_schedule" => json!({"name": "sheldon"}),
+                "pick_meal" => json!({"kind": "drinks", "country": "french"}),
+                _ => json!({}),
+            };
+            assert!(
+                build_args(name, &params).is_some(),
+                "no CLI args for {name}"
+            );
+        }
+    }
+
+    #[test]
+    fn tools_call_unknown_tool_returns_error_result() {
+        let request = json!({
+            "jsonrpc": "2.0",
+            "id": 1,
+            "method": "tools/call",
+            "params": {"name": "nope", "arguments": {}}
+        });
+        let response = handle_request(&request).expect("response");
+        assert_eq!(response["result"]["isError"], json!(true));
+        assert!(response["result"]["content"][0]["text"]
+            .as_str()
+            .unwrap()
+            .contains("Unknown tool"));
+    }
+
+    #[test]
+    fn tools_call_missing_required_arg_returns_error_result() {
+        let request = json!({
+            "jsonrpc": "2.0",
+            "id": 2,
+            "method": "tools/call",
+            "params": {"name": "get_schedule", "arguments": {}}
+        });
+        let response = handle_request(&request).expect("response");
+        assert_eq!(response["result"]["isError"], json!(true));
+    }
+
+    #[test]
+    fn initialize_returns_server_info() {
+        let request = json!({
+            "jsonrpc": "2.0",
+            "id": 3,
+            "method": "initialize",
+            "params": {}
+        });
+        let response = handle_request(&request).expect("response");
+        assert_eq!(response["result"]["serverInfo"]["name"], json!(SERVER_INFO));
+    }
+
+    #[test]
+    fn notifications_get_no_response() {
+        let request = json!({"jsonrpc": "2.0", "method": "ping"});
+        assert!(handle_request(&request).is_none());
+    }
 }
