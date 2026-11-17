@@ -1,11 +1,11 @@
 //! Static food/drink/snack/schedule data access.
 
-use serde::Deserialize;
+use serde::{Deserialize, Serialize};
 use std::env;
 use std::fs;
 use std::path::PathBuf;
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Food {
     pub country: String,
     pub category: String,
@@ -15,14 +15,14 @@ pub struct Food {
     pub emoji: String,
 }
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Cuisine {
     pub value: String,
     pub label: String,
     pub emoji: String,
 }
 
-#[derive(Debug, Clone, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ScheduleEntry {
     pub day: String,
     #[serde(default)]
