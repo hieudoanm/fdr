@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 
-jest.mock('@/styles/globals.css', () => ({}));
-jest.mock('@/components/atoms/ServiceWorker', () => ({
+vi.mock('@/styles/globals.css', () => ({}));
+vi.mock('@/components/atoms/ServiceWorker', () => ({
   ServiceWorker: () => null,
 }));
 

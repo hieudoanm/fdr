@@ -21,16 +21,16 @@
 
 ## Stack
 
-| Area       | Choice                                                |
-| ---------- | ----------------------------------------------------- |
-| Runtime    | Node 26.13.0 (`.nvmrc`), pnpm 12.16.1                 |
-| Monorepo   | pnpm workspaces + Turborepo                           |
-| Framework  | Next.js 16 App Router, React 19, TypeScript 6         |
-| Styling    | Tailwind CSS 4 + DaisyUI 5 (`fdr` theme)              |
-| Icons      | `react-icons`                                         |
-| State/data | Static JSON                                           |
-| Tests      | Jest 30 + Testing Library (jsdom), Playwright for e2e |
-| Deploy     | GitHub Pages via GitHub Actions                       |
+| Area       | Choice                                               |
+| ---------- | ---------------------------------------------------- |
+| Runtime    | Node 26.13.0 (`.nvmrc`), pnpm 12.16.1                |
+| Monorepo   | pnpm workspaces + Turborepo                          |
+| Framework  | Next.js 16 App Router, React 19, TypeScript 6        |
+| Styling    | Tailwind CSS 4 + DaisyUI 5 (`fdr` theme)             |
+| Icons      | `react-icons`                                        |
+| State/data | Static JSON                                          |
+| Tests      | Vitest + Testing Library (jsdom), Playwright for e2e |
+| Deploy     | GitHub Pages via GitHub Actions                      |
 
 ## Commands
 
@@ -42,7 +42,7 @@ pnpm dev              # turbo run dev -> http://localhost:3000
 pnpm build            # turbo run build -> packages/landing/out
 pnpm lint             # turbo run lint (eslint . in landing)
 pnpm typecheck        # turbo run typecheck (tsc --noEmit)
-pnpm test             # turbo run test (Jest, 80% coverage thresholds)
+pnpm test             # turbo run test (Vitest, 80% coverage thresholds)
 pnpm format           # turbo run format (Prettier, writes)
 
 pnpm --filter @fdr/landing test:e2e     # Playwright
@@ -52,8 +52,9 @@ cargo build --workspace                # build fdr + fdr-mcp (crates/*)
 cargo test --workspace                 # Rust tests
 cargo clippy --workspace --all-targets -- -D warnings
 cargo fmt --all -- --check
-./target/debug/fdr --help              # countries/foods/drinks/snacks/pick/schedules/schedule/stats/tui
-./target/debug/fdr-mcp --help          # MCP server: stdio, or --http <addr> [--token]
+./target/debug/fdr --help              # countries/foods/drinks/snacks/pick/schedules/schedule/stats/mcp/tui
+./target/debug/fdr mcp                 # run the MCP server over stdio
+./target/debug/fdr-mcp --help          # same server as a standalone binary: stdio, or --http <addr> [--token]
 ```
 
 ## Workspace layout
@@ -70,8 +71,8 @@ cargo fmt --all -- --check
 | `packages/landing/src/components/atoms`     | `Badge`, `OfflineBadge`, `ServiceWorker`                                                                                                                                                |
 | `packages/landing/e2e`                      | Playwright specs                                                                                                                                                                        |
 | `packages/landing/scripts`                  | `csv-to-json.mjs` — regenerates `src/data/json/` from `src/data/csv/`                                                                                                                   |
-| `crates/fdr-cli`                            | Rust CLI (`fdr` binary) over the static JSON data; `src/lib.rs` exposes `fdr_cli::data` for `fdr-mcp`                                                                                   |
-| `crates/fdr-mcp`                            | Rust MCP server (`fdr-mcp` binary + `fdr_mcp` lib): stdio or streamable-HTTP JSON-RPC tools over `fdr_cli::data`                                                                        |
+| `crates/fdr-cli`                            | Rust CLI (`fdr` binary) over the static JSON data; `src/lib.rs` exposes `fdr_cli::{data,tui,mcp,mcp_http}` — `fdr mcp` runs the MCP server in-process                                   |
+| `crates/fdr-mcp`                            | Standalone `fdr-mcp` binary: thin wrapper re-exporting `fdr_cli::mcp`/`mcp_http` (stdio or streamable-HTTP JSON-RPC tools)                                                              |
 
 ## Architecture
 
@@ -110,7 +111,7 @@ cargo fmt --all -- --check
 
 ## Testing
 
-- **Jest** runs in jsdom with coverage thresholds at 80%. Tests live in
+- **Vitest** runs in jsdom with coverage thresholds at 80%. Tests live in
   `__tests__/` next to the code they cover; shared fixtures go in
   `__fixtures__/` or `testing/`, never inside `__tests__/`.
 - **Organism tests** live in

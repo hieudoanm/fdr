@@ -1,12 +1,12 @@
 //! Interactive terminal UI for browsing and picking food, drinks, snacks,
 //! and meal schedules. Run with `fdr tui`.
 
+use crate::data::{self, Food, ScheduleEntry};
 use crossterm::event::{self, Event, KeyCode, KeyEventKind, KeyModifiers};
 use crossterm::execute;
 use crossterm::terminal::{
     EnterAlternateScreen, LeaveAlternateScreen, disable_raw_mode, enable_raw_mode,
 };
-use fdr_cli::data::{self, Food, ScheduleEntry};
 use ratatui::layout::{Constraint, Direction, Layout, Rect};
 use ratatui::style::{Color, Modifier, Style};
 use ratatui::text::{Line, Span};
@@ -16,9 +16,11 @@ use std::io;
 
 const TABS: [&str; 4] = ["Foods", "Drinks", "Snacks", "Schedules"];
 
-type MealRow = (String, ScheduleEntry);
+#[doc(hidden)]
+pub type MealRow = (String, ScheduleEntry);
 
-struct App {
+#[doc(hidden)]
+pub struct App {
     tab: usize,
     foods: Vec<Food>,
     drinks: Vec<Food>,
@@ -30,8 +32,9 @@ struct App {
     picked: Option<String>,
 }
 
+#[doc(hidden)]
 impl App {
-    fn load() -> Result<Self, String> {
+    pub fn load() -> Result<Self, String> {
         let mut meals = Vec::new();
         for name in data::schedules()? {
             for entry in data::schedule(&name)? {
@@ -51,7 +54,7 @@ impl App {
         })
     }
 
-    fn items(&self) -> &[Food] {
+    pub fn items(&self) -> &[Food] {
         match self.tab {
             0 => &self.foods,
             1 => &self.drinks,
@@ -59,16 +62,16 @@ impl App {
         }
     }
 
-    fn is_meals(&self) -> bool {
+    pub fn is_meals(&self) -> bool {
         self.tab == 3
     }
 
-    fn matches(&self, haystack: &str) -> bool {
+    pub fn matches(&self, haystack: &str) -> bool {
         let q = self.filter.to_lowercase();
         q.is_empty() || haystack.to_lowercase().contains(&q)
     }
 
-    fn food_indices(&self) -> Vec<usize> {
+    pub fn food_indices(&self) -> Vec<usize> {
         self.items()
             .iter()
             .enumerate()
@@ -82,7 +85,7 @@ impl App {
             .collect()
     }
 
-    fn meal_indices(&self) -> Vec<usize> {
+    pub fn meal_indices(&self) -> Vec<usize> {
         self.meals
             .iter()
             .enumerate()
@@ -100,7 +103,7 @@ impl App {
             .collect()
     }
 
-    fn len(&self) -> usize {
+    pub fn len(&self) -> usize {
         if self.is_meals() {
             self.meal_indices().len()
         } else {
@@ -108,7 +111,11 @@ impl App {
         }
     }
 
-    fn selected_food(&self) -> Option<&Food> {
+    pub fn is_empty(&self) -> bool {
+        self.len() == 0
+    }
+
+    pub fn selected_food(&self) -> Option<&Food> {
         if self.is_meals() {
             return None;
         }
@@ -117,7 +124,7 @@ impl App {
             .map(|&i| &self.items()[i])
     }
 
-    fn selected_meal(&self) -> Option<&MealRow> {
+    pub fn selected_meal(&self) -> Option<&MealRow> {
         if !self.is_meals() {
             return None;
         }
@@ -126,7 +133,7 @@ impl App {
             .map(|&i| &self.meals[i])
     }
 
-    fn random_pick(&mut self) {
+    pub fn random_pick(&mut self) {
         if self.is_meals() {
             let idx = self.meal_indices();
             if let Some(&i) = data::pick(&idx, data::rng()).as_ref() {
@@ -140,7 +147,7 @@ impl App {
         }
     }
 
-    fn move_cursor(&mut self, delta: isize) {
+    pub fn move_cursor(&mut self, delta: isize) {
         let len = self.len();
         if len == 0 {
             return;
@@ -148,7 +155,7 @@ impl App {
         self.cursor = (self.cursor as isize + delta).rem_euclid(len as isize) as usize;
     }
 
-    fn handle_key(&mut self, code: KeyCode) -> bool {
+    pub fn handle_key(&mut self, code: KeyCode) -> bool {
         match code {
             KeyCode::Char('q') if !self.filter_mode => return true,
             KeyCode::Tab | KeyCode::Right => self.tab = (self.tab + 1) % TABS.len(),
@@ -178,7 +185,7 @@ impl App {
         false
     }
 
-    fn draw(&self, frame: &mut Frame) {
+    pub fn draw(&self, frame: &mut Frame) {
         let chunks = Layout::default()
             .direction(Direction::Vertical)
             .constraints([

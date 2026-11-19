@@ -3,15 +3,15 @@ import userEvent from '@testing-library/user-event';
 import { FoodRandomizer } from '../Randomizer';
 import { DRINK_OPTIONS, FOOD_OPTIONS, drinks, foods } from '@/data';
 
-const advance = () => act(() => jest.advanceTimersByTime(1800));
+const advance = () => act(() => vi.advanceTimersByTime(1800));
 
 describe('FoodRandomizer', () => {
   beforeEach(() => {
-    jest.useFakeTimers();
+    vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
   afterEach(() => {
-    jest.useRealTimers();
+    vi.useRealTimers();
   });
 
   it('renders the reel placeholder and spin controls', () => {
@@ -25,7 +25,7 @@ describe('FoodRandomizer', () => {
   });
 
   it('spins, lands on a valid dish and counts the spin', async () => {
-    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+    const user = userEvent.setup();
     render(<FoodRandomizer />);
     await user.click(screen.getByTestId('spin-button'));
     expect(screen.getByTestId('spin-button')).toBeDisabled();
@@ -39,7 +39,7 @@ describe('FoodRandomizer', () => {
   });
 
   it('spins with the Space key', async () => {
-    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+    const user = userEvent.setup();
     render(<FoodRandomizer />);
     await user.keyboard(' ');
     expect(screen.getByTestId('spin-button')).toBeDisabled();
@@ -49,7 +49,7 @@ describe('FoodRandomizer', () => {
   });
 
   it('locks a cuisine through the select and spins within it', async () => {
-    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+    const user = userEvent.setup();
     render(<FoodRandomizer />);
     await user.click(screen.getByTestId('cuisine-select-trigger'));
     await user.click(screen.getByTitle('Japanese'));
@@ -61,7 +61,7 @@ describe('FoodRandomizer', () => {
   });
 
   it('pre-selects the cuisine from the initial country', async () => {
-    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+    const user = userEvent.setup();
     render(<FoodRandomizer initialCountry="japanese" />);
     expect(screen.getByTestId('cuisine-select-trigger')).toHaveTextContent(
       'Japanese'
@@ -81,7 +81,7 @@ describe('FoodRandomizer', () => {
   });
 
   it('renders the drinks variant with its own title and options', async () => {
-    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+    const user = userEvent.setup();
     render(
       <FoodRandomizer
         items={drinks}

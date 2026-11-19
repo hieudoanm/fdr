@@ -458,7 +458,7 @@ dependencies = [
 
 [[package]]
 name = "fdr-cli"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "clap",
  "crossterm",
@@ -469,11 +469,10 @@ dependencies = [
 
 [[package]]
 name = "fdr-mcp"
-version = "0.1.0"
+version = "0.0.1"
 dependencies = [
  "clap",
  "fdr-cli",
- "serde",
  "serde_json",
 ]
 

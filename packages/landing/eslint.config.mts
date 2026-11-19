@@ -4,8 +4,7 @@ const eslintConfig = defineConfig([
   globalIgnores([
     '.next/**',
     'build/**',
-    'jest.config.ts',
-    'jest.setup.ts',
+    'coverage/**',
     'next-env.d.ts',
     'node_modules/**',
     'out/**',

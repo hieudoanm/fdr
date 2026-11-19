@@ -4,11 +4,11 @@ import { FIXTURE_FOODS_MAP } from '@/components/molecules/__fixtures__/fixtures'
 
 describe('useFoodPicker', () => {
   beforeEach(() => {
-    jest.useFakeTimers();
+    vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
   afterEach(() => {
-    jest.useRealTimers();
+    vi.useRealTimers();
   });
 
   it('starts on all foods with no suggestion and not spinning', () => {
@@ -39,13 +39,13 @@ describe('useFoodPicker', () => {
   });
 
   it('spin lands on a suggestion after a random duration', () => {
-    const randomSpy = jest.spyOn(Math, 'random').mockReturnValue(0);
+    const randomSpy = vi.spyOn(Math, 'random').mockReturnValue(0);
     const { result } = renderHook(() =>
       useFoodPicker({ foodsMap: FIXTURE_FOODS_MAP })
     );
     act(() => result.current.spin());
     expect(result.current.spinning).toBe(true);
-    act(() => jest.advanceTimersByTime(1800));
+    act(() => vi.advanceTimersByTime(1800));
     expect(result.current.spinning).toBe(false);
     expect(FIXTURE_FOODS_MAP.all).toContain(result.current.suggestion);
     randomSpy.mockRestore();
@@ -57,7 +57,7 @@ describe('useFoodPicker', () => {
     );
     act(() => result.current.spin());
     act(() => result.current.spin());
-    act(() => jest.advanceTimersByTime(1800));
+    act(() => vi.advanceTimersByTime(1800));
     expect(result.current.spinning).toBe(false);
     expect(result.current.suggestion).not.toBe('');
   });
@@ -79,7 +79,7 @@ describe('useFoodPicker', () => {
     act(() => result.current.selectFood('italian'));
     expect(result.current.spinning).toBe(false);
     expect(result.current.suggestion).toBe('');
-    expect(() => jest.advanceTimersByTime(1800)).not.toThrow();
+    expect(() => vi.advanceTimersByTime(1800)).not.toThrow();
     expect(result.current.suggestion).toBe('');
   });
 });

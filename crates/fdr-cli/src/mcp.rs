@@ -4,7 +4,7 @@
 //! text and `structuredContent` matching each tool's `outputSchema`.
 //! Configure an MCP client with: `fdr mcp`
 
-use fdr_cli::data::{self, Filters, Food};
+use crate::data::{self, Filters, Food};
 use serde_json::{Value, json};
 use std::io::{BufRead, Write};
 
@@ -50,7 +50,8 @@ fn items_for(kind: &str) -> Result<Vec<Food>, String> {
 }
 
 /// Run a tool against the data layer, returning `(text, structuredContent)`.
-fn run_structured(name: &str, params: &Value) -> Result<(String, Value), String> {
+#[doc(hidden)]
+pub fn run_structured(name: &str, params: &Value) -> Result<(String, Value), String> {
     match name {
         "list_countries" => {
             let list = data::countries()?;
@@ -341,7 +342,8 @@ fn titleize(name: &str) -> String {
         .join(" ")
 }
 
-fn tools_list() -> Value {
+#[doc(hidden)]
+pub fn tools_list() -> Value {
     let mut result = json!({
         "tools": [
             {
@@ -447,7 +449,8 @@ fn tools_list() -> Value {
     result
 }
 
-fn handle_request(request: &Value) -> Option<Value> {
+#[doc(hidden)]
+pub fn handle_request(request: &Value) -> Option<Value> {
     let method = request.get("method").and_then(Value::as_str).unwrap_or("");
     let id = request.get("id").cloned().unwrap_or(Value::Null);
     let has_id = request.get("id").is_some();
@@ -543,160 +546,4 @@ pub fn run() -> std::io::Result<()> {
         }
     }
     Ok(())
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    const TOOL_NAMES: [&str; 11] = [
-        "list_countries",
-        "stats",
-        "list_schedules",
-        "get_schedule",
-        "list_foods",
-        "pick_food",
-        "list_drinks",
-        "pick_drink",
-        "list_snacks",
-        "pick_snack",
-        "pick_meal",
-    ];
-
-    fn tools() -> Vec<Value> {
-        tools_list()["tools"]
-            .as_array()
-            .expect("tools array")
-            .clone()
-    }
-
-    #[test]
-    fn tools_list_returns_all_expected_names() {
-        let tools = tools();
-        let names: Vec<&str> = tools
-            .iter()
-            .map(|t| t["name"].as_str().expect("tool name"))
-            .collect();
-        for expected in TOOL_NAMES {
-            assert!(names.contains(&expected), "missing tool {expected}");
-        }
-        assert_eq!(names.len(), TOOL_NAMES.len());
-    }
-
-    #[test]
-    fn every_tool_declares_all_four_hints() {
-        for tool in tools() {
-            let name = tool["name"].as_str().expect("tool name");
-            let annotations = &tool["annotations"];
-            // All tools read bundled static data: read-only, non-destructive,
-            // idempotent, and closed-world (no external systems).
-            assert_eq!(
-                annotations,
-                &json!({
-                    "readOnlyHint": true,
-                    "destructiveHint": false,
-                    "idempotentHint": true,
-                    "openWorldHint": false
-                }),
-                "unexpected annotations on {name}"
-            );
-        }
-    }
-
-    #[test]
-    fn every_tool_declares_output_schema() {
-        for tool in tools() {
-            let name = tool["name"].as_str().expect("tool name");
-            assert!(
-                tool.get("outputSchema").is_some(),
-                "missing outputSchema on {name}"
-            );
-        }
-    }
-
-    #[test]
-    fn every_tool_produces_structured_content() {
-        for name in TOOL_NAMES {
-            let params = match name {
-                "get_schedule" => json!({"name": "scheldon"}),
-                "pick_meal" => json!({"kind": "any"}),
-                _ => json!({}),
-            };
-            let (text, structured) =
-                run_structured(name, &params).unwrap_or_else(|e| panic!("{name}: {e}"));
-            assert!(!text.is_empty(), "{name} returned empty text");
-            assert!(
-                structured.is_object(),
-                "{name} structuredContent not object"
-            );
-        }
-    }
-
-    #[test]
-    fn tools_call_returns_structured_content() {
-        let request = json!({
-            "jsonrpc": "2.0",
-            "id": 1,
-            "method": "tools/call",
-            "params": {"name": "stats", "arguments": {}}
-        });
-        let response = handle_request(&request).expect("response");
-        let result = &response["result"];
-        assert!(result.get("isError").is_none());
-        assert!(result["structuredContent"]["total_items"].is_u64());
-        assert!(
-            result["content"][0]["text"]
-                .as_str()
-                .unwrap()
-                .contains("Countries")
-        );
-    }
-
-    #[test]
-    fn tools_call_unknown_tool_returns_error_result() {
-        let request = json!({
-            "jsonrpc": "2.0",
-            "id": 1,
-            "method": "tools/call",
-            "params": {"name": "nope", "arguments": {}}
-        });
-        let response = handle_request(&request).expect("response");
-        assert_eq!(response["result"]["isError"], json!(true));
-        assert!(
-            response["result"]["content"][0]["text"]
-                .as_str()
-                .unwrap()
-                .contains("Unknown tool")
-        );
-    }
-
-    #[test]
-    fn tools_call_missing_required_arg_returns_error_result() {
-        let request = json!({
-            "jsonrpc": "2.0",
-            "id": 2,
-            "method": "tools/call",
-            "params": {"name": "get_schedule", "arguments": {}}
-        });
-        let response = handle_request(&request).expect("response");
-        assert_eq!(response["result"]["isError"], json!(true));
-    }
-
-    #[test]
-    fn initialize_returns_server_info() {
-        let request = json!({
-            "jsonrpc": "2.0",
-            "id": 3,
-            "method": "initialize",
-            "params": {}
-        });
-        let response = handle_request(&request).expect("response");
-        assert_eq!(response["result"]["serverInfo"]["name"], json!(SERVER_INFO));
-    }
-
-    #[test]
-    fn notifications_get_no_response() {
-        let request = json!({"jsonrpc": "2.0", "method": "ping"});
-        assert!(handle_request(&request).is_none());
-    }
 }

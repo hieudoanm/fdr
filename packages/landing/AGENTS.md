@@ -29,8 +29,8 @@ world cuisines, built with Next.js.
   `/drinks/randomizer` share `src/components/templates/RandomizerTemplate.tsx`;
   the three wheel and three dishes pages share `WheelTemplate` and
   `DishesTemplate`.
-- Jest treats every file inside `__tests__/` as a suite: keep shared fixtures in
-  `<feature>/testing/`, not in `__tests__/`.
+- Vitest treats every file inside `__tests__/` as a suite: keep shared fixtures
+  in `<feature>/testing/`, not in `__tests__/`.
 - Pages are thin: they compose templates (`HomeTemplate`) and feature
   components.
 - Path alias `@/*` maps to `./src/*`.
