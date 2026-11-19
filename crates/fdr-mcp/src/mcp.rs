@@ -4,8 +4,8 @@
 //! text and `structuredContent` matching each tool's `outputSchema`.
 //! Configure an MCP client with: `fdr mcp`
 
-use crate::data::{self, Filters, Food};
-use serde_json::{json, Value};
+use fdr_cli::data::{self, Filters, Food};
+use serde_json::{Value, json};
 use std::io::{BufRead, Write};
 
 const SERVER_INFO: &str = "fdr-mcp";
@@ -644,10 +644,12 @@ mod tests {
         let result = &response["result"];
         assert!(result.get("isError").is_none());
         assert!(result["structuredContent"]["total_items"].is_u64());
-        assert!(result["content"][0]["text"]
-            .as_str()
-            .unwrap()
-            .contains("Countries"));
+        assert!(
+            result["content"][0]["text"]
+                .as_str()
+                .unwrap()
+                .contains("Countries")
+        );
     }
 
     #[test]
@@ -660,10 +662,12 @@ mod tests {
         });
         let response = handle_request(&request).expect("response");
         assert_eq!(response["result"]["isError"], json!(true));
-        assert!(response["result"]["content"][0]["text"]
-            .as_str()
-            .unwrap()
-            .contains("Unknown tool"));
+        assert!(
+            response["result"]["content"][0]["text"]
+                .as_str()
+                .unwrap()
+                .contains("Unknown tool")
+        );
     }
 
     #[test]

@@ -468,6 +468,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "fdr-mcp"
+version = "0.1.0"
+dependencies = [
+ "clap",
+ "fdr-cli",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "filedescriptor"
 version = "0.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"

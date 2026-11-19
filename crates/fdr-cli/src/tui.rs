@@ -1,12 +1,12 @@
 //! Interactive terminal UI for browsing and picking food, drinks, snacks,
 //! and meal schedules. Run with `fdr tui`.
 
-use crate::data::{self, Food, ScheduleEntry};
 use crossterm::event::{self, Event, KeyCode, KeyEventKind, KeyModifiers};
 use crossterm::execute;
 use crossterm::terminal::{
-    disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen,
+    EnterAlternateScreen, LeaveAlternateScreen, disable_raw_mode, enable_raw_mode,
 };
+use fdr_cli::data::{self, Food, ScheduleEntry};
 use ratatui::layout::{Constraint, Direction, Layout, Rect};
 use ratatui::style::{Color, Modifier, Style};
 use ratatui::text::{Line, Span};
