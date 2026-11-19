@@ -4,7 +4,8 @@
 - The [README](./README.md) explains what the app is; this file explains how to
   change it.
 - Product requirements live in [`docs/`](./docs/README.md).
-- Package-level guidance lives in [`packages/landing/AGENTS.md`](./packages/landing/AGENTS.md).
+- Package-level guidance lives in [`packages/landing/AGENTS.md`](./packages/landing/AGENTS.md)
+  and in each crate's `AGENTS.md` under [`crates/`](./crates/).
 
 ## Read this first
 
@@ -47,25 +48,30 @@ pnpm format           # turbo run format (Prettier, writes)
 pnpm --filter @fdr/landing test:e2e     # Playwright
 node packages/landing/scripts/csv-to-json.mjs  # regenerate JSON from CSV
 
-cargo build -p fdr-cli                  # build the Rust CLI (crates/fdr-cli)
-./target/debug/fdr --help               # foods/drinks/snacks/pick/schedule/stats/mcp
+cargo build --workspace                # build fdr + fdr-mcp (crates/*)
+cargo test --workspace                 # Rust tests
+cargo clippy --workspace --all-targets -- -D warnings
+cargo fmt --all -- --check
+./target/debug/fdr --help              # countries/foods/drinks/snacks/pick/schedules/schedule/stats/tui
+./target/debug/fdr-mcp --help          # MCP server: stdio, or --http <addr> [--token]
 ```
 
 ## Workspace layout
 
-| Path                                    | Contents                                                                                                             |
-| --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Path                                        | Contents                                                                                                                                                                                |
+| ------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `packages/landing/src/app`                  | Routes: `/`, `/foods/{wheel,randomizer,dishes}`, `/drinks/{wheel,randomizer,dishes}`, `/snacks/{wheel,randomizer,dishes}`, `/schedule`; error/loading/not-found boundaries; `robots.ts` |
-| `packages/landing/src/components/atoms`     | `Badge`, `OfflineBadge`                                                                                               |
-| `packages/landing/src/components/molecules` | `BackLink`, `CuisineSelect`, `Reel`, `SchedulePicker`                                                                |
-| `packages/landing/src/components/organisms` | `List`, `Randomizer`, `Schedule`, `Wheel`                                                                            |
-| `packages/landing/src/components/templates` | `HomeTemplate`, `ErrorTemplate`, `RandomizerTemplate`, `WheelTemplate`, `DishesTemplate`                                                                                      |
-| `packages/landing/src/data`                 | Types, JSON, `csv/` sources, and `FOOD_OPTIONS` accessors                                                            |
-| `packages/landing/src/hooks`                | `useFoodPicker` and related hooks                                                                                    |
-| `packages/landing/src/components/atoms`       | `Badge`, `OfflineBadge`, `ServiceWorker`                                                                              |
-| `packages/landing/e2e`                      | Playwright specs                                                                                                     |
-| `packages/landing/scripts`                  | `csv-to-json.mjs` — regenerates `src/data/json/` from `src/data/csv/`                                                |
-| `crates/fdr-cli`                            | Rust CLI (`fdr`) over the static JSON data, with `fdr mcp` MCP server over stdio                                     |
+| `packages/landing/src/components/atoms`     | `Badge`, `OfflineBadge`                                                                                                                                                                 |
+| `packages/landing/src/components/molecules` | `BackLink`, `CuisineSelect`, `Reel`, `SchedulePicker`                                                                                                                                   |
+| `packages/landing/src/components/organisms` | `List`, `Randomizer`, `Schedule`, `Wheel`                                                                                                                                               |
+| `packages/landing/src/components/templates` | `HomeTemplate`, `ErrorTemplate`, `RandomizerTemplate`, `WheelTemplate`, `DishesTemplate`                                                                                                |
+| `packages/landing/src/data`                 | Types, JSON, `csv/` sources, and `FOOD_OPTIONS` accessors                                                                                                                               |
+| `packages/landing/src/hooks`                | `useFoodPicker` and related hooks                                                                                                                                                       |
+| `packages/landing/src/components/atoms`     | `Badge`, `OfflineBadge`, `ServiceWorker`                                                                                                                                                |
+| `packages/landing/e2e`                      | Playwright specs                                                                                                                                                                        |
+| `packages/landing/scripts`                  | `csv-to-json.mjs` — regenerates `src/data/json/` from `src/data/csv/`                                                                                                                   |
+| `crates/fdr-cli`                            | Rust CLI (`fdr` binary) over the static JSON data; `src/lib.rs` exposes `fdr_cli::data` for `fdr-mcp`                                                                                   |
+| `crates/fdr-mcp`                            | Rust MCP server (`fdr-mcp` binary + `fdr_mcp` lib): stdio or streamable-HTTP JSON-RPC tools over `fdr_cli::data`                                                                        |
 
 ## Architecture
 
@@ -121,13 +127,19 @@ cargo build -p fdr-cli                  # build the Rust CLI (crates/fdr-cli)
 `.github/workflows/ci.yaml` runs on push and pull request to `master`, plus
 manual dispatch:
 
-1. Checkout, pnpm 12.16.1, Node from `.nvmrc`, cached pnpm store.
-2. `pnpm install --frozen-lockfile`.
-3. `pnpm typecheck`, `pnpm lint`, `pnpm test`.
-4. `pnpm build` with `BASE_PATH=/fdr`.
-5. `touch packages/landing/out/.nojekyll`, upload `packages/landing/out` as the Pages
+1. **CLI check** — `cargo fmt --all -- --check`, `cargo clippy --workspace
+--all-targets -- -D warnings`, `cargo test`.
+2. **CLI build** (non-PR) — `cargo build --release` on ubuntu/macos/windows;
+   uploads renamed `fdr-*` and `fdr-mcp-*` binaries as artifacts.
+3. Checkout, pnpm 12.16.1, Node from `.nvmrc`, cached pnpm store.
+4. `pnpm install --frozen-lockfile`.
+5. `pnpm typecheck`, `pnpm lint`, `pnpm test`.
+6. `pnpm build` with `BASE_PATH=/fdr`.
+7. `touch packages/landing/out/.nojekyll`, upload `packages/landing/out` as the Pages
    artifact.
-6. On `master`, deploy with `actions/deploy-pages`.
+8. On `master`: a **release** job downloads the CLI artifacts, deletes the
+   existing `latest` release/tag, and publishes a new GitHub Release; the
+   Pages artifact is deployed with `actions/deploy-pages`.
 
 - **Base path is required.** GitHub Pages serves the project from `/fdr`, so
   `next.config.ts` reads `BASE_PATH`. Links and assets must stay relative or

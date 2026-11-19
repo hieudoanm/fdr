@@ -2,7 +2,7 @@
 name = "fdr-cli"
 version = "0.1.0"
 edition = "2021"
-description = "CLI for FDR food, drink, and snack data with an MCP server"
+description = "CLI for FDR food, drink, and snack data"
 license = "MIT"
 
 [[bin]]

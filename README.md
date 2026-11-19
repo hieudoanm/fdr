@@ -1,6 +1,6 @@
 # fdr
 
-[![CI](https://github.com/hieudoanm/fdr/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/fdr/actions/workflows/ci.yaml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![CI](https://github.com/hieudoanm/fdr/actions/workflows/ci.yaml/badge.svg?branch=master)](https://github.com/hieudoanm/fdr/actions/workflows/ci.yaml?branch=master) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Topics: `food`, `randomizer`, `nextjs`, `static-site`
 
@@ -51,6 +51,9 @@ and desserts (`meal-snacks.csv`).
 │       ├── src/hooks/          # useFoodPicker and friends
 │       ├── src/providers/      # service-worker registration
 │       └── e2e/                # Playwright specs
+├── crates/
+│   ├── fdr-cli/                # `fdr` binary — query data, `fdr tui`
+│   └── fdr-mcp/                # `fdr-mcp` binary — MCP server (stdio + HTTP)
 ├── AGENTS.md                   # technical reference for contributors/agents
 └── turbo.json                  # task graph and cache outputs
 ```
@@ -115,24 +118,39 @@ node packages/landing/scripts/csv-to-json.mjs
 
 `.github/workflows/ci.yaml` runs on every push and pull request to `master`:
 
-1. **Typecheck**, **lint**, and **test**.
-2. **Build** with `BASE_PATH=/fdr`, producing `packages/landing/out`.
-3. Upload the static export as a Pages artifact.
-4. On `master` (push or manual dispatch), **deploy** to GitHub Pages.
+1. **CLI check** — `cargo fmt --check`, `clippy -D warnings`, and `cargo test`
+   across the workspace (`fdr-cli` + `fdr-mcp`).
+2. **CLI build** — release binaries for `fdr` and `fdr-mcp` on
+   Linux/macOS/Windows (non-PR events).
+3. **Landing build** — typecheck, lint, test, then **build** with
+   `BASE_PATH=/fdr`, producing `packages/landing/out`.
+4. On `master`, a **release** publishes the CLI binaries to a `latest`
+   GitHub Release, and the static export is **deployed** to GitHub Pages.
 
 Set the repository's **Settings → Pages → Source** to **GitHub Actions** once;
 the workflow cannot configure that itself. The site is served from
 `https://hieudoanm.github.io/fdr`.
 
+## CLI & MCP
+
+Two Rust crates live in `crates/`:
+
+- **`fdr-cli`** — the `fdr` binary: `countries`, `foods`, `drinks`, `snacks`,
+  `pick`, `schedules`, `schedule`, `stats`, and `fdr tui`. Reads the static
+  JSON under `packages/landing/src/data/json/` (`FDR_DATA_DIR` overrides).
+- **`fdr-mcp`** — the `fdr-mcp` binary: an MCP server exposing the same data
+  as tools (`list_foods`, `pick_meal`, `get_schedule`, …). Run `fdr-mcp` for
+  stdio, or `fdr-mcp --http 127.0.0.1:8080` for streamable HTTP at
+  `http://<addr>/mcp` (the transport used by ChatGPT connectors and remote
+  Claude clients). `--token <token>` or `MCP_AUTH_TOKEN` requires
+  `Authorization: Bearer <token>` on every request.
+
+```bash
+cargo build --release --workspace
+cargo run -p fdr-cli -- stats
+cargo run -p fdr-mcp -- --http 127.0.0.1:8080
+```
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
-
-
-### Streamable HTTP
-
-`fdr mcp --http 127.0.0.1:8080` also accepts `--http <addr>` (and `--token <token>`, or the
-`MCP_AUTH_TOKEN` environment variable) to serve the same MCP surface over
-streamable HTTP at `http://<addr>/mcp` — the transport used by ChatGPT
-connectors and remote Claude clients. When a token is configured, every
-request must carry `Authorization: Bearer <token>`.

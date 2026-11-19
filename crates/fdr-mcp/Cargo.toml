@@ -1,0 +1,20 @@
+[package]
+name = "fdr-mcp"
+version = "0.1.0"
+edition = "2021"
+description = "MCP server for FDR food, drink, snack, and schedule data"
+license = "MIT"
+
+[lib]
+name = "fdr_mcp"
+path = "src/lib.rs"
+
+[[bin]]
+name = "fdr-mcp"
+path = "src/main.rs"
+
+[dependencies]
+fdr-cli = { path = "../fdr-cli" }
+clap = { version = "=4.6.8", features = ["derive"] }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.154"
