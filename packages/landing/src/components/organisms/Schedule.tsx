@@ -1,11 +1,15 @@
 'use client';
 
 import type { FC } from 'react';
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 import type { ScheduleEntry } from '@/data';
 
 const todayLabel = (): string =>
   new Date().toLocaleDateString('en-US', { weekday: 'long' });
+
+const subscribe = (): (() => void) => () => {};
+const getSnapshot = (): string => todayLabel();
+const getServerSnapshot = (): string => '';
 
 interface FoodScheduleProps {
   entries: ScheduleEntry[];
@@ -18,11 +22,11 @@ export const FoodSchedule: FC<FoodScheduleProps> = ({
   quote,
   today,
 }) => {
-  const [clientToday, setClientToday] = useState('');
-
-  useEffect(() => {
-    if (!today) setClientToday(todayLabel());
-  }, [today]);
+  const clientToday = useSyncExternalStore(
+    subscribe,
+    getSnapshot,
+    getServerSnapshot
+  );
 
   const activeDay = today ?? clientToday;
   const showWeek = entries.some((entry) => entry.week);

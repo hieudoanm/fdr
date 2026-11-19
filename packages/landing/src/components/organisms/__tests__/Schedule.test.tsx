@@ -41,7 +41,7 @@ describe('FoodSchedule', () => {
   });
 
   it('shows a week column when entries span multiple weeks', () => {
-    const twoWeek = scheldon.flatMap((entry, index) => [
+    const twoWeek = scheldon.flatMap((entry) => [
       { ...entry, week: 'Week 1' },
       { ...entry, week: 'Week 2', meal: `${entry.meal} II` },
     ]);

@@ -3,6 +3,22 @@
 import type { FC } from 'react';
 import { useEffect, useRef, useState } from 'react';
 
+// Adjust displayed during render (React's "derive state from props" pattern)
+// so the reel always starts a spin on the current topic without a
+// synchronous setState inside an effect.
+const useDisplayedTopic = (
+  current: string,
+  spinning: boolean
+): [string, (topic: string) => void] => {
+  const [displayed, setDisplayed] = useState(current);
+  const [prev, setPrev] = useState({ current, spinning });
+  if (prev.current !== current || prev.spinning !== spinning) {
+    setPrev({ current, spinning });
+    setDisplayed(current);
+  }
+  return [displayed, setDisplayed];
+};
+
 interface ReelProps {
   topics: string[];
   spinning: boolean;
@@ -20,26 +36,21 @@ export const Reel: FC<ReelProps> = ({
   itemLabel,
   cuisineLabel,
 }) => {
-  const [displayed, setDisplayed] = useState(current);
+  const [displayed, setDisplayed] = useDisplayedTopic(current, spinning);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
-    if (spinning) {
-      if (topics.length === 0) return;
-      let index = topics.indexOf(current);
-      if (index < 0) index = 0;
-      intervalRef.current = setInterval(() => {
-        index = (index + 1) % topics.length;
-        setDisplayed(topics[index]);
-      }, 80);
-    } else {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-      setDisplayed(current);
-    }
+    if (!spinning || topics.length === 0) return;
+    let index = topics.indexOf(current);
+    if (index < 0) index = 0;
+    intervalRef.current = setInterval(() => {
+      index = (index + 1) % topics.length;
+      setDisplayed(topics[index]);
+    }, 80);
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current);
     };
-  }, [spinning, current, topics]);
+  }, [spinning, current, topics, setDisplayed]);
 
   const showLabel = landed || spinning;
 

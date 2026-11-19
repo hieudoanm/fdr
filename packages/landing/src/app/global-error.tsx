@@ -3,7 +3,6 @@
 import { ErrorTemplate } from '@/components/templates/ErrorTemplate';
 
 const GlobalErrorPage = ({
-  error,
   reset,
 }: {
   error: Error & { digest?: string };
