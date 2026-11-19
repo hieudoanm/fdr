@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react';
 import { foods, FOOD_OPTIONS } from '@/data';
 import { RandomizerTemplate } from '@/components/templates/RandomizerTemplate';
 
-jest.mock('next/navigation', () => ({
+vi.mock('next/navigation', () => ({
   useSearchParams: () => new URLSearchParams(),
-  useRouter: () => ({ replace: jest.fn() }),
+  useRouter: () => ({ replace: vi.fn() }),
 }));
 
 describe('RandomizerTemplate', () => {

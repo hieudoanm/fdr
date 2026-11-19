@@ -2,18 +2,18 @@ import { render, screen } from '@testing-library/react';
 import { notFound } from 'next/navigation';
 import ScheduleSlugPage from '@/app/(app)/schedule/[slug]/page';
 
-jest.mock('next/navigation', () => ({
-  notFound: jest.fn(),
+vi.mock('next/navigation', () => ({
+  notFound: vi.fn(),
 }));
 
-jest.mock('@/components/organisms/Schedule', () => ({
+vi.mock('@/components/organisms/Schedule', () => ({
   FoodSchedule: () => <div data-testid="food-schedule" />,
 }));
-jest.mock('@/components/molecules/SchedulePicker', () => ({
+vi.mock('@/components/molecules/SchedulePicker', () => ({
   SchedulePicker: () => <div data-testid="schedule-picker" />,
 }));
 
-const { notFound: mockNotFound } = require('next/navigation');
+const mockNotFound = vi.mocked(notFound);
 
 const Page = ScheduleSlugPage as unknown as ({
   params,
@@ -28,7 +28,7 @@ const renderForSlug = async (slug: string) => {
 
 describe('ScheduleSlugPage', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   it('renders the schedule for a known slug', async () => {

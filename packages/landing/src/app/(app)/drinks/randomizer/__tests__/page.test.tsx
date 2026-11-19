@@ -2,9 +2,9 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import RandomizerTemplate from '@/app/(app)/drinks/randomizer/page';
 
-const replace = jest.fn();
+const replace = vi.fn();
 
-jest.mock('next/navigation', () => ({
+vi.mock('next/navigation', () => ({
   useSearchParams: () => new URLSearchParams('country=japanese'),
   useRouter: () => ({ replace }),
 }));

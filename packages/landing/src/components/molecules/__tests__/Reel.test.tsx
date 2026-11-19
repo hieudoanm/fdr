@@ -32,7 +32,7 @@ describe('Reel', () => {
   });
 
   it('cycles through topics while spinning', () => {
-    jest.useFakeTimers();
+    vi.useFakeTimers({ shouldAdvanceTime: true });
     try {
       render(
         <Reel
@@ -44,17 +44,17 @@ describe('Reel', () => {
       );
       expect(screen.getByText('Rolling…')).toBeInTheDocument();
       expect(screen.getByTestId('reel-display')).toHaveTextContent('Pizza');
-      act(() => jest.advanceTimersByTime(80));
+      act(() => vi.advanceTimersByTime(80));
       expect(screen.getByTestId('reel-display')).toHaveTextContent('Pasta');
-      act(() => jest.advanceTimersByTime(80));
+      act(() => vi.advanceTimersByTime(80));
       expect(screen.getByTestId('reel-display')).toHaveTextContent('Pizza');
     } finally {
-      jest.useRealTimers();
+      vi.useRealTimers();
     }
   });
 
   it('falls back to the first topic when the current topic is missing', () => {
-    jest.useFakeTimers();
+    vi.useFakeTimers({ shouldAdvanceTime: true });
     try {
       render(
         <Reel
@@ -65,12 +65,12 @@ describe('Reel', () => {
         />
       );
       expect(screen.getByText('Rolling…')).toBeInTheDocument();
-      act(() => jest.advanceTimersByTime(80));
+      act(() => vi.advanceTimersByTime(80));
       expect(screen.getByTestId('reel-display')).toHaveTextContent('Sushi');
-      act(() => jest.advanceTimersByTime(80));
+      act(() => vi.advanceTimersByTime(80));
       expect(screen.getByTestId('reel-display')).toHaveTextContent('Ramen');
     } finally {
-      jest.useRealTimers();
+      vi.useRealTimers();
     }
   });
 });

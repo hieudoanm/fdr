@@ -1,15 +1,15 @@
 # AGENTS.md — fdr-mcp
 
-MCP server crate (`fdr-mcp` binary + `fdr_mcp` library). See the root
+Standalone MCP server binary (`fdr-mcp`) for FDR data. See the root
 [`AGENTS.md`](../../AGENTS.md).
 
-- Depends on `fdr-cli` for data access (`fdr_cli::data`) — do not duplicate
-  the data layer here.
-- `src/mcp.rs` holds JSON-RPC dispatch, tool definitions (`tools/list`
-  schemas + `outputSchema`s), and the `run()`/`run_http()` entrypoints.
-- `src/mcp_http.rs` is a minimal streamable-HTTP transport: `POST /mcp`
-  only, optional bearer auth, no batching, `GET`/`DELETE` → 405.
-- Framing on stdio: one JSON-RPC message per line; diagnostics on stderr.
-- Tool names are stable — MCP clients cache schemas; keep
-  `readOnlyHint`/`idempotentHint`/`openWorldHint` annotations accurate.
+- Thin wrapper: the server implementation lives in `fdr-cli`'s library
+  (`fdr_cli::mcp` + `fdr_cli::mcp_http`) so `fdr mcp` runs the same server
+  in-process. This crate only re-exports it (`fdr_mcp::mcp`,
+  `fdr_mcp::mcp_http`) and provides the `fdr-mcp` binary (`--http`,
+  `--token`, `MCP_AUTH_TOKEN`).
+- Depends on `fdr-cli` for the server and data access — do not duplicate
+  the data or transport layer here.
+- Tests in `tests/` exercise the binary end-to-end; the JSON-RPC and
+  transport unit tests live in `crates/fdr-cli/tests/`.
 - `cargo test -p fdr-mcp`.

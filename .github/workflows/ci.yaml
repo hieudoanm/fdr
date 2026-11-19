@@ -54,8 +54,8 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
       - name: Cache cargo
         uses: Swatinem/rust-cache@v2.9.3
-      - name: Build release binaries
-        run: cargo build --release --workspace
+      - name: Build release binary
+        run: cargo build --release -p fdr-cli
       - name: Rename binaries for release
         shell: bash
         run: |
@@ -66,10 +66,8 @@ jobs:
           esac
           if [ "${{ matrix.os }}" = "windows-latest" ]; then
             mv target/release/fdr.exe "fdr-${suffix}.exe"
-            mv target/release/fdr-mcp.exe "fdr-mcp-${suffix}.exe"
           else
             mv target/release/fdr "fdr-${suffix}"
-            mv target/release/fdr-mcp "fdr-mcp-${suffix}"
           fi
       - name: Upload CLI binaries
         uses: actions/upload-artifact@v7.0.2

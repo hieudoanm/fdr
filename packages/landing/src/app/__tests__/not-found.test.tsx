@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import NotFoundPage from '../not-found';
 
-jest.mock('next/link', () => {
+vi.mock('next/link', () => {
   const MockLink = ({
     children,
     href,
@@ -10,7 +10,7 @@ jest.mock('next/link', () => {
     href: string;
   }) => <a href={href}>{children}</a>;
   MockLink.displayName = 'MockLink';
-  return MockLink;
+  return { default: MockLink };
 });
 
 describe('NotFoundPage', () => {

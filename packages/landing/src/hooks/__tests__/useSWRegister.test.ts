@@ -2,28 +2,19 @@ import { renderHook, waitFor } from '@testing-library/react';
 import { useSWRegister } from '../useSWRegister';
 
 describe('useSWRegister', () => {
-  const unregister = jest.fn().mockResolvedValue(undefined);
-  const register = jest.fn().mockResolvedValue({ scope: '/' });
+  const unregister = vi.fn().mockResolvedValue(undefined);
+  const register = vi.fn().mockResolvedValue({ scope: '/' });
   const serviceWorker = {
-    getRegistrations: jest.fn().mockResolvedValue([{ unregister }]),
+    getRegistrations: vi.fn().mockResolvedValue([{ unregister }]),
     register,
   };
   const cachesMock = {
-    keys: jest.fn().mockResolvedValue(['old']),
-    delete: jest.fn().mockResolvedValue(true),
-  };
-
-  const originalEnv = process.env.NODE_ENV;
-
-  const setEnv = (value: string): void => {
-    Object.defineProperty(process.env, 'NODE_ENV', {
-      configurable: true,
-      value,
-    });
+    keys: vi.fn().mockResolvedValue(['old']),
+    delete: vi.fn().mockResolvedValue(true),
   };
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
     Object.defineProperty(navigator, 'serviceWorker', {
       configurable: true,
       value: serviceWorker,
@@ -35,11 +26,11 @@ describe('useSWRegister', () => {
   });
 
   afterEach(() => {
-    setEnv(originalEnv ?? 'test');
+    vi.unstubAllEnvs();
   });
 
   it('unregisters workers and clears caches in development', async () => {
-    setEnv('development');
+    vi.stubEnv('NODE_ENV', 'development');
     renderHook(() => useSWRegister());
 
     await waitFor(() => {
@@ -50,7 +41,7 @@ describe('useSWRegister', () => {
   });
 
   it('registers the worker outside development', async () => {
-    setEnv('production');
+    vi.stubEnv('NODE_ENV', 'production');
     renderHook(() => useSWRegister());
 
     await waitFor(() => {

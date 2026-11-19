@@ -136,11 +136,13 @@ the workflow cannot configure that itself. The site is served from
 Two Rust crates live in `crates/`:
 
 - **`fdr-cli`** — the `fdr` binary: `countries`, `foods`, `drinks`, `snacks`,
-  `pick`, `schedules`, `schedule`, `stats`, and `fdr tui`. Reads the static
-  JSON under `packages/landing/src/data/json/` (`FDR_DATA_DIR` overrides).
-- **`fdr-mcp`** — the `fdr-mcp` binary: an MCP server exposing the same data
-  as tools (`list_foods`, `pick_meal`, `get_schedule`, …). Run `fdr-mcp` for
-  stdio, or `fdr-mcp --http 127.0.0.1:8080` for streamable HTTP at
+  `pick`, `schedules`, `schedule`, `stats`, `fdr mcp`, and `fdr tui`. Reads
+  the static JSON under `packages/landing/src/data/json/` (`FDR_DATA_DIR`
+  overrides).
+- **`fdr-mcp`** — the `fdr-mcp` binary: a standalone MCP server exposing the
+  same data as tools (`list_foods`, `pick_meal`, `get_schedule`, …). It is a
+  thin wrapper over `fdr_cli::mcp`; `fdr mcp` runs the identical server.
+  stdio by default, or `--http 127.0.0.1:8080` for streamable HTTP at
   `http://<addr>/mcp` (the transport used by ChatGPT connectors and remote
   Claude clients). `--token <token>` or `MCP_AUTH_TOKEN` requires
   `Authorization: Bearer <token>` on every request.
@@ -148,7 +150,7 @@ Two Rust crates live in `crates/`:
 ```bash
 cargo build --release --workspace
 cargo run -p fdr-cli -- stats
-cargo run -p fdr-mcp -- --http 127.0.0.1:8080
+cargo run -p fdr-cli -- mcp --http 127.0.0.1:8080
 ```
 
 ## License

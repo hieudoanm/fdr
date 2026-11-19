@@ -30,11 +30,11 @@ describe('buildWheelRotation', () => {
 
 describe('CuisineWheel', () => {
   beforeEach(() => {
-    jest.useFakeTimers();
+    vi.useFakeTimers({ shouldAdvanceTime: true });
   });
 
   afterEach(() => {
-    jest.useRealTimers();
+    vi.useRealTimers();
   });
 
   it('renders the wheel, one sector per cuisine, and the spin controls', () => {
@@ -53,14 +53,14 @@ describe('CuisineWheel', () => {
   });
 
   it('spins, disables the button while settling, then reveals a cuisine', async () => {
-    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+    const user = userEvent.setup();
     render(<CuisineWheel settlingMs={SETTLE_MS} />);
     await user.click(screen.getByTestId('wheel-spin'));
     expect(screen.getByTestId('wheel-spin')).toBeDisabled();
     expect(screen.getByTestId('wheel-result')).toHaveTextContent(
       'Press spin to pick a cuisine'
     );
-    act(() => jest.advanceTimersByTime(SETTLE_MS));
+    act(() => vi.advanceTimersByTime(SETTLE_MS));
     const result = screen.getByTestId('wheel-result').textContent ?? '';
     expect(
       countries.some(
@@ -71,11 +71,11 @@ describe('CuisineWheel', () => {
   });
 
   it('links to the matching randomizer country once a cuisine is selected', async () => {
-    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+    const user = userEvent.setup();
     render(<CuisineWheel settlingMs={SETTLE_MS} />);
     expect(screen.queryByTestId('wheel-result-link')).not.toBeInTheDocument();
     await user.click(screen.getByTestId('wheel-spin'));
-    act(() => jest.advanceTimersByTime(SETTLE_MS));
+    act(() => vi.advanceTimersByTime(SETTLE_MS));
     const result = screen.getByTestId('wheel-result').textContent ?? '';
     const cuisine = countries.find(
       (item) => result === `${item.emoji} ${item.label}`
@@ -89,7 +89,7 @@ describe('CuisineWheel', () => {
   });
 
   it('links to a custom randomizer base path when provided', async () => {
-    const user = userEvent.setup({ advanceTimers: jest.advanceTimersByTime });
+    const user = userEvent.setup();
     render(
       <CuisineWheel
         settlingMs={SETTLE_MS}
@@ -97,7 +97,7 @@ describe('CuisineWheel', () => {
       />
     );
     await user.click(screen.getByTestId('wheel-spin'));
-    act(() => jest.advanceTimersByTime(SETTLE_MS));
+    act(() => vi.advanceTimersByTime(SETTLE_MS));
     const result = screen.getByTestId('wheel-result').textContent ?? '';
     const cuisine = countries.find(
       (item) => result === `${item.emoji} ${item.label}`

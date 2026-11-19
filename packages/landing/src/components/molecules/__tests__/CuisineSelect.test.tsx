@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { CuisineSelect } from '../CuisineSelect';
 import { FIXTURE_CUISINES } from '../__fixtures__/fixtures';
 
-const setup = (value = 'all', onChange = jest.fn()) => {
+const setup = (value = 'all', onChange = vi.fn()) => {
   render(
     <CuisineSelect
       cuisines={FIXTURE_CUISINES}

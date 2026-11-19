@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import HomePage from '@/app/page';
 
-global.fetch = jest.fn() as unknown as typeof global.fetch;
+global.fetch = vi.fn() as unknown as typeof global.fetch;
 
 describe('HomePage', () => {
   it('renders the randomizer tool card', () => {
