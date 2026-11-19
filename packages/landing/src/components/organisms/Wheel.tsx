@@ -64,7 +64,7 @@ export const CuisineWheel: FC<CuisineWheelProps> = ({
   const [result, setResult] = useState<Cuisine | null>(null);
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const gradient = useMemo(buildConicGradient, []);
+  const gradient = useMemo(() => buildConicGradient(), []);
 
   const spin = useCallback(() => {
     if (spinning) return;

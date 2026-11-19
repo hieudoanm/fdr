@@ -15,11 +15,11 @@
   },
   "scripts": {
     "dev": "turbo run dev",
-    "build": "turbo run build",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "typecheck": "turbo run typecheck",
+    "build": "turbo run build",
     "format": "turbo run format",
+    "typecheck": "turbo run typecheck",
     "prepare": "husky || true"
   },
   "devDependencies": {

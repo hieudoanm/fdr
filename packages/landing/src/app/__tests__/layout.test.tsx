@@ -5,7 +5,7 @@ vi.mock('@/components/atoms/ServiceWorker', () => ({
   ServiceWorker: () => null,
 }));
 
-import RootLayout, { metadata, viewport } from '../layout';
+import RootLayout, { metadata } from '../layout';
 
 describe('RootLayout', () => {
   it('renders children', () => {

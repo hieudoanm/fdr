@@ -6,6 +6,8 @@ export const useOffline = (): boolean => {
   const [offline, setOffline] = useState<boolean>(false);
 
   useEffect(() => {
+    // Sync once from the browser's online state, then track events.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setOffline(!navigator.onLine);
     const goOffline = (): void => setOffline(true);
     const goOnline = (): void => setOffline(false);

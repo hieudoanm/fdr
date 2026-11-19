@@ -1,7 +1,7 @@
 import scheldon from './json/schedule-scheldon.json';
 import vietnam from './json/schedule-vietnam.json';
 import unitedKingdom from './json/schedule-united-kingdom.json';
-import type { ScheduleEntry, ScheduleMeta } from './types';
+import type { ScheduleMeta } from './types';
 
 const SCHEDULES: ScheduleMeta[] = [
   {

@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
 import { NextPage } from 'next';
-import type { FC } from 'react';
 import {
   PiCalendarBlank,
   PiCircleNotch,
