@@ -6762,6 +6762,12 @@
       "language": "rust"
     },
     {
+      "id": "external:rust:serde_json.Value",
+      "kind": "external_symbol",
+      "name": "Value",
+      "language": "rust"
+    },
+    {
       "id": "external:rust:serde_json.from_str",
       "kind": "external_symbol",
       "name": "from_str",
@@ -6864,12 +6870,6 @@
       "language": "rust"
     },
     {
-      "id": "external:rust:std::Output",
-      "kind": "external_symbol",
-      "name": "Output",
-      "language": "rust"
-    },
-    {
       "id": "external:rust:std::PathBuf",
       "kind": "external_symbol",
       "name": "PathBuf",
@@ -6885,12 +6885,6 @@
       "id": "external:rust:std::Some",
       "kind": "external_symbol",
       "name": "Some",
-      "language": "rust"
-    },
-    {
-      "id": "external:rust:std::TcpStream",
-      "kind": "external_symbol",
-      "name": "TcpStream",
       "language": "rust"
     },
     {
@@ -7164,6 +7158,12 @@
       "language": "rust"
     },
     {
+      "id": "external:rust:std::net.TcpStream",
+      "kind": "external_symbol",
+      "name": "TcpStream",
+      "language": "rust"
+    },
+    {
       "id": "external:rust:std::net::TcpListener.bind",
       "kind": "external_symbol",
       "name": "bind",
@@ -7239,6 +7239,12 @@
       "id": "external:rust:std::println",
       "kind": "external_symbol",
       "name": "println",
+      "language": "rust"
+    },
+    {
+      "id": "external:rust:std::process.Output",
+      "kind": "external_symbol",
+      "name": "Output",
       "language": "rust"
     },
     {
@@ -22361,12 +22367,6 @@
       "language": "javascript"
     },
     {
-      "id": "unresolved:rust:Value",
-      "kind": "unknown",
-      "name": "Value",
-      "language": "rust"
-    },
-    {
       "id": "unresolved:rust:add_modifier",
       "kind": "unknown",
       "name": "add_modifier",
@@ -22499,18 +22499,6 @@
       "language": "rust"
     },
     {
-      "id": "unresolved:rust:draw_detail",
-      "kind": "unknown",
-      "name": "draw_detail",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:draw_list",
-      "kind": "unknown",
-      "name": "draw_list",
-      "language": "rust"
-    },
-    {
       "id": "unresolved:rust:drinks",
       "kind": "unknown",
       "name": "drinks",
@@ -22553,21 +22541,9 @@
       "language": "rust"
     },
     {
-      "id": "unresolved:rust:filters",
-      "kind": "unknown",
-      "name": "filters",
-      "language": "rust"
-    },
-    {
       "id": "unresolved:rust:flush",
       "kind": "unknown",
       "name": "flush",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:food_indices",
-      "kind": "unknown",
-      "name": "food_indices",
       "language": "rust"
     },
     {
@@ -22643,21 +22619,9 @@
       "language": "rust"
     },
     {
-      "id": "unresolved:rust:is_meals",
-      "kind": "unknown",
-      "name": "is_meals",
-      "language": "rust"
-    },
-    {
       "id": "unresolved:rust:is_none_or",
       "kind": "unknown",
       "name": "is_none_or",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:items",
-      "kind": "unknown",
-      "name": "items",
       "language": "rust"
     },
     {
@@ -22676,18 +22640,6 @@
       "id": "unresolved:rust:lock",
       "kind": "unknown",
       "name": "lock",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:meal_indices",
-      "kind": "unknown",
-      "name": "meal_indices",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:move_cursor",
-      "kind": "unknown",
-      "name": "move_cursor",
       "language": "rust"
     },
     {
@@ -22718,12 +22670,6 @@
       "id": "unresolved:rust:push_str",
       "kind": "unknown",
       "name": "push_str",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:random_pick",
-      "kind": "unknown",
-      "name": "random_pick",
       "language": "rust"
     },
     {
@@ -22790,12 +22736,6 @@
       "id": "unresolved:rust:selected_food",
       "kind": "unknown",
       "name": "selected_food",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:selected_meal",
-      "kind": "unknown",
-      "name": "selected_meal",
       "language": "rust"
     },
     {
@@ -50733,6 +50673,27 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_items",
+      "target": "method:crates/fdr-cli/src/main.rs::ItemArgs.filters",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 117,
+            "column": 20,
+            "byte": 3059
+          },
+          "end": {
+            "line": 117,
+            "column": 34,
+            "byte": 3073
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/src/main.rs::run_items",
       "target": "unresolved:rust:apply",
       "kind": "calls",
       "status": "unresolved",
@@ -50748,27 +50709,6 @@
             "line": 117,
             "column": 45,
             "byte": 3084
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/src/main.rs::run_items",
-      "target": "unresolved:rust:filters",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 117,
-            "column": 20,
-            "byte": 3059
-          },
-          "end": {
-            "line": 117,
-            "column": 34,
-            "byte": 3073
           }
         }
       ]
@@ -51123,6 +51063,27 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_pick",
+      "target": "method:crates/fdr-cli/src/main.rs::ItemArgs.filters",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 151,
+            "column": 20,
+            "byte": 4074
+          },
+          "end": {
+            "line": 151,
+            "column": 34,
+            "byte": 4088
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/src/main.rs::run_pick",
       "target": "unresolved:rust:apply",
       "kind": "calls",
       "status": "unresolved",
@@ -51138,27 +51099,6 @@
             "line": 151,
             "column": 45,
             "byte": 4099
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/src/main.rs::run_pick",
-      "target": "unresolved:rust:filters",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 151,
-            "column": 20,
-            "byte": 4074
-          },
-          "end": {
-            "line": 151,
-            "column": 34,
-            "byte": 4088
           }
         }
       ]
@@ -55917,7 +55857,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp_http.rs::drain_body",
-      "target": "external:rust:std::TcpStream",
+      "target": "external:rust:std::net.TcpStream",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -56910,7 +56850,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp_http.rs::handle_connection",
-      "target": "external:rust:std::TcpStream",
+      "target": "external:rust:std::net.TcpStream",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -57135,7 +57075,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp_http.rs::respond",
-      "target": "external:rust:std::TcpStream",
+      "target": "external:rust:std::net.TcpStream",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -58311,7 +58251,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/cli.rs::fdr",
-      "target": "external:rust:std::Output",
+      "target": "external:rust:std::process.Output",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -59748,9 +59688,9 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/cli.rs::mcp_runs_the_mcp_server_over_stdio",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json.Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -60537,7 +60477,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/cli.rs::stderr",
-      "target": "external:rust:std::Output",
+      "target": "external:rust:std::process.Output",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -60600,7 +60540,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/cli.rs::stdout",
-      "target": "external:rust:std::Output",
+      "target": "external:rust:std::process.Output",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -72114,6 +72054,27 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/tui.rs::screen",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.draw",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 17,
+            "column": 23,
+            "byte": 498
+          },
+          "end": {
+            "line": 17,
+            "column": 34,
+            "byte": 509
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/tui.rs::screen",
       "target": "unresolved:rust:backend",
       "kind": "calls",
       "status": "unresolved",
@@ -72171,18 +72132,6 @@
             "line": 17,
             "column": 35,
             "byte": 510
-          }
-        },
-        {
-          "start": {
-            "line": 17,
-            "column": 23,
-            "byte": 498
-          },
-          "end": {
-            "line": 17,
-            "column": 34,
-            "byte": 509
           }
         }
       ]
@@ -80625,6 +80574,48 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.draw_detail",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 216,
+            "column": 9,
+            "byte": 6475
+          },
+          "end": {
+            "line": 216,
+            "column": 41,
+            "byte": 6507
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.draw",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 215,
+            "column": 9,
+            "byte": 6435
+          },
+          "end": {
+            "line": 215,
+            "column": 39,
+            "byte": 6465
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.draw",
       "target": "unresolved:rust:add_modifier",
       "kind": "calls",
       "status": "unresolved",
@@ -80769,48 +80760,6 @@
             "line": 211,
             "column": 46,
             "byte": 6311
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.draw",
-      "target": "unresolved:rust:draw_detail",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 216,
-            "column": 9,
-            "byte": 6475
-          },
-          "end": {
-            "line": 216,
-            "column": 41,
-            "byte": 6507
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.draw",
-      "target": "unresolved:rust:draw_list",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 215,
-            "column": 9,
-            "byte": 6435
-          },
-          "end": {
-            "line": 215,
-            "column": 39,
-            "byte": 6465
           }
         }
       ]
@@ -81528,6 +81477,48 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw_detail",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.selected_food",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 310,
+            "column": 26,
+            "byte": 10118
+          },
+          "end": {
+            "line": 310,
+            "column": 46,
+            "byte": 10138
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_detail",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.selected_meal",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 329,
+            "column": 41,
+            "byte": 10892
+          },
+          "end": {
+            "line": 329,
+            "column": 61,
+            "byte": 10912
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_detail",
       "target": "unresolved:rust:add_modifier",
       "kind": "calls",
       "status": "unresolved",
@@ -81651,48 +81642,6 @@
             "line": 354,
             "column": 58,
             "byte": 11913
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_detail",
-      "target": "unresolved:rust:selected_food",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 310,
-            "column": 26,
-            "byte": 10118
-          },
-          "end": {
-            "line": 310,
-            "column": 46,
-            "byte": 10138
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_detail",
-      "target": "unresolved:rust:selected_meal",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 329,
-            "column": 41,
-            "byte": 10892
-          },
-          "end": {
-            "line": 329,
-            "column": 61,
-            "byte": 10912
           }
         }
       ]
@@ -82062,6 +82011,27 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
+      "target": "external:rust:std::is_empty",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 286,
+            "column": 13,
+            "byte": 9192
+          },
+          "end": {
+            "line": 286,
+            "column": 29,
+            "byte": 9208
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
       "target": "external:rust:std::iter",
       "kind": "calls",
       "status": "resolved_external",
@@ -82089,6 +82059,27 @@
             "line": 267,
             "column": 24,
             "byte": 8452
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
+      "target": "external:rust:std::len",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 287,
+            "column": 47,
+            "byte": 9257
+          },
+          "end": {
+            "line": 287,
+            "column": 58,
+            "byte": 9268
           }
         }
       ]
@@ -82215,6 +82206,48 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.food_indices",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 266,
+            "column": 13,
+            "byte": 8409
+          },
+          "end": {
+            "line": 266,
+            "column": 32,
+            "byte": 8428
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.is_meals",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 244,
+            "column": 39,
+            "byte": 7481
+          },
+          "end": {
+            "line": 244,
+            "column": 54,
+            "byte": 7496
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
       "target": "method:crates/fdr-cli/src/tui.rs::App.items",
       "kind": "calls",
       "status": "resolved_internal",
@@ -82222,26 +82255,35 @@
       "sites": [
         {
           "start": {
-            "line": 286,
-            "column": 13,
-            "byte": 9192
+            "line": 269,
+            "column": 30,
+            "byte": 8510
           },
           "end": {
-            "line": 286,
-            "column": 29,
-            "byte": 9208
+            "line": 269,
+            "column": 42,
+            "byte": 8522
           }
-        },
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.meal_indices",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
         {
           "start": {
-            "line": 287,
-            "column": 47,
-            "byte": 9257
+            "line": 245,
+            "column": 13,
+            "byte": 7511
           },
           "end": {
-            "line": 287,
-            "column": 58,
-            "byte": 9268
+            "line": 245,
+            "column": 32,
+            "byte": 7530
           }
         }
       ]
@@ -82284,27 +82326,6 @@
             "line": 236,
             "column": 59,
             "byte": 7257
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
-      "target": "unresolved:rust:food_indices",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 266,
-            "column": 13,
-            "byte": 8409
-          },
-          "end": {
-            "line": 266,
-            "column": 32,
-            "byte": 8428
           }
         }
       ]
@@ -82368,69 +82389,6 @@
             "line": 241,
             "column": 38,
             "byte": 7398
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
-      "target": "unresolved:rust:is_meals",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 244,
-            "column": 39,
-            "byte": 7481
-          },
-          "end": {
-            "line": 244,
-            "column": 54,
-            "byte": 7496
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
-      "target": "unresolved:rust:items",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 269,
-            "column": 30,
-            "byte": 8510
-          },
-          "end": {
-            "line": 269,
-            "column": 42,
-            "byte": 8522
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
-      "target": "unresolved:rust:meal_indices",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 245,
-            "column": 13,
-            "byte": 7511
-          },
-          "end": {
-            "line": 245,
-            "column": 32,
-            "byte": 7530
           }
         }
       ]
@@ -82710,9 +82668,30 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.food_indices",
-      "target": "external:rust:std::matches",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.items",
       "kind": "calls",
-      "status": "resolved_external",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 75,
+            "column": 9,
+            "byte": 2026
+          },
+          "end": {
+            "line": 75,
+            "column": 21,
+            "byte": 2038
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.food_indices",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.matches",
+      "kind": "calls",
+      "status": "resolved_internal",
       "origin": "lexical",
       "sites": [
         {
@@ -82725,27 +82704,6 @@
             "line": 82,
             "column": 19,
             "byte": 2285
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.food_indices",
-      "target": "unresolved:rust:items",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 75,
-            "column": 9,
-            "byte": 2026
-          },
-          "end": {
-            "line": 75,
-            "column": 21,
-            "byte": 2038
           }
         }
       ]
@@ -82860,10 +82818,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.handle_key",
-      "target": "unresolved:rust:move_cursor",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.move_cursor",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -82893,10 +82851,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.handle_key",
-      "target": "unresolved:rust:random_pick",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.random_pick",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -82935,9 +82893,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.is_empty",
-      "target": "external:rust:std::len",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.len",
       "kind": "calls",
-      "status": "resolved_external",
+      "status": "resolved_internal",
       "origin": "lexical",
       "sites": [
         {
@@ -83010,10 +82968,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.len",
-      "target": "unresolved:rust:food_indices",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.food_indices",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -83031,10 +82989,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.len",
-      "target": "unresolved:rust:is_meals",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.is_meals",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -83052,10 +83010,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.len",
-      "target": "unresolved:rust:meal_indices",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.meal_indices",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -83505,9 +83463,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.meal_indices",
-      "target": "external:rust:std::matches",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.matches",
       "kind": "calls",
-      "status": "resolved_external",
+      "status": "resolved_internal",
       "origin": "lexical",
       "sites": [
         {
@@ -83526,9 +83484,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.move_cursor",
-      "target": "external:rust:std::len",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.len",
       "kind": "calls",
-      "status": "resolved_external",
+      "status": "resolved_internal",
       "origin": "lexical",
       "sites": [
         {
@@ -83634,10 +83592,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.random_pick",
-      "target": "unresolved:rust:food_indices",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.food_indices",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -83649,6 +83607,69 @@
             "line": 143,
             "column": 42,
             "byte": 3857
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.random_pick",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.is_meals",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 137,
+            "column": 12,
+            "byte": 3576
+          },
+          "end": {
+            "line": 137,
+            "column": 27,
+            "byte": 3591
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.random_pick",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.items",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 145,
+            "column": 55,
+            "byte": 3984
+          },
+          "end": {
+            "line": 145,
+            "column": 67,
+            "byte": 3996
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/tui.rs::App.random_pick",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.meal_indices",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 138,
+            "column": 23,
+            "byte": 3616
+          },
+          "end": {
+            "line": 138,
+            "column": 42,
+            "byte": 3635
           }
         }
       ]
@@ -83691,69 +83712,6 @@
             "line": 140,
             "column": 75,
             "byte": 3782
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.random_pick",
-      "target": "unresolved:rust:is_meals",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 137,
-            "column": 12,
-            "byte": 3576
-          },
-          "end": {
-            "line": 137,
-            "column": 27,
-            "byte": 3591
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.random_pick",
-      "target": "unresolved:rust:items",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 145,
-            "column": 55,
-            "byte": 3984
-          },
-          "end": {
-            "line": 145,
-            "column": 67,
-            "byte": 3996
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/tui.rs::App.random_pick",
-      "target": "unresolved:rust:meal_indices",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 138,
-            "column": 23,
-            "byte": 3616
-          },
-          "end": {
-            "line": 138,
-            "column": 42,
-            "byte": 3635
           }
         }
       ]
@@ -83868,10 +83826,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.selected_food",
-      "target": "unresolved:rust:food_indices",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.food_indices",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -83889,10 +83847,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.selected_food",
-      "target": "unresolved:rust:is_meals",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.is_meals",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -83910,10 +83868,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.selected_food",
-      "target": "unresolved:rust:items",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.items",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -83994,10 +83952,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.selected_meal",
-      "target": "unresolved:rust:is_meals",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.is_meals",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -84015,10 +83973,10 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.selected_meal",
-      "target": "unresolved:rust:meal_indices",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.meal_indices",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -122712,15 +122670,15 @@
   "statistics": {
     "files": 185,
     "packages": 2,
-    "nodes": 2019,
-    "edges": 5349,
+    "nodes": 2009,
+    "edges": 5351,
     "symbols": 1097,
-    "unresolvedEdges": 282,
+    "unresolvedEdges": 256,
     "diagnostics": 51,
     "byNodeKind": {
       "constant": 259,
       "enum": 2,
-      "external_symbol": 396,
+      "external_symbol": 397,
       "file": 185,
       "framework": 10,
       "function": 259,
@@ -122732,11 +122690,11 @@
       "repository": 1,
       "struct": 8,
       "type": 5,
-      "unknown": 139,
+      "unknown": 128,
       "variable": 348
     },
     "byEdgeKind": {
-      "calls": 1906,
+      "calls": 1908,
       "contains": 1587,
       "defines": 1101,
       "exports": 221,
@@ -122748,14 +122706,14 @@
       "bash": 6,
       "javascript": 60,
       "markdown": 104,
-      "rust": 883,
+      "rust": 873,
       "tsx": 709,
       "typescript": 244
     },
     "byStatus": {
-      "resolved_external": 1600,
-      "resolved_internal": 3467,
-      "unresolved": 282
+      "resolved_external": 1599,
+      "resolved_internal": 3496,
+      "unresolved": 256
     },
     "byFramework": {
       "clap.rs": 1,
