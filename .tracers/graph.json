@@ -137,7 +137,14 @@
       "displayName": "clap.rs",
       "family": "rust",
       "version": null,
-      "confidence": "medium"
+      "confidence": "high"
+    },
+    {
+      "name": "crossterm",
+      "displayName": "crossterm",
+      "family": "rust",
+      "version": null,
+      "confidence": "high"
     },
     {
       "name": "nextjs",
@@ -147,10 +154,52 @@
       "confidence": "high"
     },
     {
+      "name": "playwright",
+      "displayName": "Playwright",
+      "family": "ecmascript",
+      "version": "tailwindcss",
+      "confidence": "high"
+    },
+    {
+      "name": "ratatui",
+      "displayName": "Ratatui",
+      "family": "rust",
+      "version": null,
+      "confidence": "high"
+    },
+    {
       "name": "react",
       "displayName": "React",
       "family": "ecmascript",
       "version": "playwright",
+      "confidence": "high"
+    },
+    {
+      "name": "serde",
+      "displayName": "Serde",
+      "family": "rust",
+      "version": null,
+      "confidence": "high"
+    },
+    {
+      "name": "tailwindcss",
+      "displayName": "Tailwind CSS",
+      "family": "ecmascript",
+      "version": "playwright",
+      "confidence": "medium"
+    },
+    {
+      "name": "turborepo",
+      "displayName": "Turborepo",
+      "family": "ecmascript",
+      "version": "commitlint",
+      "confidence": "medium"
+    },
+    {
+      "name": "vitest",
+      "displayName": "Vitest",
+      "family": "ecmascript",
+      "version": "tailwindcss",
       "confidence": "high"
     }
   ],
@@ -7319,9 +7368,19 @@
       "kind": "framework",
       "name": "clap.rs",
       "metadata": {
-        "confidence": "medium",
+        "confidence": "high",
         "family": "rust",
         "framework": "clap.rs"
+      }
+    },
+    {
+      "id": "framework:crossterm",
+      "kind": "framework",
+      "name": "crossterm",
+      "metadata": {
+        "confidence": "high",
+        "family": "rust",
+        "framework": "crossterm"
       }
     },
     {
@@ -7335,6 +7394,26 @@
       }
     },
     {
+      "id": "framework:playwright:tailwindcss",
+      "kind": "framework",
+      "name": "Playwright",
+      "metadata": {
+        "confidence": "high",
+        "family": "ecmascript",
+        "framework": "playwright"
+      }
+    },
+    {
+      "id": "framework:ratatui",
+      "kind": "framework",
+      "name": "Ratatui",
+      "metadata": {
+        "confidence": "high",
+        "family": "rust",
+        "framework": "ratatui"
+      }
+    },
+    {
       "id": "framework:react:playwright",
       "kind": "framework",
       "name": "React",
@@ -7342,6 +7421,46 @@
         "confidence": "high",
         "family": "ecmascript",
         "framework": "react"
+      }
+    },
+    {
+      "id": "framework:serde",
+      "kind": "framework",
+      "name": "Serde",
+      "metadata": {
+        "confidence": "high",
+        "family": "rust",
+        "framework": "serde"
+      }
+    },
+    {
+      "id": "framework:tailwindcss:playwright",
+      "kind": "framework",
+      "name": "Tailwind CSS",
+      "metadata": {
+        "confidence": "medium",
+        "family": "ecmascript",
+        "framework": "tailwindcss"
+      }
+    },
+    {
+      "id": "framework:turborepo:commitlint",
+      "kind": "framework",
+      "name": "Turborepo",
+      "metadata": {
+        "confidence": "medium",
+        "family": "ecmascript",
+        "framework": "turborepo"
+      }
+    },
+    {
+      "id": "framework:vitest:tailwindcss",
+      "kind": "framework",
+      "name": "Vitest",
+      "metadata": {
+        "confidence": "high",
+        "family": "ecmascript",
+        "framework": "vitest"
       }
     },
     {
@@ -120099,6 +120218,13 @@
     },
     {
       "source": "repository:.",
+      "target": "framework:crossterm",
+      "kind": "uses_framework",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
       "target": "framework:nextjs:tailwindcss",
       "kind": "uses_framework",
       "status": "resolved_internal",
@@ -120106,7 +120232,49 @@
     },
     {
       "source": "repository:.",
+      "target": "framework:playwright:tailwindcss",
+      "kind": "uses_framework",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "framework:ratatui",
+      "kind": "uses_framework",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
       "target": "framework:react:playwright",
+      "kind": "uses_framework",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "framework:serde",
+      "kind": "uses_framework",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "framework:tailwindcss:playwright",
+      "kind": "uses_framework",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "framework:turborepo:commitlint",
+      "kind": "uses_framework",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "framework:vitest:tailwindcss",
       "kind": "uses_framework",
       "status": "resolved_internal",
       "origin": "syntax"
@@ -121458,8 +121626,8 @@
   "statistics": {
     "files": 185,
     "packages": 2,
-    "nodes": 2010,
-    "edges": 5278,
+    "nodes": 2017,
+    "edges": 5285,
     "symbols": 1063,
     "unresolvedEdges": 1579,
     "diagnostics": 66,
@@ -121468,7 +121636,7 @@
       "enum": 2,
       "external_symbol": 145,
       "file": 185,
-      "framework": 3,
+      "framework": 10,
       "function": 259,
       "interface": 33,
       "method": 18,
@@ -121487,7 +121655,7 @@
       "defines": 1067,
       "exports": 235,
       "imports": 309,
-      "uses_framework": 3,
+      "uses_framework": 10,
       "uses_type": 212
     },
     "byLanguage": {
@@ -121500,13 +121668,20 @@
     },
     "byStatus": {
       "resolved_external": 386,
-      "resolved_internal": 3313,
+      "resolved_internal": 3320,
       "unresolved": 1579
     },
     "byFramework": {
       "clap.rs": 1,
+      "crossterm": 1,
       "nextjs": 1,
-      "react": 1
+      "playwright": 1,
+      "ratatui": 1,
+      "react": 1,
+      "serde": 1,
+      "tailwindcss": 1,
+      "turborepo": 1,
+      "vitest": 1
     }
   }
 }
