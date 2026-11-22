@@ -6762,6 +6762,18 @@
       "language": "rust"
     },
     {
+      "id": "external:rust:serde.Serialize",
+      "kind": "external_symbol",
+      "name": "Serialize",
+      "language": "rust"
+    },
+    {
+      "id": "external:rust:serde::Deserialize",
+      "kind": "external_symbol",
+      "name": "Deserialize",
+      "language": "rust"
+    },
+    {
       "id": "external:rust:serde_json.Value",
       "kind": "external_symbol",
       "name": "Value",
@@ -6843,6 +6855,12 @@
       "id": "external:rust:std::Child",
       "kind": "external_symbol",
       "name": "Child",
+      "language": "rust"
+    },
+    {
+      "id": "external:rust:std::Clone",
+      "kind": "external_symbol",
+      "name": "Clone",
       "language": "rust"
     },
     {
@@ -49253,6 +49271,27 @@
       ]
     },
     {
+      "source": "function:crates/fdr-cli/src/data.rs::load",
+      "target": "external:rust:serde::Deserialize",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 56,
+            "column": 21,
+            "byte": 1368
+          },
+          "end": {
+            "line": 56,
+            "column": 32,
+            "byte": 1379
+          }
+        }
+      ]
+    },
+    {
       "source": "function:crates/fdr-cli/src/data.rs::pick",
       "target": "external:rust:std::Some",
       "kind": "calls",
@@ -49353,6 +49392,27 @@
             "line": 150,
             "column": 56,
             "byte": 4352
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/src/data.rs::pick",
+      "target": "external:rust:std::Clone",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 142,
+            "column": 16,
+            "byte": 4096
+          },
+          "end": {
+            "line": 142,
+            "column": 21,
+            "byte": 4101
           }
         }
       ]
@@ -55545,6 +55605,27 @@
             "line": 40,
             "column": 54,
             "byte": 1137
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/src/mcp.rs::to_value",
+      "target": "external:rust:serde.Serialize",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 39,
+            "column": 16,
+            "byte": 1032
+          },
+          "end": {
+            "line": 39,
+            "column": 32,
+            "byte": 1048
           }
         }
       ]
@@ -122670,15 +122751,15 @@
   "statistics": {
     "files": 185,
     "packages": 2,
-    "nodes": 2009,
-    "edges": 5351,
+    "nodes": 2012,
+    "edges": 5354,
     "symbols": 1097,
     "unresolvedEdges": 256,
     "diagnostics": 51,
     "byNodeKind": {
       "constant": 259,
       "enum": 2,
-      "external_symbol": 397,
+      "external_symbol": 400,
       "file": 185,
       "framework": 10,
       "function": 259,
@@ -122700,18 +122781,18 @@
       "exports": 221,
       "imports": 317,
       "uses_framework": 10,
-      "uses_type": 207
+      "uses_type": 210
     },
     "byLanguage": {
       "bash": 6,
       "javascript": 60,
       "markdown": 104,
-      "rust": 873,
+      "rust": 876,
       "tsx": 709,
       "typescript": 244
     },
     "byStatus": {
-      "resolved_external": 1599,
+      "resolved_external": 1602,
       "resolved_internal": 3496,
       "unresolved": 256
     },
