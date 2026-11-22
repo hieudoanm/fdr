@@ -5517,6 +5517,12 @@
       "language": "rust"
     },
     {
+      "id": "external:rust:crossterm::KeyCode",
+      "kind": "external_symbol",
+      "name": "KeyCode",
+      "language": "rust"
+    },
+    {
       "id": "external:rust:lines.next.unwrap_or",
       "kind": "external_symbol",
       "name": "unwrap_or",
@@ -5526,6 +5532,30 @@
       "id": "external:rust:parts.next.unwrap_or",
       "kind": "external_symbol",
       "name": "unwrap_or",
+      "language": "rust"
+    },
+    {
+      "id": "external:rust:ratatui::Frame",
+      "kind": "external_symbol",
+      "name": "Frame",
+      "language": "rust"
+    },
+    {
+      "id": "external:rust:ratatui::Line",
+      "kind": "external_symbol",
+      "name": "Line",
+      "language": "rust"
+    },
+    {
+      "id": "external:rust:ratatui::ListItem",
+      "kind": "external_symbol",
+      "name": "ListItem",
+      "language": "rust"
+    },
+    {
+      "id": "external:rust:ratatui::Rect",
+      "kind": "external_symbol",
+      "name": "Rect",
       "language": "rust"
     },
     {
@@ -5556,6 +5586,12 @@
       "id": "external:rust:serde_json.to_value",
       "kind": "external_symbol",
       "name": "to_value",
+      "language": "rust"
+    },
+    {
+      "id": "external:rust:serde_json::Value",
+      "kind": "external_symbol",
+      "name": "Value",
       "language": "rust"
     },
     {
@@ -5733,6 +5769,12 @@
       "language": "rust"
     },
     {
+      "id": "external:rust:std::cloned",
+      "kind": "external_symbol",
+      "name": "cloned",
+      "language": "rust"
+    },
+    {
       "id": "external:rust:std::collect",
       "kind": "external_symbol",
       "name": "collect",
@@ -5847,6 +5889,12 @@
       "language": "rust"
     },
     {
+      "id": "external:rust:std::into_iter",
+      "kind": "external_symbol",
+      "name": "into_iter",
+      "language": "rust"
+    },
+    {
       "id": "external:rust:std::io.stdin",
       "kind": "external_symbol",
       "name": "stdin",
@@ -5946,6 +5994,12 @@
       "id": "external:rust:std::net::TcpStream::connect.unwrap",
       "kind": "external_symbol",
       "name": "unwrap",
+      "language": "rust"
+    },
+    {
+      "id": "external:rust:std::next",
+      "kind": "external_symbol",
+      "name": "next",
       "language": "rust"
     },
     {
@@ -6189,6 +6243,42 @@
       "language": "rust"
     },
     {
+      "id": "external:tsx:@/components/molecules/Features.Feature",
+      "kind": "external_symbol",
+      "name": "Feature",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:@/components/organisms/List.ListKind",
+      "kind": "external_symbol",
+      "name": "ListKind",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:@/components/templates/HomeTemplate.CourseItem",
+      "kind": "external_symbol",
+      "name": "CourseItem",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:@/data.Cuisine",
+      "kind": "external_symbol",
+      "name": "Cuisine",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:@/data.Food",
+      "kind": "external_symbol",
+      "name": "Food",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:@/data.ScheduleEntry",
+      "kind": "external_symbol",
+      "name": "ScheduleEntry",
+      "language": "tsx"
+    },
+    {
       "id": "external:tsx:Array.from",
       "kind": "external_symbol",
       "name": "from",
@@ -6243,12 +6333,6 @@
       "language": "tsx"
     },
     {
-      "id": "external:tsx:lib::ComponentType",
-      "kind": "external_symbol",
-      "name": "ComponentType",
-      "language": "tsx"
-    },
-    {
       "id": "external:tsx:lib::Date",
       "kind": "external_symbol",
       "name": "Date",
@@ -6258,12 +6342,6 @@
       "id": "external:tsx:lib::Error",
       "kind": "external_symbol",
       "name": "Error",
-      "language": "tsx"
-    },
-    {
-      "id": "external:tsx:lib::FC",
-      "kind": "external_symbol",
-      "name": "FC",
       "language": "tsx"
     },
     {
@@ -6414,6 +6492,54 @@
       "id": "external:tsx:lib::trim",
       "kind": "external_symbol",
       "name": "trim",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:next.Metadata",
+      "kind": "external_symbol",
+      "name": "Metadata",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:next.NextPage",
+      "kind": "external_symbol",
+      "name": "NextPage",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:next.Viewport",
+      "kind": "external_symbol",
+      "name": "Viewport",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:react-icons.IconType",
+      "kind": "external_symbol",
+      "name": "IconType",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:react.ComponentType",
+      "kind": "external_symbol",
+      "name": "ComponentType",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:react.FC",
+      "kind": "external_symbol",
+      "name": "FC",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:react.MouseEventHandler",
+      "kind": "external_symbol",
+      "name": "MouseEventHandler",
+      "language": "tsx"
+    },
+    {
+      "id": "external:tsx:react.ReactNode",
+      "kind": "external_symbol",
+      "name": "ReactNode",
       "language": "tsx"
     },
     {
@@ -6633,6 +6759,18 @@
       "language": "tsx"
     },
     {
+      "id": "external:typescript:@/data.Cuisine",
+      "kind": "external_symbol",
+      "name": "Cuisine",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:@/data.Food",
+      "kind": "external_symbol",
+      "name": "Food",
+      "language": "typescript"
+    },
+    {
       "id": "external:typescript:Event",
       "kind": "external_symbol",
       "name": "Event",
@@ -6762,6 +6900,12 @@
       "id": "external:typescript:lib::then",
       "kind": "external_symbol",
       "name": "then",
+      "language": "typescript"
+    },
+    {
+      "id": "external:typescript:next.NextConfig",
+      "kind": "external_symbol",
+      "name": "NextConfig",
       "language": "typescript"
     },
     {
@@ -7177,12 +7321,6 @@
       "kind": "external_symbol",
       "name": "eslint/config",
       "language": "typescript"
-    },
-    {
-      "id": "external:unknown:fdr_cli",
-      "kind": "external_symbol",
-      "name": "fdr_cli",
-      "language": "rust"
     },
     {
       "id": "external:unknown:next",
@@ -20870,48 +21008,6 @@
       "language": "javascript"
     },
     {
-      "id": "unresolved:rust:App",
-      "kind": "unknown",
-      "name": "App",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:Filters",
-      "kind": "unknown",
-      "name": "Filters",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:Frame",
-      "kind": "unknown",
-      "name": "Frame",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:KeyCode",
-      "kind": "unknown",
-      "name": "KeyCode",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:Line",
-      "kind": "unknown",
-      "name": "Line",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:ListItem",
-      "kind": "unknown",
-      "name": "ListItem",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:Rect",
-      "kind": "unknown",
-      "name": "Rect",
-      "language": "rust"
-    },
-    {
       "id": "unresolved:rust:Value",
       "kind": "unknown",
       "name": "Value",
@@ -21011,12 +21107,6 @@
       "id": "unresolved:rust:buffer",
       "kind": "unknown",
       "name": "buffer",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:cloned",
-      "kind": "unknown",
-      "name": "cloned",
       "language": "rust"
     },
     {
@@ -21182,12 +21272,6 @@
       "language": "rust"
     },
     {
-      "id": "unresolved:rust:into_iter",
-      "kind": "unknown",
-      "name": "into_iter",
-      "language": "rust"
-    },
-    {
       "id": "unresolved:rust:into_owned",
       "kind": "unknown",
       "name": "into_owned",
@@ -21245,12 +21329,6 @@
       "id": "unresolved:rust:move_cursor",
       "kind": "unknown",
       "name": "move_cursor",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:next",
-      "kind": "unknown",
-      "name": "next",
       "language": "rust"
     },
     {
@@ -21338,18 +21416,6 @@
       "language": "rust"
     },
     {
-      "id": "unresolved:rust:run",
-      "kind": "unknown",
-      "name": "run",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:run_http",
-      "kind": "unknown",
-      "name": "run_http",
-      "language": "rust"
-    },
-    {
       "id": "unresolved:rust:schedule",
       "kind": "unknown",
       "name": "schedule",
@@ -21377,12 +21443,6 @@
       "id": "unresolved:rust:selected_meal",
       "kind": "unknown",
       "name": "selected_meal",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:rust:serve",
-      "kind": "unknown",
-      "name": "serve",
       "language": "rust"
     },
     {
@@ -21494,75 +21554,9 @@
       "language": "rust"
     },
     {
-      "id": "unresolved:tsx:CourseItem",
-      "kind": "unknown",
-      "name": "CourseItem",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:Cuisine",
-      "kind": "unknown",
-      "name": "Cuisine",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:Feature",
-      "kind": "unknown",
-      "name": "Feature",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:Food",
-      "kind": "unknown",
-      "name": "Food",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:IconType",
-      "kind": "unknown",
-      "name": "IconType",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:ListKind",
-      "kind": "unknown",
-      "name": "ListKind",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:Metadata",
-      "kind": "unknown",
-      "name": "Metadata",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:MouseEventHandler",
-      "kind": "unknown",
-      "name": "MouseEventHandler",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:NextPage",
-      "kind": "unknown",
-      "name": "NextPage",
-      "language": "tsx"
-    },
-    {
       "id": "unresolved:tsx:Page",
       "kind": "unknown",
       "name": "Page",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:ScheduleEntry",
-      "kind": "unknown",
-      "name": "ScheduleEntry",
-      "language": "tsx"
-    },
-    {
-      "id": "unresolved:tsx:Viewport",
-      "kind": "unknown",
-      "name": "Viewport",
       "language": "tsx"
     },
     {
@@ -21846,24 +21840,6 @@
       "kind": "unknown",
       "name": "type",
       "language": "tsx"
-    },
-    {
-      "id": "unresolved:typescript:Cuisine",
-      "kind": "unknown",
-      "name": "Cuisine",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:Food",
-      "kind": "unknown",
-      "name": "Food",
-      "language": "typescript"
-    },
-    {
-      "id": "unresolved:typescript:NextConfig",
-      "kind": "unknown",
-      "name": "NextConfig",
-      "language": "typescript"
     },
     {
       "id": "unresolved:typescript:click",
@@ -31192,9 +31168,9 @@
     },
     {
       "source": "file:crates/fdr-cli/src/main.rs",
-      "target": "external:unknown:fdr_cli",
+      "target": "file:crates/fdr-cli/src/data.rs",
       "kind": "imports",
-      "status": "resolved_external",
+      "status": "resolved_internal",
       "origin": "import",
       "sites": [
         {
@@ -33846,9 +33822,9 @@
     },
     {
       "source": "file:crates/fdr-cli/tests/data.rs",
-      "target": "external:unknown:fdr_cli",
+      "target": "file:crates/fdr-cli/src/data.rs",
       "kind": "imports",
-      "status": "resolved_external",
+      "status": "resolved_internal",
       "origin": "import",
       "sites": [
         {
@@ -34336,27 +34312,6 @@
     },
     {
       "source": "file:crates/fdr-cli/tests/mcp.rs",
-      "target": "external:unknown:fdr_cli",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 4,
-            "column": 1,
-            "byte": 97
-          },
-          "end": {
-            "line": 4,
-            "column": 64,
-            "byte": 160
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:crates/fdr-cli/tests/mcp.rs",
       "target": "external:unknown:serde_json",
       "kind": "imports",
       "status": "resolved_external",
@@ -34372,6 +34327,27 @@
             "line": 5,
             "column": 31,
             "byte": 191
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:crates/fdr-cli/tests/mcp.rs",
+      "target": "file:crates/fdr-cli/src/mcp.rs",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "byte": 97
+          },
+          "end": {
+            "line": 4,
+            "column": 64,
+            "byte": 160
           }
         }
       ]
@@ -34721,27 +34697,6 @@
     },
     {
       "source": "file:crates/fdr-cli/tests/mcp_http.rs",
-      "target": "external:unknown:fdr_cli",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 3,
-            "column": 1,
-            "byte": 81
-          },
-          "end": {
-            "line": 3,
-            "column": 43,
-            "byte": 123
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:crates/fdr-cli/tests/mcp_http.rs",
       "target": "external:unknown:std",
       "kind": "imports",
       "status": "resolved_external",
@@ -34781,6 +34736,27 @@
             "line": 6,
             "column": 25,
             "byte": 203
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:crates/fdr-cli/tests/mcp_http.rs",
+      "target": "file:crates/fdr-cli/src/mcp_http.rs",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "byte": 81
+          },
+          "end": {
+            "line": 3,
+            "column": 43,
+            "byte": 123
           }
         }
       ]
@@ -35144,27 +35120,6 @@
     },
     {
       "source": "file:crates/fdr-cli/tests/tui.rs",
-      "target": "external:unknown:fdr_cli",
-      "kind": "imports",
-      "status": "resolved_external",
-      "origin": "import",
-      "sites": [
-        {
-          "start": {
-            "line": 5,
-            "column": 1,
-            "byte": 139
-          },
-          "end": {
-            "line": 5,
-            "column": 23,
-            "byte": 161
-          }
-        }
-      ]
-    },
-    {
-      "source": "file:crates/fdr-cli/tests/tui.rs",
       "target": "external:unknown:ratatui",
       "kind": "imports",
       "status": "resolved_external",
@@ -35192,6 +35147,27 @@
             "line": 7,
             "column": 35,
             "byte": 219
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:crates/fdr-cli/tests/tui.rs",
+      "target": "file:crates/fdr-cli/src/tui.rs",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 5,
+            "column": 1,
+            "byte": 139
+          },
+          "end": {
+            "line": 5,
+            "column": 23,
+            "byte": 161
           }
         }
       ]
@@ -35387,9 +35363,9 @@
     },
     {
       "source": "file:crates/fdr-mcp/src/lib.rs",
-      "target": "external:unknown:fdr_cli",
+      "target": "file:crates/fdr-cli/src/mcp.rs",
       "kind": "imports",
-      "status": "resolved_external",
+      "status": "resolved_internal",
       "origin": "import",
       "sites": [
         {
@@ -35403,7 +35379,16 @@
             "column": 22,
             "byte": 305
           }
-        },
+        }
+      ]
+    },
+    {
+      "source": "file:crates/fdr-mcp/src/lib.rs",
+      "target": "file:crates/fdr-cli/src/mcp_http.rs",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
         {
           "start": {
             "line": 8,
@@ -49018,7 +49003,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::main",
-      "target": "external:unresolved:fdr_cli::countries",
+      "target": "function:crates/fdr-cli/src/data.rs::countries",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -49039,7 +49024,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::main",
-      "target": "external:unresolved:fdr_cli::schedules",
+      "target": "function:crates/fdr-cli/src/data.rs::schedules",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -49168,10 +49153,10 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::main",
-      "target": "unresolved:rust:run",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -49184,27 +49169,15 @@
             "column": 40,
             "byte": 6441
           }
-        },
-        {
-          "start": {
-            "line": 223,
-            "column": 26,
-            "byte": 6506
-          },
-          "end": {
-            "line": 223,
-            "column": 45,
-            "byte": 6525
-          }
         }
       ]
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::main",
-      "target": "unresolved:rust:run_http",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_http",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -49216,6 +49189,27 @@
             "line": 219,
             "column": 14,
             "byte": 6360
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/src/main.rs::main",
+      "target": "function:crates/fdr-cli/src/tui.rs::run",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 223,
+            "column": 26,
+            "byte": 6506
+          },
+          "end": {
+            "line": 223,
+            "column": 45,
+            "byte": 6525
           }
         }
       ]
@@ -49459,7 +49453,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_items",
-      "target": "external:unresolved:fdr_cli::drinks",
+      "target": "function:crates/fdr-cli/src/data.rs::drinks",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -49480,7 +49474,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_items",
-      "target": "external:unresolved:fdr_cli::foods",
+      "target": "function:crates/fdr-cli/src/data.rs::foods",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -49501,7 +49495,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_items",
-      "target": "external:unresolved:fdr_cli::snacks",
+      "target": "function:crates/fdr-cli/src/data.rs::snacks",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -49813,7 +49807,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_pick",
-      "target": "external:unresolved:fdr_cli::drinks",
+      "target": "function:crates/fdr-cli/src/data.rs::drinks",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -49846,7 +49840,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_pick",
-      "target": "external:unresolved:fdr_cli::foods",
+      "target": "function:crates/fdr-cli/src/data.rs::foods",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -49879,7 +49873,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_pick",
-      "target": "external:unresolved:fdr_cli::snacks",
+      "target": "function:crates/fdr-cli/src/data.rs::snacks",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -50230,7 +50224,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_schedule",
-      "target": "external:unresolved:fdr_cli::schedule",
+      "target": "function:crates/fdr-cli/src/data.rs::schedule",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -50407,7 +50401,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_stats",
-      "target": "external:unresolved:fdr_cli::countries",
+      "target": "function:crates/fdr-cli/src/data.rs::countries",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -50428,7 +50422,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_stats",
-      "target": "external:unresolved:fdr_cli::drinks",
+      "target": "function:crates/fdr-cli/src/data.rs::drinks",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -50449,7 +50443,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_stats",
-      "target": "external:unresolved:fdr_cli::foods",
+      "target": "function:crates/fdr-cli/src/data.rs::foods",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -50470,7 +50464,7 @@
     },
     {
       "source": "function:crates/fdr-cli/src/main.rs::run_stats",
-      "target": "external:unresolved:fdr_cli::snacks",
+      "target": "function:crates/fdr-cli/src/data.rs::snacks",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -50512,9 +50506,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::annotations",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -50638,9 +50632,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::arg",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -50680,9 +50674,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::cuisine_item_schema",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -50722,9 +50716,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::filter_props",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -50821,6 +50815,27 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::filters_from",
+      "target": "external:rust:serde_json::Value",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 22,
+            "column": 26,
+            "byte": 632
+          },
+          "end": {
+            "line": 22,
+            "column": 31,
+            "byte": 637
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/src/mcp.rs::filters_from",
       "target": "struct:crates/fdr-cli/src/data.rs::Filters",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -50853,27 +50868,6 @@
       ]
     },
     {
-      "source": "function:crates/fdr-cli/src/mcp.rs::filters_from",
-      "target": "unresolved:rust:Value",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 22,
-            "column": 26,
-            "byte": 632
-          },
-          "end": {
-            "line": 22,
-            "column": 31,
-            "byte": 637
-          }
-        }
-      ]
-    },
-    {
       "source": "function:crates/fdr-cli/src/mcp.rs::food_item_schema",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
@@ -50896,9 +50890,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::food_item_schema",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -50977,6 +50971,51 @@
             "line": 468,
             "column": 66,
             "byte": 17185
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/src/mcp.rs::handle_request",
+      "target": "external:rust:std::cloned",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 455,
+            "column": 14,
+            "byte": 16593
+          },
+          "end": {
+            "line": 455,
+            "column": 40,
+            "byte": 16619
+          }
+        },
+        {
+          "start": {
+            "line": 467,
+            "column": 26,
+            "byte": 17065
+          },
+          "end": {
+            "line": 467,
+            "column": 56,
+            "byte": 17095
+          }
+        },
+        {
+          "start": {
+            "line": 469,
+            "column": 29,
+            "byte": 17229
+          },
+          "end": {
+            "line": 469,
+            "column": 61,
+            "byte": 17261
           }
         }
       ]
@@ -51277,54 +51316,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::handle_request",
-      "target": "unresolved:rust:cloned",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 455,
-            "column": 14,
-            "byte": 16593
-          },
-          "end": {
-            "line": 455,
-            "column": 40,
-            "byte": 16619
-          }
-        },
-        {
-          "start": {
-            "line": 467,
-            "column": 26,
-            "byte": 17065
-          },
-          "end": {
-            "line": 467,
-            "column": 56,
-            "byte": 17095
-          }
-        },
-        {
-          "start": {
-            "line": 469,
-            "column": 29,
-            "byte": 17229
-          },
-          "end": {
-            "line": 469,
-            "column": 61,
-            "byte": 17261
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/src/mcp.rs::handle_request",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -51439,9 +51433,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::item_schema",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -51670,9 +51664,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::limit_from",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -51712,9 +51706,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::list_output",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -52066,9 +52060,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::output_schema",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -52522,6 +52516,27 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::run_http",
+      "target": "function:crates/fdr-cli/src/mcp_http.rs::serve",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 502,
+            "column": 5,
+            "byte": 18366
+          },
+          "end": {
+            "line": 516,
+            "column": 7,
+            "byte": 18943
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/src/mcp.rs::run_http",
       "target": "unresolved:rust:from_str",
       "kind": "calls",
       "status": "unresolved",
@@ -52537,27 +52552,6 @@
             "line": 503,
             "column": 50,
             "byte": 18466
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/src/mcp.rs::run_http",
-      "target": "unresolved:rust:serve",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 502,
-            "column": 5,
-            "byte": 18366
-          },
-          "end": {
-            "line": 516,
-            "column": 7,
-            "byte": 18943
           }
         }
       ]
@@ -54061,9 +54055,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::run_structured",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -54274,6 +54268,27 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::titleize",
+      "target": "external:rust:std::next",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 336,
+            "column": 19,
+            "byte": 11810
+          },
+          "end": {
+            "line": 336,
+            "column": 31,
+            "byte": 11822
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/src/mcp.rs::titleize",
       "target": "external:rust:std::split",
       "kind": "calls",
       "status": "resolved_external",
@@ -54310,27 +54325,6 @@
             "line": 337,
             "column": 52,
             "byte": 11876
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/src/mcp.rs::titleize",
-      "target": "unresolved:rust:next",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 336,
-            "column": 19,
-            "byte": 11810
-          },
-          "end": {
-            "line": 336,
-            "column": 31,
-            "byte": 11822
           }
         }
       ]
@@ -54400,9 +54394,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::to_value",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -54580,9 +54574,9 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp.rs::tools_list",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -55102,6 +55096,51 @@
     },
     {
       "source": "function:crates/fdr-cli/src/mcp_http.rs::handle_connection",
+      "target": "external:rust:std::next",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 99,
+            "column": 24,
+            "byte": 3623
+          },
+          "end": {
+            "line": 99,
+            "column": 36,
+            "byte": 3635
+          }
+        },
+        {
+          "start": {
+            "line": 101,
+            "column": 18,
+            "byte": 3721
+          },
+          "end": {
+            "line": 101,
+            "column": 30,
+            "byte": 3733
+          }
+        },
+        {
+          "start": {
+            "line": 102,
+            "column": 16,
+            "byte": 3764
+          },
+          "end": {
+            "line": 102,
+            "column": 28,
+            "byte": 3776
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/src/mcp_http.rs::handle_connection",
       "target": "external:rust:std::parse",
       "kind": "calls",
       "status": "resolved_external",
@@ -55564,51 +55603,6 @@
             "line": 97,
             "column": 72,
             "byte": 3564
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/src/mcp_http.rs::handle_connection",
-      "target": "unresolved:rust:next",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 99,
-            "column": 24,
-            "byte": 3623
-          },
-          "end": {
-            "line": 99,
-            "column": 36,
-            "byte": 3635
-          }
-        },
-        {
-          "start": {
-            "line": 101,
-            "column": 18,
-            "byte": 3721
-          },
-          "end": {
-            "line": 101,
-            "column": 30,
-            "byte": 3733
-          }
-        },
-        {
-          "start": {
-            "line": 102,
-            "column": 16,
-            "byte": 3764
-          },
-          "end": {
-            "line": 102,
-            "column": 28,
-            "byte": 3776
           }
         }
       ]
@@ -60304,7 +60298,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::countries_loads_cuisines",
-      "target": "external:unresolved:fdr_cli::countries",
+      "target": "function:crates/fdr-cli/src/data.rs::countries",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -60388,7 +60382,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::data_dir_honors_fdr_data_dir_override",
-      "target": "external:unresolved:fdr_cli::data_dir",
+      "target": "function:crates/fdr-cli/src/data.rs::data_dir",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -60442,7 +60436,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::data_dir_points_at_json_directory",
-      "target": "external:unresolved:fdr_cli::data_dir",
+      "target": "function:crates/fdr-cli/src/data.rs::data_dir",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -60490,6 +60484,39 @@
             "line": 108,
             "column": 29,
             "byte": 3140
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/data.rs::filters_apply_category_and_subcategory",
+      "target": "external:rust:Filters",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 99,
+            "column": 23,
+            "byte": 2849
+          },
+          "end": {
+            "line": 102,
+            "column": 6,
+            "byte": 2935
+          }
+        },
+        {
+          "start": {
+            "line": 106,
+            "column": 26,
+            "byte": 3054
+          },
+          "end": {
+            "line": 109,
+            "column": 6,
+            "byte": 3146
           }
         }
       ]
@@ -60652,40 +60679,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_apply_category_and_subcategory",
-      "target": "external:unresolved:fdr_cli::Filters",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 99,
-            "column": 23,
-            "byte": 2849
-          },
-          "end": {
-            "line": 102,
-            "column": 6,
-            "byte": 2935
-          }
-        },
-        {
-          "start": {
-            "line": 106,
-            "column": 26,
-            "byte": 3054
-          },
-          "end": {
-            "line": 109,
-            "column": 6,
-            "byte": 3146
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/data.rs::filters_apply_category_and_subcategory",
-      "target": "external:unresolved:fdr_cli::foods",
+      "target": "function:crates/fdr-cli/src/data.rs::foods",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -60706,10 +60700,10 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_apply_category_and_subcategory",
-      "target": "unresolved:rust:apply",
+      "target": "method:crates/fdr-cli/src/data.rs::Filters.apply",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -60739,9 +60733,9 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_apply_category_and_subcategory",
-      "target": "unresolved:rust:Filters",
+      "target": "struct:crates/fdr-cli/src/data.rs::Filters",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_internal",
       "origin": "syntax",
       "sites": [
         {
@@ -60787,6 +60781,27 @@
             "line": 86,
             "column": 29,
             "byte": 2502
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/data.rs::filters_apply_country_case_insensitively",
+      "target": "external:rust:Filters",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 84,
+            "column": 20,
+            "byte": 2417
+          },
+          "end": {
+            "line": 87,
+            "column": 6,
+            "byte": 2508
           }
         }
       ]
@@ -60889,28 +60904,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_apply_country_case_insensitively",
-      "target": "external:unresolved:fdr_cli::Filters",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 84,
-            "column": 20,
-            "byte": 2417
-          },
-          "end": {
-            "line": 87,
-            "column": 6,
-            "byte": 2508
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/data.rs::filters_apply_country_case_insensitively",
-      "target": "external:unresolved:fdr_cli::foods",
+      "target": "function:crates/fdr-cli/src/data.rs::foods",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -60931,10 +60925,10 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_apply_country_case_insensitively",
-      "target": "unresolved:rust:apply",
+      "target": "method:crates/fdr-cli/src/data.rs::Filters.apply",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -60952,9 +60946,9 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_apply_country_case_insensitively",
-      "target": "unresolved:rust:Filters",
+      "target": "struct:crates/fdr-cli/src/data.rs::Filters",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_internal",
       "origin": "syntax",
       "sites": [
         {
@@ -60988,6 +60982,27 @@
             "line": 132,
             "column": 29,
             "byte": 3815
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/data.rs::filters_combine_with_and_semantics",
+      "target": "external:rust:Filters",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 129,
+            "column": 20,
+            "byte": 3680
+          },
+          "end": {
+            "line": 133,
+            "column": 6,
+            "byte": 3821
           }
         }
       ]
@@ -61102,28 +61117,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_combine_with_and_semantics",
-      "target": "external:unresolved:fdr_cli::Filters",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 129,
-            "column": 20,
-            "byte": 3680
-          },
-          "end": {
-            "line": 133,
-            "column": 6,
-            "byte": 3821
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/data.rs::filters_combine_with_and_semantics",
-      "target": "external:unresolved:fdr_cli::foods",
+      "target": "function:crates/fdr-cli/src/data.rs::foods",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -61144,10 +61138,10 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_combine_with_and_semantics",
-      "target": "unresolved:rust:apply",
+      "target": "method:crates/fdr-cli/src/data.rs::Filters.apply",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -61165,9 +61159,9 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_combine_with_and_semantics",
-      "target": "unresolved:rust:Filters",
+      "target": "struct:crates/fdr-cli/src/data.rs::Filters",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_internal",
       "origin": "syntax",
       "sites": [
         {
@@ -61201,6 +61195,27 @@
             "line": 118,
             "column": 29,
             "byte": 3396
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/data.rs::filters_search_matches_label_or_value",
+      "target": "external:rust:Filters",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 116,
+            "column": 20,
+            "byte": 3315
+          },
+          "end": {
+            "line": 119,
+            "column": 6,
+            "byte": 3402
           }
         }
       ]
@@ -61303,28 +61318,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_search_matches_label_or_value",
-      "target": "external:unresolved:fdr_cli::Filters",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 116,
-            "column": 20,
-            "byte": 3315
-          },
-          "end": {
-            "line": 119,
-            "column": 6,
-            "byte": 3402
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/data.rs::filters_search_matches_label_or_value",
-      "target": "external:unresolved:fdr_cli::foods",
+      "target": "function:crates/fdr-cli/src/data.rs::foods",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -61345,10 +61339,10 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_search_matches_label_or_value",
-      "target": "unresolved:rust:apply",
+      "target": "method:crates/fdr-cli/src/data.rs::Filters.apply",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -61366,9 +61360,9 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_search_matches_label_or_value",
-      "target": "unresolved:rust:Filters",
+      "target": "struct:crates/fdr-cli/src/data.rs::Filters",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_internal",
       "origin": "syntax",
       "sites": [
         {
@@ -61471,7 +61465,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::filters_with_no_criteria_return_everything",
-      "target": "external:unresolved:fdr_cli::foods",
+      "target": "function:crates/fdr-cli/src/data.rs::foods",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -61657,7 +61651,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::food_entries_have_all_fields",
-      "target": "external:unresolved:fdr_cli::foods",
+      "target": "function:crates/fdr-cli/src/data.rs::foods",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -61834,7 +61828,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::format_food_includes_all_parts",
-      "target": "external:unresolved:fdr_cli::foods",
+      "target": "function:crates/fdr-cli/src/data.rs::foods",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -61855,7 +61849,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::format_food_includes_all_parts",
-      "target": "external:unresolved:fdr_cli::format_food",
+      "target": "function:crates/fdr-cli/src/data.rs::format_food",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -61918,6 +61912,27 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::format_schedule_with_week",
+      "target": "external:rust:std::into_iter",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 202,
+            "column": 17,
+            "byte": 5499
+          },
+          "end": {
+            "line": 204,
+            "column": 21,
+            "byte": 5557
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/data.rs::format_schedule_with_week",
       "target": "external:rust:std::is_some",
       "kind": "calls",
       "status": "resolved_external",
@@ -61972,7 +61987,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::format_schedule_with_week",
-      "target": "external:unresolved:fdr_cli::format_schedule",
+      "target": "function:crates/fdr-cli/src/data.rs::format_schedule",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -61993,7 +62008,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::format_schedule_with_week",
-      "target": "external:unresolved:fdr_cli::schedule",
+      "target": "function:crates/fdr-cli/src/data.rs::schedule",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -62008,27 +62023,6 @@
             "line": 202,
             "column": 36,
             "byte": 5518
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/data.rs::format_schedule_with_week",
-      "target": "unresolved:rust:into_iter",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 202,
-            "column": 17,
-            "byte": 5499
-          },
-          "end": {
-            "line": 204,
-            "column": 21,
-            "byte": 5557
           }
         }
       ]
@@ -62122,7 +62116,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::format_schedule_without_week_or_note",
-      "target": "external:unresolved:fdr_cli::format_schedule",
+      "target": "function:crates/fdr-cli/src/data.rs::format_schedule",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -62143,7 +62137,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::format_schedule_without_week_or_note",
-      "target": "external:unresolved:fdr_cli::schedule",
+      "target": "function:crates/fdr-cli/src/data.rs::schedule",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -62290,7 +62284,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::multi_week_schedule_entries_have_week",
-      "target": "external:unresolved:fdr_cli::schedule",
+      "target": "function:crates/fdr-cli/src/data.rs::schedule",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -62500,7 +62494,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::pick_stays_in_bounds_across_seeds",
-      "target": "external:unresolved:fdr_cli::pick",
+      "target": "function:crates/fdr-cli/src/data.rs::pick",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -62563,7 +62557,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::rng_is_odd_and_nonzero",
-      "target": "external:unresolved:fdr_cli::rng",
+      "target": "function:crates/fdr-cli/src/data.rs::rng",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -62659,7 +62653,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::schedule_loads_entries",
-      "target": "external:unresolved:fdr_cli::schedule",
+      "target": "function:crates/fdr-cli/src/data.rs::schedule",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -62743,7 +62737,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/data.rs::schedules_lists_known_names_sorted",
-      "target": "external:unresolved:fdr_cli::schedules",
+      "target": "function:crates/fdr-cli/src/data.rs::schedules",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -62758,6 +62752,27 @@
             "line": 56,
             "column": 28,
             "byte": 1617
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::call",
+      "target": "external:rust:std::cloned",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 35,
+            "column": 5,
+            "byte": 776
+          },
+          "end": {
+            "line": 38,
+            "column": 18,
+            "byte": 869
           }
         }
       ]
@@ -62827,27 +62842,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::call",
-      "target": "external:unresolved:fdr_cli::handle_request",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 35,
-            "column": 5,
-            "byte": 776
-          },
-          "end": {
-            "line": 35,
-            "column": 29,
-            "byte": 800
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::call",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -62869,10 +62863,10 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::call",
-      "target": "unresolved:rust:cloned",
+      "target": "function:crates/fdr-cli/src/mcp.rs::handle_request",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -62881,18 +62875,18 @@
             "byte": 776
           },
           "end": {
-            "line": 38,
-            "column": 18,
-            "byte": 869
+            "line": 35,
+            "column": 29,
+            "byte": 800
           }
         }
       ]
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::call",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -62965,27 +62959,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::category_and_subcategory_filters_apply",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 225,
-            "column": 9,
-            "byte": 7048
-          },
-          "end": {
-            "line": 225,
-            "column": 79,
-            "byte": 7118
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::category_and_subcategory_filters_apply",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -63001,6 +62974,27 @@
             "line": 225,
             "column": 78,
             "byte": 7117
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::category_and_subcategory_filters_apply",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 225,
+            "column": 9,
+            "byte": 7048
+          },
+          "end": {
+            "line": 225,
+            "column": 79,
+            "byte": 7118
           }
         }
       ]
@@ -63049,27 +63043,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::empty_string_args_are_treated_as_absent",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 274,
-            "column": 9,
-            "byte": 8642
-          },
-          "end": {
-            "line": 274,
-            "column": 76,
-            "byte": 8709
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::empty_string_args_are_treated_as_absent",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -63085,6 +63058,27 @@
             "line": 274,
             "column": 75,
             "byte": 8708
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::empty_string_args_are_treated_as_absent",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 274,
+            "column": 9,
+            "byte": 8642
+          },
+          "end": {
+            "line": 274,
+            "column": 76,
+            "byte": 8709
           }
         }
       ]
@@ -63307,27 +63301,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::every_tool_produces_structured_content",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 104,
-            "column": 13,
-            "byte": 2860
-          },
-          "end": {
-            "line": 104,
-            "column": 42,
-            "byte": 2889
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::every_tool_produces_structured_content",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -63367,6 +63340,27 @@
             "line": 101,
             "column": 27,
             "byte": 2802
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::every_tool_produces_structured_content",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 104,
+            "column": 13,
+            "byte": 2860
+          },
+          "end": {
+            "line": 104,
+            "column": 42,
+            "byte": 2889
           }
         }
       ]
@@ -63484,39 +63478,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::get_schedule_filters_by_week_and_day",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 152,
-            "column": 20,
-            "byte": 4568
-          },
-          "end": {
-            "line": 152,
-            "column": 79,
-            "byte": 4627
-          }
-        },
-        {
-          "start": {
-            "line": 153,
-            "column": 25,
-            "byte": 4662
-          },
-          "end": {
-            "line": 156,
-            "column": 6,
-            "byte": 4774
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::get_schedule_filters_by_week_and_day",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -63544,6 +63505,39 @@
             "line": 155,
             "column": 66,
             "byte": 4767
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::get_schedule_filters_by_week_and_day",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 152,
+            "column": 20,
+            "byte": 4568
+          },
+          "end": {
+            "line": 152,
+            "column": 79,
+            "byte": 4627
+          }
+        },
+        {
+          "start": {
+            "line": 153,
+            "column": 25,
+            "byte": 4662
+          },
+          "end": {
+            "line": 156,
+            "column": 6,
+            "byte": 4774
           }
         }
       ]
@@ -63646,27 +63640,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::get_schedule_returns_entries",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 145,
-            "column": 30,
-            "byte": 4324
-          },
-          "end": {
-            "line": 145,
-            "column": 90,
-            "byte": 4384
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::get_schedule_returns_entries",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -63682,6 +63655,27 @@
             "line": 145,
             "column": 89,
             "byte": 4383
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::get_schedule_returns_entries",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 145,
+            "column": 30,
+            "byte": 4324
+          },
+          "end": {
+            "line": 145,
+            "column": 90,
+            "byte": 4384
           }
         }
       ]
@@ -63763,27 +63757,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::get_schedule_with_no_matches_returns_empty",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 169,
-            "column": 30,
-            "byte": 5201
-          },
-          "end": {
-            "line": 172,
-            "column": 6,
-            "byte": 5301
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::get_schedule_with_no_matches_returns_empty",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -63799,6 +63772,27 @@
             "line": 171,
             "column": 54,
             "byte": 5294
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::get_schedule_with_no_matches_returns_empty",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 169,
+            "column": 30,
+            "byte": 5201
+          },
+          "end": {
+            "line": 172,
+            "column": 6,
+            "byte": 5301
           }
         }
       ]
@@ -63904,27 +63898,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::initialize_returns_server_info",
-      "target": "external:unresolved:fdr_cli::handle_request",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 341,
-            "column": 20,
-            "byte": 10477
-          },
-          "end": {
-            "line": 341,
-            "column": 44,
-            "byte": 10501
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::initialize_returns_server_info",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -63940,6 +63913,27 @@
             "line": 340,
             "column": 7,
             "byte": 10456
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::initialize_returns_server_info",
+      "target": "function:crates/fdr-cli/src/mcp.rs::handle_request",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 341,
+            "column": 20,
+            "byte": 10477
+          },
+          "end": {
+            "line": 341,
+            "column": 44,
+            "byte": 10501
           }
         }
       ]
@@ -64012,27 +64006,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::list_countries_returns_cuisines",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 112,
-            "column": 30,
-            "byte": 3148
-          },
-          "end": {
-            "line": 112,
-            "column": 74,
-            "byte": 3192
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::list_countries_returns_cuisines",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -64048,6 +64021,27 @@
             "line": 112,
             "column": 73,
             "byte": 3191
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::list_countries_returns_cuisines",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 112,
+            "column": 30,
+            "byte": 3148
+          },
+          "end": {
+            "line": 112,
+            "column": 74,
+            "byte": 3192
           }
         }
       ]
@@ -64141,39 +64135,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::list_drinks_and_snacks_work",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 214,
-            "column": 31,
-            "byte": 6622
-          },
-          "end": {
-            "line": 214,
-            "column": 63,
-            "byte": 6654
-          }
-        },
-        {
-          "start": {
-            "line": 216,
-            "column": 29,
-            "byte": 6763
-          },
-          "end": {
-            "line": 216,
-            "column": 89,
-            "byte": 6823
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::list_drinks_and_snacks_work",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -64201,6 +64162,39 @@
             "line": 216,
             "column": 88,
             "byte": 6822
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::list_drinks_and_snacks_work",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 214,
+            "column": 31,
+            "byte": 6622
+          },
+          "end": {
+            "line": 214,
+            "column": 63,
+            "byte": 6654
+          }
+        },
+        {
+          "start": {
+            "line": 216,
+            "column": 29,
+            "byte": 6763
+          },
+          "end": {
+            "line": 216,
+            "column": 89,
+            "byte": 6823
           }
         }
       ]
@@ -64282,27 +64276,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::list_foods_empty_result",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 205,
-            "column": 9,
-            "byte": 6246
-          },
-          "end": {
-            "line": 205,
-            "column": 77,
-            "byte": 6314
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::list_foods_empty_result",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -64318,6 +64291,27 @@
             "line": 205,
             "column": 76,
             "byte": 6313
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::list_foods_empty_result",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 205,
+            "column": 9,
+            "byte": 6246
+          },
+          "end": {
+            "line": 205,
+            "column": 77,
+            "byte": 6314
           }
         }
       ]
@@ -64435,27 +64429,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::list_foods_supports_filters_and_limit",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 191,
-            "column": 9,
-            "byte": 5764
-          },
-          "end": {
-            "line": 191,
-            "column": 82,
-            "byte": 5837
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::list_foods_supports_filters_and_limit",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -64471,6 +64444,27 @@
             "line": 191,
             "column": 81,
             "byte": 5836
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::list_foods_supports_filters_and_limit",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 191,
+            "column": 9,
+            "byte": 5764
+          },
+          "end": {
+            "line": 191,
+            "column": 82,
+            "byte": 5837
           }
         }
       ]
@@ -64576,27 +64570,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::list_schedules_returns_names",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 136,
-            "column": 30,
-            "byte": 4009
-          },
-          "end": {
-            "line": 136,
-            "column": 74,
-            "byte": 4053
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::list_schedules_returns_names",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -64612,6 +64585,27 @@
             "line": 136,
             "column": 73,
             "byte": 4052
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::list_schedules_returns_names",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 136,
+            "column": 30,
+            "byte": 4009
+          },
+          "end": {
+            "line": 136,
+            "column": 74,
+            "byte": 4053
           }
         }
       ]
@@ -64891,27 +64885,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::pick_meal_defaults_to_any_and_rejects_unknown_kind",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 261,
-            "column": 27,
-            "byte": 8269
-          },
-          "end": {
-            "line": 261,
-            "column": 66,
-            "byte": 8308
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::pick_meal_defaults_to_any_and_rejects_unknown_kind",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -64927,6 +64900,27 @@
             "line": 261,
             "column": 65,
             "byte": 8307
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::pick_meal_defaults_to_any_and_rejects_unknown_kind",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 261,
+            "column": 27,
+            "byte": 8269
+          },
+          "end": {
+            "line": 261,
+            "column": 66,
+            "byte": 8308
           }
         }
       ]
@@ -64996,27 +64990,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::pick_meal_supports_each_kind",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 253,
-            "column": 31,
-            "byte": 8003
-          },
-          "end": {
-            "line": 253,
-            "column": 82,
-            "byte": 8054
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::pick_meal_supports_each_kind",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -65032,6 +65005,27 @@
             "line": 253,
             "column": 81,
             "byte": 8053
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::pick_meal_supports_each_kind",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 253,
+            "column": 31,
+            "byte": 8003
+          },
+          "end": {
+            "line": 253,
+            "column": 82,
+            "byte": 8054
           }
         }
       ]
@@ -65104,27 +65098,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::pick_tools_return_a_single_item",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 236,
-            "column": 34,
-            "byte": 7393
-          },
-          "end": {
-            "line": 236,
-            "column": 66,
-            "byte": 7425
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::pick_tools_return_a_single_item",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -65140,6 +65113,27 @@
             "line": 236,
             "column": 65,
             "byte": 7424
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::pick_tools_return_a_single_item",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 236,
+            "column": 34,
+            "byte": 7393
+          },
+          "end": {
+            "line": 236,
+            "column": 66,
+            "byte": 7425
           }
         }
       ]
@@ -65221,27 +65215,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::ping_returns_null_result",
-      "target": "external:unresolved:fdr_cli::handle_request",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 352,
-            "column": 20,
-            "byte": 10971
-          },
-          "end": {
-            "line": 352,
-            "column": 44,
-            "byte": 10995
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::ping_returns_null_result",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -65257,6 +65230,27 @@
             "line": 351,
             "column": 71,
             "byte": 10950
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::ping_returns_null_result",
+      "target": "function:crates/fdr-cli/src/mcp.rs::handle_request",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 352,
+            "column": 20,
+            "byte": 10971
+          },
+          "end": {
+            "line": 352,
+            "column": 44,
+            "byte": 10995
           }
         }
       ]
@@ -65326,27 +65320,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::request_without_method_or_id_is_none",
-      "target": "external:unresolved:fdr_cli::handle_request",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 398,
-            "column": 20,
-            "byte": 12458
-          },
-          "end": {
-            "line": 398,
-            "column": 53,
-            "byte": 12491
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::request_without_method_or_id_is_none",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -65362,6 +65335,27 @@
             "line": 398,
             "column": 52,
             "byte": 12490
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::request_without_method_or_id_is_none",
+      "target": "function:crates/fdr-cli/src/mcp.rs::handle_request",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 398,
+            "column": 20,
+            "byte": 12458
+          },
+          "end": {
+            "line": 398,
+            "column": 53,
+            "byte": 12491
           }
         }
       ]
@@ -65479,27 +65473,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::stats_reports_counts",
-      "target": "external:unresolved:fdr_cli::run_structured",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 120,
-            "column": 30,
-            "byte": 3438
-          },
-          "end": {
-            "line": 120,
-            "column": 65,
-            "byte": 3473
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::stats_reports_counts",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -65515,6 +65488,27 @@
             "line": 120,
             "column": 64,
             "byte": 3472
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::stats_reports_counts",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_structured",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 120,
+            "column": 30,
+            "byte": 3438
+          },
+          "end": {
+            "line": 120,
+            "column": 65,
+            "byte": 3473
           }
         }
       ]
@@ -65584,7 +65578,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::tools",
-      "target": "external:unresolved:fdr_cli::tools_list",
+      "target": "function:crates/fdr-cli/src/mcp.rs::tools_list",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -65626,9 +65620,9 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::tools",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -66007,27 +66001,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::tools_call_without_params_uses_defaults",
-      "target": "external:unresolved:fdr_cli::handle_request",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 328,
-            "column": 20,
-            "byte": 10096
-          },
-          "end": {
-            "line": 328,
-            "column": 44,
-            "byte": 10120
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::tools_call_without_params_uses_defaults",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -66043,6 +66016,27 @@
             "line": 327,
             "column": 7,
             "byte": 10075
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::tools_call_without_params_uses_defaults",
+      "target": "function:crates/fdr-cli/src/mcp.rs::handle_request",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 328,
+            "column": 20,
+            "byte": 10096
+          },
+          "end": {
+            "line": 328,
+            "column": 44,
+            "byte": 10120
           }
         }
       ]
@@ -66091,27 +66085,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::tools_list_over_rpc_returns_tools",
-      "target": "external:unresolved:fdr_cli::handle_request",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 359,
-            "column": 20,
-            "byte": 11214
-          },
-          "end": {
-            "line": 359,
-            "column": 44,
-            "byte": 11238
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::tools_list_over_rpc_returns_tools",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -66127,6 +66100,27 @@
             "line": 358,
             "column": 77,
             "byte": 11193
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::tools_list_over_rpc_returns_tools",
+      "target": "function:crates/fdr-cli/src/mcp.rs::handle_request",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 359,
+            "column": 20,
+            "byte": 11214
+          },
+          "end": {
+            "line": 359,
+            "column": 44,
+            "byte": 11238
           }
         }
       ]
@@ -66376,27 +66370,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp.rs::unknown_method_with_id_returns_method_not_found",
-      "target": "external:unresolved:fdr_cli::handle_request",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 369,
-            "column": 20,
-            "byte": 11539
-          },
-          "end": {
-            "line": 369,
-            "column": 44,
-            "byte": 11563
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/mcp.rs::unknown_method_with_id_returns_method_not_found",
       "target": "external:unresolved:serde_json::json",
       "kind": "calls",
       "status": "resolved_internal",
@@ -66412,6 +66385,27 @@
             "line": 368,
             "column": 83,
             "byte": 11518
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/mcp.rs::unknown_method_with_id_returns_method_not_found",
+      "target": "function:crates/fdr-cli/src/mcp.rs::handle_request",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 369,
+            "column": 20,
+            "byte": 11539
+          },
+          "end": {
+            "line": 369,
+            "column": 44,
+            "byte": 11563
           }
         }
       ]
@@ -68608,7 +68602,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp_http.rs::spawn_serve",
-      "target": "external:unresolved:fdr_cli::serve",
+      "target": "function:crates/fdr-cli/src/mcp_http.rs::serve",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -68755,7 +68749,7 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/mcp_http.rs::spawn_serve_seq",
-      "target": "external:unresolved:fdr_cli::serve_seq",
+      "target": "function:crates/fdr-cli/src/mcp_http.rs::serve_seq",
       "kind": "calls",
       "status": "resolved_internal",
       "origin": "lexical",
@@ -70195,27 +70189,6 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/tui.rs::new_app",
-      "target": "external:rust:App.load",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 10,
-            "column": 5,
-            "byte": 247
-          },
-          "end": {
-            "line": 10,
-            "column": 16,
-            "byte": 258
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/fdr-cli/tests/tui.rs::new_app",
       "target": "external:rust:std::expect",
       "kind": "calls",
       "status": "resolved_external",
@@ -70237,9 +70210,30 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/tui.rs::new_app",
-      "target": "unresolved:rust:App",
+      "target": "method:crates/fdr-cli/src/tui.rs::App.load",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 5,
+            "byte": 247
+          },
+          "end": {
+            "line": 10,
+            "column": 16,
+            "byte": 258
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/fdr-cli/tests/tui.rs::new_app",
+      "target": "struct:crates/fdr-cli/src/tui.rs::App",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_internal",
       "origin": "syntax",
       "sites": [
         {
@@ -71020,9 +71014,9 @@
     },
     {
       "source": "function:crates/fdr-cli/tests/tui.rs::screen",
-      "target": "unresolved:rust:App",
+      "target": "struct:crates/fdr-cli/src/tui.rs::App",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_internal",
       "origin": "syntax",
       "sites": [
         {
@@ -71629,10 +71623,10 @@
     },
     {
       "source": "function:crates/fdr-mcp/src/main.rs::main",
-      "target": "unresolved:rust:run",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -71650,10 +71644,10 @@
     },
     {
       "source": "function:crates/fdr-mcp/src/main.rs::main",
-      "target": "unresolved:rust:run_http",
+      "target": "function:crates/fdr-cli/src/mcp.rs::run_http",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_internal",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
@@ -72292,9 +72286,9 @@
     },
     {
       "source": "function:crates/fdr-mcp/tests/stdio.rs::http_mode_serves_mcp_and_rejects_bad_json",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -73261,9 +73255,9 @@
     },
     {
       "source": "function:crates/fdr-mcp/tests/stdio.rs::stdio_answers_requests_and_reports_parse_errors",
-      "target": "unresolved:rust:Value",
+      "target": "external:rust:serde_json::Value",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -73606,6 +73600,27 @@
     },
     {
       "source": "function:packages/landing/src/app/(app)/schedule/[slug]/page.tsx::generateMetadata",
+      "target": "external:tsx:next.Metadata",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 48,
+            "column": 36,
+            "byte": 1533
+          },
+          "end": {
+            "line": 48,
+            "column": 44,
+            "byte": 1541
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:packages/landing/src/app/(app)/schedule/[slug]/page.tsx::generateMetadata",
       "target": "interface:packages/landing/src/app/(app)/schedule/[slug]/page.tsx::ScheduleSlugPageProps",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -73621,27 +73636,6 @@
             "line": 48,
             "column": 25,
             "byte": 1522
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:packages/landing/src/app/(app)/schedule/[slug]/page.tsx::generateMetadata",
-      "target": "unresolved:tsx:Metadata",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 48,
-            "column": 36,
-            "byte": 1533
-          },
-          "end": {
-            "line": 48,
-            "column": 44,
-            "byte": 1541
           }
         }
       ]
@@ -75619,9 +75613,9 @@
     },
     {
       "source": "function:packages/landing/src/components/organisms/List.tsx::CuisineList",
-      "target": "unresolved:tsx:Food",
+      "target": "external:tsx:@/data.Food",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -76795,7 +76789,7 @@
     },
     {
       "source": "function:packages/landing/src/components/templates/HomeTemplate.tsx::emojiIcon",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -77860,7 +77854,7 @@
     },
     {
       "source": "interface:packages/landing/src/components/atoms/Badge.tsx::BadgeProps",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -77902,7 +77896,7 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/CTA.tsx::CTAProps",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -77956,9 +77950,9 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/CuisineSelect.tsx::CuisineSelectProps",
-      "target": "unresolved:tsx:Cuisine",
+      "target": "external:tsx:@/data.Cuisine",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -77977,9 +77971,9 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/Features.tsx::Feature",
-      "target": "unresolved:tsx:IconType",
+      "target": "external:tsx:react-icons.IconType",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -78019,7 +78013,7 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/Hero.tsx::HeroProps",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -78202,9 +78196,9 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/SchedulePicker.tsx::ScheduleSummary",
-      "target": "unresolved:tsx:ScheduleEntry",
+      "target": "external:tsx:@/data.ScheduleEntry",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -78223,7 +78217,7 @@
     },
     {
       "source": "interface:packages/landing/src/components/molecules/SectionHead.tsx::SectionHeadProps",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -78265,6 +78259,27 @@
     },
     {
       "source": "interface:packages/landing/src/components/organisms/Randomizer.tsx::FoodRandomizerProps",
+      "target": "external:tsx:@/data.Food",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 16,
+            "column": 11,
+            "byte": 585
+          },
+          "end": {
+            "line": 16,
+            "column": 15,
+            "byte": 589
+          }
+        }
+      ]
+    },
+    {
+      "source": "interface:packages/landing/src/components/organisms/Randomizer.tsx::FoodRandomizerProps",
       "target": "external:tsx:lib::Record",
       "kind": "uses_type",
       "status": "resolved_external",
@@ -78285,31 +78300,10 @@
       ]
     },
     {
-      "source": "interface:packages/landing/src/components/organisms/Randomizer.tsx::FoodRandomizerProps",
-      "target": "unresolved:tsx:Food",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 16,
-            "column": 11,
-            "byte": 585
-          },
-          "end": {
-            "line": 16,
-            "column": 15,
-            "byte": 589
-          }
-        }
-      ]
-    },
-    {
       "source": "interface:packages/landing/src/components/organisms/Schedule.tsx::FoodScheduleProps",
-      "target": "unresolved:tsx:ScheduleEntry",
+      "target": "external:tsx:@/data.ScheduleEntry",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -78328,9 +78322,9 @@
     },
     {
       "source": "interface:packages/landing/src/components/templates/DishesTemplate.tsx::DishesTemplateProps",
-      "target": "unresolved:tsx:ListKind",
+      "target": "external:tsx:@/components/organisms/List.ListKind",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -78349,7 +78343,7 @@
     },
     {
       "source": "interface:packages/landing/src/components/templates/ErrorTemplate.tsx::ErrorTemplateProps",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -78370,7 +78364,7 @@
     },
     {
       "source": "interface:packages/landing/src/components/templates/HomeTemplate.tsx::CourseItem",
-      "target": "external:tsx:lib::ComponentType",
+      "target": "external:tsx:react.ComponentType",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -78391,7 +78385,7 @@
     },
     {
       "source": "interface:packages/landing/src/components/templates/HomeTemplate.tsx::HomeTemplateProps",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -78433,6 +78427,27 @@
     },
     {
       "source": "interface:packages/landing/src/components/templates/RandomizerTemplate.tsx::RandomizerTemplateProps",
+      "target": "external:tsx:@/data.Food",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 10,
+            "byte": 374
+          },
+          "end": {
+            "line": 12,
+            "column": 14,
+            "byte": 378
+          }
+        }
+      ]
+    },
+    {
+      "source": "interface:packages/landing/src/components/templates/RandomizerTemplate.tsx::RandomizerTemplateProps",
       "target": "external:tsx:lib::Record",
       "kind": "uses_type",
       "status": "resolved_external",
@@ -78448,27 +78463,6 @@
             "line": 13,
             "column": 21,
             "byte": 402
-          }
-        }
-      ]
-    },
-    {
-      "source": "interface:packages/landing/src/components/templates/RandomizerTemplate.tsx::RandomizerTemplateProps",
-      "target": "unresolved:tsx:Food",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 12,
-            "column": 10,
-            "byte": 374
-          },
-          "end": {
-            "line": 12,
-            "column": 14,
-            "byte": 378
           }
         }
       ]
@@ -78649,6 +78643,27 @@
     },
     {
       "source": "method:crates/fdr-cli/src/data.rs::Filters.apply",
+      "target": "external:rust:std::into_iter",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 110,
+            "column": 9,
+            "byte": 2971
+          },
+          "end": {
+            "line": 111,
+            "column": 25,
+            "byte": 3001
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/data.rs::Filters.apply",
       "target": "external:rust:std::to_lowercase",
       "kind": "calls",
       "status": "resolved_external",
@@ -78751,27 +78766,6 @@
     },
     {
       "source": "method:crates/fdr-cli/src/data.rs::Filters.apply",
-      "target": "unresolved:rust:into_iter",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 110,
-            "column": 9,
-            "byte": 2971
-          },
-          "end": {
-            "line": 111,
-            "column": 25,
-            "byte": 3001
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/data.rs::Filters.apply",
       "target": "unresolved:rust:is_none_or",
       "kind": "calls",
       "status": "unresolved",
@@ -78862,6 +78856,27 @@
     },
     {
       "source": "method:crates/fdr-cli/src/main.rs::ItemArgs.filters",
+      "target": "external:rust:Filters",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 46,
+            "column": 9,
+            "byte": 1133
+          },
+          "end": {
+            "line": 51,
+            "column": 10,
+            "byte": 1332
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:crates/fdr-cli/src/main.rs::ItemArgs.filters",
       "target": "external:rust:std::clone",
       "kind": "calls",
       "status": "resolved_external",
@@ -78919,30 +78934,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/main.rs::ItemArgs.filters",
-      "target": "external:unresolved:fdr_cli::Filters",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 46,
-            "column": 9,
-            "byte": 1133
-          },
-          "end": {
-            "line": 51,
-            "column": 10,
-            "byte": 1332
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:crates/fdr-cli/src/main.rs::ItemArgs.filters",
-      "target": "unresolved:rust:Filters",
+      "target": "struct:crates/fdr-cli/src/data.rs::Filters",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_internal",
       "origin": "syntax",
       "sites": [
         {
@@ -79735,9 +79729,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw",
-      "target": "unresolved:rust:Frame",
+      "target": "external:rust:ratatui::Frame",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -79756,9 +79750,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw",
-      "target": "unresolved:rust:Line",
+      "target": "external:rust:ratatui::Line",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -80509,9 +80503,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw_detail",
-      "target": "unresolved:rust:Frame",
+      "target": "external:rust:ratatui::Frame",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -80530,9 +80524,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw_detail",
-      "target": "unresolved:rust:Line",
+      "target": "external:rust:ratatui::Line",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -80551,9 +80545,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw_detail",
-      "target": "unresolved:rust:Rect",
+      "target": "external:rust:ratatui::Rect",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -81310,9 +81304,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
-      "target": "unresolved:rust:Frame",
+      "target": "external:rust:ratatui::Frame",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -81331,9 +81325,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
-      "target": "unresolved:rust:ListItem",
+      "target": "external:rust:ratatui::ListItem",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -81352,9 +81346,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.draw_list",
-      "target": "unresolved:rust:Rect",
+      "target": "external:rust:ratatui::Rect",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -81703,9 +81697,9 @@
     },
     {
       "source": "method:crates/fdr-cli/src/tui.rs::App.handle_key",
-      "target": "unresolved:rust:KeyCode",
+      "target": "external:rust:crossterm::KeyCode",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -89466,9 +89460,9 @@
     },
     {
       "source": "module:packages/landing/next.config.ts",
-      "target": "unresolved:typescript:NextConfig",
+      "target": "external:typescript:next.NextConfig",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -90895,9 +90889,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/drinks/dishes/page.tsx",
-      "target": "unresolved:tsx:Metadata",
+      "target": "external:tsx:next.Metadata",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -90916,9 +90910,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/drinks/dishes/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -91578,7 +91572,28 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/drinks/randomizer/layout.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:next.Metadata",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 24,
+            "byte": 106
+          },
+          "end": {
+            "line": 4,
+            "column": 32,
+            "byte": 114
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/(app)/drinks/randomizer/layout.tsx",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -91599,7 +91614,7 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/drinks/randomizer/layout.tsx",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -91620,27 +91635,6 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/drinks/randomizer/layout.tsx",
-      "target": "unresolved:tsx:Metadata",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 4,
-            "column": 24,
-            "byte": 106
-          },
-          "end": {
-            "line": 4,
-            "column": 32,
-            "byte": 114
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/(app)/drinks/randomizer/layout.tsx",
       "target": "constant:packages/landing/src/app/(app)/drinks/randomizer/layout.tsx::metadata",
       "kind": "defines",
       "status": "resolved_internal",
@@ -91655,9 +91649,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/drinks/randomizer/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -91854,9 +91848,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/drinks/wheel/page.tsx",
-      "target": "unresolved:tsx:Metadata",
+      "target": "external:tsx:next.Metadata",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -91875,9 +91869,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/drinks/wheel/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -92081,9 +92075,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/foods/dishes/page.tsx",
-      "target": "unresolved:tsx:Metadata",
+      "target": "external:tsx:next.Metadata",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -92102,9 +92096,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/foods/dishes/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -92719,7 +92713,28 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/foods/randomizer/layout.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:next.Metadata",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 24,
+            "byte": 106
+          },
+          "end": {
+            "line": 4,
+            "column": 32,
+            "byte": 114
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/(app)/foods/randomizer/layout.tsx",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -92740,7 +92755,7 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/foods/randomizer/layout.tsx",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -92761,27 +92776,6 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/foods/randomizer/layout.tsx",
-      "target": "unresolved:tsx:Metadata",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 4,
-            "column": 24,
-            "byte": 106
-          },
-          "end": {
-            "line": 4,
-            "column": 32,
-            "byte": 114
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/(app)/foods/randomizer/layout.tsx",
       "target": "constant:packages/landing/src/app/(app)/foods/randomizer/layout.tsx::metadata",
       "kind": "defines",
       "status": "resolved_internal",
@@ -92796,9 +92790,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/foods/randomizer/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -92995,9 +92989,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/foods/wheel/page.tsx",
-      "target": "unresolved:tsx:Metadata",
+      "target": "external:tsx:next.Metadata",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -93016,9 +93010,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/foods/wheel/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -93719,6 +93713,27 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/schedule/[slug]/page.tsx",
+      "target": "external:tsx:next.NextPage",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 25,
+            "byte": 440
+          },
+          "end": {
+            "line": 12,
+            "column": 33,
+            "byte": 448
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/(app)/schedule/[slug]/page.tsx",
       "target": "interface:packages/landing/src/app/(app)/schedule/[slug]/page.tsx::ScheduleSlugPageProps",
       "kind": "uses_type",
       "status": "resolved_internal",
@@ -93734,27 +93749,6 @@
             "line": 12,
             "column": 55,
             "byte": 470
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/(app)/schedule/[slug]/page.tsx",
-      "target": "unresolved:tsx:NextPage",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 12,
-            "column": 25,
-            "byte": 440
-          },
-          "end": {
-            "line": 12,
-            "column": 33,
-            "byte": 448
           }
         }
       ]
@@ -94182,9 +94176,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/schedule/page.tsx",
-      "target": "unresolved:tsx:Metadata",
+      "target": "external:tsx:next.Metadata",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -94203,9 +94197,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/schedule/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -94454,9 +94448,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/snacks/dishes/page.tsx",
-      "target": "unresolved:tsx:Metadata",
+      "target": "external:tsx:next.Metadata",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -94475,9 +94469,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/snacks/dishes/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -95137,7 +95131,28 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/snacks/randomizer/layout.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:next.Metadata",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 24,
+            "byte": 106
+          },
+          "end": {
+            "line": 4,
+            "column": 32,
+            "byte": 114
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/(app)/snacks/randomizer/layout.tsx",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -95158,7 +95173,7 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/snacks/randomizer/layout.tsx",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -95179,27 +95194,6 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/snacks/randomizer/layout.tsx",
-      "target": "unresolved:tsx:Metadata",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 4,
-            "column": 24,
-            "byte": 106
-          },
-          "end": {
-            "line": 4,
-            "column": 32,
-            "byte": 114
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/(app)/snacks/randomizer/layout.tsx",
       "target": "constant:packages/landing/src/app/(app)/snacks/randomizer/layout.tsx::metadata",
       "kind": "defines",
       "status": "resolved_internal",
@@ -95214,9 +95208,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/snacks/randomizer/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -95413,9 +95407,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/snacks/wheel/page.tsx",
-      "target": "unresolved:tsx:Metadata",
+      "target": "external:tsx:next.Metadata",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -95434,9 +95428,9 @@
     },
     {
       "source": "module:packages/landing/src/app/(app)/snacks/wheel/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -98354,7 +98348,49 @@
     },
     {
       "source": "module:packages/landing/src/app/layout.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:next.Metadata",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 24,
+            "byte": 366
+          },
+          "end": {
+            "line": 9,
+            "column": 32,
+            "byte": 374
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/layout.tsx",
+      "target": "external:tsx:next.Viewport",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 62,
+            "column": 24,
+            "byte": 1732
+          },
+          "end": {
+            "line": 62,
+            "column": 32,
+            "byte": 1740
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/layout.tsx",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -98375,7 +98411,7 @@
     },
     {
       "source": "module:packages/landing/src/app/layout.tsx",
-      "target": "external:tsx:lib::ReactNode",
+      "target": "external:tsx:react.ReactNode",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -98390,48 +98426,6 @@
             "line": 122,
             "column": 43,
             "byte": 3509
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/layout.tsx",
-      "target": "unresolved:tsx:Metadata",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 9,
-            "column": 24,
-            "byte": 366
-          },
-          "end": {
-            "line": 9,
-            "column": 32,
-            "byte": 374
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/layout.tsx",
-      "target": "unresolved:tsx:Viewport",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 62,
-            "column": 24,
-            "byte": 1732
-          },
-          "end": {
-            "line": 62,
-            "column": 32,
-            "byte": 1740
           }
         }
       ]
@@ -98501,7 +98495,7 @@
     },
     {
       "source": "module:packages/landing/src/app/loading.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -98604,30 +98598,9 @@
     },
     {
       "source": "module:packages/landing/src/app/page.tsx",
-      "target": "unresolved:tsx:CourseItem",
+      "target": "external:tsx:@/components/molecules/Features.Feature",
       "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 46,
-            "column": 18,
-            "byte": 1229
-          },
-          "end": {
-            "line": 46,
-            "column": 28,
-            "byte": 1239
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/app/page.tsx",
-      "target": "unresolved:tsx:Feature",
-      "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -98646,9 +98619,30 @@
     },
     {
       "source": "module:packages/landing/src/app/page.tsx",
-      "target": "unresolved:tsx:Metadata",
+      "target": "external:tsx:@/components/templates/HomeTemplate.CourseItem",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 46,
+            "column": 18,
+            "byte": 1229
+          },
+          "end": {
+            "line": 46,
+            "column": 28,
+            "byte": 1239
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/app/page.tsx",
+      "target": "external:tsx:next.Metadata",
+      "kind": "uses_type",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -98667,9 +98661,9 @@
     },
     {
       "source": "module:packages/landing/src/app/page.tsx",
-      "target": "unresolved:tsx:NextPage",
+      "target": "external:tsx:next.NextPage",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -98772,27 +98766,6 @@
     },
     {
       "source": "module:packages/landing/src/components/atoms/Badge.tsx",
-      "target": "external:tsx:lib::FC",
-      "kind": "uses_type",
-      "status": "resolved_external",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 20,
-            "column": 21,
-            "byte": 420
-          },
-          "end": {
-            "line": 20,
-            "column": 23,
-            "byte": 422
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/atoms/Badge.tsx",
       "target": "external:tsx:lib::Record",
       "kind": "uses_type",
       "status": "resolved_external",
@@ -98808,6 +98781,27 @@
             "line": 7,
             "column": 28,
             "byte": 157
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/atoms/Badge.tsx",
+      "target": "external:tsx:react.FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 20,
+            "column": 21,
+            "byte": 420
+          },
+          "end": {
+            "line": 20,
+            "column": 23,
+            "byte": 422
           }
         }
       ]
@@ -98898,7 +98892,7 @@
     },
     {
       "source": "module:packages/landing/src/components/atoms/OfflineBadge.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -98933,7 +98927,7 @@
     },
     {
       "source": "module:packages/landing/src/components/atoms/ServiceWorker.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -99589,7 +99583,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/BackLink.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -99617,7 +99611,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/CTA.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -99769,7 +99763,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/CuisineSelect.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -99951,7 +99945,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Features.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -100056,7 +100050,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Footer.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -100133,7 +100127,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Hero.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -100292,7 +100286,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Navbar.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -100331,6 +100325,27 @@
             "line": 78,
             "column": 17,
             "byte": 1958
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/Navbar.tsx",
+      "target": "external:tsx:react.MouseEventHandler",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 32,
+            "column": 13,
+            "byte": 625
+          },
+          "end": {
+            "line": 32,
+            "column": 30,
+            "byte": 642
           }
         }
       ]
@@ -100394,27 +100409,6 @@
             "line": 78,
             "column": 29,
             "byte": 1970
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/Navbar.tsx",
-      "target": "unresolved:tsx:MouseEventHandler",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 32,
-            "column": 13,
-            "byte": 625
-          },
-          "end": {
-            "line": 32,
-            "column": 30,
-            "byte": 642
           }
         }
       ]
@@ -100540,7 +100534,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/Reel.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -100680,7 +100674,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/SchedulePicker.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -100799,7 +100793,7 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/SectionHead.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -100956,30 +100950,9 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/__fixtures__/fixtures.ts",
-      "target": "external:typescript:lib::Record",
+      "target": "external:typescript:@/data.Cuisine",
       "kind": "uses_type",
       "status": "resolved_external",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 35,
-            "column": 33,
-            "byte": 712
-          },
-          "end": {
-            "line": 35,
-            "column": 39,
-            "byte": 718
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/molecules/__fixtures__/fixtures.ts",
-      "target": "unresolved:typescript:Cuisine",
-      "kind": "uses_type",
-      "status": "unresolved",
       "origin": "syntax",
       "sites": [
         {
@@ -100998,9 +100971,9 @@
     },
     {
       "source": "module:packages/landing/src/components/molecules/__fixtures__/fixtures.ts",
-      "target": "unresolved:typescript:Food",
+      "target": "external:typescript:@/data.Food",
       "kind": "uses_type",
-      "status": "unresolved",
+      "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
@@ -101013,6 +100986,27 @@
             "line": 8,
             "column": 33,
             "byte": 246
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/molecules/__fixtures__/fixtures.ts",
+      "target": "external:typescript:lib::Record",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 35,
+            "column": 33,
+            "byte": 712
+          },
+          "end": {
+            "line": 35,
+            "column": 39,
+            "byte": 718
           }
         }
       ]
@@ -105403,21 +105397,21 @@
     },
     {
       "source": "module:packages/landing/src/components/organisms/List.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:@/data.Food",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
       "sites": [
         {
           "start": {
-            "line": 60,
-            "column": 27,
-            "byte": 1494
+            "line": 13,
+            "column": 12,
+            "byte": 321
           },
           "end": {
-            "line": 60,
-            "column": 29,
-            "byte": 1496
+            "line": 13,
+            "column": 16,
+            "byte": 325
           }
         }
       ]
@@ -105439,6 +105433,27 @@
             "line": 10,
             "column": 24,
             "byte": 292
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:packages/landing/src/components/organisms/List.tsx",
+      "target": "external:tsx:react.FC",
+      "kind": "uses_type",
+      "status": "resolved_external",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 60,
+            "column": 27,
+            "byte": 1494
+          },
+          "end": {
+            "line": 60,
+            "column": 29,
+            "byte": 1496
           }
         }
       ]
@@ -105481,27 +105496,6 @@
             "line": 11,
             "column": 11,
             "byte": 304
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:packages/landing/src/components/organisms/List.tsx",
-      "target": "unresolved:tsx:Food",
-      "kind": "uses_type",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 13,
-            "column": 12,
-            "byte": 321
-          },
-          "end": {
-            "line": 13,
-            "column": 16,
-            "byte": 325
           }
         }
       ]
@@ -105592,7 +105586,7 @@
     },
     {
       "source": "module:packages/landing/src/components/organisms/Randomizer.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -105753,7 +105747,7 @@
     },
     {
       "source": "module:packages/landing/src/components/organisms/Schedule.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -105886,7 +105880,7 @@
     },
     {
       "source": "module:packages/landing/src/components/organisms/Wheel.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -111513,7 +111507,7 @@
     },
     {
       "source": "module:packages/landing/src/components/templates/DishesTemplate.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -111590,7 +111584,7 @@
     },
     {
       "source": "module:packages/landing/src/components/templates/ErrorTemplate.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -111667,7 +111661,7 @@
     },
     {
       "source": "module:packages/landing/src/components/templates/HomeTemplate.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -111861,7 +111855,7 @@
     },
     {
       "source": "module:packages/landing/src/components/templates/RandomizerTemplate.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -112018,7 +112012,7 @@
     },
     {
       "source": "module:packages/landing/src/components/templates/WheelTemplate.tsx",
-      "target": "external:tsx:lib::FC",
+      "target": "external:tsx:react.FC",
       "kind": "uses_type",
       "status": "resolved_external",
       "origin": "syntax",
@@ -121263,15 +121257,15 @@
   "statistics": {
     "files": 185,
     "packages": 2,
-    "nodes": 2010,
-    "edges": 5293,
+    "nodes": 2006,
+    "edges": 5295,
     "symbols": 1063,
-    "unresolvedEdges": 458,
+    "unresolvedEdges": 368,
     "diagnostics": 51,
     "byNodeKind": {
       "constant": 225,
       "enum": 2,
-      "external_symbol": 348,
+      "external_symbol": 371,
       "file": 185,
       "framework": 10,
       "function": 259,
@@ -121283,15 +121277,15 @@
       "repository": 1,
       "struct": 8,
       "type": 5,
-      "unknown": 212,
+      "unknown": 185,
       "variable": 348
     },
     "byEdgeKind": {
-      "calls": 1905,
+      "calls": 1906,
       "contains": 1553,
       "defines": 1067,
       "exports": 235,
-      "imports": 316,
+      "imports": 317,
       "uses_framework": 10,
       "uses_type": 207
     },
@@ -121299,14 +121293,14 @@
       "bash": 6,
       "javascript": 58,
       "markdown": 104,
-      "rust": 890,
-      "tsx": 699,
+      "rust": 885,
+      "tsx": 700,
       "typescript": 240
     },
     "byStatus": {
-      "resolved_external": 1477,
-      "resolved_internal": 3358,
-      "unresolved": 458
+      "resolved_external": 1549,
+      "resolved_internal": 3378,
+      "unresolved": 368
     },
     "byFramework": {
       "clap.rs": 1,
