@@ -324,6 +324,8 @@ digraph tracers {
   "external:rust:ratatui::Rect" [label="Rect\nexternal_symbol", color="lightgray"];
   "external:rust:ratatui::backend::CrosstermBackend.new" [label="new\nexternal_symbol", color="lightgray"];
   "external:rust:ratatui::widgets::ListState.default" [label="default\nexternal_symbol", color="lightgray"];
+  "external:rust:serde.Serialize" [label="Serialize\nexternal_symbol", color="lightgray"];
+  "external:rust:serde::Deserialize" [label="Deserialize\nexternal_symbol", color="lightgray"];
   "external:rust:serde_json.Value" [label="Value\nexternal_symbol", color="lightgray"];
   "external:rust:serde_json.from_str" [label="from_str\nexternal_symbol", color="lightgray"];
   "external:rust:serde_json.to_string" [label="to_string\nexternal_symbol", color="lightgray"];
@@ -338,6 +340,7 @@ digraph tracers {
   "external:rust:serve.unwrap" [label="unwrap\nexternal_symbol", color="lightgray"];
   "external:rust:std::Arc" [label="Arc\nexternal_symbol", color="lightgray"];
   "external:rust:std::Child" [label="Child\nexternal_symbol", color="lightgray"];
+  "external:rust:std::Clone" [label="Clone\nexternal_symbol", color="lightgray"];
   "external:rust:std::Err" [label="Err\nexternal_symbol", color="lightgray"];
   "external:rust:std::FnMut" [label="FnMut\nexternal_symbol", color="lightgray"];
   "external:rust:std::Mutex" [label="Mutex\nexternal_symbol", color="lightgray"];
@@ -3873,11 +3876,13 @@ digraph tracers {
   "function:crates/fdr-cli/src/data.rs::load" -> "external:rust:std::map_err" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/data.rs::load" -> "function:crates/fdr-cli/src/data.rs::data_dir" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/data.rs::load" -> "unresolved:rust:read_to_string" [label="calls", style="dotted"];
+  "function:crates/fdr-cli/src/data.rs::load" -> "external:rust:serde::Deserialize" [label="uses_type", style="dotted"];
   "function:crates/fdr-cli/src/data.rs::pick" -> "external:rust:std::Some" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/data.rs::pick" -> "external:rust:std::clone" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/data.rs::pick" -> "external:rust:std::is_empty" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/data.rs::pick" -> "external:rust:std::len" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/data.rs::pick" -> "unresolved:rust:wrapping_mul" [label="calls", style="dotted"];
+  "function:crates/fdr-cli/src/data.rs::pick" -> "external:rust:std::Clone" [label="uses_type", style="dotted"];
   "function:crates/fdr-cli/src/data.rs::rng" -> "external:rust:std::time::SystemTime.now" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/data.rs::rng" -> "external:rust:std::time::SystemTime::now.duration_since" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/data.rs::rng" -> "external:rust:std::time::SystemTime::now.map" [label="calls", style="bold"];
@@ -4098,6 +4103,7 @@ digraph tracers {
   "function:crates/fdr-cli/src/mcp.rs::to_value" -> "external:rust:serde_json.to_value" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/mcp.rs::to_value" -> "external:rust:serde_json::to_value.map_err" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/mcp.rs::to_value" -> "external:rust:std::to_string" [label="calls", style="bold"];
+  "function:crates/fdr-cli/src/mcp.rs::to_value" -> "external:rust:serde.Serialize" [label="uses_type", style="dotted"];
   "function:crates/fdr-cli/src/mcp.rs::to_value" -> "external:rust:serde_json::Value" [label="uses_type", style="dotted"];
   "function:crates/fdr-cli/src/mcp.rs::tools_list" -> "external:rust:std::as_str" [label="calls", style="bold"];
   "function:crates/fdr-cli/src/mcp.rs::tools_list" -> "external:rust:std::get" [label="calls", style="bold"];
