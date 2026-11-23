@@ -132,7 +132,10 @@ const Downloads: FC = () => (
             Download fdr
           </h1>
           <p className="mt-3 text-lg text-gray-500">
-            The fdr command-line tool as prebuilt binaries. Assets are in the{' '}
+            The fdr command-line tool as prebuilt binaries.
+          </p>
+          <p className="mt-3 text-lg text-gray-500">
+            Assets are in the{' '}
             <a href={RELEASE_PAGE} className="text-primary">
               latest release
             </a>
