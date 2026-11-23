@@ -75,6 +75,8 @@ const TOOL_ITEMS = (base: string) => [
   { href: `${base}/dishes/`, label: 'Dishes' },
 ];
 
+const NAV_LINKS = [{ label: 'Downloads', href: '/downloads/' }];
+
 const NAV_GROUPS = [
   { label: 'Foods', items: TOOL_ITEMS('/foods') },
   { label: 'Drinks', items: TOOL_ITEMS('/drinks') },
@@ -129,7 +131,7 @@ const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
       <Navbar
         name="FDR"
         logoSrc={LOGO}
-        links={[]}
+        links={NAV_LINKS}
         groups={NAV_GROUPS}
         githubUrl={GITHUB_URL}
       />
