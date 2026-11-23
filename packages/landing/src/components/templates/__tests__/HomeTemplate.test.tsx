@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { FiBox } from 'react-icons/fi';
+import { PiPackage } from 'react-icons/pi';
+
 import { HomeTemplate } from '../HomeTemplate';
 
 const base = {
@@ -9,7 +10,7 @@ const base = {
     {
       label: 'Tool One',
       description: 'First tool',
-      icon: FiBox,
+      icon: PiPackage,
       href: '/randomizer/',
     },
   ],
