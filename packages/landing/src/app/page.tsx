@@ -166,10 +166,10 @@ const HomePage: NextPage = () => {
         <CTA
           title="Still can't decide?"
           description="Let fate pick tonight's meal — it takes less time than scrolling delivery apps."
-          primary={{ label: 'Spin the wheel', href: '/foods/wheel/' }}
+          primary={{ label: 'Download', href: '/downloads/' }}
           secondary={{
-            label: 'Star on GitHub',
-            href: 'https://github.com/hieudoanm/fdr',
+            label: 'View Docs',
+            href: 'https://github.com/hieudoanm/fdr#readme',
             external: true,
           }}
         />

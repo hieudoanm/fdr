@@ -26,10 +26,13 @@ describe('Navbar', () => {
   it('renders the brand and GitHub link', () => {
     render(<Navbar {...PROPS} />);
     expect(screen.getByText('FDR')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /github/i })).toHaveAttribute(
+    expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute(
       'href',
       'https://github.com/hieudoanm/fdr'
     );
+    expect(
+      screen.getAllByRole('link', { name: 'Star FDR on GitHub' })[0]
+    ).toHaveAttribute('href', 'https://github.com/hieudoanm/fdr');
   });
 
   it('renders flat links', () => {
