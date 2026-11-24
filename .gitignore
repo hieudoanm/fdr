@@ -51,3 +51,4 @@ test-results
 # Rust
 target/
 .tracers-cache/
+.tracers/cache/
