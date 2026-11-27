@@ -6,6 +6,8 @@ import { ServiceWorker } from '@/components/atoms/ServiceWorker';
 import Navbar from '@/components/molecules/Navbar';
 import { OfflineBadge } from '@/components/atoms/OfflineBadge';
 
+const THEME_INIT_SCRIPT = `(function(){try{var t=localStorage.getItem('fdr-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'fdr-dark':'fdr';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();`;
+
 export const metadata: Metadata = {
   title: 'FDR',
   description: 'Spin the reel and let fate pick your next meal',
@@ -124,6 +126,7 @@ const JSON_LD = {
 const RootLayout: FC<{ children: ReactNode }> = ({ children }) => (
   <html lang="en" data-theme="fdr" className={inter.className}>
     <body className="bg-base-100 text-base-content h-screen overflow-y-auto">
+      <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }}

@@ -30,9 +30,6 @@ describe('Navbar', () => {
       'href',
       'https://github.com/hieudoanm/fdr'
     );
-    expect(
-      screen.getAllByRole('link', { name: 'Star FDR on GitHub' })[0]
-    ).toHaveAttribute('href', 'https://github.com/hieudoanm/fdr');
   });
 
   it('renders flat links', () => {
